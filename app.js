@@ -69,30 +69,29 @@ function initializeElements() {
     if (fileInput) fileInput.addEventListener('change', handleFileUpload);
 }
 
-// Load questions on page load
-window.addEventListener('load', async () => {
-    console.log('Page loaded, initializing...');
+// Load questions and initialize on DOM ready
+document.addEventListener('DOMContentLoaded', async () => {
+    console.log('DOM Content Loaded, initializing...');
     
-    // Wait a bit to ensure DOM is fully ready
-    setTimeout(async () => {
-        try {
-            initializeElements();
-            
-            const response = await fetch('questions.json');
-            questions = await response.json();
-            console.log('Questions loaded:', questions.length);
-            
-            if (questionCountLabel) {
-                questionCountLabel.textContent = questions.length;
-            }
-            if (btnLoadErrors) {
-                btnLoadErrors.disabled = true;
-            }
-        } catch (error) {
-            console.error('Error loading questions:', error);
-            alert('Failed to load questions. Please check if questions.json exists.');
+    try {
+        initializeElements();
+        
+        const response = await fetch('questions.json');
+        questions = await response.json();
+        console.log('Questions loaded:', questions.length);
+        
+        if (questionCountLabel) {
+            questionCountLabel.textContent = questions.length;
         }
-    }, 100);
+        if (btnLoadErrors) {
+            btnLoadErrors.disabled = true;
+        }
+        
+        console.log('Application fully initialized!');
+    } catch (error) {
+        console.error('Error loading questions:', error);
+        alert('Failed to load questions. Please check if questions.json exists.');
+    }
 });
 
 function startQuiz() {
