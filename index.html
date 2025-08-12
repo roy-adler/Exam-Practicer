@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Terraform Associate 003 – Practice Test</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <h1>Terraform Associate 003 — Practice Test</h1>
+      <div class="controls">
+        <span class="pill" id="questionCountLabel">—</span>
+        <span class="pill" id="modeLabel">Mode: Quiz</span>
+        <button class="ghost" id="btnLoadErrors" title="Practice only your mistakes" disabled>Work on your errors</button>
+        <label class="secondary" for="fileInput" style="cursor:pointer;display:inline-block">Load questions</label>
+        <input id="fileInput" type="file" accept="application/json" style="display:none" />
+        <button class="secondary" id="btnExport">Export questions</button>
+        <button class="secondary" id="btnReset">Reset</button>
+      </div>
+    </header>
+
+    <section class="card" id="introCard">
+      <div class="grid" style="padding:18px">
+        <p class="meta">Choose how many questions you want, then <b>Start quiz</b>. We randomize questions and choices each run. After you submit, you’ll get a breakdown and can practice only your wrong ones.</p>
+        <div class="row">
+          <label class="pill">Questions per test: <input id="countInput" type="number" min="5" max="40" value="20" style="width:68px;margin-left:8px;background:transparent;border:none;color:var(--text)"></label>
+          <label class="pill">Shuffle choices <input id="shuffleChoices" type="checkbox" checked style="margin-left:8px"></label>
+          <label class="pill">Show explanations on submit <input id="showExplain" type="checkbox" checked style="margin-left:8px"></label>
+        </div>
+        <div class="row">
+          <button id="btnStart">Start quiz</button>
+          <button class="secondary" id="btnSample">Load sample (10)</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="card hidden" id="quizCard">
+      <div class="q" id="qContainer"></div>
+      <div class="footer">
+        <div style="flex:1;min-width:200px">
+          <div class="progress"><div id="progressInner"></div></div>
+          <div class="meta" id="progressLabel">0 / 0</div>
+        </div>
+        <div class="controls">
+          <span class="pill" id="liveTimer">00:00</span>
+          <button class="secondary" id="btnPrev">Prev</button>
+          <button class="secondary" id="btnNext">Next</button>
+          <button id="btnSubmit">Submit</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="card hidden" id="resultCard">
+      <div class="summary" id="resultSummary"></div>
+      <div class="footer">
+        <div class="controls">
+          <button id="btnRetry">New randomized quiz</button>
+          <button class="warn" id="btnPracticeWrong" disabled>Practice wrong answers</button>
+          <button class="secondary" id="btnReview">Review all</button>
+        </div>
+        <div class="meta" id="timeTaken"></div>
+      </div>
+    </section>
+  </div>
+
+  <script src="app.js" defer></script>
+</body>
+</html>

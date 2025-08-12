@@ -1,0 +1,526 @@
+[
+  {
+    "q": "Which command downloads providers and sets up the working directory?",
+    "choices": [
+      "terraform plan",
+      "terraform init",
+      "terraform apply",
+      "terraform providers"
+    ],
+    "answer": 1,
+    "explain": "`terraform init` initializes the directory and downloads required providers.",
+    "tags": [
+      "workflow"
+    ]
+  },
+  {
+    "q": "What does Terraform state primarily track?",
+    "choices": [
+      "Variable defaults",
+      "Resource dependencies",
+      "The real-world resource attributes",
+      "Terraform CLI version"
+    ],
+    "answer": 2,
+    "explain": "State maps your configuration to real resources and stores their attributes.",
+    "tags": [
+      "state"
+    ]
+  },
+  {
+    "q": "Best place to store remote state for team use?",
+    "choices": [
+      "Local disk",
+      "Email attachment",
+      "A supported backend like S3+lock or Terraform Cloud",
+      "Inside Git"
+    ],
+    "answer": 2,
+    "explain": "Use a remote backend with locking; never commit state to Git.",
+    "tags": [
+      "state",
+      "backend"
+    ]
+  },
+  {
+    "q": "How do you reference an input variable named `region`?",
+    "choices": [
+      "var.region",
+      "local.region",
+      "data.region",
+      "terraform.region"
+    ],
+    "answer": 0,
+    "explain": "Variables are referenced with the `var.` namespace.",
+    "tags": [
+      "hcl",
+      "vars"
+    ]
+  },
+  {
+    "q": "Which meta-argument creates multiple similar resources from a map?",
+    "choices": [
+      "count",
+      "for_each",
+      "providers",
+      "depends_on"
+    ],
+    "answer": 1,
+    "explain": "`for_each` iterates over maps/sets and provides keys and values.",
+    "tags": [
+      "meta"
+    ]
+  },
+  {
+    "q": "What file should be committed to lock provider versions?",
+    "choices": [
+      ".terraform/",
+      " .terraform.tfstate",
+      ".terraform.lock.hcl",
+      "versions.tf"
+    ],
+    "answer": 2,
+    "explain": "`.terraform.lock.hcl` records dependency selections and belongs in VCS.",
+    "tags": [
+      "providers"
+    ]
+  },
+  {
+    "q": "What is the recommended way to pin a provider version?",
+    "choices": [
+      "In provider block with `version` or `required_providers`",
+      "Set TF_PROVIDER env var",
+      "Never pin versions",
+      "Edit state file"
+    ],
+    "answer": 0,
+    "explain": "Use `required_providers` or provider `version` constraints.",
+    "tags": [
+      "providers"
+    ]
+  },
+  {
+    "q": "Which command shows the diff of changes Terraform will make?",
+    "choices": [
+      "terraform plan",
+      "terraform show",
+      "terraform apply -auto-approve",
+      "terraform fmt"
+    ],
+    "answer": 0,
+    "explain": "`plan` shows proposed actions without applying them.",
+    "tags": [
+      "workflow"
+    ]
+  },
+  {
+    "q": "A module input variable without default is…",
+    "choices": [
+      "Optional",
+      "Deprecated",
+      "Required",
+      "Ignored"
+    ],
+    "answer": 2,
+    "explain": "No default = caller must pass a value.",
+    "tags": [
+      "modules",
+      "vars"
+    ]
+  },
+  {
+    "q": "What does `-target` flag do?",
+    "choices": [
+      "Locks state",
+      "Limits operations to specific resources",
+      "Validates syntax",
+      "Sets backend"
+    ],
+    "answer": 1,
+    "explain": "`-target` focuses planning/apply to addresses; use sparingly.",
+    "tags": [
+      "cli"
+    ]
+  },
+  {
+    "q": "What happens when you change a resource's immutable attribute?",
+    "choices": [
+      "Nothing",
+      "In-place update",
+      "Destroy and recreate",
+      "State is edited manually"
+    ],
+    "answer": 2,
+    "explain": "Terraform will replace resources when immutable attributes change.",
+    "tags": [
+      "lifecycle"
+    ]
+  },
+  {
+    "q": "What is Sentinel in Terraform Cloud?",
+    "choices": [
+      "Language for modules",
+      "Policy-as-code framework",
+      "State encryption tool",
+      "Secret manager"
+    ],
+    "answer": 1,
+    "explain": "Sentinel evaluates policies during runs.",
+    "tags": [
+      "tfc"
+    ]
+  },
+  {
+    "q": "What does `terraform validate` do?",
+    "choices": [
+      "Runs a plan",
+      "Formats files",
+      "Checks configuration is syntactically valid",
+      "Initializes providers"
+    ],
+    "answer": 2,
+    "explain": "`validate` checks syntax and basic integrity.",
+    "tags": [
+      "cli"
+    ]
+  },
+  {
+    "q": "How to output a value named `vpc_id` from root module?",
+    "choices": [
+      "print vpc_id",
+      "output \"vpc_id\" { value = aws_vpc.main.id }",
+      "echo var.vpc_id",
+      "show output vpc_id"
+    ],
+    "answer": 1,
+    "explain": "Use an `output` block in the root module.",
+    "tags": [
+      "outputs"
+    ]
+  },
+  {
+    "q": "Where should secrets (e.g., cloud credentials) be defined when using Terraform Cloud?",
+    "choices": [
+      "Hardcoded in code",
+      ".tfvars committed to git",
+      "As workspace variables marked sensitive",
+      "In providers.tf as plain text"
+    ],
+    "answer": 2,
+    "explain": "Store sensitive values as workspace environment/TF var and mark sensitive.",
+    "tags": [
+      "tfc",
+      "security"
+    ]
+  },
+  {
+    "q": "What is a data source used for?",
+    "choices": [
+      "Create new resources",
+      "Read information from external systems",
+      "Store state elsewhere",
+      "Render templates"
+    ],
+    "answer": 1,
+    "explain": "Data sources let you query read-only info from providers.",
+    "tags": [
+      "datasource"
+    ]
+  },
+  {
+    "q": "To run the same module across multiple regions using a list, prefer…",
+    "choices": [
+      "count on module",
+      "for_each on module",
+      "duplicate directories",
+      "locals only"
+    ],
+    "answer": 1,
+    "explain": "Modules support `for_each` to instantiate multiple copies.",
+    "tags": [
+      "modules",
+      "meta"
+    ]
+  },
+  {
+    "q": "Which command upgrades provider versions respecting constraints?",
+    "choices": [
+      "terraform refresh",
+      "terraform providers lock",
+      "terraform init -upgrade",
+      "terraform apply -upgrade"
+    ],
+    "answer": 2,
+    "explain": "`init -upgrade` will request newer versions within constraints.",
+    "tags": [
+      "providers"
+    ]
+  },
+  {
+    "q": "What does the backend block configure?",
+    "choices": [
+      "Where state is stored",
+      "Which region to deploy",
+      "Logging level",
+      "Policy set"
+    ],
+    "answer": 0,
+    "explain": "Backends determine how and where state is kept.",
+    "tags": [
+      "state",
+      "backend"
+    ]
+  },
+  {
+    "q": "Which argument enforces that a resource must be created before another?",
+    "choices": [
+      "lifecycle",
+      "depends_on",
+      "provisioner",
+      "data"
+    ],
+    "answer": 1,
+    "explain": "`depends_on` adds explicit dependency edges.",
+    "tags": [
+      "graph"
+    ]
+  },
+  {
+    "q": "Which file pattern should you never commit?",
+    "choices": [
+      "*.tfvars.example",
+      ".terraform/",
+      "*.tf.json",
+      "outputs.tf"
+    ],
+    "answer": 1,
+    "explain": "`.terraform/` contains local cache of providers/modules.",
+    "tags": [
+      "vcs"
+    ]
+  },
+  {
+    "q": "What's the effect of `terraform destroy`?",
+    "choices": [
+      "Removes state file only",
+      "Deletes managed resources described by the configuration",
+      "Deletes the workspace",
+      "Deletes provider plugins"
+    ],
+    "answer": 1,
+    "explain": "It plans/apply deletions of all managed resources.",
+    "tags": [
+      "workflow"
+    ]
+  },
+  {
+    "q": "Which meta-arg preserves old and new while swapping?",
+    "choices": [
+      "ignore_changes",
+      "create_before_destroy",
+      "prevent_destroy",
+      "replace_triggered_by"
+    ],
+    "answer": 1,
+    "explain": "`create_before_destroy` in lifecycle avoids downtime.",
+    "tags": [
+      "lifecycle"
+    ]
+  },
+  {
+    "q": "How to reference attribute of a resource named aws_vpc.main?",
+    "choices": [
+      "aws_vpc.main.id",
+      "var.aws_vpc.main.id",
+      "vpc.main.id",
+      "module.main.id"
+    ],
+    "answer": 0,
+    "explain": "Resource addressing uses `type.name.attr`.",
+    "tags": [
+      "hcl"
+    ]
+  },
+  {
+    "q": "What is the recommended way to share modules?",
+    "choices": [
+      "Zip and email",
+      "Private Git repo or Terraform Registry",
+      "Copy/paste",
+      "Store in state"
+    ],
+    "answer": 1,
+    "explain": "Publish modules via VCS or Registry for versioning.",
+    "tags": [
+      "modules"
+    ]
+  },
+  {
+    "q": "What happens if two users run `apply` concurrently on same state without locking?",
+    "choices": [
+      "Terraform merges magically",
+      "State corruption / race conditions",
+      "Nothing happens",
+      "Providers prevent it"
+    ],
+    "answer": 1,
+    "explain": "Always enable state locking to avoid races.",
+    "tags": [
+      "state"
+    ]
+  },
+  {
+    "q": "Which file holds provider source and version constraints?",
+    "choices": [
+      "terraform.tfstate",
+      "providers.tf or required_providers",
+      "backend.hcl",
+      "main.tfvars"
+    ],
+    "answer": 1,
+    "explain": "`required_providers` in `terraform` block is canonical place.",
+    "tags": [
+      "providers"
+    ]
+  },
+  {
+    "q": "How do you pass a map variable from CLI?",
+    "choices": [
+      "-var 'map={a:b}'",
+      "-var 'map={a=\"b\"}'",
+      "-var 'map:[a,b]'",
+      "-map 'a=b'"
+    ],
+    "answer": 1,
+    "explain": "HCL map literal syntax with quoted string values.",
+    "tags": [
+      "vars"
+    ]
+  },
+  {
+    "q": "Which command prints the outputs from the last apply?",
+    "choices": [
+      "terraform outputs",
+      "terraform show outputs",
+      "terraform output",
+      "terraform plan -out"
+    ],
+    "answer": 2,
+    "explain": "`terraform output` prints output values.",
+    "tags": [
+      "outputs"
+    ]
+  },
+  {
+    "q": "What does `terraform fmt` do?",
+    "choices": [
+      "Validates config",
+      "Formats files to canonical style",
+      "Runs pre-commit",
+      "Upgrades providers"
+    ],
+    "answer": 1,
+    "explain": "Formatting tool for HCL.",
+    "tags": [
+      "cli"
+    ]
+  },
+  {
+    "q": "In Azure, which resource holds address space (CIDRs)?",
+    "choices": [
+      "azurerm_subnet",
+      "azurerm_virtual_network",
+      "azurerm_resource_group",
+      "azurerm_network_security_group"
+    ],
+    "answer": 1,
+    "explain": "`azurerm_virtual_network` has the VNet address space; subnets use subsets.",
+    "tags": [
+      "azure"
+    ]
+  },
+  {
+    "q": "Terraform Cloud 'workspaces' primarily separate…",
+    "choices": [
+      "users",
+      "runs & state for different environments",
+      "providers",
+      "variables from modules"
+    ],
+    "answer": 1,
+    "explain": "Workspaces isolate state and runs (e.g., dev/stage/prod).",
+    "tags": [
+      "tfc"
+    ]
+  },
+  {
+    "q": "Safest way to inject credentials on CI?",
+    "choices": [
+      "Commit to git",
+      "Read from environment variables in CI secret store",
+      "Prompt at runtime",
+      "Plain text in providers.tf"
+    ],
+    "answer": 1,
+    "explain": "Use CI secret store -> env vars or TF Cloud workspace vars.",
+    "tags": [
+      "security"
+    ]
+  },
+  {
+    "q": "Which argument iterates over a list to create N resources, providing index numbers?",
+    "choices": [
+      "for_each",
+      "count",
+      "repeat",
+      "loop"
+    ],
+    "answer": 1,
+    "explain": "`count` uses numeric indices 0..N-1.",
+    "tags": [
+      "meta"
+    ]
+  },
+  {
+    "q": "Command to generate a dependency graph image?",
+    "choices": [
+      "terraform graph | dot -Tpng",
+      "terraform deps",
+      "terraform dag",
+      "terraform render"
+    ],
+    "answer": 0,
+    "explain": "Use Graphviz `dot` to render the graph output.",
+    "tags": [
+      "graph"
+    ]
+  },
+  {
+    "q": "Purpose of `terraform login` when using Terraform Cloud?",
+    "choices": [
+      "Creates a workspace",
+      "Stores an API token locally for CLI auth",
+      "Initializes backend",
+      "Creates users"
+    ],
+    "answer": 1,
+    "explain": "`terraform login` saves TFC token in the credentials file.",
+    "tags": [
+      "tfc"
+    ]
+  },
+  {
+    "q": "What happens to resources removed from configuration but still in state?",
+    "choices": [
+      "They are kept forever",
+      "They will be destroyed on next apply",
+      "Terraform ignores them",
+      "Provider manages them"
+    ],
+    "answer": 1,
+    "explain": "Resources without config will be planned for destroy on apply (unless state is edited).",
+    "tags": [
+      "drift"
+    ]
+  }
+]

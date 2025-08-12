@@ -1,0 +1,32 @@
+:root{ --bg:#0b0f14; --card:#121823; --muted:#76839a; --text:#e6efff; --accent:#6aa6ff; --accent-2:#78f0b8; --danger:#ff6b6b; --warn:#ffd166; }
+*{box-sizing:border-box}
+body{margin:0;background:linear-gradient(180deg,#0b0f14 0%,#0e141d 100%);color:var(--text);font:16px/1.5 system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,"Helvetica Neue",Arial}
+.wrap{max-width:980px;margin:24px auto;padding:16px}
+header{display:flex;gap:12px;align-items:center;justify-content:space-between;margin-bottom:16px}
+h1{font-size:clamp(20px,3vw,28px);margin:0}
+.card{background:var(--card);border:1px solid #1f2633;border-radius:16px;box-shadow:0 10px 30px rgba(0,0,0,.35);overflow:hidden}
+.controls{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+button{background:var(--accent);border:none;color:#041225;padding:10px 14px;border-radius:12px;font-weight:600;cursor:pointer;transition:.2s transform,.2s opacity}
+button:hover{transform:translateY(-1px)}
+button.secondary{background:#1e2a3d;color:var(--text);border:1px solid #2c3a52}
+button.ghost{background:transparent;border:1px solid #2c3a52;color:var(--text)}
+button.warn{background:var(--warn);color:#222}
+button.danger{background:var(--danger);color:#fff}
+.row{display:flex;gap:14px;flex-wrap:wrap}
+.grid{display:grid;grid-template-columns:1fr;gap:14px}
+.meta{color:var(--muted);font-size:14px}
+.pill{padding:4px 10px;border-radius:999px;border:1px solid #2c3a52;background:#0f1520;color:var(--text)}
+.progress{height:10px;background:#0c1220;border:1px solid #1a2235;border-radius:999px;overflow:hidden}
+.progress>div{height:100%;background:linear-gradient(90deg,var(--accent),#9ad0ff);width:0%}
+.q{padding:18px}
+.q h3{margin:0 0 10px;font-size:18px}
+.choices{display:grid;gap:10px}
+.choice{border:1px solid #293247;background:#101827;border-radius:12px;padding:10px;display:flex;gap:10px;align-items:flex-start;cursor:pointer}
+.choice input{margin-top:3px}
+.choice.correct{border-color:rgba(120,240,184,.7);background:rgba(20,48,38,.35)}
+.choice.wrong{border-color:rgba(255,107,107,.7);background:rgba(57,18,18,.35)}
+.explain{margin-top:8px;color:#a9b6cc;font-size:14px}
+.footer{padding:14px;border-top:1px solid #1c2435;background:#0f1626;display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:space-between}
+.summary{padding:18px}
+.badge{display:inline-flex;align-items:center;gap:6px}
+.hidden{display:none}
