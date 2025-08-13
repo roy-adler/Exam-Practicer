@@ -1,0 +1,192 @@
+[
+    {
+        "id": "iac_1a_001",
+        "q": "Which statement best describes Infrastructure as Code (IaC)?",
+        "choices": [
+            "A manual process for provisioning infrastructure via a cloud console",
+            "A practice of defining, provisioning, and managing infrastructure using machine‑readable configuration files",
+            "A way to document infrastructure in wiki pages",
+            "A monitoring technique for virtual machines"
+        ],
+        "answer": [
+            1
+        ],
+        "explain": "IaC uses configuration files to define, provision, and manage infrastructure resources in a repeatable, automated way.",
+        "tags": [
+            "iac",
+            "concepts",
+            "terraform"
+        ],
+        "difficulty": "easy",
+        "focus": "1a",
+        "category": "Understand IaC concepts",
+        "multiple": false
+    },
+    {
+        "id": "iac_1a_002",
+        "q": "What are typical characteristics of IaC? (Select all that apply)",
+        "choices": [
+            "Declarative definitions of desired state",
+            "Repeatable and automated provisioning",
+            "Changes tracked in version control systems",
+            "Primarily click‑ops oriented"
+        ],
+        "answer": [
+            0,
+            1,
+            2
+        ],
+        "explain": "IaC emphasizes declarative desired state, automation, and versioning. Click‑ops is the opposite of IaC.",
+        "tags": [
+            "iac",
+            "version-control",
+            "automation"
+        ],
+        "difficulty": "easy",
+        "focus": "1a",
+        "category": "Understand IaC concepts",
+        "multiple": true
+    },
+    {
+        "id": "iac_1a_003",
+        "q": "In Terraform, which workflow steps embody the IaC approach?",
+        "choices": [
+            "Write configuration files",
+            "terraform plan to preview changes",
+            "terraform apply to make changes",
+            "Manually create resources in the console first"
+        ],
+        "answer": [
+            0,
+            1,
+            2
+        ],
+        "explain": "Terraform codifies infrastructure, previews the execution plan, and applies the desired state. Manual creation breaks IaC.",
+        "tags": [
+            "terraform",
+            "workflow",
+            "plan-apply"
+        ],
+        "difficulty": "easy",
+        "focus": "1a",
+        "category": "Understand IaC concepts",
+        "multiple": true
+    },
+    {
+        "id": "iac_1a_004",
+        "q": "Which benefit does declarative IaC (like Terraform) provide over imperative scripts?",
+        "choices": [
+            "Focus on the 'how' of each API call",
+            "Focus on the 'what' desired state and let the tool calculate steps",
+            "Requires fewer providers",
+            "Prevents drift automatically without any extra configuration"
+        ],
+        "answer": [
+            1
+        ],
+        "explain": "Declarative IaC expresses the desired end state; Terraform computes the required operations.",
+        "tags": [
+            "declarative",
+            "imperative",
+            "state"
+        ],
+        "difficulty": "medium",
+        "focus": "1a",
+        "category": "Understand IaC concepts",
+        "multiple": false
+    },
+    {
+        "id": "iac_1a_005",
+        "q": "What is configuration drift in the context of IaC?",
+        "choices": [
+            "A mismatch between the declared configuration and the real infrastructure",
+            "The natural scaling of resources under load",
+            "The use of multiple providers",
+            "The practice of rotating credentials"
+        ],
+        "answer": [
+            0
+        ],
+        "explain": "Drift occurs when the actual infrastructure deviates from what is defined in code, often due to manual changes.",
+        "tags": [
+            "drift",
+            "state",
+            "concepts"
+        ],
+        "difficulty": "medium",
+        "focus": "1a",
+        "category": "Understand IaC concepts",
+        "multiple": false
+    },
+    {
+        "id": "iac_1a_006",
+        "q": "Which techniques help reduce configuration drift? (Select all that apply)",
+        "choices": [
+            "Use only IaC tools to make changes",
+            "Enforce code review and CI before apply",
+            "Run terraform apply directly in production without review",
+            "Use drift detection or state refresh in pipelines"
+        ],
+        "answer": [
+            0,
+            1,
+            3
+        ],
+        "explain": "Stick to IaC changes, gate with review/CI, and detect drift regularly to keep real resources aligned with code.",
+        "tags": [
+            "drift",
+            "governance",
+            "pipelines"
+        ],
+        "difficulty": "medium",
+        "focus": "1a",
+        "category": "Understand IaC concepts",
+        "multiple": true
+    },
+    {
+        "id": "iac_1a_007",
+        "q": "Why is version control important for IaC?",
+        "choices": [
+            "It stores binary AMIs",
+            "It enables audit trails, collaboration, and rollbacks of infrastructure definitions",
+            "It eliminates the need for testing",
+            "It prevents provider upgrades"
+        ],
+        "answer": [
+            1
+        ],
+        "explain": "Keeping configs in VCS provides history, peer review, and the ability to revert problematic changes.",
+        "tags": [
+            "git",
+            "governance",
+            "collaboration"
+        ],
+        "difficulty": "easy",
+        "focus": "1a",
+        "category": "Understand IaC concepts",
+        "multiple": false
+    },
+    {
+        "id": "iac_1a_008",
+        "q": "Which statements about idempotency in IaC are true? (Select all that apply)",
+        "choices": [
+            "Applying the same configuration repeatedly should converge on the same result",
+            "Idempotency means resources are always recreated",
+            "It reduces unintended side effects from repeated runs",
+            "It requires declarative tools only; scripts can never be idempotent"
+        ],
+        "answer": [
+            0,
+            2
+        ],
+        "explain": "Idempotent operations converge to the declared state and minimize side effects. Re-creation is not implied.",
+        "tags": [
+            "idempotency",
+            "concepts"
+        ],
+        "difficulty": "medium",
+        "focus": "1a",
+        "category": "Understand IaC concepts",
+        "multiple": true
+    }
+]

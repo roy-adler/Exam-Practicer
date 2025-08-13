@@ -1,0 +1,243 @@
+[
+  {
+    "id": "tf_2a_001",
+    "q": "Which statement best describes Terraform\u2019s provider\u2011agnostic value proposition?",
+    "choices": [
+      "Terraform is limited to a single cloud per workspace",
+      "Terraform provides a consistent workflow and language that can target many clouds and services via providers",
+      "Terraform automatically migrates applications between clouds without changes",
+      "Terraform replaces cloud\u2011specific CLIs for all operations"
+    ],
+    "answer": [
+      1
+    ],
+    "explain": "Terraform uses providers to talk to many platforms with a single HCL workflow, enabling portability of patterns. It does not auto\u2011migrate apps or fully replace all CLIs.",
+    "tags": [
+      "multi-cloud",
+      "providers",
+      "hcl"
+    ],
+    "difficulty": "easy",
+    "focus": "2a",
+    "category": "Purpose of Terraform",
+    "multiple": false
+  },
+  {
+    "id": "tf_2a_002",
+    "q": "You want the same VPC/VNet pattern in AWS, Azure, and Google Cloud. Which approach maximizes reuse? (Select all that apply)",
+    "choices": [
+      "Write one module per cloud implementing the same input/output interface",
+      "Use variables and feature flags inside a single module to switch clouds with provider aliases",
+      "Copy and paste cloud\u2011specific code into separate folders without shared contracts",
+      "Publish versioned modules and consume them from each cloud\u2019s root configuration"
+    ],
+    "answer": [
+      0,
+      1,
+      3
+    ],
+    "explain": "Reusable modules (one per cloud or a smart multi\u2011cloud module) with stable IO and versioning enable multi\u2011cloud reuse. Copy/paste without contracts is brittle.",
+    "tags": [
+      "modules",
+      "multi-cloud",
+      "reusability"
+    ],
+    "difficulty": "medium",
+    "focus": "2a",
+    "category": "Purpose of Terraform",
+    "multiple": true
+  },
+  {
+    "id": "tf_2a_003",
+    "q": "What Terraform feature lets you configure multiple credentials or endpoints for the same provider in a single configuration?",
+    "choices": [
+      "Provider alias",
+      "Provisioner",
+      "Data source",
+      "Backend"
+    ],
+    "answer": [
+      0
+    ],
+    "explain": "Provider aliases allow multiple configurations of the same provider (e.g., two AWS accounts or Azure subscriptions) within one root module.",
+    "tags": [
+      "providers",
+      "alias",
+      "multi-account"
+    ],
+    "difficulty": "easy",
+    "focus": "2a",
+    "category": "Purpose of Terraform",
+    "multiple": false
+  },
+  {
+    "id": "tf_2a_004",
+    "q": "Which are realistic multi\u2011cloud use cases for Terraform? (Select all that apply)",
+    "choices": [
+      "Global DNS and CDN spanning providers",
+      "Disaster recovery with warm standby in a second cloud",
+      "Unified policy-as-code across providers using the exact same provider APIs",
+      "Standardized tagging/naming enforced in modules across clouds"
+    ],
+    "answer": [
+      0,
+      1,
+      3
+    ],
+    "explain": "Terraform can define global infra patterns and DR across clouds and enforce conventions via modules. Provider APIs differ, so 'exact same API' is unrealistic.",
+    "tags": [
+      "multi-cloud",
+      "dr",
+      "dns",
+      "modules"
+    ],
+    "difficulty": "medium",
+    "focus": "2a",
+    "category": "Purpose of Terraform",
+    "multiple": true
+  },
+  {
+    "id": "tf_2a_005",
+    "q": "Which benefit of Terraform helps reduce vendor lock\u2011in?",
+    "choices": [
+      "Abstracting every cloud feature to the lowest common denominator",
+      "A single declarative workflow and module patterns that can be adapted per provider",
+      "Auto\u2011translating one provider's resources into another\u2019s without refactoring",
+      "Using only local state files"
+    ],
+    "answer": [
+      1
+    ],
+    "explain": "Terraform doesn\u2019t auto\u2011translate resources; it offers a common workflow and reusable patterns to minimize coupling.",
+    "tags": [
+      "lock-in",
+      "workflow",
+      "modules"
+    ],
+    "difficulty": "easy",
+    "focus": "2a",
+    "category": "Purpose of Terraform",
+    "multiple": false
+  },
+  {
+    "id": "tf_2a_006",
+    "q": "You have AWS and Azure accounts. What\u2019s the minimal requirement to provision in both clouds from one root module?",
+    "choices": [
+      "Two backends, one for each provider",
+      "Two aliased provider blocks configured and passed to modules with the 'providers' meta\u2011argument",
+      "Two separate state files in the same backend are forbidden",
+      "Using the local-exec provisioner"
+    ],
+    "answer": [
+      1
+    ],
+    "explain": "Define and configure both providers (possibly with aliases) and pass them to modules as needed. Backends/state layout is flexible but not mandatory to split.",
+    "tags": [
+      "providers",
+      "alias",
+      "meta-arguments"
+    ],
+    "difficulty": "medium",
+    "focus": "2a",
+    "category": "Purpose of Terraform",
+    "multiple": false
+  },
+  {
+    "id": "tf_2a_007",
+    "q": "What is a limitation to consider when pursuing a provider\u2011agnostic module design?",
+    "choices": [
+      "Terraform cannot call more than one provider per configuration",
+      "Provider resources often expose different capabilities and naming, requiring conditional logic and separate modules",
+      "Modules cannot accept variables",
+      "Workspaces prevent multi\u2011cloud"
+    ],
+    "answer": [
+      1
+    ],
+    "explain": "Providers expose different schemas and capabilities; truly generic modules often need conditionals or per\u2011cloud modules.",
+    "tags": [
+      "modules",
+      "providers",
+      "design"
+    ],
+    "difficulty": "medium",
+    "focus": "2a",
+    "category": "Purpose of Terraform",
+    "multiple": false
+  },
+  {
+    "id": "tf_2a_008",
+    "q": "Which Terraform constructs help you choose different resource types per cloud at runtime? (Select all that apply)",
+    "choices": [
+      "for_each combined with maps of objects",
+      "count with conditional expressions",
+      "Dynamic blocks to generate provider\u2011specific arguments",
+      "Local values to compute per\u2011cloud settings"
+    ],
+    "answer": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "explain": "Conditional count, for_each, dynamic blocks, and locals are common techniques to adapt to provider differences.",
+    "tags": [
+      "hcl",
+      "conditionals",
+      "dynamic",
+      "locals"
+    ],
+    "difficulty": "hard",
+    "focus": "2a",
+    "category": "Purpose of Terraform",
+    "multiple": true
+  },
+  {
+    "id": "tf_2a_009",
+    "q": "What is the role of the Terraform Registry in multi\u2011cloud strategies?",
+    "choices": [
+      "Hosts provider plugins and reusable modules developed by HashiCorp and the community",
+      "Automatically enforces org policies across clouds",
+      "Stores remote state for every workspace by default",
+      "Replaces version control for modules"
+    ],
+    "answer": [
+      0
+    ],
+    "explain": "The Registry distributes providers and modules. It doesn\u2019t store state by default or replace VCS/policy systems.",
+    "tags": [
+      "registry",
+      "modules",
+      "providers"
+    ],
+    "difficulty": "easy",
+    "focus": "2a",
+    "category": "Purpose of Terraform",
+    "multiple": false
+  },
+  {
+    "id": "tf_2a_010",
+    "q": "Your team wants a single pipeline to deploy to AWS or Azure by parameter. What should vary between runs? (Select all that apply)",
+    "choices": [
+      "Selected backend workspace or state key",
+      "Selected provider credentials/configuration",
+      "The terraform language version",
+      "Input variables/TFVAR files for environment"
+    ],
+    "answer": [
+      0,
+      1,
+      3
+    ],
+    "explain": "Keep Terraform version constant; vary credentials, state location (workspace/key), and variables to target the right cloud/env.",
+    "tags": [
+      "ci/cd",
+      "workspaces",
+      "variables"
+    ],
+    "difficulty": "medium",
+    "focus": "2a",
+    "category": "Purpose of Terraform",
+    "multiple": true
+  }
+]
