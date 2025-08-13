@@ -11,7 +11,7 @@ class QuizApp {
 
         // Constants
         this.MIN_QUESTIONS = 5;
-        this.MAX_QUESTIONS = 40;
+        this.MAX_QUESTIONS = 500;
         this.PASS_THRESHOLD = 70;
         this.TIMER_INTERVAL = 1000;
 
