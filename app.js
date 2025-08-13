@@ -15,6 +15,22 @@ class QuizApp {
         this.PASS_THRESHOLD = 70;
         this.TIMER_INTERVAL = 1000;
         
+        // Difficulty levels
+        this.DIFFICULTY_LEVELS = ['easy', 'medium', 'hard'];
+        
+        // Focus areas (exam points)
+        this.FOCUS_AREAS = [
+            '1.1', '1.2', '1.3', '1.4', '1.5',
+            '2.1', '2.2', '2.3', '2.4', '2.5',
+            '3.1', '3.2', '3.3', '3.4', '3.5',
+            '4.1', '4.2', '4.3', '4.4', '4.5',
+            '5.1', '5.2', '5.3', '5.4', '5.5',
+            '6.1', '6.2', '6.3', '6.4', '6.5',
+            '7.1', '7.2', '7.3', '7.4', '7.5',
+            '8.1', '8.2', '8.3', '8.4', '8.5',
+            '9.1', '9.2', '9.3', '9.4', '9.5'
+        ];
+        
         // DOM elements cache
         this.elements = {};
         
@@ -120,6 +136,9 @@ class QuizApp {
                 throw new Error('Invalid questions format or empty questions array');
             }
             
+            // Normalize questions to new format
+            this.questions = this.questions.map(q => this.normalizeQuestion(q));
+            
             console.log(`Questions loaded: ${this.questions.length}`);
             
             // Update UI
@@ -134,6 +153,51 @@ class QuizApp {
             console.error('Error loading questions:', error);
             throw new Error('Failed to load questions. Please check if questions.json exists and is valid.');
         }
+    }
+    
+    normalizeQuestion(question) {
+        // Handle backward compatibility for old question format
+        const normalized = { ...question };
+        
+        // Ensure ID exists
+        if (!normalized.id) {
+            normalized.id = `q${Math.random().toString(36).substr(2, 9)}`;
+        }
+        
+        // Convert single answer to array format
+        if (typeof normalized.answer === 'number') {
+            normalized.answer = [normalized.answer];
+        }
+        
+        // Ensure answer is always an array
+        if (!Array.isArray(normalized.answer)) {
+            normalized.answer = [normalized.answer];
+        }
+        
+        // Set default difficulty if missing
+        if (!normalized.difficulty) {
+            normalized.difficulty = 'medium';
+        }
+        
+        // Set default focus if missing
+        if (!normalized.focus) {
+            normalized.focus = '1.1';
+        }
+        
+        // Set default category if missing
+        if (!normalized.category) {
+            normalized.category = 'General';
+        }
+        
+        // Set multiple flag based on answer array length
+        normalized.multiple = normalized.answer.length > 1;
+        
+        // Ensure tags is always an array
+        if (!Array.isArray(normalized.tags)) {
+            normalized.tags = normalized.tags ? [normalized.tags] : [];
+        }
+        
+        return normalized;
     }
     
     handleStartQuiz() {
@@ -203,6 +267,12 @@ class QuizApp {
         this.elements.qContainer.innerHTML = `
             <div class="question">
                 <h3>Question ${questionNumber} of ${this.currentQuiz.length}</h3>
+                <div class="question-meta">
+                    <span class="difficulty-badge ${question.difficulty}">${question.difficulty}</span>
+                    <span class="focus-badge">${question.focus}</span>
+                    <span class="category-badge">${question.category}</span>
+                    ${question.multiple ? '<span class="multiple-badge">Multiple Choice</span>' : ''}
+                </div>
                 <p>${this.escapeHtml(question.q)}</p>
                 <div class="choices">
                     ${choicesHtml}
@@ -225,10 +295,13 @@ class QuizApp {
         }
         
         return choices.map((choice, index) => {
-            const isSelected = this.answers[this.currentQuestionIndex] === index;
+            const isSelected = this.isChoiceSelected(index);
+            const inputType = question.multiple ? 'checkbox' : 'radio';
+            const inputName = question.multiple ? `q${this.currentQuestionIndex}_${index}` : `q${this.currentQuestionIndex}`;
+            
             return `
                 <label class="choice ${isSelected ? 'selected' : ''}">
-                    <input type="radio" name="q${this.currentQuestionIndex}" value="${index}" 
+                    <input type="${inputType}" name="${inputName}" value="${index}" 
                            ${isSelected ? 'checked' : ''} data-choice-index="${index}">
                     <span>${this.escapeHtml(choice)}</span>
                 </label>
@@ -236,8 +309,19 @@ class QuizApp {
         }).join('');
     }
     
+    isChoiceSelected(choiceIndex) {
+        const currentAnswers = this.answers[this.currentQuestionIndex];
+        if (!currentAnswers) return false;
+        
+        if (Array.isArray(currentAnswers)) {
+            return currentAnswers.includes(choiceIndex);
+        }
+        
+        return currentAnswers === choiceIndex;
+    }
+    
     attachChoiceEventListeners() {
-        const choices = this.elements.qContainer.querySelectorAll('.choice input[type="radio"]');
+        const choices = this.elements.qContainer.querySelectorAll('.choice input');
         choices.forEach(choice => {
             choice.addEventListener('change', this.handleChoiceChange);
         });
@@ -245,19 +329,57 @@ class QuizApp {
     
     handleChoiceChange(event) {
         const choiceIndex = parseInt(event.target.dataset.choiceIndex);
-        this.selectAnswer(choiceIndex);
+        const question = this.currentQuiz[this.currentQuestionIndex];
+        
+        if (question.multiple) {
+            this.selectMultipleChoice(choiceIndex, event.target.checked);
+        } else {
+            this.selectSingleChoice(choiceIndex);
+        }
     }
     
-    selectAnswer(choiceIndex) {
+    selectSingleChoice(choiceIndex) {
         this.answers[this.currentQuestionIndex] = choiceIndex;
-        
-        // Update choice styling
-        const choices = this.elements.qContainer.querySelectorAll('.choice');
-        choices.forEach((choice, index) => {
-            choice.classList.toggle('selected', index === choiceIndex);
-        });
-        
+        this.updateChoiceStyling();
         this.updateProgress();
+    }
+    
+    selectMultipleChoice(choiceIndex, isChecked) {
+        let currentAnswers = this.answers[this.currentQuestionIndex];
+        
+        // Initialize as empty array if no answers yet
+        if (!currentAnswers) {
+            currentAnswers = [];
+        }
+        
+        // Convert single answer to array if needed (backward compatibility)
+        if (!Array.isArray(currentAnswers)) {
+            currentAnswers = [currentAnswers];
+        }
+        
+        if (isChecked) {
+            // Add choice if not already selected
+            if (!currentAnswers.includes(choiceIndex)) {
+                currentAnswers.push(choiceIndex);
+            }
+        } else {
+            // Remove choice if selected
+            currentAnswers = currentAnswers.filter(a => a !== choiceIndex);
+        }
+        
+        this.answers[this.currentQuestionIndex] = currentAnswers;
+        this.updateChoiceStyling();
+        this.updateProgress();
+    }
+    
+    updateChoiceStyling() {
+        const choices = this.elements.qContainer.querySelectorAll('.choice');
+        const question = this.currentQuiz[this.currentQuestionIndex];
+        
+        choices.forEach((choice, index) => {
+            const isSelected = this.isChoiceSelected(index);
+            choice.classList.toggle('selected', isSelected);
+        });
     }
     
     handlePrev() {
@@ -343,7 +465,7 @@ class QuizApp {
         let wrong = [];
         
         this.currentQuiz.forEach((question, index) => {
-            if (this.answers[index] === question.answer) {
+            if (this.isAnswerCorrect(question, this.answers[index])) {
                 correct++;
             } else if (this.answers[index] !== null) {
                 wrong.push(index);
@@ -359,6 +481,31 @@ class QuizApp {
         if (wrong.length > 0) {
             this.storeWrongAnswers(wrong);
         }
+    }
+    
+    isAnswerCorrect(question, userAnswer) {
+        if (!userAnswer) return false;
+        
+        const correctAnswers = question.answer;
+        
+        // Handle single answer questions
+        if (!question.multiple) {
+            return userAnswer === correctAnswers[0];
+        }
+        
+        // Handle multiple answer questions
+        if (Array.isArray(userAnswer)) {
+            // Check if arrays have same length and same elements
+            if (userAnswer.length !== correctAnswers.length) return false;
+            
+            // Sort both arrays to compare regardless of order
+            const sortedUser = [...userAnswer].sort();
+            const sortedCorrect = [...correctAnswers].sort();
+            
+            return JSON.stringify(sortedUser) === JSON.stringify(sortedCorrect);
+        }
+        
+        return false;
     }
     
     storeWrongAnswers(wrong) {
@@ -479,22 +626,41 @@ class QuizApp {
         
         this.currentQuiz.forEach((question, index) => {
             const userAnswer = this.answers[index];
-            const isCorrect = userAnswer === question.answer;
-            const userChoice = userAnswer !== null ? question.choices[userAnswer] : 'Not answered';
-            const correctChoice = question.choices[question.answer];
+            const isCorrect = this.isAnswerCorrect(question, userAnswer);
+            const userChoice = this.formatUserAnswer(userAnswer, question);
+            const correctChoice = this.formatCorrectAnswer(question);
             
             reviewHtml += `
                 <div class="review-question ${isCorrect ? 'correct' : 'incorrect'}">
                     <h3>Question ${index + 1}</h3>
+                    <div class="question-meta">
+                        <span class="difficulty-badge ${question.difficulty}">${question.difficulty}</span>
+                        <span class="focus-badge">${question.focus}</span>
+                        <span class="category-badge">${question.category}</span>
+                    </div>
                     <p><strong>Question:</strong> ${this.escapeHtml(question.q)}</p>
-                    <p><strong>Your answer:</strong> ${this.escapeHtml(userChoice)}</p>
-                    <p><strong>Correct answer:</strong> ${this.escapeHtml(correctChoice)}</p>
+                    <p><strong>Your answer:</strong> ${userChoice}</p>
+                    <p><strong>Correct answer:</strong> ${correctChoice}</p>
                     ${this.elements.showExplain?.checked ? `<p><strong>Explanation:</strong> ${this.escapeHtml(question.explain || 'No explanation available')}</p>` : ''}
                 </div>
             `;
         });
         
         this.elements.resultSummary.innerHTML = reviewHtml;
+    }
+    
+    formatUserAnswer(userAnswer, question) {
+        if (!userAnswer) return 'Not answered';
+        
+        if (Array.isArray(userAnswer)) {
+            return userAnswer.map(index => question.choices[index]).join(', ');
+        }
+        
+        return question.choices[userAnswer] || 'Invalid answer';
+    }
+    
+    formatCorrectAnswer(question) {
+        return question.answer.map(index => question.choices[index]).join(', ');
     }
     
     handleLoadErrors() {
@@ -567,7 +733,8 @@ class QuizApp {
             try {
                 const newQuestions = JSON.parse(e.target.result);
                 if (Array.isArray(newQuestions) && newQuestions.length > 0) {
-                    this.questions = newQuestions;
+                    // Normalize new questions
+                    this.questions = newQuestions.map(q => this.normalizeQuestion(q));
                     if (this.elements.questionCountLabel) {
                         this.elements.questionCountLabel.textContent = this.questions.length;
                     }
