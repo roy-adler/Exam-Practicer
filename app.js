@@ -125,7 +125,7 @@ class QuizApp {
     }
 
     /// <summary>
-    /// Loads all question JSON files listed in exam-questions/index.json,
+    /// Loads all JSON files listed in exam-questions/index.json (generated at build time),
     /// normalizes them, and shows the main menu. Shows errors on failure.
     /// </summary>
     async loadQuestions() {
@@ -133,43 +133,33 @@ class QuizApp {
             this.showLoading(true);
 
             const base = 'exam-questions/';
-            const indexRes = await fetch(base + 'index.json', { cache: 'no-store' });
-            if (!indexRes.ok) throw new Error(`Cannot load ${base}index.json (${indexRes.status})`);
-            const files = await indexRes.json();
+            const idx = await fetch(base + 'index.json', { cache: 'no-store' });
+            if (!idx.ok) throw new Error(`Cannot load ${base}index.json (${idx.status})`);
+
+            const files = await idx.json(); // e.g. ["set1.json","set2.json"]
             if (!Array.isArray(files) || files.length === 0) {
-                throw new Error('No JSON files listed in exam-questions/index.json.');
+                throw new Error('index.json is empty.');
             }
 
-            const discoveredFiles = [...files];
-            const fileResponses = await Promise.all(
-                files.map(f => fetch(base + f, { cache: 'no-store' }))
-            );
-
-            const bad = fileResponses.find(r => !r.ok);
+            const rs = await Promise.all(files.map(f => fetch(base + f, { cache: 'no-store' })));
+            const bad = rs.find(r => !r.ok);
             if (bad) throw new Error(`Failed to load ${bad.url} (${bad.status})`);
 
-            const fileJsons = await Promise.all(fileResponses.map(r => r.json()));
-            const rawQuestions = fileJsons.flat();
+            const jsons = await Promise.all(rs.map(r => r.json()));
+            const raw = jsons.flat();
+            if (raw.length === 0) throw new Error('Loaded files but found 0 questions.');
 
-            if (rawQuestions.length === 0) {
-                throw new Error('Loaded files but found 0 questions.');
-            }
-
-            this.questions = rawQuestions.map(q => this.normalizeQuestion(q));
-            const loadedFiles = files.length;
-
-            console.log(`🎯 Total questions loaded: ${this.questions.length} from ${loadedFiles} discovered files`);
-            console.log(`📁 Discovered files: ${discoveredFiles.join(', ')}`);
+            this.questions = raw.map(q => this.normalizeQuestion(q));
+            console.log(`🎯 Total questions loaded: ${this.questions.length} from ${files.length} files`);
 
             this.showMainMenu();
-        } catch (error) {
-            console.error('❌ Error loading questions:', error);
-            this.showError('Failed to load questions. Please check the console for details.');
+        } catch (err) {
+            console.error('❌ Error loading questions:', err);
+            this.showError('Failed to load questions. Check console.');
         } finally {
             this.showLoading(false);
         }
     }
-
 
     // Method to dynamically add new question files
     addQuestionFile(filePath) {

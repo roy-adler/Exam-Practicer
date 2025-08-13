@@ -1,60 +1,32 @@
-# Multi-stage build for optimized production image
-FROM node:18-alpine AS builder
-
-# Set working directory
+# Build stage - Generate the exam questions index file
+FROM node:20 AS build
 WORKDIR /app
 
-# Copy package files
+# Copy package files and install dependencies
 COPY package*.json ./
+RUN npm ci || true
 
-# Install dependencies (if any)
-RUN npm ci --only=production --silent || true
-
-# Copy source code
+# Copy source code and generate index
 COPY . .
+RUN node tools/gen-index.mjs
 
-# Build/optimize if needed (for future enhancements)
-RUN echo "Build stage completed"
+# Optional: Build static assets if needed
+# RUN npm run build
 
-# Production stage
+# Production stage - Serve static files with nginx
 FROM nginx:alpine
 
-# Install security updates
-RUN apk update && apk upgrade && \
-    apk add --no-cache curl && \
-    rm -rf /var/cache/apk/*
+# Copy exam questions directory to nginx web root
+COPY --from=build /app/exam-questions/ /usr/share/nginx/html/exam-questions/
 
-# Create non-root user (handle existing users gracefully)
-RUN addgroup -g 1001 -S appuser 2>/dev/null || true && \
-    adduser -S -D -H -u 1001 -h /var/cache/nginx -s /sbin/nologin -G appuser -g appuser appuser 2>/dev/null || true
+# Alternative: Copy built dist folder if using a build process
+# COPY --from=build /app/dist/ /usr/share/nginx/html/
 
-# Copy nginx configuration
-COPY nginx.conf /etc/nginx/conf.d/default.conf
+# Alternative: Copy entire app directory for fully static serving
+# COPY --from=build /app/ /usr/share/nginx/html/
 
-# Copy static files from builder stage
-COPY --from=builder /app/index.html /usr/share/nginx/html/
-COPY --from=builder /app/styles.css /usr/share/nginx/html/
-COPY --from=builder /app/app.js /usr/share/nginx/html/
-COPY --from=builder /app/exam-questions/ /usr/share/nginx/html/exam-questions/
-
-# Set proper permissions
-RUN chown -R appuser:appuser /usr/share/nginx/html && \
-    chmod -R 755 /usr/share/nginx/html && \
-    chown -R appuser:appuser /var/cache/nginx && \
-    chown -R appuser:appuser /var/log/nginx && \
-    chown -R appuser:appuser /etc/nginx/conf.d && \
-    touch /var/run/nginx.pid && \
-    chown -R appuser:appuser /var/run/nginx.pid
-
-# Switch to non-root user
-USER appuser
-
-# Expose port
+# Expose port 80 for web traffic
 EXPOSE 80
 
-# Health check
-HEALTHCHECK --interval=30s --timeout=3s --start-period=5s --retries=3 \
-    CMD curl -f http://localhost/ || exit 1
-
-# Start nginx
+# Start nginx in foreground mode
 CMD ["nginx", "-g", "daemon off;"]
