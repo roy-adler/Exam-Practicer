@@ -1,0 +1,579 @@
+[
+    {
+        "id": "8g_1",
+        "q": "What is the primary purpose of Terraform dynamic blocks?",
+        "choices": [
+            "To generate repeated nested configuration blocks programmatically",
+            "To execute Terraform code conditionally",
+            "To create provider configurations dynamically",
+            "To store dynamic variables in state"
+        ],
+        "answer": [
+            0
+        ],
+        "explain": "Dynamic blocks let you programmatically construct nested blocks using for_each and content for repetitive or conditional configurations.",
+        "tags": [
+            "terraform",
+            "dynamic blocks",
+            "for_each"
+        ],
+        "difficulty": "easy",
+        "focus": "8g",
+        "category": "Dynamic Blocks",
+        "multiple": false
+    },
+    {
+        "id": "8g_2",
+        "q": "Which arguments are required inside a dynamic block?",
+        "choices": [
+            "for_each and content",
+            "iterator and count",
+            "name and loop",
+            "loop_var and attributes"
+        ],
+        "answer": [
+            0
+        ],
+        "explain": "A dynamic block must have for_each to iterate over a collection and content to define the block's body.",
+        "tags": [
+            "terraform",
+            "dynamic blocks",
+            "syntax"
+        ],
+        "difficulty": "medium",
+        "focus": "8g",
+        "category": "Dynamic Blocks",
+        "multiple": false
+    },
+    {
+        "id": "8g_3",
+        "q": "What is the default name of the iterator inside a dynamic block if not specified?",
+        "choices": [
+            "iterator",
+            "item",
+            "each",
+            "value"
+        ],
+        "answer": [
+            2
+        ],
+        "explain": "By default, Terraform uses each as the iterator object when no custom iterator name is provided.",
+        "tags": [
+            "terraform",
+            "dynamic blocks",
+            "iterator"
+        ],
+        "difficulty": "easy",
+        "focus": "8g",
+        "category": "Dynamic Blocks",
+        "multiple": false
+    },
+    {
+        "id": "8g_4",
+        "q": "Which syntax is correct for defining a dynamic security_group block in aws_instance?",
+        "choices": [
+            "dynamic \"security_group\" { for_each = var.groups content { id = each.value } }",
+            "dynamic security_group { foreach = var.groups content { id = value } }",
+            "dynamic \"security_group\" { loop = var.groups block { id = value } }",
+            "dynamic \"security_group\" { for_each = var.groups body { id = each.value } }"
+        ],
+        "answer": [
+            0
+        ],
+        "explain": "The correct syntax uses dynamic \"block_name\" with for_each and content {} to define nested block attributes.",
+        "tags": [
+            "terraform",
+            "dynamic blocks",
+            "syntax"
+        ],
+        "difficulty": "medium",
+        "focus": "8g",
+        "category": "Dynamic Blocks",
+        "multiple": false
+    },
+    {
+        "id": "8g_5",
+        "q": "Which attribute of the iterator object in a dynamic block returns the loop key?",
+        "choices": [
+            "each.key",
+            "each.index",
+            "each.value",
+            "each.name"
+        ],
+        "answer": [
+            0
+        ],
+        "explain": "each.key returns the current key in a for_each iteration, useful when iterating over maps.",
+        "tags": [
+            "terraform",
+            "dynamic blocks",
+            "iterator"
+        ],
+        "difficulty": "easy",
+        "focus": "8g",
+        "category": "Dynamic Blocks",
+        "multiple": false
+    },
+    {
+        "id": "8g_6",
+        "q": "What is the benefit of using a dynamic block instead of duplicating nested blocks manually?",
+        "choices": [
+            "Reduces code duplication",
+            "Allows looping over complex data structures",
+            "Enables conditional inclusion of blocks",
+            "All of the above"
+        ],
+        "answer": [
+            3
+        ],
+        "explain": "Dynamic blocks can reduce repetition, iterate over data, and conditionally include nested configurations.",
+        "tags": [
+            "terraform",
+            "dynamic blocks",
+            "advantages"
+        ],
+        "difficulty": "easy",
+        "focus": "8g",
+        "category": "Dynamic Blocks",
+        "multiple": false
+    },
+    {
+        "id": "8g_7",
+        "q": "Which keyword inside a dynamic block defines the nested block's contents?",
+        "choices": [
+            "body",
+            "attributes",
+            "content",
+            "define"
+        ],
+        "answer": [
+            2
+        ],
+        "explain": "The content block defines the arguments and nested configuration for each generated nested block.",
+        "tags": [
+            "terraform",
+            "dynamic blocks",
+            "content"
+        ],
+        "difficulty": "easy",
+        "focus": "8g",
+        "category": "Dynamic Blocks",
+        "multiple": false
+    },
+    {
+        "id": "8g_8",
+        "q": "What is the difference between a dynamic block and a for_each on a resource?",
+        "choices": [
+            "for_each on a resource creates multiple resources; dynamic blocks create multiple nested blocks within a single resource",
+            "They both create multiple resources",
+            "Dynamic blocks can only be used with variables",
+            "for_each can only be used inside modules"
+        ],
+        "answer": [
+            0
+        ],
+        "explain": "for_each duplicates entire resources or modules, while dynamic blocks duplicate nested configuration blocks inside a single resource.",
+        "tags": [
+            "terraform",
+            "dynamic blocks",
+            "for_each"
+        ],
+        "difficulty": "medium",
+        "focus": "8g",
+        "category": "Dynamic Blocks",
+        "multiple": false
+    },
+    {
+        "id": "8g_9",
+        "q": "Which of the following can be iterated over in a dynamic block's for_each?",
+        "choices": [
+            "list",
+            "map",
+            "set",
+            "tuple"
+        ],
+        "answer": [
+            0,
+            1,
+            2
+        ],
+        "explain": "Dynamic blocks can iterate over lists, maps, and sets, but not tuples directly.",
+        "tags": [
+            "terraform",
+            "dynamic blocks",
+            "for_each"
+        ],
+        "difficulty": "medium",
+        "focus": "8g",
+        "category": "Dynamic Blocks",
+        "multiple": true
+    },
+    {
+        "id": "8g_10",
+        "q": "How do you specify a custom iterator variable name in a dynamic block?",
+        "choices": [
+            "iterator = \"name\"",
+            "varname = \"name\"",
+            "loop_name = \"name\"",
+            "keyname = \"name\""
+        ],
+        "answer": [
+            0
+        ],
+        "explain": "The iterator argument lets you rename the default each object inside a dynamic block.",
+        "tags": [
+            "terraform",
+            "dynamic blocks",
+            "iterator"
+        ],
+        "difficulty": "medium",
+        "focus": "8g",
+        "category": "Dynamic Blocks",
+        "multiple": false
+    },
+    {
+        "id": "8g_11",
+        "q": "Which scenario is best suited for a dynamic block?",
+        "choices": [
+            "When the number of nested blocks is determined by a variable",
+            "When blocks need to be written only once",
+            "When you want to run shell commands",
+            "When you want to avoid using modules"
+        ],
+        "answer": [
+            0
+        ],
+        "explain": "Dynamic blocks are ideal when the number or contents of nested blocks depend on variable input or complex logic.",
+        "tags": [
+            "terraform",
+            "dynamic blocks",
+            "use cases"
+        ],
+        "difficulty": "easy",
+        "focus": "8g",
+        "category": "Dynamic Blocks",
+        "multiple": false
+    },
+    {
+        "id": "8g_12",
+        "q": "Inside a dynamic block, how do you access the current value being iterated?",
+        "choices": [
+            "iterator.value",
+            "each.value",
+            "value",
+            "loop.value"
+        ],
+        "answer": [
+            1
+        ],
+        "explain": "each.value contains the value of the current iteration unless a custom iterator name is set.",
+        "tags": [
+            "terraform",
+            "dynamic blocks",
+            "iterator"
+        ],
+        "difficulty": "easy",
+        "focus": "8g",
+        "category": "Dynamic Blocks",
+        "multiple": false
+    },
+    {
+        "id": "8g_13",
+        "q": "What happens if for_each in a dynamic block evaluates to an empty list?",
+        "choices": [
+            "Terraform creates one empty block",
+            "No nested blocks are created",
+            "Terraform throws an error",
+            "Terraform creates null blocks"
+        ],
+        "answer": [
+            1
+        ],
+        "explain": "If for_each is empty, Terraform generates no nested blocks for that configuration.",
+        "tags": [
+            "terraform",
+            "dynamic blocks",
+            "for_each"
+        ],
+        "difficulty": "medium",
+        "focus": "8g",
+        "category": "Dynamic Blocks",
+        "multiple": false
+    },
+    {
+        "id": "8g_14",
+        "q": "Which part of a dynamic block can contain interpolations and expressions?",
+        "choices": [
+            "Only the for_each argument",
+            "Only the content block",
+            "Both for_each and content",
+            "Neither"
+        ],
+        "answer": [
+            2
+        ],
+        "explain": "Both for_each and content can use Terraform expressions and functions for dynamic behavior.",
+        "tags": [
+            "terraform",
+            "dynamic blocks",
+            "expressions"
+        ],
+        "difficulty": "medium",
+        "focus": "8g",
+        "category": "Dynamic Blocks",
+        "multiple": false
+    },
+    {
+        "id": "8g_15",
+        "q": "What is a common pitfall when using dynamic blocks?",
+        "choices": [
+            "Overcomplicating simple configurations",
+            "Breaking Terraform state",
+            "Preventing plan execution",
+            "Blocking provider updates"
+        ],
+        "answer": [
+            0
+        ],
+        "explain": "Dynamic blocks can make code harder to read if overused; use them only when they reduce complexity.",
+        "tags": [
+            "terraform",
+            "dynamic blocks",
+            "pitfalls"
+        ],
+        "difficulty": "easy",
+        "focus": "8g",
+        "category": "Dynamic Blocks",
+        "multiple": false
+    },
+    {
+        "id": "8g_16",
+        "q": "Can you use a dynamic block inside a module?",
+        "choices": [
+            "Yes, as long as the resource supports nested blocks",
+            "No, dynamic blocks are not supported in modules",
+            "Only with count",
+            "Only with provider configurations"
+        ],
+        "answer": [
+            0
+        ],
+        "explain": "Dynamic blocks can be used in modules just like in root configurations, if the underlying resource supports nested blocks.",
+        "tags": [
+            "terraform",
+            "dynamic blocks",
+            "modules"
+        ],
+        "difficulty": "easy",
+        "focus": "8g",
+        "category": "Dynamic Blocks",
+        "multiple": false
+    },
+    {
+        "id": "8g_17",
+        "q": "How can you filter items in a dynamic block's for_each?",
+        "choices": [
+            "By using a for expression to pre-filter the collection",
+            "By adding a filter argument",
+            "By using a where clause",
+            "By using count instead"
+        ],
+        "answer": [
+            0
+        ],
+        "explain": "To filter, use a for expression or function like compact() before passing it to for_each.",
+        "tags": [
+            "terraform",
+            "dynamic blocks",
+            "filtering"
+        ],
+        "difficulty": "medium",
+        "focus": "8g",
+        "category": "Dynamic Blocks",
+        "multiple": false
+    },
+    {
+        "id": "8g_18",
+        "q": "Can dynamic blocks be used for provider configurations?",
+        "choices": [
+            "No, they are only for nested blocks within resources",
+            "Yes, they work for providers and resources",
+            "Yes, but only with modules",
+            "Yes, but only in variables"
+        ],
+        "answer": [
+            0
+        ],
+        "explain": "Dynamic blocks can only be used in nested blocks supported by a resource, not for provider or variable definitions.",
+        "tags": [
+            "terraform",
+            "dynamic blocks",
+            "limitations"
+        ],
+        "difficulty": "medium",
+        "focus": "8g",
+        "category": "Dynamic Blocks",
+        "multiple": false
+    },
+    {
+        "id": "8g_19",
+        "q": "What is the advantage of using a custom iterator name in a dynamic block?",
+        "choices": [
+            "Improves readability when nesting multiple dynamic blocks",
+            "Improves performance",
+            "Reduces Terraform plan size",
+            "Makes state smaller"
+        ],
+        "answer": [
+            0
+        ],
+        "explain": "Custom iterator names make code clearer when multiple dynamic blocks use nested for_each loops.",
+        "tags": [
+            "terraform",
+            "dynamic blocks",
+            "iterator"
+        ],
+        "difficulty": "easy",
+        "focus": "8g",
+        "category": "Dynamic Blocks",
+        "multiple": false
+    },
+    {
+        "id": "8g_20",
+        "q": "What is required for a resource to support dynamic blocks?",
+        "choices": [
+            "It must have at least one nested block in its schema",
+            "It must be an AWS resource",
+            "It must be in the root module",
+            "It must have provider version >= 2.0"
+        ],
+        "answer": [
+            0
+        ],
+        "explain": "Dynamic blocks can only generate blocks that exist in the provider's schema for that resource type.",
+        "tags": [
+            "terraform",
+            "dynamic blocks",
+            "requirements"
+        ],
+        "difficulty": "medium",
+        "focus": "8g",
+        "category": "Dynamic Blocks",
+        "multiple": false
+    },
+    {
+        "id": "8g_21",
+        "q": "Which Terraform version introduced dynamic blocks?",
+        "choices": [
+            "0.11",
+            "0.12",
+            "0.13",
+            "1.0"
+        ],
+        "answer": [
+            1
+        ],
+        "explain": "Dynamic blocks were introduced in Terraform 0.12 with improved expression and iteration capabilities.",
+        "tags": [
+            "terraform",
+            "dynamic blocks",
+            "versions"
+        ],
+        "difficulty": "easy",
+        "focus": "8g",
+        "category": "Dynamic Blocks",
+        "multiple": false
+    },
+    {
+        "id": "8g_22",
+        "q": "How do you conditionally include a dynamic block?",
+        "choices": [
+            "By using for_each = var.condition ? [1] : []",
+            "By setting content = null",
+            "By adding an if statement inside content",
+            "By marking the block as optional"
+        ],
+        "answer": [
+            0
+        ],
+        "explain": "Setting for_each to an empty list if the condition is false ensures no blocks are generated.",
+        "tags": [
+            "terraform",
+            "dynamic blocks",
+            "conditional"
+        ],
+        "difficulty": "medium",
+        "focus": "8g",
+        "category": "Dynamic Blocks",
+        "multiple": false
+    },
+    {
+        "id": "8g_23",
+        "q": "Can you nest a dynamic block inside another dynamic block?",
+        "choices": [
+            "Yes, if both nested blocks exist in the schema",
+            "No, only one dynamic block is allowed",
+            "Yes, but only one level deep",
+            "No, it causes an error"
+        ],
+        "answer": [
+            0
+        ],
+        "explain": "Dynamic blocks can be nested as long as the resource schema supports the nested block hierarchy.",
+        "tags": [
+            "terraform",
+            "dynamic blocks",
+            "nesting"
+        ],
+        "difficulty": "hard",
+        "focus": "8g",
+        "category": "Dynamic Blocks",
+        "multiple": false
+    },
+    {
+        "id": "8g_24",
+        "q": "What is the scope of variables used in a dynamic block's content?",
+        "choices": [
+            "They can access variables from the parent resource, module, and the iterator object",
+            "They can only access the iterator object",
+            "They can only access variables defined inside the dynamic block",
+            "They can access all variables globally"
+        ],
+        "answer": [
+            0
+        ],
+        "explain": "Dynamic block content can use the iterator object, variables, locals, and other references from the enclosing scope.",
+        "tags": [
+            "terraform",
+            "dynamic blocks",
+            "scope"
+        ],
+        "difficulty": "hard",
+        "focus": "8g",
+        "category": "Dynamic Blocks",
+        "multiple": false
+    },
+    {
+        "id": "8g_25",
+        "q": "Why might a dynamic block not generate any configuration?",
+        "choices": [
+            "for_each is empty",
+            "The nested block is not in the resource schema",
+            "The resource is not being created",
+            "All of the above"
+        ],
+        "answer": [
+            3
+        ],
+        "explain": "If for_each is empty, the nested block is unsupported, or the resource isn't in plan, the dynamic block won't generate content.",
+        "tags": [
+            "terraform",
+            "dynamic blocks",
+            "troubleshooting"
+        ],
+        "difficulty": "medium",
+        "focus": "8g",
+        "category": "Dynamic Blocks",
+        "multiple": true
+    }
+]
