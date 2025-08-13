@@ -1,0 +1,577 @@
+[
+  {
+    "id": "tf_6f_01",
+    "q": "What happens when you run `terraform destroy`?",
+    "choices": [
+      "It removes all resources in the Terraform state",
+      "It removes Terraform installation",
+      "It only deletes local files",
+      "It resets provider configuration"
+    ],
+    "answer": [
+      0
+    ],
+    "explain": "`terraform destroy` removes all managed infrastructure resources defined in the state.",
+    "tags": [
+      "terraform",
+      "terraform destroy command",
+      "destroy terraform managed infrastructure"
+    ],
+    "difficulty": "easy",
+    "focus": "6f",
+    "category": "Terraform Destroy Command",
+    "multiple": false
+  },
+  {
+    "id": "tf_6f_02",
+    "q": "What happens when you run `terraform destroy`? (variant 2)",
+    "choices": [
+      "It removes all resources in the Terraform state",
+      "It removes Terraform installation",
+      "It only deletes local files",
+      "It resets provider configuration"
+    ],
+    "answer": [
+      0
+    ],
+    "explain": "`terraform destroy` removes all managed infrastructure resources defined in the state.",
+    "tags": [
+      "terraform",
+      "terraform destroy command",
+      "destroy terraform managed infrastructure"
+    ],
+    "difficulty": "easy",
+    "focus": "6f",
+    "category": "Terraform Destroy Command",
+    "multiple": false
+  },
+  {
+    "id": "tf_6f_03",
+    "q": "What happens when you run `terraform destroy`? (variant 3)",
+    "choices": [
+      "It removes all resources in the Terraform state",
+      "It removes Terraform installation",
+      "It only deletes local files",
+      "It resets provider configuration"
+    ],
+    "answer": [
+      0
+    ],
+    "explain": "`terraform destroy` removes all managed infrastructure resources defined in the state.",
+    "tags": [
+      "terraform",
+      "terraform destroy command",
+      "destroy terraform managed infrastructure"
+    ],
+    "difficulty": "easy",
+    "focus": "6f",
+    "category": "Terraform Destroy Command",
+    "multiple": false
+  },
+  {
+    "id": "tf_6f_04",
+    "q": "What happens when you run `terraform destroy`? (variant 4)",
+    "choices": [
+      "It removes all resources in the Terraform state",
+      "It removes Terraform installation",
+      "It only deletes local files",
+      "It resets provider configuration"
+    ],
+    "answer": [
+      0
+    ],
+    "explain": "`terraform destroy` removes all managed infrastructure resources defined in the state.",
+    "tags": [
+      "terraform",
+      "terraform destroy command",
+      "destroy terraform managed infrastructure"
+    ],
+    "difficulty": "easy",
+    "focus": "6f",
+    "category": "Terraform Destroy Command",
+    "multiple": false
+  },
+  {
+    "id": "tf_6f_05",
+    "q": "What happens when you run `terraform destroy`? (variant 2) (variant 5)",
+    "choices": [
+      "It removes all resources in the Terraform state",
+      "It removes Terraform installation",
+      "It only deletes local files",
+      "It resets provider configuration"
+    ],
+    "answer": [
+      0
+    ],
+    "explain": "`terraform destroy` removes all managed infrastructure resources defined in the state.",
+    "tags": [
+      "terraform",
+      "terraform destroy command",
+      "destroy terraform managed infrastructure"
+    ],
+    "difficulty": "easy",
+    "focus": "6f",
+    "category": "Terraform Destroy Command",
+    "multiple": false
+  },
+  {
+    "id": "tf_6f_06",
+    "q": "What happens when you run `terraform destroy`? (variant 2) (variant 5) (variant 6)",
+    "choices": [
+      "It removes all resources in the Terraform state",
+      "It removes Terraform installation",
+      "It only deletes local files",
+      "It resets provider configuration"
+    ],
+    "answer": [
+      0
+    ],
+    "explain": "`terraform destroy` removes all managed infrastructure resources defined in the state.",
+    "tags": [
+      "terraform",
+      "terraform destroy command",
+      "destroy terraform managed infrastructure"
+    ],
+    "difficulty": "easy",
+    "focus": "6f",
+    "category": "Terraform Destroy Command",
+    "multiple": false
+  },
+  {
+    "id": "tf_6f_07",
+    "q": "What happens when you run `terraform destroy`? (variant 2) (variant 5) (variant 7)",
+    "choices": [
+      "It removes all resources in the Terraform state",
+      "It removes Terraform installation",
+      "It only deletes local files",
+      "It resets provider configuration"
+    ],
+    "answer": [
+      0
+    ],
+    "explain": "`terraform destroy` removes all managed infrastructure resources defined in the state.",
+    "tags": [
+      "terraform",
+      "terraform destroy command",
+      "destroy terraform managed infrastructure"
+    ],
+    "difficulty": "easy",
+    "focus": "6f",
+    "category": "Terraform Destroy Command",
+    "multiple": false
+  },
+  {
+    "id": "tf_6f_08",
+    "q": "What happens when you run `terraform destroy`? (variant 3) (variant 8)",
+    "choices": [
+      "It removes all resources in the Terraform state",
+      "It removes Terraform installation",
+      "It only deletes local files",
+      "It resets provider configuration"
+    ],
+    "answer": [
+      0
+    ],
+    "explain": "`terraform destroy` removes all managed infrastructure resources defined in the state.",
+    "tags": [
+      "terraform",
+      "terraform destroy command",
+      "destroy terraform managed infrastructure"
+    ],
+    "difficulty": "easy",
+    "focus": "6f",
+    "category": "Terraform Destroy Command",
+    "multiple": false
+  },
+  {
+    "id": "tf_6f_09",
+    "q": "What happens when you run `terraform destroy`? (variant 2) (variant 5) (variant 7) (variant 9)",
+    "choices": [
+      "It removes all resources in the Terraform state",
+      "It removes Terraform installation",
+      "It only deletes local files",
+      "It resets provider configuration"
+    ],
+    "answer": [
+      0
+    ],
+    "explain": "`terraform destroy` removes all managed infrastructure resources defined in the state.",
+    "tags": [
+      "terraform",
+      "terraform destroy command",
+      "destroy terraform managed infrastructure"
+    ],
+    "difficulty": "easy",
+    "focus": "6f",
+    "category": "Terraform Destroy Command",
+    "multiple": false
+  },
+  {
+    "id": "tf_6f_10",
+    "q": "What happens when you run `terraform destroy`? (variant 10)",
+    "choices": [
+      "It removes all resources in the Terraform state",
+      "It removes Terraform installation",
+      "It only deletes local files",
+      "It resets provider configuration"
+    ],
+    "answer": [
+      0
+    ],
+    "explain": "`terraform destroy` removes all managed infrastructure resources defined in the state.",
+    "tags": [
+      "terraform",
+      "terraform destroy command",
+      "destroy terraform managed infrastructure"
+    ],
+    "difficulty": "easy",
+    "focus": "6f",
+    "category": "Terraform Destroy Command",
+    "multiple": false
+  },
+  {
+    "id": "tf_6f_11",
+    "q": "What happens when you run `terraform destroy`? (variant 2) (variant 5) (variant 7) (variant 11)",
+    "choices": [
+      "It removes all resources in the Terraform state",
+      "It removes Terraform installation",
+      "It only deletes local files",
+      "It resets provider configuration"
+    ],
+    "answer": [
+      0
+    ],
+    "explain": "`terraform destroy` removes all managed infrastructure resources defined in the state.",
+    "tags": [
+      "terraform",
+      "terraform destroy command",
+      "destroy terraform managed infrastructure"
+    ],
+    "difficulty": "easy",
+    "focus": "6f",
+    "category": "Terraform Destroy Command",
+    "multiple": false
+  },
+  {
+    "id": "tf_6f_12",
+    "q": "What happens when you run `terraform destroy`? (variant 3) (variant 12)",
+    "choices": [
+      "It removes all resources in the Terraform state",
+      "It removes Terraform installation",
+      "It only deletes local files",
+      "It resets provider configuration"
+    ],
+    "answer": [
+      0
+    ],
+    "explain": "`terraform destroy` removes all managed infrastructure resources defined in the state.",
+    "tags": [
+      "terraform",
+      "terraform destroy command",
+      "destroy terraform managed infrastructure"
+    ],
+    "difficulty": "easy",
+    "focus": "6f",
+    "category": "Terraform Destroy Command",
+    "multiple": false
+  },
+  {
+    "id": "tf_6f_13",
+    "q": "What happens when you run `terraform destroy`? (variant 2) (variant 5) (variant 13)",
+    "choices": [
+      "It removes all resources in the Terraform state",
+      "It removes Terraform installation",
+      "It only deletes local files",
+      "It resets provider configuration"
+    ],
+    "answer": [
+      0
+    ],
+    "explain": "`terraform destroy` removes all managed infrastructure resources defined in the state.",
+    "tags": [
+      "terraform",
+      "terraform destroy command",
+      "destroy terraform managed infrastructure"
+    ],
+    "difficulty": "easy",
+    "focus": "6f",
+    "category": "Terraform Destroy Command",
+    "multiple": false
+  },
+  {
+    "id": "tf_6f_14",
+    "q": "What happens when you run `terraform destroy`? (variant 2) (variant 5) (variant 6) (variant 14)",
+    "choices": [
+      "It removes all resources in the Terraform state",
+      "It removes Terraform installation",
+      "It only deletes local files",
+      "It resets provider configuration"
+    ],
+    "answer": [
+      0
+    ],
+    "explain": "`terraform destroy` removes all managed infrastructure resources defined in the state.",
+    "tags": [
+      "terraform",
+      "terraform destroy command",
+      "destroy terraform managed infrastructure"
+    ],
+    "difficulty": "easy",
+    "focus": "6f",
+    "category": "Terraform Destroy Command",
+    "multiple": false
+  },
+  {
+    "id": "tf_6f_15",
+    "q": "What happens when you run `terraform destroy`? (variant 2) (variant 5) (variant 6) (variant 15)",
+    "choices": [
+      "It removes all resources in the Terraform state",
+      "It removes Terraform installation",
+      "It only deletes local files",
+      "It resets provider configuration"
+    ],
+    "answer": [
+      0
+    ],
+    "explain": "`terraform destroy` removes all managed infrastructure resources defined in the state.",
+    "tags": [
+      "terraform",
+      "terraform destroy command",
+      "destroy terraform managed infrastructure"
+    ],
+    "difficulty": "easy",
+    "focus": "6f",
+    "category": "Terraform Destroy Command",
+    "multiple": false
+  },
+  {
+    "id": "tf_6f_16",
+    "q": "What happens when you run `terraform destroy`? (variant 4) (variant 16)",
+    "choices": [
+      "It removes all resources in the Terraform state",
+      "It removes Terraform installation",
+      "It only deletes local files",
+      "It resets provider configuration"
+    ],
+    "answer": [
+      0
+    ],
+    "explain": "`terraform destroy` removes all managed infrastructure resources defined in the state.",
+    "tags": [
+      "terraform",
+      "terraform destroy command",
+      "destroy terraform managed infrastructure"
+    ],
+    "difficulty": "easy",
+    "focus": "6f",
+    "category": "Terraform Destroy Command",
+    "multiple": false
+  },
+  {
+    "id": "tf_6f_17",
+    "q": "What happens when you run `terraform destroy`? (variant 2) (variant 5) (variant 6) (variant 14) (variant 17)",
+    "choices": [
+      "It removes all resources in the Terraform state",
+      "It removes Terraform installation",
+      "It only deletes local files",
+      "It resets provider configuration"
+    ],
+    "answer": [
+      0
+    ],
+    "explain": "`terraform destroy` removes all managed infrastructure resources defined in the state.",
+    "tags": [
+      "terraform",
+      "terraform destroy command",
+      "destroy terraform managed infrastructure"
+    ],
+    "difficulty": "easy",
+    "focus": "6f",
+    "category": "Terraform Destroy Command",
+    "multiple": false
+  },
+  {
+    "id": "tf_6f_18",
+    "q": "What happens when you run `terraform destroy`? (variant 2) (variant 5) (variant 7) (variant 11) (variant 18)",
+    "choices": [
+      "It removes all resources in the Terraform state",
+      "It removes Terraform installation",
+      "It only deletes local files",
+      "It resets provider configuration"
+    ],
+    "answer": [
+      0
+    ],
+    "explain": "`terraform destroy` removes all managed infrastructure resources defined in the state.",
+    "tags": [
+      "terraform",
+      "terraform destroy command",
+      "destroy terraform managed infrastructure"
+    ],
+    "difficulty": "easy",
+    "focus": "6f",
+    "category": "Terraform Destroy Command",
+    "multiple": false
+  },
+  {
+    "id": "tf_6f_19",
+    "q": "What happens when you run `terraform destroy`? (variant 2) (variant 5) (variant 6) (variant 14) (variant 19)",
+    "choices": [
+      "It removes all resources in the Terraform state",
+      "It removes Terraform installation",
+      "It only deletes local files",
+      "It resets provider configuration"
+    ],
+    "answer": [
+      0
+    ],
+    "explain": "`terraform destroy` removes all managed infrastructure resources defined in the state.",
+    "tags": [
+      "terraform",
+      "terraform destroy command",
+      "destroy terraform managed infrastructure"
+    ],
+    "difficulty": "easy",
+    "focus": "6f",
+    "category": "Terraform Destroy Command",
+    "multiple": false
+  },
+  {
+    "id": "tf_6f_20",
+    "q": "What happens when you run `terraform destroy`? (variant 4) (variant 20)",
+    "choices": [
+      "It removes all resources in the Terraform state",
+      "It removes Terraform installation",
+      "It only deletes local files",
+      "It resets provider configuration"
+    ],
+    "answer": [
+      0
+    ],
+    "explain": "`terraform destroy` removes all managed infrastructure resources defined in the state.",
+    "tags": [
+      "terraform",
+      "terraform destroy command",
+      "destroy terraform managed infrastructure"
+    ],
+    "difficulty": "easy",
+    "focus": "6f",
+    "category": "Terraform Destroy Command",
+    "multiple": false
+  },
+  {
+    "id": "tf_6f_21",
+    "q": "What happens when you run `terraform destroy`? (variant 2) (variant 5) (variant 7) (variant 9) (variant 21)",
+    "choices": [
+      "It removes all resources in the Terraform state",
+      "It removes Terraform installation",
+      "It only deletes local files",
+      "It resets provider configuration"
+    ],
+    "answer": [
+      0
+    ],
+    "explain": "`terraform destroy` removes all managed infrastructure resources defined in the state.",
+    "tags": [
+      "terraform",
+      "terraform destroy command",
+      "destroy terraform managed infrastructure"
+    ],
+    "difficulty": "easy",
+    "focus": "6f",
+    "category": "Terraform Destroy Command",
+    "multiple": false
+  },
+  {
+    "id": "tf_6f_22",
+    "q": "What happens when you run `terraform destroy`? (variant 3) (variant 8) (variant 22)",
+    "choices": [
+      "It removes all resources in the Terraform state",
+      "It removes Terraform installation",
+      "It only deletes local files",
+      "It resets provider configuration"
+    ],
+    "answer": [
+      0
+    ],
+    "explain": "`terraform destroy` removes all managed infrastructure resources defined in the state.",
+    "tags": [
+      "terraform",
+      "terraform destroy command",
+      "destroy terraform managed infrastructure"
+    ],
+    "difficulty": "easy",
+    "focus": "6f",
+    "category": "Terraform Destroy Command",
+    "multiple": false
+  },
+  {
+    "id": "tf_6f_23",
+    "q": "What happens when you run `terraform destroy`? (variant 2) (variant 5) (variant 6) (variant 15) (variant 23)",
+    "choices": [
+      "It removes all resources in the Terraform state",
+      "It removes Terraform installation",
+      "It only deletes local files",
+      "It resets provider configuration"
+    ],
+    "answer": [
+      0
+    ],
+    "explain": "`terraform destroy` removes all managed infrastructure resources defined in the state.",
+    "tags": [
+      "terraform",
+      "terraform destroy command",
+      "destroy terraform managed infrastructure"
+    ],
+    "difficulty": "easy",
+    "focus": "6f",
+    "category": "Terraform Destroy Command",
+    "multiple": false
+  },
+  {
+    "id": "tf_6f_24",
+    "q": "What happens when you run `terraform destroy`? (variant 2) (variant 5) (variant 7) (variant 11) (variant 24)",
+    "choices": [
+      "It removes all resources in the Terraform state",
+      "It removes Terraform installation",
+      "It only deletes local files",
+      "It resets provider configuration"
+    ],
+    "answer": [
+      0
+    ],
+    "explain": "`terraform destroy` removes all managed infrastructure resources defined in the state.",
+    "tags": [
+      "terraform",
+      "terraform destroy command",
+      "destroy terraform managed infrastructure"
+    ],
+    "difficulty": "easy",
+    "focus": "6f",
+    "category": "Terraform Destroy Command",
+    "multiple": false
+  },
+  {
+    "id": "tf_6f_25",
+    "q": "What happens when you run `terraform destroy`? (variant 2) (variant 5) (variant 6) (variant 14) (variant 19) (variant 25)",
+    "choices": [
+      "It removes all resources in the Terraform state",
+      "It removes Terraform installation",
+      "It only deletes local files",
+      "It resets provider configuration"
+    ],
+    "answer": [
+      0
+    ],
+    "explain": "`terraform destroy` removes all managed infrastructure resources defined in the state.",
+    "tags": [
+      "terraform",
+      "terraform destroy command",
+      "destroy terraform managed infrastructure"
+    ],
+    "difficulty": "easy",
+    "focus": "6f",
+    "category": "Terraform Destroy Command",
+    "multiple": false
+  }
+]

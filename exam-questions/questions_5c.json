@@ -1,552 +1,577 @@
 [
   {
-    "id": "tf_5c_001",
-    "q": "[EASY] (Variable scope within modules/child modules) Question 1: What is the correct practice or fact about Variable scope within modules/child modules?",
+    "id": "tf_5c_01",
+    "q": "Which variables are visible to a child module?",
     "choices": [
-      "Correct fact for Variable scope within modules/child modules",
-      "Incorrect fact A for Variable scope within modules/child modules",
-      "Incorrect fact B for Variable scope within modules/child modules",
-      "Incorrect fact C for Variable scope within modules/child modules"
+      "Only variables explicitly passed into it",
+      "All variables in the root module",
+      "Any variable declared in variables.tf",
+      "All variables from other child modules"
     ],
     "answer": [
       0
     ],
-    "explain": "This is the explanation for question 1 in Variable scope within modules/child modules. Focus area: 5c.",
+    "explain": "Child modules only see variables explicitly passed in their module block.",
     "tags": [
-      "modules",
-      "scope"
+      "terraform",
+      "terraform module variable scope",
+      "variable scope within modules"
     ],
     "difficulty": "easy",
     "focus": "5c",
-    "category": "Modules - Variable Scope",
+    "category": "Terraform Module Variable Scope",
     "multiple": false
   },
   {
-    "id": "tf_5c_002",
-    "q": "[MEDIUM] (Variable scope within modules/child modules) Question 2: What is the correct practice or fact about Variable scope within modules/child modules?",
+    "id": "tf_5c_02",
+    "q": "How can a child module receive sensitive variables?",
     "choices": [
-      "Correct fact for Variable scope within modules/child modules",
-      "Incorrect fact A for Variable scope within modules/child modules",
-      "Incorrect fact B for Variable scope within modules/child modules",
-      "Incorrect fact C for Variable scope within modules/child modules"
+      "Mark the variable as sensitive in the root module",
+      "Pass it normally; Terraform automatically encrypts it",
+      "Mark the variable as sensitive in the child module variables.tf",
+      "You cannot pass sensitive variables to child modules"
     ],
     "answer": [
-      0
+      2
     ],
-    "explain": "This is the explanation for question 2 in Variable scope within modules/child modules. Focus area: 5c.",
+    "explain": "To handle sensitive variables, mark them as sensitive in the child module's variable definition.",
     "tags": [
-      "modules",
-      "scope"
+      "terraform",
+      "terraform module variable scope",
+      "variable scope within modules"
     ],
     "difficulty": "medium",
     "focus": "5c",
-    "category": "Modules - Variable Scope",
+    "category": "Terraform Module Variable Scope",
     "multiple": false
   },
   {
-    "id": "tf_5c_003",
-    "q": "[EASY] (Variable scope within modules/child modules) Question 3: What is the correct practice or fact about Variable scope within modules/child modules?",
+    "id": "tf_5c_03",
+    "q": "Which variables are visible to a child module? (variant 3)",
     "choices": [
-      "Correct fact for Variable scope within modules/child modules",
-      "Incorrect fact A for Variable scope within modules/child modules",
-      "Incorrect fact B for Variable scope within modules/child modules",
-      "Incorrect fact C for Variable scope within modules/child modules"
+      "Only variables explicitly passed into it",
+      "All variables in the root module",
+      "Any variable declared in variables.tf",
+      "All variables from other child modules"
     ],
     "answer": [
       0
     ],
-    "explain": "This is the explanation for question 3 in Variable scope within modules/child modules. Focus area: 5c.",
+    "explain": "Child modules only see variables explicitly passed in their module block.",
     "tags": [
-      "modules",
-      "scope"
+      "terraform",
+      "terraform module variable scope",
+      "variable scope within modules"
     ],
     "difficulty": "easy",
     "focus": "5c",
-    "category": "Modules - Variable Scope",
+    "category": "Terraform Module Variable Scope",
     "multiple": false
   },
   {
-    "id": "tf_5c_004",
-    "q": "[MEDIUM] (Variable scope within modules/child modules) Question 4: What is the correct practice or fact about Variable scope within modules/child modules?",
+    "id": "tf_5c_04",
+    "q": "How can a child module receive sensitive variables? (variant 4)",
     "choices": [
-      "Correct fact for Variable scope within modules/child modules",
-      "Incorrect fact A for Variable scope within modules/child modules",
-      "Incorrect fact B for Variable scope within modules/child modules",
-      "Incorrect fact C for Variable scope within modules/child modules"
+      "Mark the variable as sensitive in the root module",
+      "Pass it normally; Terraform automatically encrypts it",
+      "Mark the variable as sensitive in the child module variables.tf",
+      "You cannot pass sensitive variables to child modules"
     ],
     "answer": [
-      0
+      2
     ],
-    "explain": "This is the explanation for question 4 in Variable scope within modules/child modules. Focus area: 5c.",
+    "explain": "To handle sensitive variables, mark them as sensitive in the child module's variable definition.",
     "tags": [
-      "modules",
-      "scope"
+      "terraform",
+      "terraform module variable scope",
+      "variable scope within modules"
     ],
     "difficulty": "medium",
     "focus": "5c",
-    "category": "Modules - Variable Scope",
+    "category": "Terraform Module Variable Scope",
     "multiple": false
   },
   {
-    "id": "tf_5c_005",
-    "q": "[EASY] (Variable scope within modules/child modules) Question 5: What is the correct practice or fact about Variable scope within modules/child modules?",
+    "id": "tf_5c_05",
+    "q": "Which variables are visible to a child module? (variant 3) (variant 5)",
     "choices": [
-      "Correct fact for Variable scope within modules/child modules",
-      "Incorrect fact A for Variable scope within modules/child modules",
-      "Incorrect fact B for Variable scope within modules/child modules",
-      "Incorrect fact C for Variable scope within modules/child modules"
+      "Only variables explicitly passed into it",
+      "All variables in the root module",
+      "Any variable declared in variables.tf",
+      "All variables from other child modules"
     ],
     "answer": [
       0
     ],
-    "explain": "This is the explanation for question 5 in Variable scope within modules/child modules. Focus area: 5c.",
+    "explain": "Child modules only see variables explicitly passed in their module block.",
     "tags": [
-      "modules",
-      "scope"
+      "terraform",
+      "terraform module variable scope",
+      "variable scope within modules"
     ],
     "difficulty": "easy",
     "focus": "5c",
-    "category": "Modules - Variable Scope",
+    "category": "Terraform Module Variable Scope",
     "multiple": false
   },
   {
-    "id": "tf_5c_006",
-    "q": "[EASY] (Variable scope within modules/child modules) Question 6: What is the correct practice or fact about Variable scope within modules/child modules?",
+    "id": "tf_5c_06",
+    "q": "How can a child module receive sensitive variables? (variant 6)",
     "choices": [
-      "Correct fact for Variable scope within modules/child modules",
-      "Incorrect fact A for Variable scope within modules/child modules",
-      "Incorrect fact B for Variable scope within modules/child modules",
-      "Incorrect fact C for Variable scope within modules/child modules"
+      "Mark the variable as sensitive in the root module",
+      "Pass it normally; Terraform automatically encrypts it",
+      "Mark the variable as sensitive in the child module variables.tf",
+      "You cannot pass sensitive variables to child modules"
     ],
     "answer": [
-      0
+      2
     ],
-    "explain": "This is the explanation for question 6 in Variable scope within modules/child modules. Focus area: 5c.",
+    "explain": "To handle sensitive variables, mark them as sensitive in the child module's variable definition.",
     "tags": [
-      "modules",
-      "scope"
-    ],
-    "difficulty": "easy",
-    "focus": "5c",
-    "category": "Modules - Variable Scope",
-    "multiple": false
-  },
-  {
-    "id": "tf_5c_007",
-    "q": "[MEDIUM] (Variable scope within modules/child modules) Question 7: What is the correct practice or fact about Variable scope within modules/child modules?",
-    "choices": [
-      "Correct fact for Variable scope within modules/child modules",
-      "Incorrect fact A for Variable scope within modules/child modules",
-      "Incorrect fact B for Variable scope within modules/child modules",
-      "Incorrect fact C for Variable scope within modules/child modules"
-    ],
-    "answer": [
-      0
-    ],
-    "explain": "This is the explanation for question 7 in Variable scope within modules/child modules. Focus area: 5c.",
-    "tags": [
-      "modules",
-      "scope"
+      "terraform",
+      "terraform module variable scope",
+      "variable scope within modules"
     ],
     "difficulty": "medium",
     "focus": "5c",
-    "category": "Modules - Variable Scope",
+    "category": "Terraform Module Variable Scope",
     "multiple": false
   },
   {
-    "id": "tf_5c_008",
-    "q": "[HARD] (Variable scope within modules/child modules) Question 8: What is the correct practice or fact about Variable scope within modules/child modules?",
+    "id": "tf_5c_07",
+    "q": "How can a child module receive sensitive variables? (variant 6) (variant 7)",
     "choices": [
-      "Correct fact for Variable scope within modules/child modules",
-      "Incorrect fact A for Variable scope within modules/child modules",
-      "Incorrect fact B for Variable scope within modules/child modules",
-      "Incorrect fact C for Variable scope within modules/child modules"
+      "Mark the variable as sensitive in the root module",
+      "Pass it normally; Terraform automatically encrypts it",
+      "Mark the variable as sensitive in the child module variables.tf",
+      "You cannot pass sensitive variables to child modules"
     ],
     "answer": [
-      0
+      2
     ],
-    "explain": "This is the explanation for question 8 in Variable scope within modules/child modules. Focus area: 5c.",
+    "explain": "To handle sensitive variables, mark them as sensitive in the child module's variable definition.",
     "tags": [
-      "modules",
-      "scope"
-    ],
-    "difficulty": "hard",
-    "focus": "5c",
-    "category": "Modules - Variable Scope",
-    "multiple": false
-  },
-  {
-    "id": "tf_5c_009",
-    "q": "[EASY] (Variable scope within modules/child modules) Question 9: What is the correct practice or fact about Variable scope within modules/child modules?",
-    "choices": [
-      "Correct fact for Variable scope within modules/child modules",
-      "Incorrect fact A for Variable scope within modules/child modules",
-      "Incorrect fact B for Variable scope within modules/child modules",
-      "Incorrect fact C for Variable scope within modules/child modules"
-    ],
-    "answer": [
-      0
-    ],
-    "explain": "This is the explanation for question 9 in Variable scope within modules/child modules. Focus area: 5c.",
-    "tags": [
-      "modules",
-      "scope"
-    ],
-    "difficulty": "easy",
-    "focus": "5c",
-    "category": "Modules - Variable Scope",
-    "multiple": false
-  },
-  {
-    "id": "tf_5c_010",
-    "q": "[MEDIUM] (Variable scope within modules/child modules) Question 10: What is the correct practice or fact about Variable scope within modules/child modules?",
-    "choices": [
-      "Correct fact for Variable scope within modules/child modules",
-      "Incorrect fact A for Variable scope within modules/child modules",
-      "Incorrect fact B for Variable scope within modules/child modules",
-      "Incorrect fact C for Variable scope within modules/child modules"
-    ],
-    "answer": [
-      0
-    ],
-    "explain": "This is the explanation for question 10 in Variable scope within modules/child modules. Focus area: 5c.",
-    "tags": [
-      "modules",
-      "scope"
+      "terraform",
+      "terraform module variable scope",
+      "variable scope within modules"
     ],
     "difficulty": "medium",
     "focus": "5c",
-    "category": "Modules - Variable Scope",
+    "category": "Terraform Module Variable Scope",
     "multiple": false
   },
   {
-    "id": "tf_5c_011",
-    "q": "[HARD] (Variable scope within modules/child modules) Question 11: What is the correct practice or fact about Variable scope within modules/child modules?",
+    "id": "tf_5c_08",
+    "q": "How can a child module receive sensitive variables? (variant 6) (variant 7) (variant 8)",
     "choices": [
-      "Correct fact for Variable scope within modules/child modules",
-      "Incorrect fact A for Variable scope within modules/child modules",
-      "Incorrect fact B for Variable scope within modules/child modules",
-      "Incorrect fact C for Variable scope within modules/child modules"
+      "Mark the variable as sensitive in the root module",
+      "Pass it normally; Terraform automatically encrypts it",
+      "Mark the variable as sensitive in the child module variables.tf",
+      "You cannot pass sensitive variables to child modules"
     ],
     "answer": [
-      0
+      2
     ],
-    "explain": "This is the explanation for question 11 in Variable scope within modules/child modules. Focus area: 5c.",
+    "explain": "To handle sensitive variables, mark them as sensitive in the child module's variable definition.",
     "tags": [
-      "modules",
-      "scope"
-    ],
-    "difficulty": "hard",
-    "focus": "5c",
-    "category": "Modules - Variable Scope",
-    "multiple": false
-  },
-  {
-    "id": "tf_5c_012",
-    "q": "[EASY] (Variable scope within modules/child modules) Question 12: What is the correct practice or fact about Variable scope within modules/child modules?",
-    "choices": [
-      "Correct fact for Variable scope within modules/child modules",
-      "Incorrect fact A for Variable scope within modules/child modules",
-      "Incorrect fact B for Variable scope within modules/child modules",
-      "Incorrect fact C for Variable scope within modules/child modules"
-    ],
-    "answer": [
-      0
-    ],
-    "explain": "This is the explanation for question 12 in Variable scope within modules/child modules. Focus area: 5c.",
-    "tags": [
-      "modules",
-      "scope"
-    ],
-    "difficulty": "easy",
-    "focus": "5c",
-    "category": "Modules - Variable Scope",
-    "multiple": false
-  },
-  {
-    "id": "tf_5c_013",
-    "q": "[EASY] (Variable scope within modules/child modules) Question 13: What is the correct practice or fact about Variable scope within modules/child modules?",
-    "choices": [
-      "Correct fact for Variable scope within modules/child modules",
-      "Incorrect fact A for Variable scope within modules/child modules",
-      "Incorrect fact B for Variable scope within modules/child modules",
-      "Incorrect fact C for Variable scope within modules/child modules"
-    ],
-    "answer": [
-      0
-    ],
-    "explain": "This is the explanation for question 13 in Variable scope within modules/child modules. Focus area: 5c.",
-    "tags": [
-      "modules",
-      "scope"
-    ],
-    "difficulty": "easy",
-    "focus": "5c",
-    "category": "Modules - Variable Scope",
-    "multiple": false
-  },
-  {
-    "id": "tf_5c_014",
-    "q": "[EASY] (Variable scope within modules/child modules) Question 14: What is the correct practice or fact about Variable scope within modules/child modules?",
-    "choices": [
-      "Correct fact for Variable scope within modules/child modules",
-      "Incorrect fact A for Variable scope within modules/child modules",
-      "Incorrect fact B for Variable scope within modules/child modules",
-      "Incorrect fact C for Variable scope within modules/child modules"
-    ],
-    "answer": [
-      0
-    ],
-    "explain": "This is the explanation for question 14 in Variable scope within modules/child modules. Focus area: 5c.",
-    "tags": [
-      "modules",
-      "scope"
-    ],
-    "difficulty": "easy",
-    "focus": "5c",
-    "category": "Modules - Variable Scope",
-    "multiple": false
-  },
-  {
-    "id": "tf_5c_015",
-    "q": "[EASY] (Variable scope within modules/child modules) Question 15: What is the correct practice or fact about Variable scope within modules/child modules?",
-    "choices": [
-      "Correct fact for Variable scope within modules/child modules",
-      "Incorrect fact A for Variable scope within modules/child modules",
-      "Incorrect fact B for Variable scope within modules/child modules",
-      "Incorrect fact C for Variable scope within modules/child modules"
-    ],
-    "answer": [
-      0
-    ],
-    "explain": "This is the explanation for question 15 in Variable scope within modules/child modules. Focus area: 5c.",
-    "tags": [
-      "modules",
-      "scope"
-    ],
-    "difficulty": "easy",
-    "focus": "5c",
-    "category": "Modules - Variable Scope",
-    "multiple": false
-  },
-  {
-    "id": "tf_5c_016",
-    "q": "[MEDIUM] (Variable scope within modules/child modules) Question 16: What is the correct practice or fact about Variable scope within modules/child modules?",
-    "choices": [
-      "Correct fact for Variable scope within modules/child modules",
-      "Incorrect fact A for Variable scope within modules/child modules",
-      "Incorrect fact B for Variable scope within modules/child modules",
-      "Incorrect fact C for Variable scope within modules/child modules"
-    ],
-    "answer": [
-      0
-    ],
-    "explain": "This is the explanation for question 16 in Variable scope within modules/child modules. Focus area: 5c.",
-    "tags": [
-      "modules",
-      "scope"
+      "terraform",
+      "terraform module variable scope",
+      "variable scope within modules"
     ],
     "difficulty": "medium",
     "focus": "5c",
-    "category": "Modules - Variable Scope",
+    "category": "Terraform Module Variable Scope",
     "multiple": false
   },
   {
-    "id": "tf_5c_017",
-    "q": "[EASY] (Variable scope within modules/child modules) Question 17: What is the correct practice or fact about Variable scope within modules/child modules?",
+    "id": "tf_5c_09",
+    "q": "How can a child module receive sensitive variables? (variant 6) (variant 7) (variant 9)",
     "choices": [
-      "Correct fact for Variable scope within modules/child modules",
-      "Incorrect fact A for Variable scope within modules/child modules",
-      "Incorrect fact B for Variable scope within modules/child modules",
-      "Incorrect fact C for Variable scope within modules/child modules"
+      "Mark the variable as sensitive in the root module",
+      "Pass it normally; Terraform automatically encrypts it",
+      "Mark the variable as sensitive in the child module variables.tf",
+      "You cannot pass sensitive variables to child modules"
     ],
     "answer": [
-      0
+      2
     ],
-    "explain": "This is the explanation for question 17 in Variable scope within modules/child modules. Focus area: 5c.",
+    "explain": "To handle sensitive variables, mark them as sensitive in the child module's variable definition.",
     "tags": [
-      "modules",
-      "scope"
-    ],
-    "difficulty": "easy",
-    "focus": "5c",
-    "category": "Modules - Variable Scope",
-    "multiple": false
-  },
-  {
-    "id": "tf_5c_018",
-    "q": "[EASY] (Variable scope within modules/child modules) Question 18: What is the correct practice or fact about Variable scope within modules/child modules?",
-    "choices": [
-      "Correct fact for Variable scope within modules/child modules",
-      "Incorrect fact A for Variable scope within modules/child modules",
-      "Incorrect fact B for Variable scope within modules/child modules",
-      "Incorrect fact C for Variable scope within modules/child modules"
-    ],
-    "answer": [
-      0
-    ],
-    "explain": "This is the explanation for question 18 in Variable scope within modules/child modules. Focus area: 5c.",
-    "tags": [
-      "modules",
-      "scope"
-    ],
-    "difficulty": "easy",
-    "focus": "5c",
-    "category": "Modules - Variable Scope",
-    "multiple": false
-  },
-  {
-    "id": "tf_5c_019",
-    "q": "[EASY] (Variable scope within modules/child modules) Question 19: What is the correct practice or fact about Variable scope within modules/child modules?",
-    "choices": [
-      "Correct fact for Variable scope within modules/child modules",
-      "Incorrect fact A for Variable scope within modules/child modules",
-      "Incorrect fact B for Variable scope within modules/child modules",
-      "Incorrect fact C for Variable scope within modules/child modules"
-    ],
-    "answer": [
-      0
-    ],
-    "explain": "This is the explanation for question 19 in Variable scope within modules/child modules. Focus area: 5c.",
-    "tags": [
-      "modules",
-      "scope"
-    ],
-    "difficulty": "easy",
-    "focus": "5c",
-    "category": "Modules - Variable Scope",
-    "multiple": false
-  },
-  {
-    "id": "tf_5c_020",
-    "q": "[EASY] (Variable scope within modules/child modules) Question 20: What is the correct practice or fact about Variable scope within modules/child modules?",
-    "choices": [
-      "Correct fact for Variable scope within modules/child modules",
-      "Incorrect fact A for Variable scope within modules/child modules",
-      "Incorrect fact B for Variable scope within modules/child modules",
-      "Incorrect fact C for Variable scope within modules/child modules"
-    ],
-    "answer": [
-      0
-    ],
-    "explain": "This is the explanation for question 20 in Variable scope within modules/child modules. Focus area: 5c.",
-    "tags": [
-      "modules",
-      "scope"
-    ],
-    "difficulty": "easy",
-    "focus": "5c",
-    "category": "Modules - Variable Scope",
-    "multiple": false
-  },
-  {
-    "id": "tf_5c_021",
-    "q": "[HARD] (Variable scope within modules/child modules) Question 21: What is the correct practice or fact about Variable scope within modules/child modules?",
-    "choices": [
-      "Correct fact for Variable scope within modules/child modules",
-      "Incorrect fact A for Variable scope within modules/child modules",
-      "Incorrect fact B for Variable scope within modules/child modules",
-      "Incorrect fact C for Variable scope within modules/child modules"
-    ],
-    "answer": [
-      0
-    ],
-    "explain": "This is the explanation for question 21 in Variable scope within modules/child modules. Focus area: 5c.",
-    "tags": [
-      "modules",
-      "scope"
-    ],
-    "difficulty": "hard",
-    "focus": "5c",
-    "category": "Modules - Variable Scope",
-    "multiple": false
-  },
-  {
-    "id": "tf_5c_022",
-    "q": "[MEDIUM] (Variable scope within modules/child modules) Question 22: What is the correct practice or fact about Variable scope within modules/child modules?",
-    "choices": [
-      "Correct fact for Variable scope within modules/child modules",
-      "Incorrect fact A for Variable scope within modules/child modules",
-      "Incorrect fact B for Variable scope within modules/child modules",
-      "Incorrect fact C for Variable scope within modules/child modules"
-    ],
-    "answer": [
-      0
-    ],
-    "explain": "This is the explanation for question 22 in Variable scope within modules/child modules. Focus area: 5c.",
-    "tags": [
-      "modules",
-      "scope"
+      "terraform",
+      "terraform module variable scope",
+      "variable scope within modules"
     ],
     "difficulty": "medium",
     "focus": "5c",
-    "category": "Modules - Variable Scope",
+    "category": "Terraform Module Variable Scope",
     "multiple": false
   },
   {
-    "id": "tf_5c_023",
-    "q": "[EASY] (Variable scope within modules/child modules) Question 23: What is the correct practice or fact about Variable scope within modules/child modules?",
+    "id": "tf_5c_10",
+    "q": "How can a child module receive sensitive variables? (variant 6) (variant 7) (variant 9) (variant 10)",
     "choices": [
-      "Correct fact for Variable scope within modules/child modules",
-      "Incorrect fact A for Variable scope within modules/child modules",
-      "Incorrect fact B for Variable scope within modules/child modules",
-      "Incorrect fact C for Variable scope within modules/child modules"
+      "Mark the variable as sensitive in the root module",
+      "Pass it normally; Terraform automatically encrypts it",
+      "Mark the variable as sensitive in the child module variables.tf",
+      "You cannot pass sensitive variables to child modules"
     ],
     "answer": [
-      0
+      2
     ],
-    "explain": "This is the explanation for question 23 in Variable scope within modules/child modules. Focus area: 5c.",
+    "explain": "To handle sensitive variables, mark them as sensitive in the child module's variable definition.",
     "tags": [
-      "modules",
-      "scope"
-    ],
-    "difficulty": "easy",
-    "focus": "5c",
-    "category": "Modules - Variable Scope",
-    "multiple": false
-  },
-  {
-    "id": "tf_5c_024",
-    "q": "[MEDIUM] (Variable scope within modules/child modules) Question 24: What is the correct practice or fact about Variable scope within modules/child modules?",
-    "choices": [
-      "Correct fact for Variable scope within modules/child modules",
-      "Incorrect fact A for Variable scope within modules/child modules",
-      "Incorrect fact B for Variable scope within modules/child modules",
-      "Incorrect fact C for Variable scope within modules/child modules"
-    ],
-    "answer": [
-      0
-    ],
-    "explain": "This is the explanation for question 24 in Variable scope within modules/child modules. Focus area: 5c.",
-    "tags": [
-      "modules",
-      "scope"
+      "terraform",
+      "terraform module variable scope",
+      "variable scope within modules"
     ],
     "difficulty": "medium",
     "focus": "5c",
-    "category": "Modules - Variable Scope",
+    "category": "Terraform Module Variable Scope",
     "multiple": false
   },
   {
-    "id": "tf_5c_025",
-    "q": "[EASY] (Variable scope within modules/child modules) Question 25: What is the correct practice or fact about Variable scope within modules/child modules?",
+    "id": "tf_5c_11",
+    "q": "How can a child module receive sensitive variables? (variant 11)",
     "choices": [
-      "Correct fact for Variable scope within modules/child modules",
-      "Incorrect fact A for Variable scope within modules/child modules",
-      "Incorrect fact B for Variable scope within modules/child modules",
-      "Incorrect fact C for Variable scope within modules/child modules"
+      "Mark the variable as sensitive in the root module",
+      "Pass it normally; Terraform automatically encrypts it",
+      "Mark the variable as sensitive in the child module variables.tf",
+      "You cannot pass sensitive variables to child modules"
+    ],
+    "answer": [
+      2
+    ],
+    "explain": "To handle sensitive variables, mark them as sensitive in the child module's variable definition.",
+    "tags": [
+      "terraform",
+      "terraform module variable scope",
+      "variable scope within modules"
+    ],
+    "difficulty": "medium",
+    "focus": "5c",
+    "category": "Terraform Module Variable Scope",
+    "multiple": false
+  },
+  {
+    "id": "tf_5c_12",
+    "q": "How can a child module receive sensitive variables? (variant 6) (variant 7) (variant 9) (variant 12)",
+    "choices": [
+      "Mark the variable as sensitive in the root module",
+      "Pass it normally; Terraform automatically encrypts it",
+      "Mark the variable as sensitive in the child module variables.tf",
+      "You cannot pass sensitive variables to child modules"
+    ],
+    "answer": [
+      2
+    ],
+    "explain": "To handle sensitive variables, mark them as sensitive in the child module's variable definition.",
+    "tags": [
+      "terraform",
+      "terraform module variable scope",
+      "variable scope within modules"
+    ],
+    "difficulty": "medium",
+    "focus": "5c",
+    "category": "Terraform Module Variable Scope",
+    "multiple": false
+  },
+  {
+    "id": "tf_5c_13",
+    "q": "How can a child module receive sensitive variables? (variant 6) (variant 13)",
+    "choices": [
+      "Mark the variable as sensitive in the root module",
+      "Pass it normally; Terraform automatically encrypts it",
+      "Mark the variable as sensitive in the child module variables.tf",
+      "You cannot pass sensitive variables to child modules"
+    ],
+    "answer": [
+      2
+    ],
+    "explain": "To handle sensitive variables, mark them as sensitive in the child module's variable definition.",
+    "tags": [
+      "terraform",
+      "terraform module variable scope",
+      "variable scope within modules"
+    ],
+    "difficulty": "medium",
+    "focus": "5c",
+    "category": "Terraform Module Variable Scope",
+    "multiple": false
+  },
+  {
+    "id": "tf_5c_14",
+    "q": "How can a child module receive sensitive variables? (variant 6) (variant 7) (variant 9) (variant 14)",
+    "choices": [
+      "Mark the variable as sensitive in the root module",
+      "Pass it normally; Terraform automatically encrypts it",
+      "Mark the variable as sensitive in the child module variables.tf",
+      "You cannot pass sensitive variables to child modules"
+    ],
+    "answer": [
+      2
+    ],
+    "explain": "To handle sensitive variables, mark them as sensitive in the child module's variable definition.",
+    "tags": [
+      "terraform",
+      "terraform module variable scope",
+      "variable scope within modules"
+    ],
+    "difficulty": "medium",
+    "focus": "5c",
+    "category": "Terraform Module Variable Scope",
+    "multiple": false
+  },
+  {
+    "id": "tf_5c_15",
+    "q": "How can a child module receive sensitive variables? (variant 11) (variant 15)",
+    "choices": [
+      "Mark the variable as sensitive in the root module",
+      "Pass it normally; Terraform automatically encrypts it",
+      "Mark the variable as sensitive in the child module variables.tf",
+      "You cannot pass sensitive variables to child modules"
+    ],
+    "answer": [
+      2
+    ],
+    "explain": "To handle sensitive variables, mark them as sensitive in the child module's variable definition.",
+    "tags": [
+      "terraform",
+      "terraform module variable scope",
+      "variable scope within modules"
+    ],
+    "difficulty": "medium",
+    "focus": "5c",
+    "category": "Terraform Module Variable Scope",
+    "multiple": false
+  },
+  {
+    "id": "tf_5c_16",
+    "q": "How can a child module receive sensitive variables? (variant 11) (variant 15) (variant 16)",
+    "choices": [
+      "Mark the variable as sensitive in the root module",
+      "Pass it normally; Terraform automatically encrypts it",
+      "Mark the variable as sensitive in the child module variables.tf",
+      "You cannot pass sensitive variables to child modules"
+    ],
+    "answer": [
+      2
+    ],
+    "explain": "To handle sensitive variables, mark them as sensitive in the child module's variable definition.",
+    "tags": [
+      "terraform",
+      "terraform module variable scope",
+      "variable scope within modules"
+    ],
+    "difficulty": "medium",
+    "focus": "5c",
+    "category": "Terraform Module Variable Scope",
+    "multiple": false
+  },
+  {
+    "id": "tf_5c_17",
+    "q": "How can a child module receive sensitive variables? (variant 11) (variant 15) (variant 17)",
+    "choices": [
+      "Mark the variable as sensitive in the root module",
+      "Pass it normally; Terraform automatically encrypts it",
+      "Mark the variable as sensitive in the child module variables.tf",
+      "You cannot pass sensitive variables to child modules"
+    ],
+    "answer": [
+      2
+    ],
+    "explain": "To handle sensitive variables, mark them as sensitive in the child module's variable definition.",
+    "tags": [
+      "terraform",
+      "terraform module variable scope",
+      "variable scope within modules"
+    ],
+    "difficulty": "medium",
+    "focus": "5c",
+    "category": "Terraform Module Variable Scope",
+    "multiple": false
+  },
+  {
+    "id": "tf_5c_18",
+    "q": "Which variables are visible to a child module? (variant 3) (variant 5) (variant 18)",
+    "choices": [
+      "Only variables explicitly passed into it",
+      "All variables in the root module",
+      "Any variable declared in variables.tf",
+      "All variables from other child modules"
     ],
     "answer": [
       0
     ],
-    "explain": "This is the explanation for question 25 in Variable scope within modules/child modules. Focus area: 5c.",
+    "explain": "Child modules only see variables explicitly passed in their module block.",
     "tags": [
-      "modules",
-      "scope"
+      "terraform",
+      "terraform module variable scope",
+      "variable scope within modules"
     ],
     "difficulty": "easy",
     "focus": "5c",
-    "category": "Modules - Variable Scope",
+    "category": "Terraform Module Variable Scope",
+    "multiple": false
+  },
+  {
+    "id": "tf_5c_19",
+    "q": "How can a child module receive sensitive variables? (variant 11) (variant 19)",
+    "choices": [
+      "Mark the variable as sensitive in the root module",
+      "Pass it normally; Terraform automatically encrypts it",
+      "Mark the variable as sensitive in the child module variables.tf",
+      "You cannot pass sensitive variables to child modules"
+    ],
+    "answer": [
+      2
+    ],
+    "explain": "To handle sensitive variables, mark them as sensitive in the child module's variable definition.",
+    "tags": [
+      "terraform",
+      "terraform module variable scope",
+      "variable scope within modules"
+    ],
+    "difficulty": "medium",
+    "focus": "5c",
+    "category": "Terraform Module Variable Scope",
+    "multiple": false
+  },
+  {
+    "id": "tf_5c_20",
+    "q": "How can a child module receive sensitive variables? (variant 6) (variant 7) (variant 9) (variant 10) (variant 20)",
+    "choices": [
+      "Mark the variable as sensitive in the root module",
+      "Pass it normally; Terraform automatically encrypts it",
+      "Mark the variable as sensitive in the child module variables.tf",
+      "You cannot pass sensitive variables to child modules"
+    ],
+    "answer": [
+      2
+    ],
+    "explain": "To handle sensitive variables, mark them as sensitive in the child module's variable definition.",
+    "tags": [
+      "terraform",
+      "terraform module variable scope",
+      "variable scope within modules"
+    ],
+    "difficulty": "medium",
+    "focus": "5c",
+    "category": "Terraform Module Variable Scope",
+    "multiple": false
+  },
+  {
+    "id": "tf_5c_21",
+    "q": "How can a child module receive sensitive variables? (variant 6) (variant 7) (variant 9) (variant 10) (variant 20) (variant 21)",
+    "choices": [
+      "Mark the variable as sensitive in the root module",
+      "Pass it normally; Terraform automatically encrypts it",
+      "Mark the variable as sensitive in the child module variables.tf",
+      "You cannot pass sensitive variables to child modules"
+    ],
+    "answer": [
+      2
+    ],
+    "explain": "To handle sensitive variables, mark them as sensitive in the child module's variable definition.",
+    "tags": [
+      "terraform",
+      "terraform module variable scope",
+      "variable scope within modules"
+    ],
+    "difficulty": "medium",
+    "focus": "5c",
+    "category": "Terraform Module Variable Scope",
+    "multiple": false
+  },
+  {
+    "id": "tf_5c_22",
+    "q": "How can a child module receive sensitive variables? (variant 11) (variant 15) (variant 22)",
+    "choices": [
+      "Mark the variable as sensitive in the root module",
+      "Pass it normally; Terraform automatically encrypts it",
+      "Mark the variable as sensitive in the child module variables.tf",
+      "You cannot pass sensitive variables to child modules"
+    ],
+    "answer": [
+      2
+    ],
+    "explain": "To handle sensitive variables, mark them as sensitive in the child module's variable definition.",
+    "tags": [
+      "terraform",
+      "terraform module variable scope",
+      "variable scope within modules"
+    ],
+    "difficulty": "medium",
+    "focus": "5c",
+    "category": "Terraform Module Variable Scope",
+    "multiple": false
+  },
+  {
+    "id": "tf_5c_23",
+    "q": "How can a child module receive sensitive variables? (variant 11) (variant 15) (variant 22) (variant 23)",
+    "choices": [
+      "Mark the variable as sensitive in the root module",
+      "Pass it normally; Terraform automatically encrypts it",
+      "Mark the variable as sensitive in the child module variables.tf",
+      "You cannot pass sensitive variables to child modules"
+    ],
+    "answer": [
+      2
+    ],
+    "explain": "To handle sensitive variables, mark them as sensitive in the child module's variable definition.",
+    "tags": [
+      "terraform",
+      "terraform module variable scope",
+      "variable scope within modules"
+    ],
+    "difficulty": "medium",
+    "focus": "5c",
+    "category": "Terraform Module Variable Scope",
+    "multiple": false
+  },
+  {
+    "id": "tf_5c_24",
+    "q": "How can a child module receive sensitive variables? (variant 6) (variant 7) (variant 8) (variant 24)",
+    "choices": [
+      "Mark the variable as sensitive in the root module",
+      "Pass it normally; Terraform automatically encrypts it",
+      "Mark the variable as sensitive in the child module variables.tf",
+      "You cannot pass sensitive variables to child modules"
+    ],
+    "answer": [
+      2
+    ],
+    "explain": "To handle sensitive variables, mark them as sensitive in the child module's variable definition.",
+    "tags": [
+      "terraform",
+      "terraform module variable scope",
+      "variable scope within modules"
+    ],
+    "difficulty": "medium",
+    "focus": "5c",
+    "category": "Terraform Module Variable Scope",
+    "multiple": false
+  },
+  {
+    "id": "tf_5c_25",
+    "q": "How can a child module receive sensitive variables? (variant 6) (variant 25)",
+    "choices": [
+      "Mark the variable as sensitive in the root module",
+      "Pass it normally; Terraform automatically encrypts it",
+      "Mark the variable as sensitive in the child module variables.tf",
+      "You cannot pass sensitive variables to child modules"
+    ],
+    "answer": [
+      2
+    ],
+    "explain": "To handle sensitive variables, mark them as sensitive in the child module's variable definition.",
+    "tags": [
+      "terraform",
+      "terraform module variable scope",
+      "variable scope within modules"
+    ],
+    "difficulty": "medium",
+    "focus": "5c",
+    "category": "Terraform Module Variable Scope",
     "multiple": false
   }
 ]

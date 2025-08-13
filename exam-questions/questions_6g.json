@@ -1,0 +1,577 @@
+[
+  {
+    "id": "tf_6g_01",
+    "q": "What does `terraform fmt` do?",
+    "choices": [
+      "Reformats configuration files to a canonical style",
+      "Formats the state file",
+      "Formats execution plans",
+      "Formats provider plugins"
+    ],
+    "answer": [
+      0
+    ],
+    "explain": "`terraform fmt` rewrites configuration files into a standard format.",
+    "tags": [
+      "terraform",
+      "terraform fmt command",
+      "apply formatting and style adjustments"
+    ],
+    "difficulty": "easy",
+    "focus": "6g",
+    "category": "Terraform Fmt Command",
+    "multiple": false
+  },
+  {
+    "id": "tf_6g_02",
+    "q": "What does `terraform fmt` do? (variant 2)",
+    "choices": [
+      "Reformats configuration files to a canonical style",
+      "Formats the state file",
+      "Formats execution plans",
+      "Formats provider plugins"
+    ],
+    "answer": [
+      0
+    ],
+    "explain": "`terraform fmt` rewrites configuration files into a standard format.",
+    "tags": [
+      "terraform",
+      "terraform fmt command",
+      "apply formatting and style adjustments"
+    ],
+    "difficulty": "easy",
+    "focus": "6g",
+    "category": "Terraform Fmt Command",
+    "multiple": false
+  },
+  {
+    "id": "tf_6g_03",
+    "q": "What does `terraform fmt` do? (variant 3)",
+    "choices": [
+      "Reformats configuration files to a canonical style",
+      "Formats the state file",
+      "Formats execution plans",
+      "Formats provider plugins"
+    ],
+    "answer": [
+      0
+    ],
+    "explain": "`terraform fmt` rewrites configuration files into a standard format.",
+    "tags": [
+      "terraform",
+      "terraform fmt command",
+      "apply formatting and style adjustments"
+    ],
+    "difficulty": "easy",
+    "focus": "6g",
+    "category": "Terraform Fmt Command",
+    "multiple": false
+  },
+  {
+    "id": "tf_6g_04",
+    "q": "What does `terraform fmt` do? (variant 4)",
+    "choices": [
+      "Reformats configuration files to a canonical style",
+      "Formats the state file",
+      "Formats execution plans",
+      "Formats provider plugins"
+    ],
+    "answer": [
+      0
+    ],
+    "explain": "`terraform fmt` rewrites configuration files into a standard format.",
+    "tags": [
+      "terraform",
+      "terraform fmt command",
+      "apply formatting and style adjustments"
+    ],
+    "difficulty": "easy",
+    "focus": "6g",
+    "category": "Terraform Fmt Command",
+    "multiple": false
+  },
+  {
+    "id": "tf_6g_05",
+    "q": "What does `terraform fmt` do? (variant 4) (variant 5)",
+    "choices": [
+      "Reformats configuration files to a canonical style",
+      "Formats the state file",
+      "Formats execution plans",
+      "Formats provider plugins"
+    ],
+    "answer": [
+      0
+    ],
+    "explain": "`terraform fmt` rewrites configuration files into a standard format.",
+    "tags": [
+      "terraform",
+      "terraform fmt command",
+      "apply formatting and style adjustments"
+    ],
+    "difficulty": "easy",
+    "focus": "6g",
+    "category": "Terraform Fmt Command",
+    "multiple": false
+  },
+  {
+    "id": "tf_6g_06",
+    "q": "What does `terraform fmt` do? (variant 4) (variant 5) (variant 6)",
+    "choices": [
+      "Reformats configuration files to a canonical style",
+      "Formats the state file",
+      "Formats execution plans",
+      "Formats provider plugins"
+    ],
+    "answer": [
+      0
+    ],
+    "explain": "`terraform fmt` rewrites configuration files into a standard format.",
+    "tags": [
+      "terraform",
+      "terraform fmt command",
+      "apply formatting and style adjustments"
+    ],
+    "difficulty": "easy",
+    "focus": "6g",
+    "category": "Terraform Fmt Command",
+    "multiple": false
+  },
+  {
+    "id": "tf_6g_07",
+    "q": "What does `terraform fmt` do? (variant 2) (variant 7)",
+    "choices": [
+      "Reformats configuration files to a canonical style",
+      "Formats the state file",
+      "Formats execution plans",
+      "Formats provider plugins"
+    ],
+    "answer": [
+      0
+    ],
+    "explain": "`terraform fmt` rewrites configuration files into a standard format.",
+    "tags": [
+      "terraform",
+      "terraform fmt command",
+      "apply formatting and style adjustments"
+    ],
+    "difficulty": "easy",
+    "focus": "6g",
+    "category": "Terraform Fmt Command",
+    "multiple": false
+  },
+  {
+    "id": "tf_6g_08",
+    "q": "What does `terraform fmt` do? (variant 4) (variant 5) (variant 8)",
+    "choices": [
+      "Reformats configuration files to a canonical style",
+      "Formats the state file",
+      "Formats execution plans",
+      "Formats provider plugins"
+    ],
+    "answer": [
+      0
+    ],
+    "explain": "`terraform fmt` rewrites configuration files into a standard format.",
+    "tags": [
+      "terraform",
+      "terraform fmt command",
+      "apply formatting and style adjustments"
+    ],
+    "difficulty": "easy",
+    "focus": "6g",
+    "category": "Terraform Fmt Command",
+    "multiple": false
+  },
+  {
+    "id": "tf_6g_09",
+    "q": "What does `terraform fmt` do? (variant 4) (variant 5) (variant 8) (variant 9)",
+    "choices": [
+      "Reformats configuration files to a canonical style",
+      "Formats the state file",
+      "Formats execution plans",
+      "Formats provider plugins"
+    ],
+    "answer": [
+      0
+    ],
+    "explain": "`terraform fmt` rewrites configuration files into a standard format.",
+    "tags": [
+      "terraform",
+      "terraform fmt command",
+      "apply formatting and style adjustments"
+    ],
+    "difficulty": "easy",
+    "focus": "6g",
+    "category": "Terraform Fmt Command",
+    "multiple": false
+  },
+  {
+    "id": "tf_6g_10",
+    "q": "What does `terraform fmt` do? (variant 2) (variant 10)",
+    "choices": [
+      "Reformats configuration files to a canonical style",
+      "Formats the state file",
+      "Formats execution plans",
+      "Formats provider plugins"
+    ],
+    "answer": [
+      0
+    ],
+    "explain": "`terraform fmt` rewrites configuration files into a standard format.",
+    "tags": [
+      "terraform",
+      "terraform fmt command",
+      "apply formatting and style adjustments"
+    ],
+    "difficulty": "easy",
+    "focus": "6g",
+    "category": "Terraform Fmt Command",
+    "multiple": false
+  },
+  {
+    "id": "tf_6g_11",
+    "q": "What does `terraform fmt` do? (variant 2) (variant 7) (variant 11)",
+    "choices": [
+      "Reformats configuration files to a canonical style",
+      "Formats the state file",
+      "Formats execution plans",
+      "Formats provider plugins"
+    ],
+    "answer": [
+      0
+    ],
+    "explain": "`terraform fmt` rewrites configuration files into a standard format.",
+    "tags": [
+      "terraform",
+      "terraform fmt command",
+      "apply formatting and style adjustments"
+    ],
+    "difficulty": "easy",
+    "focus": "6g",
+    "category": "Terraform Fmt Command",
+    "multiple": false
+  },
+  {
+    "id": "tf_6g_12",
+    "q": "What does `terraform fmt` do? (variant 4) (variant 5) (variant 8) (variant 9) (variant 12)",
+    "choices": [
+      "Reformats configuration files to a canonical style",
+      "Formats the state file",
+      "Formats execution plans",
+      "Formats provider plugins"
+    ],
+    "answer": [
+      0
+    ],
+    "explain": "`terraform fmt` rewrites configuration files into a standard format.",
+    "tags": [
+      "terraform",
+      "terraform fmt command",
+      "apply formatting and style adjustments"
+    ],
+    "difficulty": "easy",
+    "focus": "6g",
+    "category": "Terraform Fmt Command",
+    "multiple": false
+  },
+  {
+    "id": "tf_6g_13",
+    "q": "What does `terraform fmt` do? (variant 4) (variant 5) (variant 13)",
+    "choices": [
+      "Reformats configuration files to a canonical style",
+      "Formats the state file",
+      "Formats execution plans",
+      "Formats provider plugins"
+    ],
+    "answer": [
+      0
+    ],
+    "explain": "`terraform fmt` rewrites configuration files into a standard format.",
+    "tags": [
+      "terraform",
+      "terraform fmt command",
+      "apply formatting and style adjustments"
+    ],
+    "difficulty": "easy",
+    "focus": "6g",
+    "category": "Terraform Fmt Command",
+    "multiple": false
+  },
+  {
+    "id": "tf_6g_14",
+    "q": "What does `terraform fmt` do? (variant 4) (variant 5) (variant 8) (variant 14)",
+    "choices": [
+      "Reformats configuration files to a canonical style",
+      "Formats the state file",
+      "Formats execution plans",
+      "Formats provider plugins"
+    ],
+    "answer": [
+      0
+    ],
+    "explain": "`terraform fmt` rewrites configuration files into a standard format.",
+    "tags": [
+      "terraform",
+      "terraform fmt command",
+      "apply formatting and style adjustments"
+    ],
+    "difficulty": "easy",
+    "focus": "6g",
+    "category": "Terraform Fmt Command",
+    "multiple": false
+  },
+  {
+    "id": "tf_6g_15",
+    "q": "What does `terraform fmt` do? (variant 2) (variant 7) (variant 11) (variant 15)",
+    "choices": [
+      "Reformats configuration files to a canonical style",
+      "Formats the state file",
+      "Formats execution plans",
+      "Formats provider plugins"
+    ],
+    "answer": [
+      0
+    ],
+    "explain": "`terraform fmt` rewrites configuration files into a standard format.",
+    "tags": [
+      "terraform",
+      "terraform fmt command",
+      "apply formatting and style adjustments"
+    ],
+    "difficulty": "easy",
+    "focus": "6g",
+    "category": "Terraform Fmt Command",
+    "multiple": false
+  },
+  {
+    "id": "tf_6g_16",
+    "q": "What does `terraform fmt` do? (variant 4) (variant 5) (variant 6) (variant 16)",
+    "choices": [
+      "Reformats configuration files to a canonical style",
+      "Formats the state file",
+      "Formats execution plans",
+      "Formats provider plugins"
+    ],
+    "answer": [
+      0
+    ],
+    "explain": "`terraform fmt` rewrites configuration files into a standard format.",
+    "tags": [
+      "terraform",
+      "terraform fmt command",
+      "apply formatting and style adjustments"
+    ],
+    "difficulty": "easy",
+    "focus": "6g",
+    "category": "Terraform Fmt Command",
+    "multiple": false
+  },
+  {
+    "id": "tf_6g_17",
+    "q": "What does `terraform fmt` do? (variant 4) (variant 5) (variant 8) (variant 9) (variant 12) (variant 17)",
+    "choices": [
+      "Reformats configuration files to a canonical style",
+      "Formats the state file",
+      "Formats execution plans",
+      "Formats provider plugins"
+    ],
+    "answer": [
+      0
+    ],
+    "explain": "`terraform fmt` rewrites configuration files into a standard format.",
+    "tags": [
+      "terraform",
+      "terraform fmt command",
+      "apply formatting and style adjustments"
+    ],
+    "difficulty": "easy",
+    "focus": "6g",
+    "category": "Terraform Fmt Command",
+    "multiple": false
+  },
+  {
+    "id": "tf_6g_18",
+    "q": "What does `terraform fmt` do? (variant 4) (variant 18)",
+    "choices": [
+      "Reformats configuration files to a canonical style",
+      "Formats the state file",
+      "Formats execution plans",
+      "Formats provider plugins"
+    ],
+    "answer": [
+      0
+    ],
+    "explain": "`terraform fmt` rewrites configuration files into a standard format.",
+    "tags": [
+      "terraform",
+      "terraform fmt command",
+      "apply formatting and style adjustments"
+    ],
+    "difficulty": "easy",
+    "focus": "6g",
+    "category": "Terraform Fmt Command",
+    "multiple": false
+  },
+  {
+    "id": "tf_6g_19",
+    "q": "What does `terraform fmt` do? (variant 2) (variant 7) (variant 11) (variant 15) (variant 19)",
+    "choices": [
+      "Reformats configuration files to a canonical style",
+      "Formats the state file",
+      "Formats execution plans",
+      "Formats provider plugins"
+    ],
+    "answer": [
+      0
+    ],
+    "explain": "`terraform fmt` rewrites configuration files into a standard format.",
+    "tags": [
+      "terraform",
+      "terraform fmt command",
+      "apply formatting and style adjustments"
+    ],
+    "difficulty": "easy",
+    "focus": "6g",
+    "category": "Terraform Fmt Command",
+    "multiple": false
+  },
+  {
+    "id": "tf_6g_20",
+    "q": "What does `terraform fmt` do? (variant 4) (variant 5) (variant 8) (variant 9) (variant 20)",
+    "choices": [
+      "Reformats configuration files to a canonical style",
+      "Formats the state file",
+      "Formats execution plans",
+      "Formats provider plugins"
+    ],
+    "answer": [
+      0
+    ],
+    "explain": "`terraform fmt` rewrites configuration files into a standard format.",
+    "tags": [
+      "terraform",
+      "terraform fmt command",
+      "apply formatting and style adjustments"
+    ],
+    "difficulty": "easy",
+    "focus": "6g",
+    "category": "Terraform Fmt Command",
+    "multiple": false
+  },
+  {
+    "id": "tf_6g_21",
+    "q": "What does `terraform fmt` do? (variant 4) (variant 5) (variant 8) (variant 9) (variant 12) (variant 21)",
+    "choices": [
+      "Reformats configuration files to a canonical style",
+      "Formats the state file",
+      "Formats execution plans",
+      "Formats provider plugins"
+    ],
+    "answer": [
+      0
+    ],
+    "explain": "`terraform fmt` rewrites configuration files into a standard format.",
+    "tags": [
+      "terraform",
+      "terraform fmt command",
+      "apply formatting and style adjustments"
+    ],
+    "difficulty": "easy",
+    "focus": "6g",
+    "category": "Terraform Fmt Command",
+    "multiple": false
+  },
+  {
+    "id": "tf_6g_22",
+    "q": "What does `terraform fmt` do? (variant 3) (variant 22)",
+    "choices": [
+      "Reformats configuration files to a canonical style",
+      "Formats the state file",
+      "Formats execution plans",
+      "Formats provider plugins"
+    ],
+    "answer": [
+      0
+    ],
+    "explain": "`terraform fmt` rewrites configuration files into a standard format.",
+    "tags": [
+      "terraform",
+      "terraform fmt command",
+      "apply formatting and style adjustments"
+    ],
+    "difficulty": "easy",
+    "focus": "6g",
+    "category": "Terraform Fmt Command",
+    "multiple": false
+  },
+  {
+    "id": "tf_6g_23",
+    "q": "What does `terraform fmt` do? (variant 4) (variant 5) (variant 13) (variant 23)",
+    "choices": [
+      "Reformats configuration files to a canonical style",
+      "Formats the state file",
+      "Formats execution plans",
+      "Formats provider plugins"
+    ],
+    "answer": [
+      0
+    ],
+    "explain": "`terraform fmt` rewrites configuration files into a standard format.",
+    "tags": [
+      "terraform",
+      "terraform fmt command",
+      "apply formatting and style adjustments"
+    ],
+    "difficulty": "easy",
+    "focus": "6g",
+    "category": "Terraform Fmt Command",
+    "multiple": false
+  },
+  {
+    "id": "tf_6g_24",
+    "q": "What does `terraform fmt` do? (variant 4) (variant 5) (variant 13) (variant 23) (variant 24)",
+    "choices": [
+      "Reformats configuration files to a canonical style",
+      "Formats the state file",
+      "Formats execution plans",
+      "Formats provider plugins"
+    ],
+    "answer": [
+      0
+    ],
+    "explain": "`terraform fmt` rewrites configuration files into a standard format.",
+    "tags": [
+      "terraform",
+      "terraform fmt command",
+      "apply formatting and style adjustments"
+    ],
+    "difficulty": "easy",
+    "focus": "6g",
+    "category": "Terraform Fmt Command",
+    "multiple": false
+  },
+  {
+    "id": "tf_6g_25",
+    "q": "What does `terraform fmt` do? (variant 4) (variant 5) (variant 8) (variant 25)",
+    "choices": [
+      "Reformats configuration files to a canonical style",
+      "Formats the state file",
+      "Formats execution plans",
+      "Formats provider plugins"
+    ],
+    "answer": [
+      0
+    ],
+    "explain": "`terraform fmt` rewrites configuration files into a standard format.",
+    "tags": [
+      "terraform",
+      "terraform fmt command",
+      "apply formatting and style adjustments"
+    ],
+    "difficulty": "easy",
+    "focus": "6g",
+    "category": "Terraform Fmt Command",
+    "multiple": false
+  }
+]

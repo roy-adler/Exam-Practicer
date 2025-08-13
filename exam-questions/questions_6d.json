@@ -1,0 +1,577 @@
+[
+  {
+    "id": "tf_6d_01",
+    "q": "What is the main output of `terraform plan`?",
+    "choices": [
+      "A list of infrastructure changes Terraform will make",
+      "A syntax check report",
+      "A state file",
+      "An execution log"
+    ],
+    "answer": [
+      0
+    ],
+    "explain": "`terraform plan` shows the actions Terraform will take to match the desired configuration without applying them.",
+    "tags": [
+      "terraform",
+      "terraform plan command",
+      "generate and review an execution plan"
+    ],
+    "difficulty": "easy",
+    "focus": "6d",
+    "category": "Terraform Plan Command",
+    "multiple": false
+  },
+  {
+    "id": "tf_6d_02",
+    "q": "What is the main output of `terraform plan`? (variant 2)",
+    "choices": [
+      "A list of infrastructure changes Terraform will make",
+      "A syntax check report",
+      "A state file",
+      "An execution log"
+    ],
+    "answer": [
+      0
+    ],
+    "explain": "`terraform plan` shows the actions Terraform will take to match the desired configuration without applying them.",
+    "tags": [
+      "terraform",
+      "terraform plan command",
+      "generate and review an execution plan"
+    ],
+    "difficulty": "easy",
+    "focus": "6d",
+    "category": "Terraform Plan Command",
+    "multiple": false
+  },
+  {
+    "id": "tf_6d_03",
+    "q": "What is the main output of `terraform plan`? (variant 3)",
+    "choices": [
+      "A list of infrastructure changes Terraform will make",
+      "A syntax check report",
+      "A state file",
+      "An execution log"
+    ],
+    "answer": [
+      0
+    ],
+    "explain": "`terraform plan` shows the actions Terraform will take to match the desired configuration without applying them.",
+    "tags": [
+      "terraform",
+      "terraform plan command",
+      "generate and review an execution plan"
+    ],
+    "difficulty": "easy",
+    "focus": "6d",
+    "category": "Terraform Plan Command",
+    "multiple": false
+  },
+  {
+    "id": "tf_6d_04",
+    "q": "What is the main output of `terraform plan`? (variant 4)",
+    "choices": [
+      "A list of infrastructure changes Terraform will make",
+      "A syntax check report",
+      "A state file",
+      "An execution log"
+    ],
+    "answer": [
+      0
+    ],
+    "explain": "`terraform plan` shows the actions Terraform will take to match the desired configuration without applying them.",
+    "tags": [
+      "terraform",
+      "terraform plan command",
+      "generate and review an execution plan"
+    ],
+    "difficulty": "easy",
+    "focus": "6d",
+    "category": "Terraform Plan Command",
+    "multiple": false
+  },
+  {
+    "id": "tf_6d_05",
+    "q": "What is the main output of `terraform plan`? (variant 4) (variant 5)",
+    "choices": [
+      "A list of infrastructure changes Terraform will make",
+      "A syntax check report",
+      "A state file",
+      "An execution log"
+    ],
+    "answer": [
+      0
+    ],
+    "explain": "`terraform plan` shows the actions Terraform will take to match the desired configuration without applying them.",
+    "tags": [
+      "terraform",
+      "terraform plan command",
+      "generate and review an execution plan"
+    ],
+    "difficulty": "easy",
+    "focus": "6d",
+    "category": "Terraform Plan Command",
+    "multiple": false
+  },
+  {
+    "id": "tf_6d_06",
+    "q": "What is the main output of `terraform plan`? (variant 4) (variant 6)",
+    "choices": [
+      "A list of infrastructure changes Terraform will make",
+      "A syntax check report",
+      "A state file",
+      "An execution log"
+    ],
+    "answer": [
+      0
+    ],
+    "explain": "`terraform plan` shows the actions Terraform will take to match the desired configuration without applying them.",
+    "tags": [
+      "terraform",
+      "terraform plan command",
+      "generate and review an execution plan"
+    ],
+    "difficulty": "easy",
+    "focus": "6d",
+    "category": "Terraform Plan Command",
+    "multiple": false
+  },
+  {
+    "id": "tf_6d_07",
+    "q": "What is the main output of `terraform plan`? (variant 7)",
+    "choices": [
+      "A list of infrastructure changes Terraform will make",
+      "A syntax check report",
+      "A state file",
+      "An execution log"
+    ],
+    "answer": [
+      0
+    ],
+    "explain": "`terraform plan` shows the actions Terraform will take to match the desired configuration without applying them.",
+    "tags": [
+      "terraform",
+      "terraform plan command",
+      "generate and review an execution plan"
+    ],
+    "difficulty": "easy",
+    "focus": "6d",
+    "category": "Terraform Plan Command",
+    "multiple": false
+  },
+  {
+    "id": "tf_6d_08",
+    "q": "What is the main output of `terraform plan`? (variant 2) (variant 8)",
+    "choices": [
+      "A list of infrastructure changes Terraform will make",
+      "A syntax check report",
+      "A state file",
+      "An execution log"
+    ],
+    "answer": [
+      0
+    ],
+    "explain": "`terraform plan` shows the actions Terraform will take to match the desired configuration without applying them.",
+    "tags": [
+      "terraform",
+      "terraform plan command",
+      "generate and review an execution plan"
+    ],
+    "difficulty": "easy",
+    "focus": "6d",
+    "category": "Terraform Plan Command",
+    "multiple": false
+  },
+  {
+    "id": "tf_6d_09",
+    "q": "What is the main output of `terraform plan`? (variant 2) (variant 9)",
+    "choices": [
+      "A list of infrastructure changes Terraform will make",
+      "A syntax check report",
+      "A state file",
+      "An execution log"
+    ],
+    "answer": [
+      0
+    ],
+    "explain": "`terraform plan` shows the actions Terraform will take to match the desired configuration without applying them.",
+    "tags": [
+      "terraform",
+      "terraform plan command",
+      "generate and review an execution plan"
+    ],
+    "difficulty": "easy",
+    "focus": "6d",
+    "category": "Terraform Plan Command",
+    "multiple": false
+  },
+  {
+    "id": "tf_6d_10",
+    "q": "What is the main output of `terraform plan`? (variant 10)",
+    "choices": [
+      "A list of infrastructure changes Terraform will make",
+      "A syntax check report",
+      "A state file",
+      "An execution log"
+    ],
+    "answer": [
+      0
+    ],
+    "explain": "`terraform plan` shows the actions Terraform will take to match the desired configuration without applying them.",
+    "tags": [
+      "terraform",
+      "terraform plan command",
+      "generate and review an execution plan"
+    ],
+    "difficulty": "easy",
+    "focus": "6d",
+    "category": "Terraform Plan Command",
+    "multiple": false
+  },
+  {
+    "id": "tf_6d_11",
+    "q": "What is the main output of `terraform plan`? (variant 2) (variant 9) (variant 11)",
+    "choices": [
+      "A list of infrastructure changes Terraform will make",
+      "A syntax check report",
+      "A state file",
+      "An execution log"
+    ],
+    "answer": [
+      0
+    ],
+    "explain": "`terraform plan` shows the actions Terraform will take to match the desired configuration without applying them.",
+    "tags": [
+      "terraform",
+      "terraform plan command",
+      "generate and review an execution plan"
+    ],
+    "difficulty": "easy",
+    "focus": "6d",
+    "category": "Terraform Plan Command",
+    "multiple": false
+  },
+  {
+    "id": "tf_6d_12",
+    "q": "What is the main output of `terraform plan`? (variant 4) (variant 6) (variant 12)",
+    "choices": [
+      "A list of infrastructure changes Terraform will make",
+      "A syntax check report",
+      "A state file",
+      "An execution log"
+    ],
+    "answer": [
+      0
+    ],
+    "explain": "`terraform plan` shows the actions Terraform will take to match the desired configuration without applying them.",
+    "tags": [
+      "terraform",
+      "terraform plan command",
+      "generate and review an execution plan"
+    ],
+    "difficulty": "easy",
+    "focus": "6d",
+    "category": "Terraform Plan Command",
+    "multiple": false
+  },
+  {
+    "id": "tf_6d_13",
+    "q": "What is the main output of `terraform plan`? (variant 2) (variant 9) (variant 13)",
+    "choices": [
+      "A list of infrastructure changes Terraform will make",
+      "A syntax check report",
+      "A state file",
+      "An execution log"
+    ],
+    "answer": [
+      0
+    ],
+    "explain": "`terraform plan` shows the actions Terraform will take to match the desired configuration without applying them.",
+    "tags": [
+      "terraform",
+      "terraform plan command",
+      "generate and review an execution plan"
+    ],
+    "difficulty": "easy",
+    "focus": "6d",
+    "category": "Terraform Plan Command",
+    "multiple": false
+  },
+  {
+    "id": "tf_6d_14",
+    "q": "What is the main output of `terraform plan`? (variant 2) (variant 9) (variant 14)",
+    "choices": [
+      "A list of infrastructure changes Terraform will make",
+      "A syntax check report",
+      "A state file",
+      "An execution log"
+    ],
+    "answer": [
+      0
+    ],
+    "explain": "`terraform plan` shows the actions Terraform will take to match the desired configuration without applying them.",
+    "tags": [
+      "terraform",
+      "terraform plan command",
+      "generate and review an execution plan"
+    ],
+    "difficulty": "easy",
+    "focus": "6d",
+    "category": "Terraform Plan Command",
+    "multiple": false
+  },
+  {
+    "id": "tf_6d_15",
+    "q": "What is the main output of `terraform plan`? (variant 7) (variant 15)",
+    "choices": [
+      "A list of infrastructure changes Terraform will make",
+      "A syntax check report",
+      "A state file",
+      "An execution log"
+    ],
+    "answer": [
+      0
+    ],
+    "explain": "`terraform plan` shows the actions Terraform will take to match the desired configuration without applying them.",
+    "tags": [
+      "terraform",
+      "terraform plan command",
+      "generate and review an execution plan"
+    ],
+    "difficulty": "easy",
+    "focus": "6d",
+    "category": "Terraform Plan Command",
+    "multiple": false
+  },
+  {
+    "id": "tf_6d_16",
+    "q": "What is the main output of `terraform plan`? (variant 10) (variant 16)",
+    "choices": [
+      "A list of infrastructure changes Terraform will make",
+      "A syntax check report",
+      "A state file",
+      "An execution log"
+    ],
+    "answer": [
+      0
+    ],
+    "explain": "`terraform plan` shows the actions Terraform will take to match the desired configuration without applying them.",
+    "tags": [
+      "terraform",
+      "terraform plan command",
+      "generate and review an execution plan"
+    ],
+    "difficulty": "easy",
+    "focus": "6d",
+    "category": "Terraform Plan Command",
+    "multiple": false
+  },
+  {
+    "id": "tf_6d_17",
+    "q": "What is the main output of `terraform plan`? (variant 4) (variant 6) (variant 17)",
+    "choices": [
+      "A list of infrastructure changes Terraform will make",
+      "A syntax check report",
+      "A state file",
+      "An execution log"
+    ],
+    "answer": [
+      0
+    ],
+    "explain": "`terraform plan` shows the actions Terraform will take to match the desired configuration without applying them.",
+    "tags": [
+      "terraform",
+      "terraform plan command",
+      "generate and review an execution plan"
+    ],
+    "difficulty": "easy",
+    "focus": "6d",
+    "category": "Terraform Plan Command",
+    "multiple": false
+  },
+  {
+    "id": "tf_6d_18",
+    "q": "What is the main output of `terraform plan`? (variant 2) (variant 18)",
+    "choices": [
+      "A list of infrastructure changes Terraform will make",
+      "A syntax check report",
+      "A state file",
+      "An execution log"
+    ],
+    "answer": [
+      0
+    ],
+    "explain": "`terraform plan` shows the actions Terraform will take to match the desired configuration without applying them.",
+    "tags": [
+      "terraform",
+      "terraform plan command",
+      "generate and review an execution plan"
+    ],
+    "difficulty": "easy",
+    "focus": "6d",
+    "category": "Terraform Plan Command",
+    "multiple": false
+  },
+  {
+    "id": "tf_6d_19",
+    "q": "What is the main output of `terraform plan`? (variant 2) (variant 9) (variant 14) (variant 19)",
+    "choices": [
+      "A list of infrastructure changes Terraform will make",
+      "A syntax check report",
+      "A state file",
+      "An execution log"
+    ],
+    "answer": [
+      0
+    ],
+    "explain": "`terraform plan` shows the actions Terraform will take to match the desired configuration without applying them.",
+    "tags": [
+      "terraform",
+      "terraform plan command",
+      "generate and review an execution plan"
+    ],
+    "difficulty": "easy",
+    "focus": "6d",
+    "category": "Terraform Plan Command",
+    "multiple": false
+  },
+  {
+    "id": "tf_6d_20",
+    "q": "What is the main output of `terraform plan`? (variant 2) (variant 9) (variant 14) (variant 19) (variant 20)",
+    "choices": [
+      "A list of infrastructure changes Terraform will make",
+      "A syntax check report",
+      "A state file",
+      "An execution log"
+    ],
+    "answer": [
+      0
+    ],
+    "explain": "`terraform plan` shows the actions Terraform will take to match the desired configuration without applying them.",
+    "tags": [
+      "terraform",
+      "terraform plan command",
+      "generate and review an execution plan"
+    ],
+    "difficulty": "easy",
+    "focus": "6d",
+    "category": "Terraform Plan Command",
+    "multiple": false
+  },
+  {
+    "id": "tf_6d_21",
+    "q": "What is the main output of `terraform plan`? (variant 2) (variant 9) (variant 13) (variant 21)",
+    "choices": [
+      "A list of infrastructure changes Terraform will make",
+      "A syntax check report",
+      "A state file",
+      "An execution log"
+    ],
+    "answer": [
+      0
+    ],
+    "explain": "`terraform plan` shows the actions Terraform will take to match the desired configuration without applying them.",
+    "tags": [
+      "terraform",
+      "terraform plan command",
+      "generate and review an execution plan"
+    ],
+    "difficulty": "easy",
+    "focus": "6d",
+    "category": "Terraform Plan Command",
+    "multiple": false
+  },
+  {
+    "id": "tf_6d_22",
+    "q": "What is the main output of `terraform plan`? (variant 7) (variant 22)",
+    "choices": [
+      "A list of infrastructure changes Terraform will make",
+      "A syntax check report",
+      "A state file",
+      "An execution log"
+    ],
+    "answer": [
+      0
+    ],
+    "explain": "`terraform plan` shows the actions Terraform will take to match the desired configuration without applying them.",
+    "tags": [
+      "terraform",
+      "terraform plan command",
+      "generate and review an execution plan"
+    ],
+    "difficulty": "easy",
+    "focus": "6d",
+    "category": "Terraform Plan Command",
+    "multiple": false
+  },
+  {
+    "id": "tf_6d_23",
+    "q": "What is the main output of `terraform plan`? (variant 7) (variant 23)",
+    "choices": [
+      "A list of infrastructure changes Terraform will make",
+      "A syntax check report",
+      "A state file",
+      "An execution log"
+    ],
+    "answer": [
+      0
+    ],
+    "explain": "`terraform plan` shows the actions Terraform will take to match the desired configuration without applying them.",
+    "tags": [
+      "terraform",
+      "terraform plan command",
+      "generate and review an execution plan"
+    ],
+    "difficulty": "easy",
+    "focus": "6d",
+    "category": "Terraform Plan Command",
+    "multiple": false
+  },
+  {
+    "id": "tf_6d_24",
+    "q": "What is the main output of `terraform plan`? (variant 24)",
+    "choices": [
+      "A list of infrastructure changes Terraform will make",
+      "A syntax check report",
+      "A state file",
+      "An execution log"
+    ],
+    "answer": [
+      0
+    ],
+    "explain": "`terraform plan` shows the actions Terraform will take to match the desired configuration without applying them.",
+    "tags": [
+      "terraform",
+      "terraform plan command",
+      "generate and review an execution plan"
+    ],
+    "difficulty": "easy",
+    "focus": "6d",
+    "category": "Terraform Plan Command",
+    "multiple": false
+  },
+  {
+    "id": "tf_6d_25",
+    "q": "What is the main output of `terraform plan`? (variant 10) (variant 16) (variant 25)",
+    "choices": [
+      "A list of infrastructure changes Terraform will make",
+      "A syntax check report",
+      "A state file",
+      "An execution log"
+    ],
+    "answer": [
+      0
+    ],
+    "explain": "`terraform plan` shows the actions Terraform will take to match the desired configuration without applying them.",
+    "tags": [
+      "terraform",
+      "terraform plan command",
+      "generate and review an execution plan"
+    ],
+    "difficulty": "easy",
+    "focus": "6d",
+    "category": "Terraform Plan Command",
+    "multiple": false
+  }
+]

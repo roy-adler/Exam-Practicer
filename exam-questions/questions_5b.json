@@ -1,577 +1,594 @@
 [
   {
-    "id": "tf_5b_001",
-    "q": "[EASY] (Module inputs and outputs) Question 1: What is the correct practice or fact about Module inputs and outputs?",
+    "id": "tf_5b_01",
+    "q": "How do you pass a variable into a module?",
     "choices": [
-      "Correct fact for Module inputs and outputs",
-      "Incorrect fact A for Module inputs and outputs",
-      "Incorrect fact B for Module inputs and outputs",
-      "Incorrect fact C for Module inputs and outputs"
+      "Inside the module block using variable_name = value",
+      "By editing variables.tf inside the module",
+      "By exporting it as an environment variable",
+      "By modifying the .terraform directory"
     ],
     "answer": [
       0
     ],
-    "explain": "This is the explanation for question 1 in Module inputs and outputs. Focus area: 5b.",
+    "explain": "Module inputs are passed as arguments inside the module block in the root configuration.",
     "tags": [
-      "modules",
-      "inputs",
-      "outputs"
+      "terraform",
+      "terraform module inputs and outputs",
+      "module inputs & outputs"
     ],
     "difficulty": "easy",
     "focus": "5b",
-    "category": "Modules - Inputs/Outputs",
+    "category": "Terraform Module Inputs and Outputs",
     "multiple": false
   },
   {
-    "id": "tf_5b_002",
-    "q": "[EASY] (Module inputs and outputs) Question 2: What is the correct practice or fact about Module inputs and outputs?",
+    "id": "tf_5b_02",
+    "q": "How can outputs from a child module be accessed in the root module? (Select all that apply)",
     "choices": [
-      "Correct fact for Module inputs and outputs",
-      "Incorrect fact A for Module inputs and outputs",
-      "Incorrect fact B for Module inputs and outputs",
-      "Incorrect fact C for Module inputs and outputs"
+      "Using module.<MODULE_NAME>.<OUTPUT_NAME>",
+      "By copying them manually into root variables",
+      "By referencing them directly in resource blocks",
+      "By using terraform output after apply"
     ],
     "answer": [
-      0
+      0,
+      3
     ],
-    "explain": "This is the explanation for question 2 in Module inputs and outputs. Focus area: 5b.",
+    "explain": "Outputs can be referenced with module.<MODULE_NAME>.<OUTPUT_NAME> and also shown via `terraform output`.",
     "tags": [
-      "modules",
-      "inputs",
-      "outputs"
-    ],
-    "difficulty": "easy",
-    "focus": "5b",
-    "category": "Modules - Inputs/Outputs",
-    "multiple": false
-  },
-  {
-    "id": "tf_5b_003",
-    "q": "[MEDIUM] (Module inputs and outputs) Question 3: What is the correct practice or fact about Module inputs and outputs?",
-    "choices": [
-      "Correct fact for Module inputs and outputs",
-      "Incorrect fact A for Module inputs and outputs",
-      "Incorrect fact B for Module inputs and outputs",
-      "Incorrect fact C for Module inputs and outputs"
-    ],
-    "answer": [
-      0
-    ],
-    "explain": "This is the explanation for question 3 in Module inputs and outputs. Focus area: 5b.",
-    "tags": [
-      "modules",
-      "inputs",
-      "outputs"
+      "terraform",
+      "terraform module inputs and outputs",
+      "module inputs & outputs"
     ],
     "difficulty": "medium",
     "focus": "5b",
-    "category": "Modules - Inputs/Outputs",
-    "multiple": false
+    "category": "Terraform Module Inputs and Outputs",
+    "multiple": true
   },
   {
-    "id": "tf_5b_004",
-    "q": "[MEDIUM] (Module inputs and outputs) Question 4: What is the correct practice or fact about Module inputs and outputs?",
+    "id": "tf_5b_03",
+    "q": "How do you pass a variable into a module? (variant 3)",
     "choices": [
-      "Correct fact for Module inputs and outputs",
-      "Incorrect fact A for Module inputs and outputs",
-      "Incorrect fact B for Module inputs and outputs",
-      "Incorrect fact C for Module inputs and outputs"
+      "Inside the module block using variable_name = value",
+      "By editing variables.tf inside the module",
+      "By exporting it as an environment variable",
+      "By modifying the .terraform directory"
     ],
     "answer": [
       0
     ],
-    "explain": "This is the explanation for question 4 in Module inputs and outputs. Focus area: 5b.",
+    "explain": "Module inputs are passed as arguments inside the module block in the root configuration.",
     "tags": [
-      "modules",
-      "inputs",
-      "outputs"
+      "terraform",
+      "terraform module inputs and outputs",
+      "module inputs & outputs"
+    ],
+    "difficulty": "easy",
+    "focus": "5b",
+    "category": "Terraform Module Inputs and Outputs",
+    "multiple": false
+  },
+  {
+    "id": "tf_5b_04",
+    "q": "How do you pass a variable into a module? (variant 4)",
+    "choices": [
+      "Inside the module block using variable_name = value",
+      "By editing variables.tf inside the module",
+      "By exporting it as an environment variable",
+      "By modifying the .terraform directory"
+    ],
+    "answer": [
+      0
+    ],
+    "explain": "Module inputs are passed as arguments inside the module block in the root configuration.",
+    "tags": [
+      "terraform",
+      "terraform module inputs and outputs",
+      "module inputs & outputs"
+    ],
+    "difficulty": "easy",
+    "focus": "5b",
+    "category": "Terraform Module Inputs and Outputs",
+    "multiple": false
+  },
+  {
+    "id": "tf_5b_05",
+    "q": "How can outputs from a child module be accessed in the root module? (Select all that apply) (variant 5)",
+    "choices": [
+      "Using module.<MODULE_NAME>.<OUTPUT_NAME>",
+      "By copying them manually into root variables",
+      "By referencing them directly in resource blocks",
+      "By using terraform output after apply"
+    ],
+    "answer": [
+      0,
+      3
+    ],
+    "explain": "Outputs can be referenced with module.<MODULE_NAME>.<OUTPUT_NAME> and also shown via `terraform output`.",
+    "tags": [
+      "terraform",
+      "terraform module inputs and outputs",
+      "module inputs & outputs"
     ],
     "difficulty": "medium",
     "focus": "5b",
-    "category": "Modules - Inputs/Outputs",
-    "multiple": false
+    "category": "Terraform Module Inputs and Outputs",
+    "multiple": true
   },
   {
-    "id": "tf_5b_005",
-    "q": "[EASY] (Module inputs and outputs) Question 5: What is the correct practice or fact about Module inputs and outputs?",
+    "id": "tf_5b_06",
+    "q": "How do you pass a variable into a module? (variant 3) (variant 6)",
     "choices": [
-      "Correct fact for Module inputs and outputs",
-      "Incorrect fact A for Module inputs and outputs",
-      "Incorrect fact B for Module inputs and outputs",
-      "Incorrect fact C for Module inputs and outputs"
+      "Inside the module block using variable_name = value",
+      "By editing variables.tf inside the module",
+      "By exporting it as an environment variable",
+      "By modifying the .terraform directory"
     ],
     "answer": [
       0
     ],
-    "explain": "This is the explanation for question 5 in Module inputs and outputs. Focus area: 5b.",
+    "explain": "Module inputs are passed as arguments inside the module block in the root configuration.",
     "tags": [
-      "modules",
-      "inputs",
-      "outputs"
+      "terraform",
+      "terraform module inputs and outputs",
+      "module inputs & outputs"
     ],
     "difficulty": "easy",
     "focus": "5b",
-    "category": "Modules - Inputs/Outputs",
+    "category": "Terraform Module Inputs and Outputs",
     "multiple": false
   },
   {
-    "id": "tf_5b_006",
-    "q": "[EASY] (Module inputs and outputs) Question 6: What is the correct practice or fact about Module inputs and outputs?",
+    "id": "tf_5b_07",
+    "q": "How can outputs from a child module be accessed in the root module? (Select all that apply) (variant 5) (variant 7)",
     "choices": [
-      "Correct fact for Module inputs and outputs",
-      "Incorrect fact A for Module inputs and outputs",
-      "Incorrect fact B for Module inputs and outputs",
-      "Incorrect fact C for Module inputs and outputs"
+      "Using module.<MODULE_NAME>.<OUTPUT_NAME>",
+      "By copying them manually into root variables",
+      "By referencing them directly in resource blocks",
+      "By using terraform output after apply"
     ],
     "answer": [
-      0
+      0,
+      3
     ],
-    "explain": "This is the explanation for question 6 in Module inputs and outputs. Focus area: 5b.",
+    "explain": "Outputs can be referenced with module.<MODULE_NAME>.<OUTPUT_NAME> and also shown via `terraform output`.",
     "tags": [
-      "modules",
-      "inputs",
-      "outputs"
-    ],
-    "difficulty": "easy",
-    "focus": "5b",
-    "category": "Modules - Inputs/Outputs",
-    "multiple": false
-  },
-  {
-    "id": "tf_5b_007",
-    "q": "[HARD] (Module inputs and outputs) Question 7: What is the correct practice or fact about Module inputs and outputs?",
-    "choices": [
-      "Correct fact for Module inputs and outputs",
-      "Incorrect fact A for Module inputs and outputs",
-      "Incorrect fact B for Module inputs and outputs",
-      "Incorrect fact C for Module inputs and outputs"
-    ],
-    "answer": [
-      0
-    ],
-    "explain": "This is the explanation for question 7 in Module inputs and outputs. Focus area: 5b.",
-    "tags": [
-      "modules",
-      "inputs",
-      "outputs"
-    ],
-    "difficulty": "hard",
-    "focus": "5b",
-    "category": "Modules - Inputs/Outputs",
-    "multiple": false
-  },
-  {
-    "id": "tf_5b_008",
-    "q": "[EASY] (Module inputs and outputs) Question 8: What is the correct practice or fact about Module inputs and outputs?",
-    "choices": [
-      "Correct fact for Module inputs and outputs",
-      "Incorrect fact A for Module inputs and outputs",
-      "Incorrect fact B for Module inputs and outputs",
-      "Incorrect fact C for Module inputs and outputs"
-    ],
-    "answer": [
-      0
-    ],
-    "explain": "This is the explanation for question 8 in Module inputs and outputs. Focus area: 5b.",
-    "tags": [
-      "modules",
-      "inputs",
-      "outputs"
-    ],
-    "difficulty": "easy",
-    "focus": "5b",
-    "category": "Modules - Inputs/Outputs",
-    "multiple": false
-  },
-  {
-    "id": "tf_5b_009",
-    "q": "[EASY] (Module inputs and outputs) Question 9: What is the correct practice or fact about Module inputs and outputs?",
-    "choices": [
-      "Correct fact for Module inputs and outputs",
-      "Incorrect fact A for Module inputs and outputs",
-      "Incorrect fact B for Module inputs and outputs",
-      "Incorrect fact C for Module inputs and outputs"
-    ],
-    "answer": [
-      0
-    ],
-    "explain": "This is the explanation for question 9 in Module inputs and outputs. Focus area: 5b.",
-    "tags": [
-      "modules",
-      "inputs",
-      "outputs"
-    ],
-    "difficulty": "easy",
-    "focus": "5b",
-    "category": "Modules - Inputs/Outputs",
-    "multiple": false
-  },
-  {
-    "id": "tf_5b_010",
-    "q": "[MEDIUM] (Module inputs and outputs) Question 10: What is the correct practice or fact about Module inputs and outputs?",
-    "choices": [
-      "Correct fact for Module inputs and outputs",
-      "Incorrect fact A for Module inputs and outputs",
-      "Incorrect fact B for Module inputs and outputs",
-      "Incorrect fact C for Module inputs and outputs"
-    ],
-    "answer": [
-      0
-    ],
-    "explain": "This is the explanation for question 10 in Module inputs and outputs. Focus area: 5b.",
-    "tags": [
-      "modules",
-      "inputs",
-      "outputs"
+      "terraform",
+      "terraform module inputs and outputs",
+      "module inputs & outputs"
     ],
     "difficulty": "medium",
     "focus": "5b",
-    "category": "Modules - Inputs/Outputs",
-    "multiple": false
+    "category": "Terraform Module Inputs and Outputs",
+    "multiple": true
   },
   {
-    "id": "tf_5b_011",
-    "q": "[EASY] (Module inputs and outputs) Question 11: What is the correct practice or fact about Module inputs and outputs?",
+    "id": "tf_5b_08",
+    "q": "How do you pass a variable into a module? (variant 3) (variant 6) (variant 8)",
     "choices": [
-      "Correct fact for Module inputs and outputs",
-      "Incorrect fact A for Module inputs and outputs",
-      "Incorrect fact B for Module inputs and outputs",
-      "Incorrect fact C for Module inputs and outputs"
+      "Inside the module block using variable_name = value",
+      "By editing variables.tf inside the module",
+      "By exporting it as an environment variable",
+      "By modifying the .terraform directory"
     ],
     "answer": [
       0
     ],
-    "explain": "This is the explanation for question 11 in Module inputs and outputs. Focus area: 5b.",
+    "explain": "Module inputs are passed as arguments inside the module block in the root configuration.",
     "tags": [
-      "modules",
-      "inputs",
-      "outputs"
+      "terraform",
+      "terraform module inputs and outputs",
+      "module inputs & outputs"
     ],
     "difficulty": "easy",
     "focus": "5b",
-    "category": "Modules - Inputs/Outputs",
+    "category": "Terraform Module Inputs and Outputs",
     "multiple": false
   },
   {
-    "id": "tf_5b_012",
-    "q": "[MEDIUM] (Module inputs and outputs) Question 12: What is the correct practice or fact about Module inputs and outputs?",
+    "id": "tf_5b_09",
+    "q": "How can outputs from a child module be accessed in the root module? (Select all that apply) (variant 5) (variant 9)",
     "choices": [
-      "Correct fact for Module inputs and outputs",
-      "Incorrect fact A for Module inputs and outputs",
-      "Incorrect fact B for Module inputs and outputs",
-      "Incorrect fact C for Module inputs and outputs"
+      "Using module.<MODULE_NAME>.<OUTPUT_NAME>",
+      "By copying them manually into root variables",
+      "By referencing them directly in resource blocks",
+      "By using terraform output after apply"
     ],
     "answer": [
-      0
+      0,
+      3
     ],
-    "explain": "This is the explanation for question 12 in Module inputs and outputs. Focus area: 5b.",
+    "explain": "Outputs can be referenced with module.<MODULE_NAME>.<OUTPUT_NAME> and also shown via `terraform output`.",
     "tags": [
-      "modules",
-      "inputs",
-      "outputs"
+      "terraform",
+      "terraform module inputs and outputs",
+      "module inputs & outputs"
     ],
     "difficulty": "medium",
     "focus": "5b",
-    "category": "Modules - Inputs/Outputs",
-    "multiple": false
+    "category": "Terraform Module Inputs and Outputs",
+    "multiple": true
   },
   {
-    "id": "tf_5b_013",
-    "q": "[MEDIUM] (Module inputs and outputs) Question 13: What is the correct practice or fact about Module inputs and outputs?",
+    "id": "tf_5b_10",
+    "q": "How can outputs from a child module be accessed in the root module? (Select all that apply) (variant 5) (variant 7) (variant 10)",
     "choices": [
-      "Correct fact for Module inputs and outputs",
-      "Incorrect fact A for Module inputs and outputs",
-      "Incorrect fact B for Module inputs and outputs",
-      "Incorrect fact C for Module inputs and outputs"
+      "Using module.<MODULE_NAME>.<OUTPUT_NAME>",
+      "By copying them manually into root variables",
+      "By referencing them directly in resource blocks",
+      "By using terraform output after apply"
     ],
     "answer": [
-      0
+      0,
+      3
     ],
-    "explain": "This is the explanation for question 13 in Module inputs and outputs. Focus area: 5b.",
+    "explain": "Outputs can be referenced with module.<MODULE_NAME>.<OUTPUT_NAME> and also shown via `terraform output`.",
     "tags": [
-      "modules",
-      "inputs",
-      "outputs"
+      "terraform",
+      "terraform module inputs and outputs",
+      "module inputs & outputs"
     ],
     "difficulty": "medium",
     "focus": "5b",
-    "category": "Modules - Inputs/Outputs",
-    "multiple": false
+    "category": "Terraform Module Inputs and Outputs",
+    "multiple": true
   },
   {
-    "id": "tf_5b_014",
-    "q": "[EASY] (Module inputs and outputs) Question 14: What is the correct practice or fact about Module inputs and outputs?",
+    "id": "tf_5b_11",
+    "q": "How do you pass a variable into a module? (variant 11)",
     "choices": [
-      "Correct fact for Module inputs and outputs",
-      "Incorrect fact A for Module inputs and outputs",
-      "Incorrect fact B for Module inputs and outputs",
-      "Incorrect fact C for Module inputs and outputs"
+      "Inside the module block using variable_name = value",
+      "By editing variables.tf inside the module",
+      "By exporting it as an environment variable",
+      "By modifying the .terraform directory"
     ],
     "answer": [
       0
     ],
-    "explain": "This is the explanation for question 14 in Module inputs and outputs. Focus area: 5b.",
+    "explain": "Module inputs are passed as arguments inside the module block in the root configuration.",
     "tags": [
-      "modules",
-      "inputs",
-      "outputs"
+      "terraform",
+      "terraform module inputs and outputs",
+      "module inputs & outputs"
     ],
     "difficulty": "easy",
     "focus": "5b",
-    "category": "Modules - Inputs/Outputs",
+    "category": "Terraform Module Inputs and Outputs",
     "multiple": false
   },
   {
-    "id": "tf_5b_015",
-    "q": "[EASY] (Module inputs and outputs) Question 15: What is the correct practice or fact about Module inputs and outputs?",
+    "id": "tf_5b_12",
+    "q": "How can outputs from a child module be accessed in the root module? (Select all that apply) (variant 5) (variant 12)",
     "choices": [
-      "Correct fact for Module inputs and outputs",
-      "Incorrect fact A for Module inputs and outputs",
-      "Incorrect fact B for Module inputs and outputs",
-      "Incorrect fact C for Module inputs and outputs"
+      "Using module.<MODULE_NAME>.<OUTPUT_NAME>",
+      "By copying them manually into root variables",
+      "By referencing them directly in resource blocks",
+      "By using terraform output after apply"
     ],
     "answer": [
-      0
+      0,
+      3
     ],
-    "explain": "This is the explanation for question 15 in Module inputs and outputs. Focus area: 5b.",
+    "explain": "Outputs can be referenced with module.<MODULE_NAME>.<OUTPUT_NAME> and also shown via `terraform output`.",
     "tags": [
-      "modules",
-      "inputs",
-      "outputs"
-    ],
-    "difficulty": "easy",
-    "focus": "5b",
-    "category": "Modules - Inputs/Outputs",
-    "multiple": false
-  },
-  {
-    "id": "tf_5b_016",
-    "q": "[EASY] (Module inputs and outputs) Question 16: What is the correct practice or fact about Module inputs and outputs?",
-    "choices": [
-      "Correct fact for Module inputs and outputs",
-      "Incorrect fact A for Module inputs and outputs",
-      "Incorrect fact B for Module inputs and outputs",
-      "Incorrect fact C for Module inputs and outputs"
-    ],
-    "answer": [
-      0
-    ],
-    "explain": "This is the explanation for question 16 in Module inputs and outputs. Focus area: 5b.",
-    "tags": [
-      "modules",
-      "inputs",
-      "outputs"
-    ],
-    "difficulty": "easy",
-    "focus": "5b",
-    "category": "Modules - Inputs/Outputs",
-    "multiple": false
-  },
-  {
-    "id": "tf_5b_017",
-    "q": "[EASY] (Module inputs and outputs) Question 17: What is the correct practice or fact about Module inputs and outputs?",
-    "choices": [
-      "Correct fact for Module inputs and outputs",
-      "Incorrect fact A for Module inputs and outputs",
-      "Incorrect fact B for Module inputs and outputs",
-      "Incorrect fact C for Module inputs and outputs"
-    ],
-    "answer": [
-      0
-    ],
-    "explain": "This is the explanation for question 17 in Module inputs and outputs. Focus area: 5b.",
-    "tags": [
-      "modules",
-      "inputs",
-      "outputs"
-    ],
-    "difficulty": "easy",
-    "focus": "5b",
-    "category": "Modules - Inputs/Outputs",
-    "multiple": false
-  },
-  {
-    "id": "tf_5b_018",
-    "q": "[EASY] (Module inputs and outputs) Question 18: What is the correct practice or fact about Module inputs and outputs?",
-    "choices": [
-      "Correct fact for Module inputs and outputs",
-      "Incorrect fact A for Module inputs and outputs",
-      "Incorrect fact B for Module inputs and outputs",
-      "Incorrect fact C for Module inputs and outputs"
-    ],
-    "answer": [
-      0
-    ],
-    "explain": "This is the explanation for question 18 in Module inputs and outputs. Focus area: 5b.",
-    "tags": [
-      "modules",
-      "inputs",
-      "outputs"
-    ],
-    "difficulty": "easy",
-    "focus": "5b",
-    "category": "Modules - Inputs/Outputs",
-    "multiple": false
-  },
-  {
-    "id": "tf_5b_019",
-    "q": "[HARD] (Module inputs and outputs) Question 19: What is the correct practice or fact about Module inputs and outputs?",
-    "choices": [
-      "Correct fact for Module inputs and outputs",
-      "Incorrect fact A for Module inputs and outputs",
-      "Incorrect fact B for Module inputs and outputs",
-      "Incorrect fact C for Module inputs and outputs"
-    ],
-    "answer": [
-      0
-    ],
-    "explain": "This is the explanation for question 19 in Module inputs and outputs. Focus area: 5b.",
-    "tags": [
-      "modules",
-      "inputs",
-      "outputs"
-    ],
-    "difficulty": "hard",
-    "focus": "5b",
-    "category": "Modules - Inputs/Outputs",
-    "multiple": false
-  },
-  {
-    "id": "tf_5b_020",
-    "q": "[MEDIUM] (Module inputs and outputs) Question 20: What is the correct practice or fact about Module inputs and outputs?",
-    "choices": [
-      "Correct fact for Module inputs and outputs",
-      "Incorrect fact A for Module inputs and outputs",
-      "Incorrect fact B for Module inputs and outputs",
-      "Incorrect fact C for Module inputs and outputs"
-    ],
-    "answer": [
-      0
-    ],
-    "explain": "This is the explanation for question 20 in Module inputs and outputs. Focus area: 5b.",
-    "tags": [
-      "modules",
-      "inputs",
-      "outputs"
+      "terraform",
+      "terraform module inputs and outputs",
+      "module inputs & outputs"
     ],
     "difficulty": "medium",
     "focus": "5b",
-    "category": "Modules - Inputs/Outputs",
-    "multiple": false
+    "category": "Terraform Module Inputs and Outputs",
+    "multiple": true
   },
   {
-    "id": "tf_5b_021",
-    "q": "[EASY] (Module inputs and outputs) Question 21: What is the correct practice or fact about Module inputs and outputs?",
+    "id": "tf_5b_13",
+    "q": "How do you pass a variable into a module? (variant 3) (variant 6) (variant 13)",
     "choices": [
-      "Correct fact for Module inputs and outputs",
-      "Incorrect fact A for Module inputs and outputs",
-      "Incorrect fact B for Module inputs and outputs",
-      "Incorrect fact C for Module inputs and outputs"
+      "Inside the module block using variable_name = value",
+      "By editing variables.tf inside the module",
+      "By exporting it as an environment variable",
+      "By modifying the .terraform directory"
     ],
     "answer": [
       0
     ],
-    "explain": "This is the explanation for question 21 in Module inputs and outputs. Focus area: 5b.",
+    "explain": "Module inputs are passed as arguments inside the module block in the root configuration.",
     "tags": [
-      "modules",
-      "inputs",
-      "outputs"
+      "terraform",
+      "terraform module inputs and outputs",
+      "module inputs & outputs"
     ],
     "difficulty": "easy",
     "focus": "5b",
-    "category": "Modules - Inputs/Outputs",
+    "category": "Terraform Module Inputs and Outputs",
     "multiple": false
   },
   {
-    "id": "tf_5b_022",
-    "q": "[EASY] (Module inputs and outputs) Question 22: What is the correct practice or fact about Module inputs and outputs?",
+    "id": "tf_5b_14",
+    "q": "How can outputs from a child module be accessed in the root module? (Select all that apply) (variant 5) (variant 7) (variant 14)",
     "choices": [
-      "Correct fact for Module inputs and outputs",
-      "Incorrect fact A for Module inputs and outputs",
-      "Incorrect fact B for Module inputs and outputs",
-      "Incorrect fact C for Module inputs and outputs"
+      "Using module.<MODULE_NAME>.<OUTPUT_NAME>",
+      "By copying them manually into root variables",
+      "By referencing them directly in resource blocks",
+      "By using terraform output after apply"
     ],
     "answer": [
-      0
+      0,
+      3
     ],
-    "explain": "This is the explanation for question 22 in Module inputs and outputs. Focus area: 5b.",
+    "explain": "Outputs can be referenced with module.<MODULE_NAME>.<OUTPUT_NAME> and also shown via `terraform output`.",
     "tags": [
-      "modules",
-      "inputs",
-      "outputs"
-    ],
-    "difficulty": "easy",
-    "focus": "5b",
-    "category": "Modules - Inputs/Outputs",
-    "multiple": false
-  },
-  {
-    "id": "tf_5b_023",
-    "q": "[MEDIUM] (Module inputs and outputs) Question 23: What is the correct practice or fact about Module inputs and outputs?",
-    "choices": [
-      "Correct fact for Module inputs and outputs",
-      "Incorrect fact A for Module inputs and outputs",
-      "Incorrect fact B for Module inputs and outputs",
-      "Incorrect fact C for Module inputs and outputs"
-    ],
-    "answer": [
-      0
-    ],
-    "explain": "This is the explanation for question 23 in Module inputs and outputs. Focus area: 5b.",
-    "tags": [
-      "modules",
-      "inputs",
-      "outputs"
+      "terraform",
+      "terraform module inputs and outputs",
+      "module inputs & outputs"
     ],
     "difficulty": "medium",
     "focus": "5b",
-    "category": "Modules - Inputs/Outputs",
-    "multiple": false
+    "category": "Terraform Module Inputs and Outputs",
+    "multiple": true
   },
   {
-    "id": "tf_5b_024",
-    "q": "[HARD] (Module inputs and outputs) Question 24: What is the correct practice or fact about Module inputs and outputs?",
+    "id": "tf_5b_15",
+    "q": "How can outputs from a child module be accessed in the root module? (Select all that apply) (variant 5) (variant 12) (variant 15)",
     "choices": [
-      "Correct fact for Module inputs and outputs",
-      "Incorrect fact A for Module inputs and outputs",
-      "Incorrect fact B for Module inputs and outputs",
-      "Incorrect fact C for Module inputs and outputs"
+      "Using module.<MODULE_NAME>.<OUTPUT_NAME>",
+      "By copying them manually into root variables",
+      "By referencing them directly in resource blocks",
+      "By using terraform output after apply"
     ],
     "answer": [
-      0
+      0,
+      3
     ],
-    "explain": "This is the explanation for question 24 in Module inputs and outputs. Focus area: 5b.",
+    "explain": "Outputs can be referenced with module.<MODULE_NAME>.<OUTPUT_NAME> and also shown via `terraform output`.",
     "tags": [
-      "modules",
-      "inputs",
-      "outputs"
+      "terraform",
+      "terraform module inputs and outputs",
+      "module inputs & outputs"
     ],
-    "difficulty": "hard",
+    "difficulty": "medium",
     "focus": "5b",
-    "category": "Modules - Inputs/Outputs",
-    "multiple": false
+    "category": "Terraform Module Inputs and Outputs",
+    "multiple": true
   },
   {
-    "id": "tf_5b_025",
-    "q": "[EASY] (Module inputs and outputs) Question 25: What is the correct practice or fact about Module inputs and outputs?",
+    "id": "tf_5b_16",
+    "q": "How can outputs from a child module be accessed in the root module? (Select all that apply) (variant 5) (variant 7) (variant 14) (variant 16)",
     "choices": [
-      "Correct fact for Module inputs and outputs",
-      "Incorrect fact A for Module inputs and outputs",
-      "Incorrect fact B for Module inputs and outputs",
-      "Incorrect fact C for Module inputs and outputs"
+      "Using module.<MODULE_NAME>.<OUTPUT_NAME>",
+      "By copying them manually into root variables",
+      "By referencing them directly in resource blocks",
+      "By using terraform output after apply"
+    ],
+    "answer": [
+      0,
+      3
+    ],
+    "explain": "Outputs can be referenced with module.<MODULE_NAME>.<OUTPUT_NAME> and also shown via `terraform output`.",
+    "tags": [
+      "terraform",
+      "terraform module inputs and outputs",
+      "module inputs & outputs"
+    ],
+    "difficulty": "medium",
+    "focus": "5b",
+    "category": "Terraform Module Inputs and Outputs",
+    "multiple": true
+  },
+  {
+    "id": "tf_5b_17",
+    "q": "How can outputs from a child module be accessed in the root module? (Select all that apply) (variant 5) (variant 9) (variant 17)",
+    "choices": [
+      "Using module.<MODULE_NAME>.<OUTPUT_NAME>",
+      "By copying them manually into root variables",
+      "By referencing them directly in resource blocks",
+      "By using terraform output after apply"
+    ],
+    "answer": [
+      0,
+      3
+    ],
+    "explain": "Outputs can be referenced with module.<MODULE_NAME>.<OUTPUT_NAME> and also shown via `terraform output`.",
+    "tags": [
+      "terraform",
+      "terraform module inputs and outputs",
+      "module inputs & outputs"
+    ],
+    "difficulty": "medium",
+    "focus": "5b",
+    "category": "Terraform Module Inputs and Outputs",
+    "multiple": true
+  },
+  {
+    "id": "tf_5b_18",
+    "q": "How can outputs from a child module be accessed in the root module? (Select all that apply) (variant 5) (variant 18)",
+    "choices": [
+      "Using module.<MODULE_NAME>.<OUTPUT_NAME>",
+      "By copying them manually into root variables",
+      "By referencing them directly in resource blocks",
+      "By using terraform output after apply"
+    ],
+    "answer": [
+      0,
+      3
+    ],
+    "explain": "Outputs can be referenced with module.<MODULE_NAME>.<OUTPUT_NAME> and also shown via `terraform output`.",
+    "tags": [
+      "terraform",
+      "terraform module inputs and outputs",
+      "module inputs & outputs"
+    ],
+    "difficulty": "medium",
+    "focus": "5b",
+    "category": "Terraform Module Inputs and Outputs",
+    "multiple": true
+  },
+  {
+    "id": "tf_5b_19",
+    "q": "How can outputs from a child module be accessed in the root module? (Select all that apply) (variant 5) (variant 12) (variant 19)",
+    "choices": [
+      "Using module.<MODULE_NAME>.<OUTPUT_NAME>",
+      "By copying them manually into root variables",
+      "By referencing them directly in resource blocks",
+      "By using terraform output after apply"
+    ],
+    "answer": [
+      0,
+      3
+    ],
+    "explain": "Outputs can be referenced with module.<MODULE_NAME>.<OUTPUT_NAME> and also shown via `terraform output`.",
+    "tags": [
+      "terraform",
+      "terraform module inputs and outputs",
+      "module inputs & outputs"
+    ],
+    "difficulty": "medium",
+    "focus": "5b",
+    "category": "Terraform Module Inputs and Outputs",
+    "multiple": true
+  },
+  {
+    "id": "tf_5b_20",
+    "q": "How can outputs from a child module be accessed in the root module? (Select all that apply) (variant 5) (variant 7) (variant 10) (variant 20)",
+    "choices": [
+      "Using module.<MODULE_NAME>.<OUTPUT_NAME>",
+      "By copying them manually into root variables",
+      "By referencing them directly in resource blocks",
+      "By using terraform output after apply"
+    ],
+    "answer": [
+      0,
+      3
+    ],
+    "explain": "Outputs can be referenced with module.<MODULE_NAME>.<OUTPUT_NAME> and also shown via `terraform output`.",
+    "tags": [
+      "terraform",
+      "terraform module inputs and outputs",
+      "module inputs & outputs"
+    ],
+    "difficulty": "medium",
+    "focus": "5b",
+    "category": "Terraform Module Inputs and Outputs",
+    "multiple": true
+  },
+  {
+    "id": "tf_5b_21",
+    "q": "How can outputs from a child module be accessed in the root module? (Select all that apply) (variant 5) (variant 9) (variant 21)",
+    "choices": [
+      "Using module.<MODULE_NAME>.<OUTPUT_NAME>",
+      "By copying them manually into root variables",
+      "By referencing them directly in resource blocks",
+      "By using terraform output after apply"
+    ],
+    "answer": [
+      0,
+      3
+    ],
+    "explain": "Outputs can be referenced with module.<MODULE_NAME>.<OUTPUT_NAME> and also shown via `terraform output`.",
+    "tags": [
+      "terraform",
+      "terraform module inputs and outputs",
+      "module inputs & outputs"
+    ],
+    "difficulty": "medium",
+    "focus": "5b",
+    "category": "Terraform Module Inputs and Outputs",
+    "multiple": true
+  },
+  {
+    "id": "tf_5b_22",
+    "q": "How can outputs from a child module be accessed in the root module? (Select all that apply) (variant 5) (variant 12) (variant 22)",
+    "choices": [
+      "Using module.<MODULE_NAME>.<OUTPUT_NAME>",
+      "By copying them manually into root variables",
+      "By referencing them directly in resource blocks",
+      "By using terraform output after apply"
+    ],
+    "answer": [
+      0,
+      3
+    ],
+    "explain": "Outputs can be referenced with module.<MODULE_NAME>.<OUTPUT_NAME> and also shown via `terraform output`.",
+    "tags": [
+      "terraform",
+      "terraform module inputs and outputs",
+      "module inputs & outputs"
+    ],
+    "difficulty": "medium",
+    "focus": "5b",
+    "category": "Terraform Module Inputs and Outputs",
+    "multiple": true
+  },
+  {
+    "id": "tf_5b_23",
+    "q": "How can outputs from a child module be accessed in the root module? (Select all that apply) (variant 5) (variant 9) (variant 17) (variant 23)",
+    "choices": [
+      "Using module.<MODULE_NAME>.<OUTPUT_NAME>",
+      "By copying them manually into root variables",
+      "By referencing them directly in resource blocks",
+      "By using terraform output after apply"
+    ],
+    "answer": [
+      0,
+      3
+    ],
+    "explain": "Outputs can be referenced with module.<MODULE_NAME>.<OUTPUT_NAME> and also shown via `terraform output`.",
+    "tags": [
+      "terraform",
+      "terraform module inputs and outputs",
+      "module inputs & outputs"
+    ],
+    "difficulty": "medium",
+    "focus": "5b",
+    "category": "Terraform Module Inputs and Outputs",
+    "multiple": true
+  },
+  {
+    "id": "tf_5b_24",
+    "q": "How can outputs from a child module be accessed in the root module? (Select all that apply) (variant 5) (variant 7) (variant 14) (variant 24)",
+    "choices": [
+      "Using module.<MODULE_NAME>.<OUTPUT_NAME>",
+      "By copying them manually into root variables",
+      "By referencing them directly in resource blocks",
+      "By using terraform output after apply"
+    ],
+    "answer": [
+      0,
+      3
+    ],
+    "explain": "Outputs can be referenced with module.<MODULE_NAME>.<OUTPUT_NAME> and also shown via `terraform output`.",
+    "tags": [
+      "terraform",
+      "terraform module inputs and outputs",
+      "module inputs & outputs"
+    ],
+    "difficulty": "medium",
+    "focus": "5b",
+    "category": "Terraform Module Inputs and Outputs",
+    "multiple": true
+  },
+  {
+    "id": "tf_5b_25",
+    "q": "How do you pass a variable into a module? (variant 4) (variant 25)",
+    "choices": [
+      "Inside the module block using variable_name = value",
+      "By editing variables.tf inside the module",
+      "By exporting it as an environment variable",
+      "By modifying the .terraform directory"
     ],
     "answer": [
       0
     ],
-    "explain": "This is the explanation for question 25 in Module inputs and outputs. Focus area: 5b.",
+    "explain": "Module inputs are passed as arguments inside the module block in the root configuration.",
     "tags": [
-      "modules",
-      "inputs",
-      "outputs"
+      "terraform",
+      "terraform module inputs and outputs",
+      "module inputs & outputs"
     ],
     "difficulty": "easy",
     "focus": "5b",
-    "category": "Modules - Inputs/Outputs",
+    "category": "Terraform Module Inputs and Outputs",
     "multiple": false
   }
 ]

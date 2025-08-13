@@ -1,552 +1,613 @@
 [
   {
-    "id": "tf_5a_001",
-    "q": "[HARD] (Module source options, including Terraform Registry) Question 1: What is the correct practice or fact about Module source options, including Terraform Registry?",
+    "id": "tf_5a_01",
+    "q": "Which of the following are valid module source types in Terraform? (Select all that apply)",
     "choices": [
-      "Correct fact for Module source options, including Terraform Registry",
-      "Incorrect fact A for Module source options, including Terraform Registry",
-      "Incorrect fact B for Module source options, including Terraform Registry",
-      "Incorrect fact C for Module source options, including Terraform Registry"
+      "Terraform Registry",
+      "Local path",
+      "Git repository",
+      "S3 bucket URL",
+      "FTP server"
     ],
     "answer": [
-      0
+      0,
+      1,
+      2,
+      3
     ],
-    "explain": "This is the explanation for question 1 in Module source options, including Terraform Registry. Focus area: 5a.",
+    "explain": "Terraform supports module sources from the registry, local paths, Git URLs, and cloud storage like S3. FTP is not supported.",
     "tags": [
-      "modules",
-      "source"
-    ],
-    "difficulty": "hard",
-    "focus": "5a",
-    "category": "Modules - Source Options",
-    "multiple": false
-  },
-  {
-    "id": "tf_5a_002",
-    "q": "[EASY] (Module source options, including Terraform Registry) Question 2: What is the correct practice or fact about Module source options, including Terraform Registry?",
-    "choices": [
-      "Correct fact for Module source options, including Terraform Registry",
-      "Incorrect fact A for Module source options, including Terraform Registry",
-      "Incorrect fact B for Module source options, including Terraform Registry",
-      "Incorrect fact C for Module source options, including Terraform Registry"
-    ],
-    "answer": [
-      0
-    ],
-    "explain": "This is the explanation for question 2 in Module source options, including Terraform Registry. Focus area: 5a.",
-    "tags": [
-      "modules",
-      "source"
-    ],
-    "difficulty": "easy",
-    "focus": "5a",
-    "category": "Modules - Source Options",
-    "multiple": false
-  },
-  {
-    "id": "tf_5a_003",
-    "q": "[EASY] (Module source options, including Terraform Registry) Question 3: What is the correct practice or fact about Module source options, including Terraform Registry?",
-    "choices": [
-      "Correct fact for Module source options, including Terraform Registry",
-      "Incorrect fact A for Module source options, including Terraform Registry",
-      "Incorrect fact B for Module source options, including Terraform Registry",
-      "Incorrect fact C for Module source options, including Terraform Registry"
-    ],
-    "answer": [
-      0
-    ],
-    "explain": "This is the explanation for question 3 in Module source options, including Terraform Registry. Focus area: 5a.",
-    "tags": [
-      "modules",
-      "source"
-    ],
-    "difficulty": "easy",
-    "focus": "5a",
-    "category": "Modules - Source Options",
-    "multiple": false
-  },
-  {
-    "id": "tf_5a_004",
-    "q": "[EASY] (Module source options, including Terraform Registry) Question 4: What is the correct practice or fact about Module source options, including Terraform Registry?",
-    "choices": [
-      "Correct fact for Module source options, including Terraform Registry",
-      "Incorrect fact A for Module source options, including Terraform Registry",
-      "Incorrect fact B for Module source options, including Terraform Registry",
-      "Incorrect fact C for Module source options, including Terraform Registry"
-    ],
-    "answer": [
-      0
-    ],
-    "explain": "This is the explanation for question 4 in Module source options, including Terraform Registry. Focus area: 5a.",
-    "tags": [
-      "modules",
-      "source"
-    ],
-    "difficulty": "easy",
-    "focus": "5a",
-    "category": "Modules - Source Options",
-    "multiple": false
-  },
-  {
-    "id": "tf_5a_005",
-    "q": "[EASY] (Module source options, including Terraform Registry) Question 5: What is the correct practice or fact about Module source options, including Terraform Registry?",
-    "choices": [
-      "Correct fact for Module source options, including Terraform Registry",
-      "Incorrect fact A for Module source options, including Terraform Registry",
-      "Incorrect fact B for Module source options, including Terraform Registry",
-      "Incorrect fact C for Module source options, including Terraform Registry"
-    ],
-    "answer": [
-      0
-    ],
-    "explain": "This is the explanation for question 5 in Module source options, including Terraform Registry. Focus area: 5a.",
-    "tags": [
-      "modules",
-      "source"
-    ],
-    "difficulty": "easy",
-    "focus": "5a",
-    "category": "Modules - Source Options",
-    "multiple": false
-  },
-  {
-    "id": "tf_5a_006",
-    "q": "[MEDIUM] (Module source options, including Terraform Registry) Question 6: What is the correct practice or fact about Module source options, including Terraform Registry?",
-    "choices": [
-      "Correct fact for Module source options, including Terraform Registry",
-      "Incorrect fact A for Module source options, including Terraform Registry",
-      "Incorrect fact B for Module source options, including Terraform Registry",
-      "Incorrect fact C for Module source options, including Terraform Registry"
-    ],
-    "answer": [
-      0
-    ],
-    "explain": "This is the explanation for question 6 in Module source options, including Terraform Registry. Focus area: 5a.",
-    "tags": [
-      "modules",
-      "source"
+      "terraform",
+      "terraform module source options",
+      "module source options"
     ],
     "difficulty": "medium",
     "focus": "5a",
-    "category": "Modules - Source Options",
-    "multiple": false
+    "category": "Terraform Module Source Options",
+    "multiple": true
   },
   {
-    "id": "tf_5a_007",
-    "q": "[EASY] (Module source options, including Terraform Registry) Question 7: What is the correct practice or fact about Module source options, including Terraform Registry?",
+    "id": "tf_5a_02",
+    "q": "What is the correct syntax for a module source from the public Terraform Registry?",
     "choices": [
-      "Correct fact for Module source options, including Terraform Registry",
-      "Incorrect fact A for Module source options, including Terraform Registry",
-      "Incorrect fact B for Module source options, including Terraform Registry",
-      "Incorrect fact C for Module source options, including Terraform Registry"
+      "source = \"terraform.io/module/name/provider\"",
+      "source = \"hashicorp/module/name\"",
+      "source = \"terraform-aws-modules/vpc/aws\"",
+      "module \"name\" { registry = \"terraform-aws-modules/vpc/aws\" }"
     ],
     "answer": [
-      0
+      2
     ],
-    "explain": "This is the explanation for question 7 in Module source options, including Terraform Registry. Focus area: 5a.",
+    "explain": "Registry modules use the syntax 'namespace/module/provider', e.g., terraform-aws-modules/vpc/aws.",
     "tags": [
-      "modules",
-      "source"
+      "terraform",
+      "terraform module source options",
+      "module source options"
     ],
     "difficulty": "easy",
     "focus": "5a",
-    "category": "Modules - Source Options",
+    "category": "Terraform Module Source Options",
     "multiple": false
   },
   {
-    "id": "tf_5a_008",
-    "q": "[EASY] (Module source options, including Terraform Registry) Question 8: What is the correct practice or fact about Module source options, including Terraform Registry?",
+    "id": "tf_5a_03",
+    "q": "Which of the following are valid module source types in Terraform? (Select all that apply) (variant 3)",
     "choices": [
-      "Correct fact for Module source options, including Terraform Registry",
-      "Incorrect fact A for Module source options, including Terraform Registry",
-      "Incorrect fact B for Module source options, including Terraform Registry",
-      "Incorrect fact C for Module source options, including Terraform Registry"
+      "Terraform Registry",
+      "Local path",
+      "Git repository",
+      "S3 bucket URL",
+      "FTP server"
     ],
     "answer": [
-      0
+      0,
+      1,
+      2,
+      3
     ],
-    "explain": "This is the explanation for question 8 in Module source options, including Terraform Registry. Focus area: 5a.",
+    "explain": "Terraform supports module sources from the registry, local paths, Git URLs, and cloud storage like S3. FTP is not supported.",
     "tags": [
-      "modules",
-      "source"
-    ],
-    "difficulty": "easy",
-    "focus": "5a",
-    "category": "Modules - Source Options",
-    "multiple": false
-  },
-  {
-    "id": "tf_5a_009",
-    "q": "[EASY] (Module source options, including Terraform Registry) Question 9: What is the correct practice or fact about Module source options, including Terraform Registry?",
-    "choices": [
-      "Correct fact for Module source options, including Terraform Registry",
-      "Incorrect fact A for Module source options, including Terraform Registry",
-      "Incorrect fact B for Module source options, including Terraform Registry",
-      "Incorrect fact C for Module source options, including Terraform Registry"
-    ],
-    "answer": [
-      0
-    ],
-    "explain": "This is the explanation for question 9 in Module source options, including Terraform Registry. Focus area: 5a.",
-    "tags": [
-      "modules",
-      "source"
-    ],
-    "difficulty": "easy",
-    "focus": "5a",
-    "category": "Modules - Source Options",
-    "multiple": false
-  },
-  {
-    "id": "tf_5a_010",
-    "q": "[MEDIUM] (Module source options, including Terraform Registry) Question 10: What is the correct practice or fact about Module source options, including Terraform Registry?",
-    "choices": [
-      "Correct fact for Module source options, including Terraform Registry",
-      "Incorrect fact A for Module source options, including Terraform Registry",
-      "Incorrect fact B for Module source options, including Terraform Registry",
-      "Incorrect fact C for Module source options, including Terraform Registry"
-    ],
-    "answer": [
-      0
-    ],
-    "explain": "This is the explanation for question 10 in Module source options, including Terraform Registry. Focus area: 5a.",
-    "tags": [
-      "modules",
-      "source"
+      "terraform",
+      "terraform module source options",
+      "module source options"
     ],
     "difficulty": "medium",
     "focus": "5a",
-    "category": "Modules - Source Options",
+    "category": "Terraform Module Source Options",
+    "multiple": true
+  },
+  {
+    "id": "tf_5a_04",
+    "q": "What is the correct syntax for a module source from the public Terraform Registry? (variant 4)",
+    "choices": [
+      "source = \"terraform.io/module/name/provider\"",
+      "source = \"hashicorp/module/name\"",
+      "source = \"terraform-aws-modules/vpc/aws\"",
+      "module \"name\" { registry = \"terraform-aws-modules/vpc/aws\" }"
+    ],
+    "answer": [
+      2
+    ],
+    "explain": "Registry modules use the syntax 'namespace/module/provider', e.g., terraform-aws-modules/vpc/aws.",
+    "tags": [
+      "terraform",
+      "terraform module source options",
+      "module source options"
+    ],
+    "difficulty": "easy",
+    "focus": "5a",
+    "category": "Terraform Module Source Options",
     "multiple": false
   },
   {
-    "id": "tf_5a_011",
-    "q": "[MEDIUM] (Module source options, including Terraform Registry) Question 11: What is the correct practice or fact about Module source options, including Terraform Registry?",
+    "id": "tf_5a_05",
+    "q": "Which of the following are valid module source types in Terraform? (Select all that apply) (variant 3) (variant 5)",
     "choices": [
-      "Correct fact for Module source options, including Terraform Registry",
-      "Incorrect fact A for Module source options, including Terraform Registry",
-      "Incorrect fact B for Module source options, including Terraform Registry",
-      "Incorrect fact C for Module source options, including Terraform Registry"
+      "Terraform Registry",
+      "Local path",
+      "Git repository",
+      "S3 bucket URL",
+      "FTP server"
     ],
     "answer": [
-      0
+      0,
+      1,
+      2,
+      3
     ],
-    "explain": "This is the explanation for question 11 in Module source options, including Terraform Registry. Focus area: 5a.",
+    "explain": "Terraform supports module sources from the registry, local paths, Git URLs, and cloud storage like S3. FTP is not supported.",
     "tags": [
-      "modules",
-      "source"
+      "terraform",
+      "terraform module source options",
+      "module source options"
     ],
     "difficulty": "medium",
     "focus": "5a",
-    "category": "Modules - Source Options",
-    "multiple": false
+    "category": "Terraform Module Source Options",
+    "multiple": true
   },
   {
-    "id": "tf_5a_012",
-    "q": "[EASY] (Module source options, including Terraform Registry) Question 12: What is the correct practice or fact about Module source options, including Terraform Registry?",
+    "id": "tf_5a_06",
+    "q": "What is the correct syntax for a module source from the public Terraform Registry? (variant 6)",
     "choices": [
-      "Correct fact for Module source options, including Terraform Registry",
-      "Incorrect fact A for Module source options, including Terraform Registry",
-      "Incorrect fact B for Module source options, including Terraform Registry",
-      "Incorrect fact C for Module source options, including Terraform Registry"
+      "source = \"terraform.io/module/name/provider\"",
+      "source = \"hashicorp/module/name\"",
+      "source = \"terraform-aws-modules/vpc/aws\"",
+      "module \"name\" { registry = \"terraform-aws-modules/vpc/aws\" }"
     ],
     "answer": [
-      0
+      2
     ],
-    "explain": "This is the explanation for question 12 in Module source options, including Terraform Registry. Focus area: 5a.",
+    "explain": "Registry modules use the syntax 'namespace/module/provider', e.g., terraform-aws-modules/vpc/aws.",
     "tags": [
-      "modules",
-      "source"
+      "terraform",
+      "terraform module source options",
+      "module source options"
     ],
     "difficulty": "easy",
     "focus": "5a",
-    "category": "Modules - Source Options",
+    "category": "Terraform Module Source Options",
     "multiple": false
   },
   {
-    "id": "tf_5a_013",
-    "q": "[HARD] (Module source options, including Terraform Registry) Question 13: What is the correct practice or fact about Module source options, including Terraform Registry?",
+    "id": "tf_5a_07",
+    "q": "What is the correct syntax for a module source from the public Terraform Registry? (variant 6) (variant 7)",
     "choices": [
-      "Correct fact for Module source options, including Terraform Registry",
-      "Incorrect fact A for Module source options, including Terraform Registry",
-      "Incorrect fact B for Module source options, including Terraform Registry",
-      "Incorrect fact C for Module source options, including Terraform Registry"
+      "source = \"terraform.io/module/name/provider\"",
+      "source = \"hashicorp/module/name\"",
+      "source = \"terraform-aws-modules/vpc/aws\"",
+      "module \"name\" { registry = \"terraform-aws-modules/vpc/aws\" }"
     ],
     "answer": [
-      0
+      2
     ],
-    "explain": "This is the explanation for question 13 in Module source options, including Terraform Registry. Focus area: 5a.",
+    "explain": "Registry modules use the syntax 'namespace/module/provider', e.g., terraform-aws-modules/vpc/aws.",
     "tags": [
-      "modules",
-      "source"
-    ],
-    "difficulty": "hard",
-    "focus": "5a",
-    "category": "Modules - Source Options",
-    "multiple": false
-  },
-  {
-    "id": "tf_5a_014",
-    "q": "[EASY] (Module source options, including Terraform Registry) Question 14: What is the correct practice or fact about Module source options, including Terraform Registry?",
-    "choices": [
-      "Correct fact for Module source options, including Terraform Registry",
-      "Incorrect fact A for Module source options, including Terraform Registry",
-      "Incorrect fact B for Module source options, including Terraform Registry",
-      "Incorrect fact C for Module source options, including Terraform Registry"
-    ],
-    "answer": [
-      0
-    ],
-    "explain": "This is the explanation for question 14 in Module source options, including Terraform Registry. Focus area: 5a.",
-    "tags": [
-      "modules",
-      "source"
+      "terraform",
+      "terraform module source options",
+      "module source options"
     ],
     "difficulty": "easy",
     "focus": "5a",
-    "category": "Modules - Source Options",
+    "category": "Terraform Module Source Options",
     "multiple": false
   },
   {
-    "id": "tf_5a_015",
-    "q": "[MEDIUM] (Module source options, including Terraform Registry) Question 15: What is the correct practice or fact about Module source options, including Terraform Registry?",
+    "id": "tf_5a_08",
+    "q": "Which of the following are valid module source types in Terraform? (Select all that apply) (variant 8)",
     "choices": [
-      "Correct fact for Module source options, including Terraform Registry",
-      "Incorrect fact A for Module source options, including Terraform Registry",
-      "Incorrect fact B for Module source options, including Terraform Registry",
-      "Incorrect fact C for Module source options, including Terraform Registry"
+      "Terraform Registry",
+      "Local path",
+      "Git repository",
+      "S3 bucket URL",
+      "FTP server"
     ],
     "answer": [
-      0
+      0,
+      1,
+      2,
+      3
     ],
-    "explain": "This is the explanation for question 15 in Module source options, including Terraform Registry. Focus area: 5a.",
+    "explain": "Terraform supports module sources from the registry, local paths, Git URLs, and cloud storage like S3. FTP is not supported.",
     "tags": [
-      "modules",
-      "source"
+      "terraform",
+      "terraform module source options",
+      "module source options"
     ],
     "difficulty": "medium",
     "focus": "5a",
-    "category": "Modules - Source Options",
-    "multiple": false
+    "category": "Terraform Module Source Options",
+    "multiple": true
   },
   {
-    "id": "tf_5a_016",
-    "q": "[HARD] (Module source options, including Terraform Registry) Question 16: What is the correct practice or fact about Module source options, including Terraform Registry?",
+    "id": "tf_5a_09",
+    "q": "Which of the following are valid module source types in Terraform? (Select all that apply) (variant 8) (variant 9)",
     "choices": [
-      "Correct fact for Module source options, including Terraform Registry",
-      "Incorrect fact A for Module source options, including Terraform Registry",
-      "Incorrect fact B for Module source options, including Terraform Registry",
-      "Incorrect fact C for Module source options, including Terraform Registry"
+      "Terraform Registry",
+      "Local path",
+      "Git repository",
+      "S3 bucket URL",
+      "FTP server"
     ],
     "answer": [
-      0
+      0,
+      1,
+      2,
+      3
     ],
-    "explain": "This is the explanation for question 16 in Module source options, including Terraform Registry. Focus area: 5a.",
+    "explain": "Terraform supports module sources from the registry, local paths, Git URLs, and cloud storage like S3. FTP is not supported.",
     "tags": [
-      "modules",
-      "source"
-    ],
-    "difficulty": "hard",
-    "focus": "5a",
-    "category": "Modules - Source Options",
-    "multiple": false
-  },
-  {
-    "id": "tf_5a_017",
-    "q": "[MEDIUM] (Module source options, including Terraform Registry) Question 17: What is the correct practice or fact about Module source options, including Terraform Registry?",
-    "choices": [
-      "Correct fact for Module source options, including Terraform Registry",
-      "Incorrect fact A for Module source options, including Terraform Registry",
-      "Incorrect fact B for Module source options, including Terraform Registry",
-      "Incorrect fact C for Module source options, including Terraform Registry"
-    ],
-    "answer": [
-      0
-    ],
-    "explain": "This is the explanation for question 17 in Module source options, including Terraform Registry. Focus area: 5a.",
-    "tags": [
-      "modules",
-      "source"
+      "terraform",
+      "terraform module source options",
+      "module source options"
     ],
     "difficulty": "medium",
     "focus": "5a",
-    "category": "Modules - Source Options",
-    "multiple": false
+    "category": "Terraform Module Source Options",
+    "multiple": true
   },
   {
-    "id": "tf_5a_018",
-    "q": "[EASY] (Module source options, including Terraform Registry) Question 18: What is the correct practice or fact about Module source options, including Terraform Registry?",
+    "id": "tf_5a_10",
+    "q": "Which of the following are valid module source types in Terraform? (Select all that apply) (variant 3) (variant 5) (variant 10)",
     "choices": [
-      "Correct fact for Module source options, including Terraform Registry",
-      "Incorrect fact A for Module source options, including Terraform Registry",
-      "Incorrect fact B for Module source options, including Terraform Registry",
-      "Incorrect fact C for Module source options, including Terraform Registry"
+      "Terraform Registry",
+      "Local path",
+      "Git repository",
+      "S3 bucket URL",
+      "FTP server"
     ],
     "answer": [
-      0
+      0,
+      1,
+      2,
+      3
     ],
-    "explain": "This is the explanation for question 18 in Module source options, including Terraform Registry. Focus area: 5a.",
+    "explain": "Terraform supports module sources from the registry, local paths, Git URLs, and cloud storage like S3. FTP is not supported.",
     "tags": [
-      "modules",
-      "source"
-    ],
-    "difficulty": "easy",
-    "focus": "5a",
-    "category": "Modules - Source Options",
-    "multiple": false
-  },
-  {
-    "id": "tf_5a_019",
-    "q": "[EASY] (Module source options, including Terraform Registry) Question 19: What is the correct practice or fact about Module source options, including Terraform Registry?",
-    "choices": [
-      "Correct fact for Module source options, including Terraform Registry",
-      "Incorrect fact A for Module source options, including Terraform Registry",
-      "Incorrect fact B for Module source options, including Terraform Registry",
-      "Incorrect fact C for Module source options, including Terraform Registry"
-    ],
-    "answer": [
-      0
-    ],
-    "explain": "This is the explanation for question 19 in Module source options, including Terraform Registry. Focus area: 5a.",
-    "tags": [
-      "modules",
-      "source"
-    ],
-    "difficulty": "easy",
-    "focus": "5a",
-    "category": "Modules - Source Options",
-    "multiple": false
-  },
-  {
-    "id": "tf_5a_020",
-    "q": "[MEDIUM] (Module source options, including Terraform Registry) Question 20: What is the correct practice or fact about Module source options, including Terraform Registry?",
-    "choices": [
-      "Correct fact for Module source options, including Terraform Registry",
-      "Incorrect fact A for Module source options, including Terraform Registry",
-      "Incorrect fact B for Module source options, including Terraform Registry",
-      "Incorrect fact C for Module source options, including Terraform Registry"
-    ],
-    "answer": [
-      0
-    ],
-    "explain": "This is the explanation for question 20 in Module source options, including Terraform Registry. Focus area: 5a.",
-    "tags": [
-      "modules",
-      "source"
+      "terraform",
+      "terraform module source options",
+      "module source options"
     ],
     "difficulty": "medium",
     "focus": "5a",
-    "category": "Modules - Source Options",
-    "multiple": false
+    "category": "Terraform Module Source Options",
+    "multiple": true
   },
   {
-    "id": "tf_5a_021",
-    "q": "[EASY] (Module source options, including Terraform Registry) Question 21: What is the correct practice or fact about Module source options, including Terraform Registry?",
+    "id": "tf_5a_11",
+    "q": "What is the correct syntax for a module source from the public Terraform Registry? (variant 4) (variant 11)",
     "choices": [
-      "Correct fact for Module source options, including Terraform Registry",
-      "Incorrect fact A for Module source options, including Terraform Registry",
-      "Incorrect fact B for Module source options, including Terraform Registry",
-      "Incorrect fact C for Module source options, including Terraform Registry"
+      "source = \"terraform.io/module/name/provider\"",
+      "source = \"hashicorp/module/name\"",
+      "source = \"terraform-aws-modules/vpc/aws\"",
+      "module \"name\" { registry = \"terraform-aws-modules/vpc/aws\" }"
     ],
     "answer": [
-      0
+      2
     ],
-    "explain": "This is the explanation for question 21 in Module source options, including Terraform Registry. Focus area: 5a.",
+    "explain": "Registry modules use the syntax 'namespace/module/provider', e.g., terraform-aws-modules/vpc/aws.",
     "tags": [
-      "modules",
-      "source"
+      "terraform",
+      "terraform module source options",
+      "module source options"
     ],
     "difficulty": "easy",
     "focus": "5a",
-    "category": "Modules - Source Options",
+    "category": "Terraform Module Source Options",
     "multiple": false
   },
   {
-    "id": "tf_5a_022",
-    "q": "[EASY] (Module source options, including Terraform Registry) Question 22: What is the correct practice or fact about Module source options, including Terraform Registry?",
+    "id": "tf_5a_12",
+    "q": "What is the correct syntax for a module source from the public Terraform Registry? (variant 6) (variant 7) (variant 12)",
     "choices": [
-      "Correct fact for Module source options, including Terraform Registry",
-      "Incorrect fact A for Module source options, including Terraform Registry",
-      "Incorrect fact B for Module source options, including Terraform Registry",
-      "Incorrect fact C for Module source options, including Terraform Registry"
+      "source = \"terraform.io/module/name/provider\"",
+      "source = \"hashicorp/module/name\"",
+      "source = \"terraform-aws-modules/vpc/aws\"",
+      "module \"name\" { registry = \"terraform-aws-modules/vpc/aws\" }"
     ],
     "answer": [
-      0
+      2
     ],
-    "explain": "This is the explanation for question 22 in Module source options, including Terraform Registry. Focus area: 5a.",
+    "explain": "Registry modules use the syntax 'namespace/module/provider', e.g., terraform-aws-modules/vpc/aws.",
     "tags": [
-      "modules",
-      "source"
+      "terraform",
+      "terraform module source options",
+      "module source options"
     ],
     "difficulty": "easy",
     "focus": "5a",
-    "category": "Modules - Source Options",
+    "category": "Terraform Module Source Options",
     "multiple": false
   },
   {
-    "id": "tf_5a_023",
-    "q": "[MEDIUM] (Module source options, including Terraform Registry) Question 23: What is the correct practice or fact about Module source options, including Terraform Registry?",
+    "id": "tf_5a_13",
+    "q": "What is the correct syntax for a module source from the public Terraform Registry? (variant 6) (variant 7) (variant 13)",
     "choices": [
-      "Correct fact for Module source options, including Terraform Registry",
-      "Incorrect fact A for Module source options, including Terraform Registry",
-      "Incorrect fact B for Module source options, including Terraform Registry",
-      "Incorrect fact C for Module source options, including Terraform Registry"
+      "source = \"terraform.io/module/name/provider\"",
+      "source = \"hashicorp/module/name\"",
+      "source = \"terraform-aws-modules/vpc/aws\"",
+      "module \"name\" { registry = \"terraform-aws-modules/vpc/aws\" }"
     ],
     "answer": [
-      0
+      2
     ],
-    "explain": "This is the explanation for question 23 in Module source options, including Terraform Registry. Focus area: 5a.",
+    "explain": "Registry modules use the syntax 'namespace/module/provider', e.g., terraform-aws-modules/vpc/aws.",
     "tags": [
-      "modules",
-      "source"
+      "terraform",
+      "terraform module source options",
+      "module source options"
+    ],
+    "difficulty": "easy",
+    "focus": "5a",
+    "category": "Terraform Module Source Options",
+    "multiple": false
+  },
+  {
+    "id": "tf_5a_14",
+    "q": "What is the correct syntax for a module source from the public Terraform Registry? (variant 6) (variant 14)",
+    "choices": [
+      "source = \"terraform.io/module/name/provider\"",
+      "source = \"hashicorp/module/name\"",
+      "source = \"terraform-aws-modules/vpc/aws\"",
+      "module \"name\" { registry = \"terraform-aws-modules/vpc/aws\" }"
+    ],
+    "answer": [
+      2
+    ],
+    "explain": "Registry modules use the syntax 'namespace/module/provider', e.g., terraform-aws-modules/vpc/aws.",
+    "tags": [
+      "terraform",
+      "terraform module source options",
+      "module source options"
+    ],
+    "difficulty": "easy",
+    "focus": "5a",
+    "category": "Terraform Module Source Options",
+    "multiple": false
+  },
+  {
+    "id": "tf_5a_15",
+    "q": "What is the correct syntax for a module source from the public Terraform Registry? (variant 6) (variant 15)",
+    "choices": [
+      "source = \"terraform.io/module/name/provider\"",
+      "source = \"hashicorp/module/name\"",
+      "source = \"terraform-aws-modules/vpc/aws\"",
+      "module \"name\" { registry = \"terraform-aws-modules/vpc/aws\" }"
+    ],
+    "answer": [
+      2
+    ],
+    "explain": "Registry modules use the syntax 'namespace/module/provider', e.g., terraform-aws-modules/vpc/aws.",
+    "tags": [
+      "terraform",
+      "terraform module source options",
+      "module source options"
+    ],
+    "difficulty": "easy",
+    "focus": "5a",
+    "category": "Terraform Module Source Options",
+    "multiple": false
+  },
+  {
+    "id": "tf_5a_16",
+    "q": "What is the correct syntax for a module source from the public Terraform Registry? (variant 6) (variant 16)",
+    "choices": [
+      "source = \"terraform.io/module/name/provider\"",
+      "source = \"hashicorp/module/name\"",
+      "source = \"terraform-aws-modules/vpc/aws\"",
+      "module \"name\" { registry = \"terraform-aws-modules/vpc/aws\" }"
+    ],
+    "answer": [
+      2
+    ],
+    "explain": "Registry modules use the syntax 'namespace/module/provider', e.g., terraform-aws-modules/vpc/aws.",
+    "tags": [
+      "terraform",
+      "terraform module source options",
+      "module source options"
+    ],
+    "difficulty": "easy",
+    "focus": "5a",
+    "category": "Terraform Module Source Options",
+    "multiple": false
+  },
+  {
+    "id": "tf_5a_17",
+    "q": "What is the correct syntax for a module source from the public Terraform Registry? (variant 17)",
+    "choices": [
+      "source = \"terraform.io/module/name/provider\"",
+      "source = \"hashicorp/module/name\"",
+      "source = \"terraform-aws-modules/vpc/aws\"",
+      "module \"name\" { registry = \"terraform-aws-modules/vpc/aws\" }"
+    ],
+    "answer": [
+      2
+    ],
+    "explain": "Registry modules use the syntax 'namespace/module/provider', e.g., terraform-aws-modules/vpc/aws.",
+    "tags": [
+      "terraform",
+      "terraform module source options",
+      "module source options"
+    ],
+    "difficulty": "easy",
+    "focus": "5a",
+    "category": "Terraform Module Source Options",
+    "multiple": false
+  },
+  {
+    "id": "tf_5a_18",
+    "q": "Which of the following are valid module source types in Terraform? (Select all that apply) (variant 8) (variant 18)",
+    "choices": [
+      "Terraform Registry",
+      "Local path",
+      "Git repository",
+      "S3 bucket URL",
+      "FTP server"
+    ],
+    "answer": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "explain": "Terraform supports module sources from the registry, local paths, Git URLs, and cloud storage like S3. FTP is not supported.",
+    "tags": [
+      "terraform",
+      "terraform module source options",
+      "module source options"
     ],
     "difficulty": "medium",
     "focus": "5a",
-    "category": "Modules - Source Options",
-    "multiple": false
+    "category": "Terraform Module Source Options",
+    "multiple": true
   },
   {
-    "id": "tf_5a_024",
-    "q": "[EASY] (Module source options, including Terraform Registry) Question 24: What is the correct practice or fact about Module source options, including Terraform Registry?",
+    "id": "tf_5a_19",
+    "q": "Which of the following are valid module source types in Terraform? (Select all that apply) (variant 3) (variant 19)",
     "choices": [
-      "Correct fact for Module source options, including Terraform Registry",
-      "Incorrect fact A for Module source options, including Terraform Registry",
-      "Incorrect fact B for Module source options, including Terraform Registry",
-      "Incorrect fact C for Module source options, including Terraform Registry"
+      "Terraform Registry",
+      "Local path",
+      "Git repository",
+      "S3 bucket URL",
+      "FTP server"
     ],
     "answer": [
-      0
+      0,
+      1,
+      2,
+      3
     ],
-    "explain": "This is the explanation for question 24 in Module source options, including Terraform Registry. Focus area: 5a.",
+    "explain": "Terraform supports module sources from the registry, local paths, Git URLs, and cloud storage like S3. FTP is not supported.",
     "tags": [
-      "modules",
-      "source"
+      "terraform",
+      "terraform module source options",
+      "module source options"
+    ],
+    "difficulty": "medium",
+    "focus": "5a",
+    "category": "Terraform Module Source Options",
+    "multiple": true
+  },
+  {
+    "id": "tf_5a_20",
+    "q": "What is the correct syntax for a module source from the public Terraform Registry? (variant 17) (variant 20)",
+    "choices": [
+      "source = \"terraform.io/module/name/provider\"",
+      "source = \"hashicorp/module/name\"",
+      "source = \"terraform-aws-modules/vpc/aws\"",
+      "module \"name\" { registry = \"terraform-aws-modules/vpc/aws\" }"
+    ],
+    "answer": [
+      2
+    ],
+    "explain": "Registry modules use the syntax 'namespace/module/provider', e.g., terraform-aws-modules/vpc/aws.",
+    "tags": [
+      "terraform",
+      "terraform module source options",
+      "module source options"
     ],
     "difficulty": "easy",
     "focus": "5a",
-    "category": "Modules - Source Options",
+    "category": "Terraform Module Source Options",
     "multiple": false
   },
   {
-    "id": "tf_5a_025",
-    "q": "[EASY] (Module source options, including Terraform Registry) Question 25: What is the correct practice or fact about Module source options, including Terraform Registry?",
+    "id": "tf_5a_21",
+    "q": "What is the correct syntax for a module source from the public Terraform Registry? (variant 6) (variant 21)",
     "choices": [
-      "Correct fact for Module source options, including Terraform Registry",
-      "Incorrect fact A for Module source options, including Terraform Registry",
-      "Incorrect fact B for Module source options, including Terraform Registry",
-      "Incorrect fact C for Module source options, including Terraform Registry"
+      "source = \"terraform.io/module/name/provider\"",
+      "source = \"hashicorp/module/name\"",
+      "source = \"terraform-aws-modules/vpc/aws\"",
+      "module \"name\" { registry = \"terraform-aws-modules/vpc/aws\" }"
     ],
     "answer": [
-      0
+      2
     ],
-    "explain": "This is the explanation for question 25 in Module source options, including Terraform Registry. Focus area: 5a.",
+    "explain": "Registry modules use the syntax 'namespace/module/provider', e.g., terraform-aws-modules/vpc/aws.",
     "tags": [
-      "modules",
-      "source"
+      "terraform",
+      "terraform module source options",
+      "module source options"
     ],
     "difficulty": "easy",
     "focus": "5a",
-    "category": "Modules - Source Options",
+    "category": "Terraform Module Source Options",
+    "multiple": false
+  },
+  {
+    "id": "tf_5a_22",
+    "q": "Which of the following are valid module source types in Terraform? (Select all that apply) (variant 22)",
+    "choices": [
+      "Terraform Registry",
+      "Local path",
+      "Git repository",
+      "S3 bucket URL",
+      "FTP server"
+    ],
+    "answer": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "explain": "Terraform supports module sources from the registry, local paths, Git URLs, and cloud storage like S3. FTP is not supported.",
+    "tags": [
+      "terraform",
+      "terraform module source options",
+      "module source options"
+    ],
+    "difficulty": "medium",
+    "focus": "5a",
+    "category": "Terraform Module Source Options",
+    "multiple": true
+  },
+  {
+    "id": "tf_5a_23",
+    "q": "What is the correct syntax for a module source from the public Terraform Registry? (variant 6) (variant 7) (variant 12) (variant 23)",
+    "choices": [
+      "source = \"terraform.io/module/name/provider\"",
+      "source = \"hashicorp/module/name\"",
+      "source = \"terraform-aws-modules/vpc/aws\"",
+      "module \"name\" { registry = \"terraform-aws-modules/vpc/aws\" }"
+    ],
+    "answer": [
+      2
+    ],
+    "explain": "Registry modules use the syntax 'namespace/module/provider', e.g., terraform-aws-modules/vpc/aws.",
+    "tags": [
+      "terraform",
+      "terraform module source options",
+      "module source options"
+    ],
+    "difficulty": "easy",
+    "focus": "5a",
+    "category": "Terraform Module Source Options",
+    "multiple": false
+  },
+  {
+    "id": "tf_5a_24",
+    "q": "What is the correct syntax for a module source from the public Terraform Registry? (variant 4) (variant 24)",
+    "choices": [
+      "source = \"terraform.io/module/name/provider\"",
+      "source = \"hashicorp/module/name\"",
+      "source = \"terraform-aws-modules/vpc/aws\"",
+      "module \"name\" { registry = \"terraform-aws-modules/vpc/aws\" }"
+    ],
+    "answer": [
+      2
+    ],
+    "explain": "Registry modules use the syntax 'namespace/module/provider', e.g., terraform-aws-modules/vpc/aws.",
+    "tags": [
+      "terraform",
+      "terraform module source options",
+      "module source options"
+    ],
+    "difficulty": "easy",
+    "focus": "5a",
+    "category": "Terraform Module Source Options",
+    "multiple": false
+  },
+  {
+    "id": "tf_5a_25",
+    "q": "What is the correct syntax for a module source from the public Terraform Registry? (variant 17) (variant 20) (variant 25)",
+    "choices": [
+      "source = \"terraform.io/module/name/provider\"",
+      "source = \"hashicorp/module/name\"",
+      "source = \"terraform-aws-modules/vpc/aws\"",
+      "module \"name\" { registry = \"terraform-aws-modules/vpc/aws\" }"
+    ],
+    "answer": [
+      2
+    ],
+    "explain": "Registry modules use the syntax 'namespace/module/provider', e.g., terraform-aws-modules/vpc/aws.",
+    "tags": [
+      "terraform",
+      "terraform module source options",
+      "module source options"
+    ],
+    "difficulty": "easy",
+    "focus": "5a",
+    "category": "Terraform Module Source Options",
     "multiple": false
   }
 ]
