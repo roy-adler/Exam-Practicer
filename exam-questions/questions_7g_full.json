@@ -1,0 +1,302 @@
+[
+    {
+        "id": 1,
+        "difficulty": "easy",
+        "question": "What is one risk of storing secrets in Terraform state files?",
+        "options": [
+            "They may be visible to all users with state file access",
+            "They are automatically encrypted with AES-256 by default",
+            "They cannot be accessed after apply",
+            "They expire after 24 hours"
+        ],
+        "answer": "They may be visible to all users with state file access"
+    },
+    {
+        "id": 2,
+        "difficulty": "easy",
+        "question": "Where does Terraform store sensitive data by default in the state file?",
+        "options": [
+            "In plaintext",
+            "Encrypted at rest",
+            "Hashed with SHA-256",
+            "Compressed and encoded"
+        ],
+        "answer": "In plaintext"
+    },
+    {
+        "id": 3,
+        "difficulty": "easy",
+        "question": "Which Terraform argument can you use to mark an output as sensitive?",
+        "options": [
+            "sensitive = true",
+            "secret = true",
+            "hidden = true",
+            "encrypt = true"
+        ],
+        "answer": "sensitive = true"
+    },
+    {
+        "id": 4,
+        "difficulty": "medium",
+        "question": "If a secret value is marked as sensitive in Terraform, what effect does this have on CLI output?",
+        "options": [
+            "It is masked in Terraform plan and apply outputs",
+            "It is encrypted in the state file",
+            "It cannot be used in other modules",
+            "It prevents the value from being saved"
+        ],
+        "answer": "It is masked in Terraform plan and apply outputs"
+    },
+    {
+        "id": 5,
+        "difficulty": "medium",
+        "question": "Which backend type can provide encryption-at-rest for state files without additional configuration?",
+        "options": [
+            "S3 with SSE",
+            "Local",
+            "Consul",
+            "None"
+        ],
+        "answer": "S3 with SSE"
+    },
+    {
+        "id": 6,
+        "difficulty": "medium",
+        "question": "What is the best way to prevent secret leakage in Terraform logs?",
+        "options": [
+            "Mark variables or outputs as sensitive",
+            "Store secrets in local variables",
+            "Use base64 encoding",
+            "Encrypt logs manually"
+        ],
+        "answer": "Mark variables or outputs as sensitive"
+    },
+    {
+        "id": 7,
+        "difficulty": "medium",
+        "question": "Which of the following is NOT a recommended practice for managing secrets in Terraform?",
+        "options": [
+            "Use external secret stores like Vault",
+            "Use plain text in .tfvars files committed to Git",
+            "Mark outputs as sensitive",
+            "Limit state file access"
+        ],
+        "answer": "Use plain text in .tfvars files committed to Git"
+    },
+    {
+        "id": 8,
+        "difficulty": "medium",
+        "question": "If you store Terraform state in a remote backend, who can access secrets in that state?",
+        "options": [
+            "Anyone with access to the backend storage",
+            "Only the Terraform CLI",
+            "Only the user who ran terraform apply",
+            "Nobody"
+        ],
+        "answer": "Anyone with access to the backend storage"
+    },
+    {
+        "id": 9,
+        "difficulty": "hard",
+        "question": "When using Terraform Cloud, how are sensitive values stored in the state file?",
+        "options": [
+            "Encrypted at rest and masked in the UI",
+            "Plaintext in the database",
+            "Hashed with SHA-256 only",
+            "Base64 encoded"
+        ],
+        "answer": "Encrypted at rest and masked in the UI"
+    },
+    {
+        "id": 10,
+        "difficulty": "hard",
+        "question": "How can you ensure that an input variable value is never written to the Terraform state file?",
+        "options": [
+            "You cannot prevent it if it is used in a managed resource",
+            "Set sensitive = true",
+            "Store it in an environment variable",
+            "Pass it via CLI"
+        ],
+        "answer": "You cannot prevent it if it is used in a managed resource"
+    },
+    {
+        "id": 11,
+        "difficulty": "hard",
+        "question": "Which HashiCorp tool is designed for managing secrets outside Terraform state?",
+        "options": [
+            "Vault",
+            "Consul",
+            "Nomad",
+            "Packer"
+        ],
+        "answer": "Vault"
+    },
+    {
+        "id": 12,
+        "difficulty": "hard",
+        "question": "Why is encrypting the state file not enough to fully protect secrets in Terraform?",
+        "options": [
+            "Because secrets may still appear in logs or plan output",
+            "Because encryption is reversible",
+            "Because state files can be huge",
+            "Because Terraform ignores encryption"
+        ],
+        "answer": "Because secrets may still appear in logs or plan output"
+    },
+    {
+        "id": 13,
+        "difficulty": "hard",
+        "question": "What Terraform function can be used to retrieve secrets from Vault during a run?",
+        "options": [
+            "vault_generic_secret",
+            "data.vault_generic_secret",
+            "secret_get",
+            "read_secret"
+        ],
+        "answer": "data.vault_generic_secret"
+    },
+    {
+        "id": 14,
+        "difficulty": "easy",
+        "question": "Which Terraform file typically contains variable definitions, including potentially sensitive ones?",
+        "options": [
+            "terraform.tfvars",
+            "main.tf",
+            "outputs.tf",
+            "backend.tf"
+        ],
+        "answer": "terraform.tfvars"
+    },
+    {
+        "id": 15,
+        "difficulty": "medium",
+        "question": "What AWS feature can be enabled to encrypt state files stored in an S3 backend?",
+        "options": [
+            "Server-Side Encryption (SSE)",
+            "IAM Roles",
+            "VPC Endpoints",
+            "MFA Delete"
+        ],
+        "answer": "Server-Side Encryption (SSE)"
+    },
+    {
+        "id": 16,
+        "difficulty": "medium",
+        "question": "Which Terraform block is used to declare outputs, including sensitive outputs?",
+        "options": [
+            "output",
+            "variable",
+            "provider",
+            "module"
+        ],
+        "answer": "output"
+    },
+    {
+        "id": 17,
+        "difficulty": "easy",
+        "question": "How does Terraform display a sensitive output when you run terraform output?",
+        "options": [
+            "(sensitive value)",
+            "********",
+            "hidden",
+            "null"
+        ],
+        "answer": "(sensitive value)"
+    },
+    {
+        "id": 18,
+        "difficulty": "hard",
+        "question": "Which command can be used to manually inspect the raw state file contents?",
+        "options": [
+            "terraform state pull",
+            "terraform show",
+            "terraform view state",
+            "cat terraform.tfstate"
+        ],
+        "answer": "terraform state pull"
+    },
+    {
+        "id": 19,
+        "difficulty": "medium",
+        "question": "What is one disadvantage of using environment variables for secrets in Terraform?",
+        "options": [
+            "They may still be logged by the shell or CI/CD pipeline",
+            "They cannot be changed once set",
+            "They are always encrypted",
+            "Terraform cannot read them"
+        ],
+        "answer": "They may still be logged by the shell or CI/CD pipeline"
+    },
+    {
+        "id": 20,
+        "difficulty": "easy",
+        "question": "Which Terraform CLI option can help mask sensitive input in logs?",
+        "options": [
+            "No direct CLI option; must use sensitive variables",
+            "--hide-values",
+            "--secure-mode",
+            "--mask"
+        ],
+        "answer": "No direct CLI option; must use sensitive variables"
+    },
+    {
+        "id": 21,
+        "difficulty": "hard",
+        "question": "What is a potential risk when using remote state with a shared backend for multiple teams?",
+        "options": [
+            "Unintended exposure of secrets to unauthorized teams",
+            "Terraform will fail to run",
+            "State file corruption is guaranteed",
+            "Secrets will be automatically removed"
+        ],
+        "answer": "Unintended exposure of secrets to unauthorized teams"
+    },
+    {
+        "id": 22,
+        "difficulty": "medium",
+        "question": "Which backend type automatically encrypts state at rest when using Azure?",
+        "options": [
+            "AzureRM backend",
+            "Local",
+            "Consul",
+            "HTTP"
+        ],
+        "answer": "AzureRM backend"
+    },
+    {
+        "id": 23,
+        "difficulty": "hard",
+        "question": "How can you limit secret exposure when using Terraform in a CI/CD pipeline?",
+        "options": [
+            "Use masked environment variables and avoid printing plan output",
+            "Commit secrets to the repo for faster access",
+            "Use plain text variables for speed",
+            "Run terraform with --no-secrets flag"
+        ],
+        "answer": "Use masked environment variables and avoid printing plan output"
+    },
+    {
+        "id": 24,
+        "difficulty": "medium",
+        "question": "If a sensitive variable is accidentally output to logs, what should you do first?",
+        "options": [
+            "Rotate the secret immediately",
+            "Delete the log file",
+            "Ignore it if encrypted",
+            "Run terraform refresh"
+        ],
+        "answer": "Rotate the secret immediately"
+    },
+    {
+        "id": 25,
+        "difficulty": "hard",
+        "question": "What happens if you mark a variable as sensitive but then pass it into a non-sensitive output?",
+        "options": [
+            "The output will still display the value in plaintext",
+            "Terraform will throw an error",
+            "The value will be masked automatically",
+            "It will be encrypted at rest"
+        ],
+        "answer": "The output will still display the value in plaintext"
+    }
+]

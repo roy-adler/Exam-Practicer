@@ -1,0 +1,277 @@
+[
+  {
+    "question": "Which Terraform backend type stores state locally on your machine and is not shared between team members?",
+    "options": [
+      "local",
+      "remote",
+      "S3",
+      "Consul"
+    ],
+    "answer": "local",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Which backend type is most commonly used to store state in AWS and supports state locking with DynamoDB?",
+    "options": [
+      "S3",
+      "local",
+      "gcs",
+      "remote"
+    ],
+    "answer": "S3",
+    "difficulty": "easy"
+  },
+  {
+    "question": "The 'remote' backend in Terraform is typically associated with which HashiCorp product?",
+    "options": [
+      "HCP Terraform",
+      "Vault",
+      "Nomad",
+      "Consul"
+    ],
+    "answer": "HCP Terraform",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Which backend type allows you to store state in Google Cloud Storage?",
+    "options": [
+      "gcs",
+      "azurerm",
+      "S3",
+      "consul"
+    ],
+    "answer": "gcs",
+    "difficulty": "easy"
+  },
+  {
+    "question": "What is the main advantage of using a remote backend over a local backend?",
+    "options": [
+      "Supports collaboration and locking",
+      "Faster execution",
+      "No configuration required",
+      "Works offline"
+    ],
+    "answer": "Supports collaboration and locking",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Which backend type supports storing Terraform state in Azure Blob Storage?",
+    "options": [
+      "azurerm",
+      "S3",
+      "gcs",
+      "remote"
+    ],
+    "answer": "azurerm",
+    "difficulty": "easy"
+  },
+  {
+    "question": "When using the Consul backend, Terraform state is stored in which key-value store system?",
+    "options": [
+      "Consul KV",
+      "Etcd",
+      "Redis",
+      "Vault"
+    ],
+    "answer": "Consul KV",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Which backend type is best suited for storing Terraform state securely and centrally for multiple teams in a large organization using HashiCorp tools?",
+    "options": [
+      "remote",
+      "local",
+      "S3",
+      "azurerm"
+    ],
+    "answer": "remote",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What is a key disadvantage of the local backend in a team environment?",
+    "options": [
+      "No locking or collaboration",
+      "Requires internet connection",
+      "Slow performance",
+      "Cannot run terraform apply"
+    ],
+    "answer": "No locking or collaboration",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Which remote backend option integrates directly with Terraform Cloud or HCP Terraform workspaces?",
+    "options": [
+      "remote",
+      "S3",
+      "azurerm",
+      "consul"
+    ],
+    "answer": "remote",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Which backend type is most appropriate for storing state in a HashiCorp Consul cluster?",
+    "options": [
+      "consul",
+      "remote",
+      "S3",
+      "local"
+    ],
+    "answer": "consul",
+    "difficulty": "easy"
+  },
+  {
+    "question": "When using the S3 backend, which AWS service can be used to provide state locking?",
+    "options": [
+      "DynamoDB",
+      "RDS",
+      "EFS",
+      "CloudWatch"
+    ],
+    "answer": "DynamoDB",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Which backend type supports encryption at rest by default when using Terraform Cloud?",
+    "options": [
+      "remote",
+      "S3",
+      "local",
+      "gcs"
+    ],
+    "answer": "remote",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Which backend type uses Azure Blob Storage containers for storing state files?",
+    "options": [
+      "azurerm",
+      "S3",
+      "gcs",
+      "remote"
+    ],
+    "answer": "azurerm",
+    "difficulty": "easy"
+  },
+  {
+    "question": "What is required in addition to an S3 bucket for state locking when using the S3 backend?",
+    "options": [
+      "DynamoDB table",
+      "RDS database",
+      "CloudFormation stack",
+      "Elastic Beanstalk"
+    ],
+    "answer": "DynamoDB table",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Which backend type is most suitable when you want to store state in GCP and use IAM roles for access control?",
+    "options": [
+      "gcs",
+      "S3",
+      "azurerm",
+      "remote"
+    ],
+    "answer": "gcs",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Which backend type can be configured using the 'hostname', 'organization', and 'workspaces' arguments?",
+    "options": [
+      "remote",
+      "S3",
+      "azurerm",
+      "local"
+    ],
+    "answer": "remote",
+    "difficulty": "medium"
+  },
+  {
+    "question": "When using the 'remote' backend, Terraform automatically handles which of the following?",
+    "options": [
+      "State storage and locking",
+      "Provisioning infrastructure",
+      "Generating resource graphs",
+      "Destroying unused resources"
+    ],
+    "answer": "State storage and locking",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Which backend option allows for storing state in multiple cloud providers with provider-specific configurations?",
+    "options": [
+      "S3, azurerm, gcs",
+      "local only",
+      "remote only",
+      "consul only"
+    ],
+    "answer": "S3, azurerm, gcs",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Which backend should be used if you require Terraform state to be managed entirely on-premises?",
+    "options": [
+      "local or consul",
+      "remote",
+      "S3",
+      "azurerm"
+    ],
+    "answer": "local or consul",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Which backend type allows using Terraform Cloud without storing any state locally?",
+    "options": [
+      "remote",
+      "S3",
+      "gcs",
+      "azurerm"
+    ],
+    "answer": "remote",
+    "difficulty": "easy"
+  },
+  {
+    "question": "When choosing a backend type, which factor is most important for a distributed DevOps team?",
+    "options": [
+      "State locking and remote access",
+      "Low latency",
+      "Free cost",
+      "No authentication"
+    ],
+    "answer": "State locking and remote access",
+    "difficulty": "medium"
+  },
+  {
+    "question": "In Terraform, which backend is designed for state storage in HashiCorp Consul clusters?",
+    "options": [
+      "consul",
+      "S3",
+      "azurerm",
+      "gcs"
+    ],
+    "answer": "consul",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Which backend type offers automatic state encryption in GCP?",
+    "options": [
+      "gcs",
+      "S3",
+      "azurerm",
+      "remote"
+    ],
+    "answer": "gcs",
+    "difficulty": "medium"
+  },
+  {
+    "question": "When using AzureRM backend, where is the state file physically stored?",
+    "options": [
+      "Azure Blob Storage",
+      "Azure Key Vault",
+      "Azure SQL Database",
+      "Azure App Service"
+    ],
+    "answer": "Azure Blob Storage",
+    "difficulty": "easy"
+  }
+]

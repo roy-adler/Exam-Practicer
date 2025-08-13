@@ -1,0 +1,269 @@
+[
+    {
+        "question": "What is the primary purpose of Terraform state locking?",
+        "options": [
+            "Prevent concurrent modifications",
+            "Encrypt state files",
+            "Validate syntax",
+            "Speed up applies"
+        ],
+        "answer": "Prevent concurrent modifications",
+        "difficulty": "easy"
+    },
+    {
+        "question": "Which backend type supports state locking natively?",
+        "options": [
+            "Local",
+            "S3 with DynamoDB",
+            "Consul",
+            "All of the above"
+        ],
+        "answer": "All of the above",
+        "difficulty": "medium"
+    },
+    {
+        "question": "When using S3 as a backend, which AWS service can be used to enable state locking?",
+        "options": [
+            "CloudWatch",
+            "DynamoDB",
+            "EC2",
+            "KMS"
+        ],
+        "answer": "DynamoDB",
+        "difficulty": "easy"
+    },
+    {
+        "question": "What could happen if state locking is disabled in a multi-user environment?",
+        "options": [
+            "State corruption",
+            "Faster execution",
+            "Automatic encryption",
+            "Improved security"
+        ],
+        "answer": "State corruption",
+        "difficulty": "medium"
+    },
+    {
+        "question": "True or False: The local backend supports remote state locking by default.",
+        "options": [
+            "True",
+            "False"
+        ],
+        "answer": "False",
+        "difficulty": "easy"
+    },
+    {
+        "question": "Which Terraform command is most likely to fail if another process holds the state lock?",
+        "options": [
+            "terraform plan",
+            "terraform apply",
+            "terraform init",
+            "terraform fmt"
+        ],
+        "answer": "terraform apply",
+        "difficulty": "easy"
+    },
+    {
+        "question": "How can you manually release a stuck state lock in Terraform?",
+        "options": [
+            "By deleting the state file",
+            "Using 'terraform force-unlock'",
+            "Restarting Terraform CLI",
+            "Re-running 'terraform init'"
+        ],
+        "answer": "Using 'terraform force-unlock'",
+        "difficulty": "medium"
+    },
+    {
+        "question": "State locking prevents:",
+        "options": [
+            "Two users from running apply simultaneously",
+            "Terraform from using multiple providers",
+            "Backend configuration changes",
+            "Resource drift"
+        ],
+        "answer": "Two users from running apply simultaneously",
+        "difficulty": "easy"
+    },
+    {
+        "question": "In Terraform Cloud, state locking is:",
+        "options": [
+            "Disabled",
+            "Optional",
+            "Automatic",
+            "Unsupported"
+        ],
+        "answer": "Automatic",
+        "difficulty": "medium"
+    },
+    {
+        "question": "What is the effect of 'terraform force-unlock -force'?",
+        "options": [
+            "It deletes all resources",
+            "It removes the lock without checking",
+            "It verifies the lock owner before removal",
+            "It encrypts the state"
+        ],
+        "answer": "It removes the lock without checking",
+        "difficulty": "hard"
+    },
+    {
+        "question": "True or False: State locking improves Terraform performance.",
+        "options": [
+            "True",
+            "False"
+        ],
+        "answer": "False",
+        "difficulty": "easy"
+    },
+    {
+        "question": "Which locking mechanism is used when using Consul as a backend?",
+        "options": [
+            "Pessimistic locking",
+            "Optimistic locking",
+            "Timestamp-based locking",
+            "File-based locking"
+        ],
+        "answer": "Pessimistic locking",
+        "difficulty": "hard"
+    },
+    {
+        "question": "If a state lock cannot be acquired, Terraform will:",
+        "options": [
+            "Retry after a delay",
+            "Exit with an error",
+            "Ignore the lock",
+            "Switch backend"
+        ],
+        "answer": "Exit with an error",
+        "difficulty": "medium"
+    },
+    {
+        "question": "Which environment variable can be used to disable state locking?",
+        "options": [
+            "TF_DISABLE_STATE_LOCKING",
+            "TF_LOCK",
+            "TF_STATE_UNLOCK",
+            "TF_LOCKING"
+        ],
+        "answer": "TF_DISABLE_STATE_LOCKING",
+        "difficulty": "hard"
+    },
+    {
+        "question": "What is the risk of using 'terraform force-unlock' without verifying the lock holder?",
+        "options": [
+            "Losing encrypted state",
+            "Concurrent modifications causing corruption",
+            "Provider misconfiguration",
+            "Version mismatch"
+        ],
+        "answer": "Concurrent modifications causing corruption",
+        "difficulty": "medium"
+    },
+    {
+        "question": "In an S3 + DynamoDB backend, the DynamoDB table must have:",
+        "options": [
+            "A primary key named 'LockID'",
+            "No primary key",
+            "TTL enabled",
+            "Encryption enabled"
+        ],
+        "answer": "A primary key named 'LockID'",
+        "difficulty": "medium"
+    },
+    {
+        "question": "State locking applies to which Terraform commands?",
+        "options": [
+            "terraform plan only",
+            "terraform apply and terraform refresh",
+            "terraform init only",
+            "terraform validate only"
+        ],
+        "answer": "terraform apply and terraform refresh",
+        "difficulty": "medium"
+    },
+    {
+        "question": "True or False: State locking is required for all backends.",
+        "options": [
+            "True",
+            "False"
+        ],
+        "answer": "False",
+        "difficulty": "easy"
+    },
+    {
+        "question": "If a backend does not support locking, what can you do to prevent issues?",
+        "options": [
+            "Use local backend",
+            "Implement manual coordination",
+            "Disable state",
+            "Use force-unlock regularly"
+        ],
+        "answer": "Implement manual coordination",
+        "difficulty": "hard"
+    },
+    {
+        "question": "When using Terraform Enterprise, state locking is:",
+        "options": [
+            "Optional",
+            "Manual",
+            "Automatic",
+            "Unsupported"
+        ],
+        "answer": "Automatic",
+        "difficulty": "medium"
+    },
+    {
+        "question": "What happens if two applies run at the same time without locking?",
+        "options": [
+            "Both fail immediately",
+            "The last one overwrites the other's changes",
+            "Terraform merges the changes",
+            "Terraform stops both"
+        ],
+        "answer": "The last one overwrites the other's changes",
+        "difficulty": "hard"
+    },
+    {
+        "question": "Which command is used to troubleshoot a stuck lock in Terraform?",
+        "options": [
+            "terraform unlock",
+            "terraform force-unlock",
+            "terraform release-lock",
+            "terraform debug-lock"
+        ],
+        "answer": "terraform force-unlock",
+        "difficulty": "easy"
+    },
+    {
+        "question": "In Terraform OSS, which backends support native locking?",
+        "options": [
+            "Consul, S3+DynamoDB, GCS",
+            "Local, S3, AzureRM",
+            "Consul only",
+            "All backends"
+        ],
+        "answer": "Consul, S3+DynamoDB, GCS",
+        "difficulty": "hard"
+    },
+    {
+        "question": "True or False: Locking ensures that the state file cannot be read by other processes.",
+        "options": [
+            "True",
+            "False"
+        ],
+        "answer": "False",
+        "difficulty": "easy"
+    },
+    {
+        "question": "What is the default lock timeout in Terraform?",
+        "options": [
+            "10s",
+            "1m",
+            "5m",
+            "Unlimited"
+        ],
+        "answer": "Unlimited",
+        "difficulty": "hard"
+    }
+]

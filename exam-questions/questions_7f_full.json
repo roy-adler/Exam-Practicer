@@ -1,0 +1,277 @@
+[
+  {
+    "question": "In Terraform, where is the backend configuration typically defined?",
+    "options": [
+      "Inside the terraform block",
+      "Inside the provider block",
+      "Inside the variables file",
+      "Inside outputs"
+    ],
+    "answer": "Inside the terraform block",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Which backend configuration parameter specifies the remote storage location for S3 backend?",
+    "options": [
+      "bucket",
+      "container_name",
+      "storage_account_name",
+      "project"
+    ],
+    "answer": "bucket",
+    "difficulty": "easy"
+  },
+  {
+    "question": "For the AzureRM backend, which parameters are required to locate the state file?",
+    "options": [
+      "storage_account_name, container_name, key",
+      "bucket, region, key",
+      "project, bucket, prefix",
+      "organization, workspace"
+    ],
+    "answer": "storage_account_name, container_name, key",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What does the 'key' argument in backend configuration specify?",
+    "options": [
+      "The encryption key",
+      "The path or name of the state file",
+      "The IAM key for authentication",
+      "The API key for provider"
+    ],
+    "answer": "The path or name of the state file",
+    "difficulty": "easy"
+  },
+  {
+    "question": "In a backend configuration, what does setting 'encrypt = true' do for the S3 backend?",
+    "options": [
+      "Enables server-side encryption for the state file",
+      "Encrypts provider credentials",
+      "Enables client-side encryption",
+      "Encrypts all resource data"
+    ],
+    "answer": "Enables server-side encryption for the state file",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Which backend type requires the 'prefix' argument to organize state files in GCS?",
+    "options": [
+      "gcs",
+      "S3",
+      "azurerm",
+      "local"
+    ],
+    "answer": "gcs",
+    "difficulty": "medium"
+  },
+  {
+    "question": "If a backend configuration block contains sensitive information, what is the recommended best practice?",
+    "options": [
+      "Use environment variables",
+      "Store in Git",
+      "Ignore encryption",
+      "Disable locking"
+    ],
+    "answer": "Use environment variables",
+    "difficulty": "medium"
+  },
+  {
+    "question": "In the 'remote' backend configuration, which argument specifies the Terraform Cloud workspace?",
+    "options": [
+      "workspaces",
+      "workspace_name",
+      "key",
+      "org"
+    ],
+    "answer": "workspaces",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What is the function of the 'region' parameter in S3 backend configuration?",
+    "options": [
+      "Specifies AWS region for the S3 bucket",
+      "Defines encryption algorithm",
+      "Sets IAM role",
+      "Specifies AWS profile"
+    ],
+    "answer": "Specifies AWS region for the S3 bucket",
+    "difficulty": "easy"
+  },
+  {
+    "question": "In backend configuration, what happens if you change the 'key' argument value?",
+    "options": [
+      "Terraform treats it as a new state file",
+      "State file is overwritten",
+      "Backend type changes",
+      "Nothing changes"
+    ],
+    "answer": "Terraform treats it as a new state file",
+    "difficulty": "hard"
+  },
+  {
+    "question": "What is the purpose of the 'endpoint' argument in some backend configurations?",
+    "options": [
+      "To specify a custom API endpoint",
+      "To specify the final resource location",
+      "To override default credentials",
+      "To set encryption key location"
+    ],
+    "answer": "To specify a custom API endpoint",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Which backend type can specify 'lock_table' for state locking?",
+    "options": [
+      "S3",
+      "gcs",
+      "azurerm",
+      "local"
+    ],
+    "answer": "S3",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What does the 'workspace_key_prefix' parameter do in backend configuration?",
+    "options": [
+      "Prefixes state file names for each workspace",
+      "Sets a default workspace",
+      "Adds encryption to workspaces",
+      "Defines IAM permissions"
+    ],
+    "answer": "Prefixes state file names for each workspace",
+    "difficulty": "hard"
+  },
+  {
+    "question": "When configuring a GCS backend, what is the 'bucket' parameter used for?",
+    "options": [
+      "The GCS bucket name for storing state",
+      "The local file path",
+      "The Terraform module name",
+      "The encryption key name"
+    ],
+    "answer": "The GCS bucket name for storing state",
+    "difficulty": "easy"
+  },
+  {
+    "question": "If you omit a required backend parameter, what happens when you run 'terraform init'?",
+    "options": [
+      "Terraform prompts for it",
+      "Terraform uses defaults",
+      "Terraform fails immediately",
+      "Terraform switches to local backend"
+    ],
+    "answer": "Terraform prompts for it",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Which backend type requires the 'organization' parameter?",
+    "options": [
+      "remote",
+      "S3",
+      "gcs",
+      "azurerm"
+    ],
+    "answer": "remote",
+    "difficulty": "easy"
+  },
+  {
+    "question": "What is the function of 'access_key' and 'secret_key' in backend configuration?",
+    "options": [
+      "AWS credentials for authentication",
+      "Encryption parameters",
+      "Provider configuration",
+      "Workspace selection"
+    ],
+    "answer": "AWS credentials for authentication",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Which backend parameter defines whether to require SSL connections?",
+    "options": [
+      "skip_region_validation",
+      "force_path_style",
+      "skip_credentials_validation",
+      "use_ssl"
+    ],
+    "answer": "use_ssl",
+    "difficulty": "hard"
+  },
+  {
+    "question": "In AzureRM backend configuration, what does 'key' refer to?",
+    "options": [
+      "The name of the blob object storing state",
+      "The API key for authentication",
+      "The encryption key",
+      "The container name"
+    ],
+    "answer": "The name of the blob object storing state",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What is the role of 'profile' in S3 backend configuration?",
+    "options": [
+      "Selects a named AWS CLI profile",
+      "Defines backend encryption",
+      "Specifies bucket location",
+      "Overrides provider version"
+    ],
+    "answer": "Selects a named AWS CLI profile",
+    "difficulty": "medium"
+  },
+  {
+    "question": "If the backend configuration block changes, what command should be run to reinitialize it?",
+    "options": [
+      "terraform init",
+      "terraform refresh",
+      "terraform plan",
+      "terraform apply"
+    ],
+    "answer": "terraform init",
+    "difficulty": "easy"
+  },
+  {
+    "question": "What is the primary purpose of the backend configuration in Terraform?",
+    "options": [
+      "To define where and how state is stored",
+      "To configure providers",
+      "To manage resources",
+      "To set variable defaults"
+    ],
+    "answer": "To define where and how state is stored",
+    "difficulty": "easy"
+  },
+  {
+    "question": "What does 'skip_region_validation' do in S3 backend configuration?",
+    "options": [
+      "Prevents Terraform from checking if the S3 bucket region exists",
+      "Skips credential validation",
+      "Disables locking",
+      "Forces path style"
+    ],
+    "answer": "Prevents Terraform from checking if the S3 bucket region exists",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Which backend type allows the 'prefix' parameter to organize state files?",
+    "options": [
+      "gcs",
+      "S3",
+      "azurerm",
+      "remote"
+    ],
+    "answer": "gcs",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What should you do if backend configuration contains secrets and must be shared with teammates?",
+    "options": [
+      "Use partial configuration with environment variables",
+      "Commit full configuration to Git",
+      "Send via email",
+      "Remove backend entirely"
+    ],
+    "answer": "Use partial configuration with environment variables",
+    "difficulty": "medium"
+  }
+]

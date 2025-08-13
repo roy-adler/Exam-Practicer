@@ -1,0 +1,266 @@
+[
+  {
+    "question": "What is the primary purpose of the default `local` backend in Terraform?",
+    "options": [
+      "Store state locally on the machine running Terraform",
+      "Store state in HashiCorp Cloud Platform",
+      "Store state in AWS S3",
+      "Distribute state across multiple team members automatically"
+    ],
+    "answer": "Store state locally on the machine running Terraform",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Where does the `local` backend store its state file by default?",
+    "options": [
+      "./terraform.tfstate",
+      "~/.terraform/state.json",
+      "/var/lib/terraform/state.tfstate",
+      "./state/local.tfstate"
+    ],
+    "answer": "./terraform.tfstate",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Which of the following is TRUE about the `local` backend?",
+    "options": [
+      "It supports team-based state locking",
+      "It is the default backend if no backend is configured",
+      "It encrypts state files automatically",
+      "It requires network connectivity to operate"
+    ],
+    "answer": "It is the default backend if no backend is configured",
+    "difficulty": "easy"
+  },
+  {
+    "question": "What is a major limitation of the `local` backend when used in a team environment?",
+    "options": [
+      "It does not support remote state storage",
+      "It does not support variables",
+      "It cannot be used with AWS",
+      "It requires a separate database"
+    ],
+    "answer": "It does not support remote state storage",
+    "difficulty": "medium"
+  },
+  {
+    "question": "How can you explicitly configure a `local` backend in Terraform?",
+    "options": [
+      "backend \"local\" { path = \"terraform.tfstate\" }",
+      "backend \"default\" {}",
+      "backend \"filesystem\" {}",
+      "backend \"file\" { location = \"./state\" }"
+    ],
+    "answer": "backend \"local\" { path = \"terraform.tfstate\" }",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Which backend type is recommended for collaborative work instead of the default `local` backend?",
+    "options": [
+      "remote",
+      "cloud",
+      "s3",
+      "All of the above"
+    ],
+    "answer": "All of the above",
+    "difficulty": "medium"
+  },
+  {
+    "question": "When using the `local` backend, how is state locking handled?",
+    "options": [
+      "State locking is not supported",
+      "It uses a lock file in the `.terraform` directory",
+      "It uses DynamoDB for locking",
+      "It locks state in memory only"
+    ],
+    "answer": "State locking is not supported",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Which of the following is NOT a valid reason to use the `local` backend?",
+    "options": [
+      "You work alone and want simple local storage",
+      "You want to avoid remote dependencies",
+      "You need concurrent access from multiple team members",
+      "You are testing a new Terraform module locally"
+    ],
+    "answer": "You need concurrent access from multiple team members",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What happens to the state file when you switch from the `local` backend to a remote backend?",
+    "options": [
+      "It is automatically migrated to the new backend",
+      "It is deleted from the local directory",
+      "It must be manually recreated",
+      "Terraform ignores the old state file"
+    ],
+    "answer": "It is automatically migrated to the new backend",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Which command can you use to inspect the current backend configuration in Terraform?",
+    "options": [
+      "terraform show",
+      "terraform state list",
+      "terraform init -migrate-state",
+      "terraform providers"
+    ],
+    "answer": "terraform init -migrate-state",
+    "difficulty": "hard"
+  },
+  {
+    "question": "The `local` backend is most suitable for which use case?",
+    "options": [
+      "Collaborative production environments",
+      "Individual developer testing",
+      "High-security multi-region deployments",
+      "Terraform Cloud automation"
+    ],
+    "answer": "Individual developer testing",
+    "difficulty": "easy"
+  },
+  {
+    "question": "By default, the `local` backend's state file is stored in:",
+    "options": [
+      "JSON format",
+      "YAML format",
+      "HCL format",
+      "Binary format"
+    ],
+    "answer": "JSON format",
+    "difficulty": "easy"
+  },
+  {
+    "question": "If a local backend state file is accidentally deleted, what happens on the next `terraform plan`?",
+    "options": [
+      "Terraform fails because it cannot find state",
+      "Terraform recreates it based on configuration and current infrastructure",
+      "Terraform fetches it from remote storage",
+      "Terraform prompts for reinitialization"
+    ],
+    "answer": "Terraform recreates it based on configuration and current infrastructure",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Which file extension does the local backend state file typically have?",
+    "options": [
+      ".tf",
+      ".tfvars",
+      ".tfstate",
+      ".state"
+    ],
+    "answer": ".tfstate",
+    "difficulty": "easy"
+  },
+  {
+    "question": "What is the best way to secure sensitive data in a local backend state file?",
+    "options": [
+      "Encrypt the state file using an OS-level tool",
+      "Move to a remote backend with encryption",
+      "Add `.tfstate` to `.gitignore`",
+      "All of the above"
+    ],
+    "answer": "All of the above",
+    "difficulty": "medium"
+  },
+  {
+    "question": "In a CI/CD pipeline, why is the `local` backend generally avoided?",
+    "options": [
+      "It is too slow",
+      "It does not persist state between pipeline runs",
+      "It requires a database connection",
+      "It cannot handle variables"
+    ],
+    "answer": "It does not persist state between pipeline runs",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What is the default name of the local backend state file?",
+    "options": [
+      "terraform.state",
+      "terraform.tfstate",
+      "state.tf",
+      "backend.tfstate"
+    ],
+    "answer": "terraform.tfstate",
+    "difficulty": "easy"
+  },
+  {
+    "question": "If you configure `path = \"custom.tfstate\"` in a local backend, where will the state file be stored?",
+    "options": [
+      "In the `.terraform` directory",
+      "In the working directory with that filename",
+      "In `/tmp`",
+      "In the Terraform Cloud workspace"
+    ],
+    "answer": "In the working directory with that filename",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Which backend is automatically configured if you run `terraform init` without specifying any backend?",
+    "options": [
+      "remote",
+      "local",
+      "s3",
+      "consul"
+    ],
+    "answer": "local",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Can the local backend be configured to store multiple state files in different locations?",
+    "options": [
+      "Yes, by using different `path` configurations per workspace",
+      "No, it can only store one state file",
+      "Yes, but only with remote locking",
+      "No, unless using Terraform Enterprise"
+    ],
+    "answer": "Yes, by using different `path` configurations per workspace",
+    "difficulty": "hard"
+  },
+  {
+    "question": "How does the local backend handle concurrent applies from different users?",
+    "options": [
+      "It overwrites state without warning",
+      "It merges the state automatically",
+      "It prompts the user to retry",
+      "It uses an OS-level file lock"
+    ],
+    "answer": "It overwrites state without warning",
+    "difficulty": "hard"
+  },
+  {
+    "question": "In the backend block, what argument specifies where the state file is stored?",
+    "options": [
+      "file",
+      "path",
+      "location",
+      "state"
+    ],
+    "answer": "path",
+    "difficulty": "easy"
+  },
+  {
+    "question": "If you want to migrate from the local backend to S3, which flag is needed with `terraform init`?",
+    "options": [
+      "--migrate-state",
+      "--move-state",
+      "--transfer-state",
+      "--backend-config"
+    ],
+    "answer": "--migrate-state",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What does Terraform store in the `.terraform/` directory when using the local backend?",
+    "options": [
+      "Provider plugins and workspace metadata",
+      "State files",
+      "Cloud workspace secrets",
+      "Terraform license information"
+    ],
+    "answer": "Provider plugins and workspace metadata",
+    "difficulty": "medium"
+  }
+]
