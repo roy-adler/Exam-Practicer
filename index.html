@@ -3,68 +3,233 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Terraform Associate 003 Practice Test - Interactive quiz application for studying Terraform concepts" />
+  <meta name="keywords" content="terraform, practice test, quiz, associate, certification" />
+  <meta name="author" content="Terraform Practice Test" />
+  
+  <!-- Open Graph / Social Media -->
+  <meta property="og:title" content="Terraform Associate 003 Practice Test" />
+  <meta property="og:description" content="Interactive practice test for Terraform Associate certification" />
+  <meta property="og:type" content="website" />
+  
   <title>Terraform Associate 003 – Practice Test</title>
   <link rel="stylesheet" href="styles.css">
+  
+  <!-- Preload critical resources -->
+  <link rel="preload" href="questions.json" as="fetch" crossorigin>
+  <link rel="preload" href="app.js" as="script">
 </head>
 <body>
+  <!-- Skip link for accessibility -->
+  <a href="#main-content" class="skip-link sr-only">Skip to main content</a>
+  
   <div class="wrap">
-    <header>
+    <header role="banner">
       <h1>Terraform Associate 003 — Practice Test</h1>
-      <div class="controls">
-        <span class="pill" id="questionCountLabel">—</span>
-        <span class="pill" id="modeLabel">Mode: Quiz</span>
-        <button class="ghost" id="btnLoadErrors" title="Practice only your mistakes" disabled>Work on your errors</button>
-        <label class="secondary" for="fileInput" style="cursor:pointer;display:inline-block">Load questions</label>
-        <input id="fileInput" type="file" accept="application/json" style="display:none" />
-        <button class="secondary" id="btnExport">Export questions</button>
-        <button class="secondary" id="btnReset">Reset</button>
+      <div class="controls" role="toolbar" aria-label="Quiz controls">
+        <span class="pill" id="questionCountLabel" aria-label="Total questions available">—</span>
+        <span class="pill" id="modeLabel" aria-label="Current quiz mode">Mode: Quiz</span>
+        <button 
+          class="ghost" 
+          id="btnLoadErrors" 
+          title="Practice only your mistakes" 
+          disabled
+          aria-label="Practice your previous wrong answers"
+        >
+          Work on your errors
+        </button>
+        <label class="secondary" for="fileInput" style="cursor:pointer;display:inline-block">
+          Load questions
+          <input 
+            id="fileInput" 
+            type="file" 
+            accept="application/json" 
+            style="display:none" 
+            aria-label="Upload custom questions file"
+          />
+        </label>
+        <button 
+          class="secondary" 
+          id="btnExport"
+          aria-label="Export all questions to JSON file"
+        >
+          Export questions
+        </button>
+        <button 
+          class="secondary" 
+          id="btnReset"
+          aria-label="Reset all progress and wrong answers"
+        >
+          Reset
+        </button>
       </div>
     </header>
 
-    <section class="card" id="introCard">
-      <div class="grid" style="padding:18px">
-        <p class="meta">Choose how many questions you want, then <b>Start quiz</b>. We randomize questions and choices each run. After you submit, you’ll get a breakdown and can practice only your wrong ones.</p>
-        <div class="row">
-          <label class="pill">Questions per test: <input id="countInput" type="number" min="5" max="40" value="20" style="width:68px;margin-left:8px;background:transparent;border:none;color:var(--text)"></label>
-          <label class="pill">Shuffle choices <input id="shuffleChoices" type="checkbox" checked style="margin-left:8px"></label>
-          <label class="pill">Show explanations on submit <input id="showExplain" type="checkbox" checked style="margin-left:8px"></label>
+    <main id="main-content" role="main">
+      <section class="card" id="introCard" role="region" aria-label="Quiz introduction">
+        <div class="grid" style="padding:18px">
+          <p class="meta">
+            Choose how many questions you want, then <strong>Start quiz</strong>. 
+            We randomize questions and choices each run. After you submit, you'll get a breakdown 
+            and can practice only your wrong ones.
+          </p>
+          <div class="row">
+            <label class="pill" for="countInput">
+              Questions per test: 
+              <input 
+                id="countInput" 
+                type="number" 
+                min="5" 
+                max="40" 
+                value="20" 
+                style="width:68px;margin-left:8px;background:transparent;border:none;color:var(--text)"
+                aria-label="Number of questions for the quiz"
+              />
+            </label>
+            <label class="pill">
+              <input 
+                id="shuffleChoices" 
+                type="checkbox" 
+                checked 
+                style="margin-left:8px"
+                aria-label="Shuffle answer choices for each question"
+              />
+              Shuffle choices
+            </label>
+            <label class="pill">
+              <input 
+                id="showExplain" 
+                type="checkbox" 
+                checked 
+                style="margin-left:8px"
+                aria-label="Show explanations when reviewing answers"
+              />
+              Show explanations on submit
+            </label>
+          </div>
+          <div class="row">
+            <button 
+              id="btnStart"
+              aria-label="Start the quiz with selected number of questions"
+            >
+              Start quiz
+            </button>
+            <button 
+              class="secondary" 
+              id="btnSample"
+              aria-label="Start a sample quiz with 10 questions"
+            >
+              Load sample (10)
+            </button>
+          </div>
         </div>
-        <div class="row">
-          <button id="btnStart">Start quiz</button>
-          <button class="secondary" id="btnSample">Load sample (10)</button>
-        </div>
-      </div>
-    </section>
+      </section>
 
-    <section class="card hidden" id="quizCard">
-      <div class="q" id="qContainer"></div>
-      <div class="footer">
-        <div style="flex:1;min-width:200px">
-          <div class="progress"><div id="progressInner"></div></div>
-          <div class="meta" id="progressLabel">0 / 0</div>
+      <section class="card hidden" id="quizCard" role="region" aria-label="Quiz questions">
+        <div class="q" id="qContainer" role="main" aria-live="polite" aria-atomic="false">
+          <!-- Questions will be dynamically inserted here -->
         </div>
-        <div class="controls">
-          <span class="pill" id="liveTimer">00:00</span>
-          <button class="secondary" id="btnPrev">Prev</button>
-          <button class="secondary" id="btnNext">Next</button>
-          <button id="btnSubmit">Submit</button>
-        </div>
-      </div>
-    </section>
+        <footer class="footer" role="contentinfo">
+          <div style="flex:1;min-width:200px">
+            <div class="progress" role="progressbar" aria-label="Quiz progress">
+              <div id="progressInner" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+            <div class="meta" id="progressLabel" aria-label="Questions answered">0 / 0</div>
+          </div>
+          <div class="controls">
+            <span class="pill" id="liveTimer" aria-label="Time elapsed">00:00</span>
+            <button 
+              class="secondary" 
+              id="btnPrev"
+              aria-label="Go to previous question"
+            >
+              Prev
+            </button>
+            <button 
+              class="secondary" 
+              id="btnNext"
+              aria-label="Go to next question"
+            >
+              Next
+            </button>
+            <button 
+              id="btnSubmit"
+              aria-label="Submit quiz and see results"
+            >
+              Submit
+            </button>
+          </div>
+        </footer>
+      </section>
 
-    <section class="card hidden" id="resultCard">
-      <div class="summary" id="resultSummary"></div>
-      <div class="footer">
-        <div class="controls">
-          <button id="btnRetry">New randomized quiz</button>
-          <button class="warn" id="btnPracticeWrong" disabled>Practice wrong answers</button>
-          <button class="secondary" id="btnReview">Review all</button>
+      <section class="card hidden" id="resultCard" role="region" aria-label="Quiz results">
+        <div class="summary" id="resultSummary" role="main" aria-live="polite" aria-atomic="true">
+          <!-- Results will be dynamically inserted here -->
         </div>
-        <div class="meta" id="timeTaken"></div>
-      </div>
-    </section>
+        <footer class="footer">
+          <div class="controls">
+            <button 
+              id="btnRetry"
+              aria-label="Start a new randomized quiz"
+            >
+              New randomized quiz
+            </button>
+            <button 
+              class="warn" 
+              id="btnPracticeWrong" 
+              disabled
+              aria-label="Practice questions you answered incorrectly"
+            >
+              Practice wrong answers
+            </button>
+            <button 
+              class="secondary" 
+              id="btnReview"
+              aria-label="Review all questions and answers"
+            >
+              Review all
+            </button>
+          </div>
+          <div class="meta" id="timeTaken" aria-label="Total time taken"></div>
+        </footer>
+      </section>
+    </main>
+  </div>
+
+  <!-- Loading indicator -->
+  <div id="loadingIndicator" class="hidden" role="status" aria-live="polite">
+    <div style="text-align: center; padding: 20px;">
+      <p>Loading questions...</p>
+    </div>
+  </div>
+
+  <!-- Error boundary -->
+  <div id="errorBoundary" class="hidden" role="alert" aria-live="assertive">
+    <div style="text-align: center; padding: 20px; color: var(--danger);">
+      <h2>Something went wrong</h2>
+      <p id="errorMessage">An unexpected error occurred.</p>
+      <button onclick="location.reload()" class="secondary">Reload Page</button>
+    </div>
   </div>
 
   <script src="app.js" defer></script>
+  
+  <!-- Structured data for SEO -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Terraform Associate 003 Practice Test",
+    "description": "Interactive practice test for Terraform Associate certification",
+    "url": "https://example.com",
+    "applicationCategory": "EducationalApplication",
+    "operatingSystem": "Web Browser",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    }
+  }
+  </script>
 </body>
 </html>
