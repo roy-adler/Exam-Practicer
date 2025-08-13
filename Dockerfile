@@ -31,11 +31,11 @@ RUN addgroup -g 1001 -S appuser 2>/dev/null || true && \
 # Copy nginx configuration
 COPY nginx.conf /etc/nginx/conf.d/default.conf
 
-# Copy built application from builder stage
+# Copy static files from builder stage
 COPY --from=builder /app/index.html /usr/share/nginx/html/
 COPY --from=builder /app/styles.css /usr/share/nginx/html/
 COPY --from=builder /app/app.js /usr/share/nginx/html/
-COPY --from=builder /app/questions.json /usr/share/nginx/html/
+COPY --from=builder /app/exam-questions/ /usr/share/nginx/html/exam-questions/
 
 # Set proper permissions
 RUN chown -R appuser:appuser /usr/share/nginx/html && \

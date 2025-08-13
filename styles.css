@@ -689,3 +689,23 @@ button.danger:hover {
     color: black;
   }
 }
+
+.error-boundary {
+    background-color: #fee;
+    color: #c33;
+    padding: 1rem;
+    margin: 1rem 0;
+    border: 1px solid #fcc;
+    border-radius: 4px;
+    display: none;
+}
+
+.success-message {
+    background-color: #efe;
+    color: #363;
+    padding: 1rem;
+    margin: 1rem 0;
+    border: 1px solid #cfc;
+    border-radius: 4px;
+    display: block;
+}
