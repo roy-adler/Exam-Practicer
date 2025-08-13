@@ -661,10 +661,7 @@ class QuizApp {
         const choiceIndex = parseInt(event.target.dataset.choiceIndex);
         const question = this.currentQuiz[this.currentQuestionIndex];
 
-        // Double-check the multiple property
-        const isMultiple = question.answer && question.answer.length > 1;
-        question.multiple = isMultiple;
-
+        // Use the multiple property from the question data
         if (question.multiple) {
             this.selectMultipleChoice(choiceIndex, event.target.checked);
         } else {
