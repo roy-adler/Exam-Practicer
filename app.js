@@ -294,6 +294,14 @@ class QuizApp {
             this.shuffleArray(choices);
         }
         
+        // Debug logging
+        console.log(`Creating choices for question:`, {
+            id: question.id,
+            multiple: question.multiple,
+            answerLength: question.answer.length,
+            answer: question.answer
+        });
+        
         return choices.map((choice, index) => {
             const isSelected = this.isChoiceSelected(index);
             const inputType = question.multiple ? 'checkbox' : 'radio';
@@ -339,6 +347,18 @@ class QuizApp {
     }
     
     selectSingleChoice(choiceIndex) {
+        // For single choice questions, uncheck all other radio buttons
+        const choices = this.elements.qContainer.querySelectorAll('.choice input[type="radio"]');
+        choices.forEach(choice => {
+            choice.checked = false;
+        });
+        
+        // Check the selected choice
+        const selectedChoice = this.elements.qContainer.querySelector(`input[data-choice-index="${choiceIndex}"]`);
+        if (selectedChoice) {
+            selectedChoice.checked = true;
+        }
+        
         this.answers[this.currentQuestionIndex] = choiceIndex;
         this.updateChoiceStyling();
         this.updateProgress();
