@@ -1,0 +1,87 @@
+[
+    {
+        "id": "7a_001",
+        "q": "What is the primary purpose of the default `local` backend in Terraform?",
+        "choices": [
+            "Store state locally on the machine running Terraform",
+            "Store state in HashiCorp Cloud Platform",
+            "Store state in AWS S3",
+            "Distribute state across multiple team members automatically"
+        ],
+        "answer": [0],
+        "explain": "The local backend stores Terraform state files locally on the machine where Terraform is running, making it the default and simplest backend option.",
+        "tags": ["terraform", "backend", "local", "state"],
+        "difficulty": "easy",
+        "focus": "7a",
+        "category": "Backend Configuration",
+        "multiple": false
+    },
+    {
+        "id": "7a_002",
+        "q": "Where does the `local` backend store its state file by default?",
+        "choices": [
+            "./terraform.tfstate",
+            "~/.terraform/state.json",
+            "/var/lib/terraform/state.tfstate",
+            "./state/local.tfstate"
+        ],
+        "answer": [0],
+        "explain": "The local backend stores state in `./terraform.tfstate` by default, which is in the current working directory.",
+        "tags": ["terraform", "backend", "local", "state", "file"],
+        "difficulty": "easy",
+        "focus": "7a",
+        "category": "Backend Configuration",
+        "multiple": false
+    },
+    {
+        "id": "7a_003",
+        "q": "Which of the following is TRUE about the `local` backend?",
+        "choices": [
+            "It supports team-based state locking",
+            "It is the default backend if no backend is configured",
+            "It encrypts state files automatically",
+            "It requires network connectivity to operate"
+        ],
+        "answer": [1],
+        "explain": "The local backend is the default backend when no backend configuration is specified in Terraform.",
+        "tags": ["terraform", "backend", "local", "default"],
+        "difficulty": "easy",
+        "focus": "7a",
+        "category": "Backend Configuration",
+        "multiple": false
+    },
+    {
+        "id": "7a_004",
+        "q": "What is a major limitation of the `local` backend when used in a team environment?",
+        "choices": [
+            "It does not support remote state storage",
+            "It does not support variables",
+            "It cannot be used with AWS",
+            "It requires a separate database"
+        ],
+        "answer": [0],
+        "explain": "The local backend stores state locally and cannot be shared between team members, making collaboration difficult.",
+        "tags": ["terraform", "backend", "local", "limitations", "team"],
+        "difficulty": "medium",
+        "focus": "7a",
+        "category": "Backend Configuration",
+        "multiple": false
+    },
+    {
+        "id": "7a_005",
+        "q": "How can you explicitly configure a `local` backend in Terraform?",
+        "choices": [
+            "backend \"local\" { path = \"terraform.tfstate\" }",
+            "backend \"default\" {}",
+            "backend \"filesystem\" {}",
+            "backend \"file\" { location = \"./state\" }"
+        ],
+        "answer": [0],
+        "explain": "You can explicitly configure the local backend with a custom path using the path argument.",
+        "tags": ["terraform", "backend", "local", "configuration"],
+        "difficulty": "medium",
+        "focus": "7a",
+        "category": "Backend Configuration",
+        "multiple": false
+    }
+]

@@ -1,0 +1,87 @@
+[
+    {
+        "id": "7e_001",
+        "q": "What is 'resource drift' in Terraform?",
+        "choices": [
+            "Changes in infrastructure made outside Terraform",
+            "Terraform state file corruption",
+            "A planned change in Terraform configuration",
+            "Updating provider plugins"
+        ],
+        "answer": [0],
+        "explain": "Drift occurs when the real infrastructure changes without Terraform being informed, causing differences between state and reality.",
+        "tags": ["drift", "state", "terraform"],
+        "difficulty": "easy",
+        "focus": "7e",
+        "category": "State Management",
+        "multiple": false
+    },
+    {
+        "id": "7e_002",
+        "q": "Which command detects resource drift without making changes to infrastructure?",
+        "choices": [
+            "terraform plan -refresh-only",
+            "terraform refresh",
+            "terraform state list",
+            "terraform import"
+        ],
+        "answer": [0],
+        "explain": "`terraform plan -refresh-only` refreshes state from the real infrastructure and shows differences without applying changes.",
+        "tags": ["drift", "plan", "state"],
+        "difficulty": "easy",
+        "focus": "7e",
+        "category": "State Management",
+        "multiple": false
+    },
+    {
+        "id": "7e_003",
+        "q": "How can you update the state to match the real infrastructure without changing the configuration?",
+        "choices": [
+            "terraform plan -refresh-only && terraform apply -refresh-only",
+            "terraform refresh",
+            "terraform import",
+            "terraform state replace-provider"
+        ],
+        "answer": [1],
+        "explain": "`terraform refresh` updates state to match reality without altering configuration.",
+        "tags": ["drift", "refresh"],
+        "difficulty": "medium",
+        "focus": "7e",
+        "category": "State Management",
+        "multiple": false
+    },
+    {
+        "id": "7e_004",
+        "q": "Which command lets you add an existing resource into Terraform state?",
+        "choices": [
+            "terraform import",
+            "terraform state add",
+            "terraform plan",
+            "terraform refresh"
+        ],
+        "answer": [0],
+        "explain": "`terraform import` associates a real-world resource with Terraform state so it can be managed.",
+        "tags": ["import", "state"],
+        "difficulty": "easy",
+        "focus": "7e",
+        "category": "State Management",
+        "multiple": false
+    },
+    {
+        "id": "7e_005",
+        "q": "Which command removes a resource from state without destroying it?",
+        "choices": [
+            "terraform state rm",
+            "terraform destroy",
+            "terraform refresh",
+            "terraform state drop"
+        ],
+        "answer": [0],
+        "explain": "`terraform state rm` removes a resource from Terraform state without affecting the actual infrastructure.",
+        "tags": ["state", "remove", "rm"],
+        "difficulty": "easy",
+        "focus": "7e",
+        "category": "State Management",
+        "multiple": false
+    }
+]

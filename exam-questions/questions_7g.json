@@ -1,0 +1,87 @@
+[
+    {
+        "id": "7g_001",
+        "q": "What is one risk of storing secrets in Terraform state files?",
+        "choices": [
+            "They may be visible to all users with state file access",
+            "They are automatically encrypted with AES-256 by default",
+            "They cannot be accessed after apply",
+            "They expire after 24 hours"
+        ],
+        "answer": [0],
+        "explain": "Secrets stored in Terraform state files are visible in plaintext to anyone with access to the state file, posing a security risk.",
+        "tags": ["terraform", "state", "secrets", "security", "plaintext"],
+        "difficulty": "easy",
+        "focus": "7g",
+        "category": "Security",
+        "multiple": false
+    },
+    {
+        "id": "7g_002",
+        "q": "Where does Terraform store sensitive data by default in the state file?",
+        "choices": [
+            "In plaintext",
+            "Encrypted at rest",
+            "Hashed with SHA-256",
+            "Compressed and encoded"
+        ],
+        "answer": [0],
+        "explain": "By default, Terraform stores sensitive data in plaintext within the state file, making it vulnerable to exposure.",
+        "tags": ["terraform", "state", "sensitive", "plaintext", "default"],
+        "difficulty": "easy",
+        "focus": "7g",
+        "category": "Security",
+        "multiple": false
+    },
+    {
+        "id": "7g_003",
+        "q": "Which Terraform argument can you use to mark an output as sensitive?",
+        "choices": [
+            "sensitive = true",
+            "secret = true",
+            "hidden = true",
+            "encrypt = true"
+        ],
+        "answer": [0],
+        "explain": "The `sensitive = true` argument marks an output as sensitive, which masks its value in CLI output and logs.",
+        "tags": ["terraform", "output", "sensitive", "argument", "masking"],
+        "difficulty": "easy",
+        "focus": "7g",
+        "category": "Security",
+        "multiple": false
+    },
+    {
+        "id": "7g_004",
+        "q": "If a secret value is marked as sensitive in Terraform, what effect does this have on CLI output?",
+        "choices": [
+            "It is masked in Terraform plan and apply outputs",
+            "It is encrypted in the state file",
+            "It cannot be used in other modules",
+            "It prevents the value from being saved"
+        ],
+        "answer": [0],
+        "explain": "Marking a value as sensitive masks it in CLI output, but it still appears in plaintext in the state file.",
+        "tags": ["terraform", "sensitive", "cli", "output", "masking"],
+        "difficulty": "medium",
+        "focus": "7g",
+        "category": "Security",
+        "multiple": false
+    },
+    {
+        "id": "7g_005",
+        "q": "Which backend type can provide encryption-at-rest for state files without additional configuration?",
+        "choices": [
+            "S3 with SSE",
+            "Local",
+            "Consul",
+            "None"
+        ],
+        "answer": [0],
+        "explain": "S3 with Server-Side Encryption (SSE) provides encryption-at-rest for state files stored in S3 buckets.",
+        "tags": ["terraform", "backend", "s3", "encryption", "sse"],
+        "difficulty": "medium",
+        "focus": "7g",
+        "category": "Security",
+        "multiple": false
+    }
+]

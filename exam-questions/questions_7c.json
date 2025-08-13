@@ -1,0 +1,87 @@
+[
+    {
+        "id": "7c_001",
+        "q": "Which Terraform CLI command is commonly used to authenticate to Terraform Cloud?",
+        "choices": [
+            "terraform login",
+            "terraform auth",
+            "terraform init",
+            "terraform connect"
+        ],
+        "answer": [0],
+        "explain": "The `terraform login` command opens a browser to authenticate with Terraform Cloud and stores the token locally.",
+        "tags": ["terraform", "cli", "login", "authentication", "cloud"],
+        "difficulty": "easy",
+        "focus": "7c",
+        "category": "Authentication",
+        "multiple": false
+    },
+    {
+        "id": "7c_002",
+        "q": "When using the 'terraform login' command, where are credentials stored by default?",
+        "choices": [
+            "In the .terraformrc or terraform.rc file",
+            "In a local SQLite database",
+            "In provider-specific credential files",
+            "In environment variables"
+        ],
+        "answer": [0],
+        "explain": "Terraform stores authentication tokens in the `.terraformrc` (Unix) or `terraform.rc` (Windows) file in the user's home directory.",
+        "tags": ["terraform", "credentials", "terraformrc", "authentication"],
+        "difficulty": "medium",
+        "focus": "7c",
+        "category": "Authentication",
+        "multiple": false
+    },
+    {
+        "id": "7c_003",
+        "q": "Which environment variable can be used to authenticate to Terraform Cloud without interactive login?",
+        "choices": [
+            "TERRAFORM_TOKEN",
+            "TF_CLOUD_TOKEN",
+            "TF_TOKEN_app.terraform.io",
+            "TERRAFORM_CLOUD_AUTH"
+        ],
+        "answer": [2],
+        "explain": "The `TF_TOKEN_app.terraform.io` environment variable allows non-interactive authentication to Terraform Cloud.",
+        "tags": ["terraform", "environment", "variables", "authentication", "cloud"],
+        "difficulty": "hard",
+        "focus": "7c",
+        "category": "Authentication",
+        "multiple": false
+    },
+    {
+        "id": "7c_004",
+        "q": "What type of authentication is typically required when using a remote backend on AWS S3?",
+        "choices": [
+            "OAuth token",
+            "AWS access keys",
+            "SSH key",
+            "GPG key"
+        ],
+        "answer": [1],
+        "explain": "AWS S3 backend requires AWS access keys (or IAM roles) for authentication to access the S3 bucket and DynamoDB table.",
+        "tags": ["terraform", "backend", "s3", "aws", "authentication"],
+        "difficulty": "easy",
+        "focus": "7c",
+        "category": "Authentication",
+        "multiple": false
+    },
+    {
+        "id": "7c_005",
+        "q": "Which backend requires a service principal for authentication in Azure?",
+        "choices": [
+            "azurerm",
+            "gcs",
+            "s3",
+            "local"
+        ],
+        "answer": [0],
+        "explain": "The AzureRM backend requires a service principal with appropriate permissions to access Azure Blob Storage.",
+        "tags": ["terraform", "backend", "azurerm", "azure", "service-principal"],
+        "difficulty": "medium",
+        "focus": "7c",
+        "category": "Authentication",
+        "multiple": false
+    }
+]

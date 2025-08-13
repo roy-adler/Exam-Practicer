@@ -1,277 +1,172 @@
 [
     {
-        "question": "Which Terraform CLI command is commonly used to authenticate to Terraform Cloud?",
-        "options": [
+        "id": "7c_001",
+        "q": "Which Terraform CLI command is commonly used to authenticate to Terraform Cloud?",
+        "choices": [
             "terraform login",
             "terraform auth",
             "terraform init",
             "terraform connect"
         ],
-        "answer": "terraform login",
-        "difficulty": "easy"
+        "answer": [0],
+        "explain": "The `terraform login` command opens a browser to authenticate with Terraform Cloud and stores the token locally.",
+        "tags": ["terraform", "cli", "login", "authentication", "cloud"],
+        "difficulty": "easy",
+        "focus": "7c",
+        "category": "Authentication",
+        "multiple": false
     },
     {
-        "question": "When using the 'terraform login' command, where are credentials stored by default?",
-        "options": [
+        "id": "7c_002",
+        "q": "When using the 'terraform login' command, where are credentials stored by default?",
+        "choices": [
             "In the .terraformrc or terraform.rc file",
             "In a local SQLite database",
             "In provider-specific credential files",
             "In environment variables"
         ],
-        "answer": "In the .terraformrc or terraform.rc file",
-        "difficulty": "medium"
+        "answer": [0],
+        "explain": "Terraform stores authentication tokens in the `.terraformrc` (Unix) or `terraform.rc` (Windows) file in the user's home directory.",
+        "tags": ["terraform", "credentials", "terraformrc", "authentication"],
+        "difficulty": "medium",
+        "focus": "7c",
+        "category": "Authentication",
+        "multiple": false
     },
     {
-        "question": "Which environment variable can be used to authenticate to Terraform Cloud without interactive login?",
-        "options": [
+        "id": "7c_003",
+        "q": "Which environment variable can be used to authenticate to Terraform Cloud without interactive login?",
+        "choices": [
             "TERRAFORM_TOKEN",
             "TF_CLOUD_TOKEN",
             "TF_TOKEN_app.terraform.io",
             "TERRAFORM_CLOUD_AUTH"
         ],
-        "answer": "TF_TOKEN_app.terraform.io",
-        "difficulty": "hard"
+        "answer": [2],
+        "explain": "The `TF_TOKEN_app.terraform.io` environment variable allows non-interactive authentication to Terraform Cloud.",
+        "tags": ["terraform", "environment", "variables", "authentication", "cloud"],
+        "difficulty": "hard",
+        "focus": "7c",
+        "category": "Authentication",
+        "multiple": false
     },
     {
-        "question": "What type of authentication is typically required when using a remote backend on AWS S3?",
-        "options": [
+        "id": "7c_004",
+        "q": "What type of authentication is typically required when using a remote backend on AWS S3?",
+        "choices": [
             "OAuth token",
             "AWS access keys",
             "SSH key",
             "GPG key"
         ],
-        "answer": "AWS access keys",
-        "difficulty": "easy"
+        "answer": [1],
+        "explain": "AWS S3 backend requires AWS access keys (or IAM roles) for authentication to access the S3 bucket and DynamoDB table.",
+        "tags": ["terraform", "backend", "s3", "aws", "authentication"],
+        "difficulty": "easy",
+        "focus": "7c",
+        "category": "Authentication",
+        "multiple": false
     },
     {
-        "question": "Which backend requires a service principal for authentication in Azure?",
-        "options": [
+        "id": "7c_005",
+        "q": "Which backend requires a service principal for authentication in Azure?",
+        "choices": [
             "azurerm",
             "gcs",
             "s3",
             "local"
         ],
-        "answer": "azurerm",
-        "difficulty": "medium"
+        "answer": [0],
+        "explain": "The AzureRM backend requires a service principal with appropriate permissions to access Azure Blob Storage.",
+        "tags": ["terraform", "backend", "azurerm", "azure", "service-principal"],
+        "difficulty": "medium",
+        "focus": "7c",
+        "category": "Authentication",
+        "multiple": false
     },
     {
-        "question": "What is the main benefit of authenticating with environment variables over storing credentials in configuration files?",
-        "options": [
+        "id": "7c_006",
+        "q": "What is the main benefit of authenticating with environment variables over storing credentials in configuration files?",
+        "choices": [
             "Credentials are automatically encrypted",
             "Credentials are not stored in plain text",
             "Faster initialization",
             "Supports multiple backends"
         ],
-        "answer": "Credentials are not stored in plain text",
-        "difficulty": "medium"
+        "answer": [1],
+        "explain": "Environment variables prevent credentials from being stored in plain text files that might be committed to version control.",
+        "tags": ["terraform", "authentication", "environment", "variables", "security"],
+        "difficulty": "medium",
+        "focus": "7c",
+        "category": "Authentication",
+        "multiple": false
     },
     {
-        "question": "In Google Cloud Storage backend, which environment variable stores the path to the credentials JSON file?",
-        "options": [
+        "id": "7c_007",
+        "q": "In Google Cloud Storage backend, which environment variable stores the path to the credentials JSON file?",
+        "choices": [
             "GOOGLE_CREDENTIALS",
             "GOOGLE_APPLICATION_CREDENTIALS",
             "GCP_KEY_PATH",
             "TF_GCP_AUTH"
         ],
-        "answer": "GOOGLE_APPLICATION_CREDENTIALS",
-        "difficulty": "easy"
+        "answer": [1],
+        "explain": "The `GOOGLE_APPLICATION_CREDENTIALS` environment variable points to the service account key JSON file for GCS backend authentication.",
+        "tags": ["terraform", "backend", "gcs", "google", "authentication"],
+        "difficulty": "easy",
+        "focus": "7c",
+        "category": "Authentication",
+        "multiple": false
     },
     {
-        "question": "Which authentication method is recommended for CI/CD pipelines connecting to Terraform Cloud?",
-        "options": [
+        "id": "7c_008",
+        "q": "Which authentication method is recommended for CI/CD pipelines connecting to Terraform Cloud?",
+        "choices": [
             "Manual terraform login",
             "Environment variable token",
             "Interactive OAuth",
             "SSH key authentication"
         ],
-        "answer": "Environment variable token",
-        "difficulty": "medium"
+        "answer": [1],
+        "explain": "Environment variable tokens are ideal for CI/CD pipelines as they provide non-interactive authentication without manual intervention.",
+        "tags": ["terraform", "ci-cd", "pipeline", "authentication", "cloud"],
+        "difficulty": "medium",
+        "focus": "7c",
+        "category": "Authentication",
+        "multiple": false
     },
     {
-        "question": "When configuring the 'remote' backend for Terraform Cloud, what parameter specifies the organization name?",
-        "options": [
+        "id": "7c_009",
+        "q": "When configuring the 'remote' backend for Terraform Cloud, what parameter specifies the organization name?",
+        "choices": [
             "org",
             "organization",
             "workspace_org",
             "account"
         ],
-        "answer": "organization",
-        "difficulty": "medium"
+        "answer": [1],
+        "explain": "The `organization` parameter in the remote backend configuration specifies the Terraform Cloud organization name.",
+        "tags": ["terraform", "backend", "remote", "cloud", "organization"],
+        "difficulty": "medium",
+        "focus": "7c",
+        "category": "Authentication",
+        "multiple": false
     },
     {
-        "question": "For AWS S3 backend authentication, what happens if no credentials are provided explicitly?",
-        "options": [
-            "Terraform fails immediately",
-            "It falls back to AWS CLI configured credentials",
-            "It requests credentials interactively",
-            "It switches to the local backend"
-        ],
-        "answer": "It falls back to AWS CLI configured credentials",
-        "difficulty": "medium"
-    },
-    {
-        "question": "Which authentication method is NOT supported by the Terraform Cloud 'remote' backend?",
-        "options": [
-            "API token",
-            "OAuth with GitHub",
-            "SSH public key",
-            "Interactive login"
-        ],
-        "answer": "SSH public key",
-        "difficulty": "hard"
-    },
-    {
-        "question": "In Terraform backend configuration, which block typically contains authentication parameters?",
-        "options": [
-            "auth",
-            "credentials",
-            "backend",
-            "provider"
-        ],
-        "answer": "backend",
-        "difficulty": "easy"
-    },
-    {
-        "question": "What is a potential security risk when storing backend authentication credentials directly in configuration files?",
-        "options": [
-            "They may be lost on 'terraform init'",
-            "They can be exposed in version control",
-            "They expire too quickly",
-            "They disable state locking"
-        ],
-        "answer": "They can be exposed in version control",
-        "difficulty": "easy"
-    },
-    {
-        "question": "Which CLI command can be used to verify if Terraform Cloud authentication is currently valid?",
-        "options": [
-            "terraform cloud status",
-            "terraform login --status",
-            "terraform whoami",
-            "terraform auth status"
-        ],
-        "answer": "terraform whoami",
-        "difficulty": "medium"
-    },
-    {
-        "question": "When configuring Terraform Cloud authentication for multiple organizations, how should tokens be stored?",
-        "options": [
-            "Single token for all organizations",
-            "Multiple tokens keyed by hostname in .terraformrc",
-            "Only one token at a time",
-            "Store tokens in provider blocks"
-        ],
-        "answer": "Multiple tokens keyed by hostname in .terraformrc",
-        "difficulty": "hard"
-    },
-    {
-        "question": "In Azure backend authentication, which environment variable stores the client secret?",
-        "options": [
-            "ARM_CLIENT_SECRET",
-            "AZURE_CLIENT_SECRET",
-            "TF_AZURE_SECRET",
-            "ARM_SECRET_KEY"
-        ],
-        "answer": "ARM_CLIENT_SECRET",
-        "difficulty": "easy"
-    },
-    {
-        "question": "What is the primary purpose of the 'terraform login' command for Terraform Cloud?",
-        "options": [
-            "To initialize backend configuration",
-            "To generate and store an API token",
-            "To enable verbose logging",
-            "To refresh state files"
-        ],
-        "answer": "To generate and store an API token",
-        "difficulty": "easy"
-    },
-    {
-        "question": "When using an HCP Terraform backend, which authentication method is required for non-interactive automation?",
-        "options": [
-            "OAuth",
-            "Environment variable API token",
-            "SSH key pair",
-            "Basic authentication"
-        ],
-        "answer": "Environment variable API token",
-        "difficulty": "medium"
-    },
-    {
-        "question": "For AWS authentication in Terraform backends, which is the preferred method in CI/CD environments?",
-        "options": [
-            "Hardcoding in configuration",
+        "id": "7c_010",
+        "q": "Which authentication method is used when Terraform runs on an EC2 instance with an IAM role?",
+        "choices": [
+            "Instance metadata service",
             "Environment variables",
-            "Interactive login",
-            "Local AWS CLI session"
+            "Configuration file",
+            "Manual login"
         ],
-        "answer": "Environment variables",
-        "difficulty": "medium"
-    },
-    {
-        "question": "In Terraform backend configuration, where should sensitive authentication values ideally be placed?",
-        "options": [
-            "Directly in the .tf file",
-            "Environment variables or external vault",
-            "In provider version constraints",
-            "Inside variable descriptions"
-        ],
-        "answer": "Environment variables or external vault",
-        "difficulty": "medium"
-    },
-    {
-        "question": "Which backend type would typically use service account keys for authentication?",
-        "options": [
-            "gcs",
-            "azurerm",
-            "s3",
-            "local"
-        ],
-        "answer": "gcs",
-        "difficulty": "easy"
-    },
-    {
-        "question": "When storing Terraform Cloud tokens in environment variables, what is a common security practice?",
-        "options": [
-            "Store them in plain text on disk",
-            "Use a secrets manager",
-            "Commit them to Git for backup",
-            "Write them to .terraformrc"
-        ],
-        "answer": "Use a secrets manager",
-        "difficulty": "medium"
-    },
-    {
-        "question": "Which authentication method is required when using the 'remote' backend with private module sources?",
-        "options": [
-            "SSH key authentication",
-            "API token authentication",
-            "Anonymous access",
-            "No authentication needed"
-        ],
-        "answer": "API token authentication",
-        "difficulty": "medium"
-    },
-    {
-        "question": "For Azure authentication in Terraform backend, which environment variable stores the subscription ID?",
-        "options": [
-            "ARM_SUBSCRIPTION_ID",
-            "AZURE_SUBSCRIPTION",
-            "TF_AZURE_SUB_ID",
-            "ARM_SUB_ID"
-        ],
-        "answer": "ARM_SUBSCRIPTION_ID",
-        "difficulty": "easy"
-    },
-    {
-        "question": "Which security measure should be taken when running Terraform commands on shared machines with backend authentication?",
-        "options": [
-            "Disable backend",
-            "Use ephemeral environment variables",
-            "Allow password caching",
-            "Ignore encryption"
-        ],
-        "answer": "Use ephemeral environment variables",
-        "difficulty": "hard"
+        "answer": [0],
+        "explain": "EC2 instances with IAM roles use the instance metadata service to automatically obtain temporary credentials.",
+        "tags": ["terraform", "aws", "iam", "ec2", "authentication"],
+        "difficulty": "medium",
+        "focus": "7c",
+        "category": "Authentication",
+        "multiple": false
     }
 ]
