@@ -271,6 +271,63 @@ button.danger:hover {
   color: var(--text);
 }
 
+/* Question metadata badges */
+.question-meta {
+  display: flex;
+  gap: var(--spacing-sm);
+  flex-wrap: wrap;
+  margin-bottom: var(--spacing-md);
+  align-items: center;
+}
+
+.difficulty-badge,
+.focus-badge,
+.category-badge,
+.multiple-badge {
+  padding: var(--spacing-xs) var(--spacing-sm);
+  border-radius: var(--radius-sm);
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.difficulty-badge.easy {
+  background: rgba(120, 240, 184, 0.2);
+  color: var(--success);
+  border: 1px solid rgba(120, 240, 184, 0.3);
+}
+
+.difficulty-badge.medium {
+  background: rgba(255, 209, 102, 0.2);
+  color: var(--warn);
+  border: 1px solid rgba(255, 209, 102, 0.3);
+}
+
+.difficulty-badge.hard {
+  background: rgba(255, 107, 107, 0.2);
+  color: var(--danger);
+  border: 1px solid rgba(255, 107, 107, 0.3);
+}
+
+.focus-badge {
+  background: rgba(106, 166, 255, 0.2);
+  color: var(--accent);
+  border: 1px solid rgba(106, 166, 255, 0.3);
+}
+
+.category-badge {
+  background: rgba(118, 131, 154, 0.2);
+  color: var(--muted);
+  border: 1px solid rgba(118, 131, 154, 0.3);
+}
+
+.multiple-badge {
+  background: rgba(255, 107, 107, 0.2);
+  color: var(--danger);
+  border: 1px solid rgba(255, 107, 107, 0.3);
+}
+
 /* Choices */
 .choices {
   display: grid;
@@ -302,7 +359,8 @@ button.danger:hover {
   background: rgba(106, 166, 255, 0.1);
 }
 
-.choice input[type="radio"] {
+.choice input[type="radio"],
+.choice input[type="checkbox"] {
   margin-top: 3px;
   cursor: pointer;
   width: 18px;
@@ -310,7 +368,8 @@ button.danger:hover {
   accent-color: var(--accent);
 }
 
-.choice input[type="radio"]:focus + span {
+.choice input[type="radio"]:focus + span,
+.choice input[type="checkbox"]:focus + span {
   color: var(--accent);
 }
 
@@ -529,6 +588,11 @@ button.danger:hover {
   .summary {
     padding: var(--spacing-md);
   }
+  
+  .question-meta {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 }
 
 @media (max-width: 480px) {
@@ -558,6 +622,14 @@ button.danger:hover {
   
   .choice {
     padding: var(--spacing-sm);
+  }
+  
+  .difficulty-badge,
+  .focus-badge,
+  .category-badge,
+  .multiple-badge {
+    font-size: 11px;
+    padding: var(--spacing-xs);
   }
 }
 
