@@ -1,0 +1,481 @@
+[
+  {
+    "id": "tf_4c_001",
+    "q": "Which env var controls Terraform logging?",
+    "choices": [
+      "TF_LOG",
+      "TERRAFORM_DEBUG"
+    ],
+    "answer": [
+      0
+    ],
+    "explain": "TF_LOG sets the verbosity of logs.",
+    "tags": [
+      "tf_log"
+    ],
+    "difficulty": "easy",
+    "focus": "4c",
+    "category": "Verbose logging",
+    "multiple": false
+  },
+  {
+    "id": "tf_4c_002",
+    "q": "Which TF_LOG level shows the most detail?",
+    "choices": [
+      "TRACE",
+      "DEBUG",
+      "INFO",
+      "ERROR"
+    ],
+    "answer": [
+      0
+    ],
+    "explain": "TRACE shows the most verbose logging.",
+    "tags": [
+      "tf_log"
+    ],
+    "difficulty": "easy",
+    "focus": "4c",
+    "category": "Verbose logging",
+    "multiple": false
+  },
+  {
+    "id": "tf_4c_003",
+    "q": "Default TF_LOG level?",
+    "choices": [
+      "None/off",
+      "INFO",
+      "DEBUG"
+    ],
+    "answer": [
+      0
+    ],
+    "explain": "Logging is off unless TF_LOG is set.",
+    "tags": [
+      "tf_log"
+    ],
+    "difficulty": "easy",
+    "focus": "4c",
+    "category": "Verbose logging",
+    "multiple": false
+  },
+  {
+    "id": "tf_4c_004",
+    "q": "How to write logs to a file?",
+    "choices": [
+      "Set TF_LOG_PATH",
+      "Redirect stdout"
+    ],
+    "answer": [
+      0
+    ],
+    "explain": "TF_LOG_PATH writes logs to a file.",
+    "tags": [
+      "tf_log_path"
+    ],
+    "difficulty": "easy",
+    "focus": "4c",
+    "category": "Verbose logging",
+    "multiple": false
+  },
+  {
+    "id": "tf_4c_005",
+    "q": "Does TF_LOG output contain sensitive data?",
+    "choices": [
+      "Yes, sometimes",
+      "No"
+    ],
+    "answer": [
+      0
+    ],
+    "explain": "TRACE/DEBUG can include secrets; handle securely.",
+    "tags": [
+      "security"
+    ],
+    "difficulty": "easy",
+    "focus": "4c",
+    "category": "Verbose logging",
+    "multiple": false
+  },
+  {
+    "id": "tf_4c_006",
+    "q": "Which command disables logging?",
+    "choices": [
+      "Unset TF_LOG",
+      "TF_LOG=NONE"
+    ],
+    "answer": [
+      0
+    ],
+    "explain": "Unset the variable to disable logs.",
+    "tags": [
+      "tf_log"
+    ],
+    "difficulty": "easy",
+    "focus": "4c",
+    "category": "Verbose logging",
+    "multiple": false
+  },
+  {
+    "id": "tf_4c_007",
+    "q": "Can TF_LOG be set for a single command?",
+    "choices": [
+      "Yes, env var before command",
+      "No"
+    ],
+    "answer": [
+      0
+    ],
+    "explain": "Prefix command: TF_LOG=DEBUG terraform apply",
+    "tags": [
+      "tf_log"
+    ],
+    "difficulty": "easy",
+    "focus": "4c",
+    "category": "Verbose logging",
+    "multiple": false
+  },
+  {
+    "id": "tf_4c_008",
+    "q": "Valid TF_LOG values?",
+    "choices": [
+      "TRACE, DEBUG, INFO, WARN, ERROR",
+      "LOW, MEDIUM, HIGH"
+    ],
+    "answer": [
+      0
+    ],
+    "explain": "Accepted values: TRACE, DEBUG, INFO, WARN, ERROR.",
+    "tags": [
+      "tf_log"
+    ],
+    "difficulty": "easy",
+    "focus": "4c",
+    "category": "Verbose logging",
+    "multiple": false
+  },
+  {
+    "id": "tf_4c_009",
+    "q": "Where does TF_LOG output go by default?",
+    "choices": [
+      "stderr",
+      "stdout"
+    ],
+    "answer": [
+      0
+    ],
+    "explain": "Terraform writes logs to stderr by default.",
+    "tags": [
+      "tf_log"
+    ],
+    "difficulty": "easy",
+    "focus": "4c",
+    "category": "Verbose logging",
+    "multiple": false
+  },
+  {
+    "id": "tf_4c_010",
+    "q": "Can TF_LOG be combined with TF_LOG_PATH?",
+    "choices": [
+      "Yes",
+      "No"
+    ],
+    "answer": [
+      0
+    ],
+    "explain": "You can set both to control level and output file.",
+    "tags": [
+      "tf_log"
+    ],
+    "difficulty": "easy",
+    "focus": "4c",
+    "category": "Verbose logging",
+    "multiple": false
+  },
+  {
+    "id": "tf_4c_011",
+    "q": "What is TF_LOG_CORE?",
+    "choices": [
+      "Logs only core Terraform internals",
+      "Logs everything"
+    ],
+    "answer": [
+      0
+    ],
+    "explain": "It limits logging to core subsystems.",
+    "tags": [
+      "tf_log_core"
+    ],
+    "difficulty": "easy",
+    "focus": "4c",
+    "category": "Verbose logging",
+    "multiple": false
+  },
+  {
+    "id": "tf_4c_012",
+    "q": "What happens if TF_LOG has invalid value?",
+    "choices": [
+      "Terraform errors",
+      "Terraform ignores it"
+    ],
+    "answer": [
+      1
+    ],
+    "explain": "Invalid values disable logging silently.",
+    "tags": [
+      "tf_log"
+    ],
+    "difficulty": "easy",
+    "focus": "4c",
+    "category": "Verbose logging",
+    "multiple": false
+  },
+  {
+    "id": "tf_4c_013",
+    "q": "Best practice before sharing logs?",
+    "choices": [
+      "Redact sensitive data",
+      "Share raw"
+    ],
+    "answer": [
+      0
+    ],
+    "explain": "Logs may include secrets.",
+    "tags": [
+      "security"
+    ],
+    "difficulty": "easy",
+    "focus": "4c",
+    "category": "Verbose logging",
+    "multiple": false
+  },
+  {
+    "id": "tf_4c_014",
+    "q": "Can TF_LOG help debug provider authentication?",
+    "choices": [
+      "Yes",
+      "No"
+    ],
+    "answer": [
+      0
+    ],
+    "explain": "Verbose logs can reveal auth process.",
+    "tags": [
+      "debug"
+    ],
+    "difficulty": "easy",
+    "focus": "4c",
+    "category": "Verbose logging",
+    "multiple": false
+  },
+  {
+    "id": "tf_4c_015",
+    "q": "How to see plugin communication logs?",
+    "choices": [
+      "TF_LOG=TRACE",
+      "TF_LOG=INFO"
+    ],
+    "answer": [
+      0
+    ],
+    "explain": "TRACE logs provider RPC traffic.",
+    "tags": [
+      "trace"
+    ],
+    "difficulty": "easy",
+    "focus": "4c",
+    "category": "Verbose logging",
+    "multiple": false
+  },
+  {
+    "id": "tf_4c_016",
+    "q": "Which TF_LOG level is minimal but still shows warnings?",
+    "choices": [
+      "WARN",
+      "INFO"
+    ],
+    "answer": [
+      0
+    ],
+    "explain": "WARN shows warnings and errors only.",
+    "tags": [
+      "tf_log"
+    ],
+    "difficulty": "medium",
+    "focus": "4c",
+    "category": "Verbose logging",
+    "multiple": false
+  },
+  {
+    "id": "tf_4c_017",
+    "q": "Difference between TF_LOG=DEBUG and TF_LOG=TRACE?",
+    "choices": [
+      "TRACE includes detailed internals, DEBUG less verbose",
+      "No difference"
+    ],
+    "answer": [
+      0
+    ],
+    "explain": "TRACE is the most detailed.",
+    "tags": [
+      "tf_log"
+    ],
+    "difficulty": "medium",
+    "focus": "4c",
+    "category": "Verbose logging",
+    "multiple": false
+  },
+  {
+    "id": "tf_4c_018",
+    "q": "How to enable logs only for a single Terraform run?",
+    "choices": [
+      "Set TF_LOG before the command",
+      "Edit terraform.rc"
+    ],
+    "answer": [
+      0
+    ],
+    "explain": "Setting env var inline applies only to that run.",
+    "tags": [
+      "tf_log"
+    ],
+    "difficulty": "medium",
+    "focus": "4c",
+    "category": "Verbose logging",
+    "multiple": false
+  },
+  {
+    "id": "tf_4c_019",
+    "q": "What is the effect of TF_LOG_PATH with relative path?",
+    "choices": [
+      "Writes file in current working dir",
+      "Writes to home"
+    ],
+    "answer": [
+      0
+    ],
+    "explain": "Relative paths resolve from CWD.",
+    "tags": [
+      "tf_log_path"
+    ],
+    "difficulty": "medium",
+    "focus": "4c",
+    "category": "Verbose logging",
+    "multiple": false
+  },
+  {
+    "id": "tf_4c_020",
+    "q": "Security risk of leaving TF_LOG=TRACE on in production?",
+    "choices": [
+      "Large log files, exposed secrets",
+      "None"
+    ],
+    "answer": [
+      0
+    ],
+    "explain": "Logs may contain sensitive info and consume disk space.",
+    "tags": [
+      "security"
+    ],
+    "difficulty": "medium",
+    "focus": "4c",
+    "category": "Verbose logging",
+    "multiple": false
+  },
+  {
+    "id": "tf_4c_021",
+    "q": "How to completely disable logging in shell?",
+    "choices": [
+      "unset TF_LOG",
+      "TF_LOG=OFF"
+    ],
+    "answer": [
+      0
+    ],
+    "explain": "Unset the variable to disable logs.",
+    "tags": [
+      "tf_log"
+    ],
+    "difficulty": "medium",
+    "focus": "4c",
+    "category": "Verbose logging",
+    "multiple": false
+  },
+  {
+    "id": "tf_4c_022",
+    "q": "How to capture logs and output separately?",
+    "choices": [
+      "Redirect stderr and stdout differently",
+      "Use TF_LOG_PATH only"
+    ],
+    "answer": [
+      0
+    ],
+    "explain": "Separate redirection allows capturing logs in separate file.",
+    "tags": [
+      "logs"
+    ],
+    "difficulty": "medium",
+    "focus": "4c",
+    "category": "Verbose logging",
+    "multiple": false
+  },
+  {
+    "id": "tf_4c_023",
+    "q": "How to debug only provider plugin issues?",
+    "choices": [
+      "TF_LOG=DEBUG and TF_LOG_CORE",
+      "TF_LOG=TRACE"
+    ],
+    "answer": [
+      1
+    ],
+    "explain": "TRACE includes all provider RPC details.",
+    "tags": [
+      "trace",
+      "provider"
+    ],
+    "difficulty": "hard",
+    "focus": "4c",
+    "category": "Verbose logging",
+    "multiple": false
+  },
+  {
+    "id": "tf_4c_024",
+    "q": "Can TF_LOG_PATH overwrite existing files?",
+    "choices": [
+      "Yes",
+      "No"
+    ],
+    "answer": [
+      0
+    ],
+    "explain": "It overwrites unless you append via shell redirection.",
+    "tags": [
+      "tf_log_path"
+    ],
+    "difficulty": "hard",
+    "focus": "4c",
+    "category": "Verbose logging",
+    "multiple": false
+  },
+  {
+    "id": "tf_4c_025",
+    "q": "What is the behavior if TF_LOG and TF_LOG_CORE are set together?",
+    "choices": [
+      "Both influence logging, with TF_LOG_CORE limiting subsystems",
+      "Last one wins"
+    ],
+    "answer": [
+      0
+    ],
+    "explain": "TF_LOG sets level, TF_LOG_CORE scopes subsystems.",
+    "tags": [
+      "tf_log_core"
+    ],
+    "difficulty": "hard",
+    "focus": "4c",
+    "category": "Verbose logging",
+    "multiple": false
+  }
+]

@@ -1,0 +1,494 @@
+[
+  {
+    "id": "tf_4b_001",
+    "q": "What command shows all resources in the current state?",
+    "choices": [
+      "terraform state list",
+      "terraform show",
+      "terraform plan",
+      "terraform state show"
+    ],
+    "answer": [
+      0
+    ],
+    "explain": "terraform state list displays addresses of all tracked resources in state.",
+    "tags": [
+      "state",
+      "list"
+    ],
+    "difficulty": "easy",
+    "focus": "4b",
+    "category": "View Terraform state",
+    "multiple": false
+  },
+  {
+    "id": "tf_4b_002",
+    "q": "Which command shows full details of a specific resource from state?",
+    "choices": [
+      "terraform state show",
+      "terraform show",
+      "terraform state list"
+    ],
+    "answer": [
+      0
+    ],
+    "explain": "terraform state show <address> reveals all attributes stored in state.",
+    "tags": [
+      "state",
+      "show"
+    ],
+    "difficulty": "easy",
+    "focus": "4b",
+    "category": "View Terraform state",
+    "multiple": false
+  },
+  {
+    "id": "tf_4b_003",
+    "q": "Does terraform show display only state data?",
+    "choices": [
+      "Yes",
+      "No"
+    ],
+    "answer": [
+      1
+    ],
+    "explain": "terraform show merges state with config to display a plan or state; it can display both values and differences.",
+    "tags": [
+      "show"
+    ],
+    "difficulty": "easy",
+    "focus": "4b",
+    "category": "View Terraform state",
+    "multiple": false
+  },
+  {
+    "id": "tf_4b_004",
+    "q": "Can you view state without a backend connection?",
+    "choices": [
+      "Yes, if local state file available",
+      "No"
+    ],
+    "answer": [
+      0
+    ],
+    "explain": "Local state can be viewed directly.",
+    "tags": [
+      "state"
+    ],
+    "difficulty": "easy",
+    "focus": "4b",
+    "category": "View Terraform state",
+    "multiple": false
+  },
+  {
+    "id": "tf_4b_005",
+    "q": "Where is local state stored by default?",
+    "choices": [
+      "terraform.tfstate",
+      ".terraform.lock.hcl"
+    ],
+    "answer": [
+      0
+    ],
+    "explain": "terraform.tfstate stores state by default.",
+    "tags": [
+      "state",
+      "file"
+    ],
+    "difficulty": "easy",
+    "focus": "4b",
+    "category": "View Terraform state",
+    "multiple": false
+  },
+  {
+    "id": "tf_4b_006",
+    "q": "What flag pretty-prints terraform show output?",
+    "choices": [
+      "-json",
+      "-no-color",
+      "-pretty"
+    ],
+    "answer": [
+      1
+    ],
+    "explain": "-no-color removes color codes, useful for piping output.",
+    "tags": [
+      "show"
+    ],
+    "difficulty": "easy",
+    "focus": "4b",
+    "category": "View Terraform state",
+    "multiple": false
+  },
+  {
+    "id": "tf_4b_007",
+    "q": "What does terraform state list output?",
+    "choices": [
+      "Resource addresses",
+      "Full attribute values"
+    ],
+    "answer": [
+      0
+    ],
+    "explain": "It lists addresses, not full details.",
+    "tags": [
+      "state",
+      "list"
+    ],
+    "difficulty": "easy",
+    "focus": "4b",
+    "category": "View Terraform state",
+    "multiple": false
+  },
+  {
+    "id": "tf_4b_008",
+    "q": "Can terraform state list filter by address prefix?",
+    "choices": [
+      "Yes",
+      "No"
+    ],
+    "answer": [
+      0
+    ],
+    "explain": "You can specify an address prefix to narrow results.",
+    "tags": [
+      "list"
+    ],
+    "difficulty": "easy",
+    "focus": "4b",
+    "category": "View Terraform state",
+    "multiple": false
+  },
+  {
+    "id": "tf_4b_009",
+    "q": "What is needed to run terraform state commands?",
+    "choices": [
+      "State access and permissions",
+      "Only config"
+    ],
+    "answer": [
+      0
+    ],
+    "explain": "You need access to state storage and proper credentials.",
+    "tags": [
+      "state"
+    ],
+    "difficulty": "easy",
+    "focus": "4b",
+    "category": "View Terraform state",
+    "multiple": false
+  },
+  {
+    "id": "tf_4b_010",
+    "q": "Which command can output state in JSON?",
+    "choices": [
+      "terraform show -json",
+      "terraform state list -json"
+    ],
+    "answer": [
+      0
+    ],
+    "explain": "terraform show -json exports state in machine-readable format.",
+    "tags": [
+      "show",
+      "json"
+    ],
+    "difficulty": "easy",
+    "focus": "4b",
+    "category": "View Terraform state",
+    "multiple": false
+  },
+  {
+    "id": "tf_4b_011",
+    "q": "Does terraform state show contact the provider?",
+    "choices": [
+      "No",
+      "Yes"
+    ],
+    "answer": [
+      0
+    ],
+    "explain": "It reads from local/remote state only.",
+    "tags": [
+      "state",
+      "show"
+    ],
+    "difficulty": "easy",
+    "focus": "4b",
+    "category": "View Terraform state",
+    "multiple": false
+  },
+  {
+    "id": "tf_4b_012",
+    "q": "What command can inspect outputs from state?",
+    "choices": [
+      "terraform output",
+      "terraform show"
+    ],
+    "answer": [
+      0
+    ],
+    "explain": "terraform output reads values from the state file.",
+    "tags": [
+      "output"
+    ],
+    "difficulty": "easy",
+    "focus": "4b",
+    "category": "View Terraform state",
+    "multiple": false
+  },
+  {
+    "id": "tf_4b_013",
+    "q": "Does terraform state list require init?",
+    "choices": [
+      "Yes",
+      "No"
+    ],
+    "answer": [
+      0
+    ],
+    "explain": "Init configures the backend so Terraform can access state.",
+    "tags": [
+      "init"
+    ],
+    "difficulty": "easy",
+    "focus": "4b",
+    "category": "View Terraform state",
+    "multiple": false
+  },
+  {
+    "id": "tf_4b_014",
+    "q": "What can terraform show display besides state?",
+    "choices": [
+      "Plan output",
+      "Module code"
+    ],
+    "answer": [
+      0
+    ],
+    "explain": "terraform show can display a saved plan file.",
+    "tags": [
+      "show"
+    ],
+    "difficulty": "easy",
+    "focus": "4b",
+    "category": "View Terraform state",
+    "multiple": false
+  },
+  {
+    "id": "tf_4b_015",
+    "q": "Can you view state locked by another user?",
+    "choices": [
+      "No, must wait or force-unlock",
+      "Yes"
+    ],
+    "answer": [
+      0
+    ],
+    "explain": "Terraform enforces state locking to prevent concurrent changes.",
+    "tags": [
+      "state",
+      "lock"
+    ],
+    "difficulty": "easy",
+    "focus": "4b",
+    "category": "View Terraform state",
+    "multiple": false
+  },
+  {
+    "id": "tf_4b_016",
+    "q": "How to find the exact name of a resource for terraform state show?",
+    "choices": [
+      "Use terraform state list",
+      "Guess from config"
+    ],
+    "answer": [
+      0
+    ],
+    "explain": "List first, then show for details.",
+    "tags": [
+      "state"
+    ],
+    "difficulty": "medium",
+    "focus": "4b",
+    "category": "View Terraform state",
+    "multiple": false
+  },
+  {
+    "id": "tf_4b_017",
+    "q": "What is the risk of using terraform state pull?",
+    "choices": [
+      "Exposing sensitive data",
+      "Corrupting state"
+    ],
+    "answer": [
+      0
+    ],
+    "explain": "State may contain secrets; handle output carefully.",
+    "tags": [
+      "state",
+      "security"
+    ],
+    "difficulty": "medium",
+    "focus": "4b",
+    "category": "View Terraform state",
+    "multiple": false
+  },
+  {
+    "id": "tf_4b_018",
+    "q": "terraform show -json is mainly useful for?",
+    "choices": [
+      "Scripting/automation",
+      "Better colors"
+    ],
+    "answer": [
+      0
+    ],
+    "explain": "Machine-readable output enables parsing in scripts.",
+    "tags": [
+      "json"
+    ],
+    "difficulty": "medium",
+    "focus": "4b",
+    "category": "View Terraform state",
+    "multiple": false
+  },
+  {
+    "id": "tf_4b_019",
+    "q": "How can you check if state matches real infrastructure?",
+    "choices": [
+      "Run terraform plan",
+      "Run terraform show"
+    ],
+    "answer": [
+      0
+    ],
+    "explain": "Plan queries provider and compares with state.",
+    "tags": [
+      "plan",
+      "drift"
+    ],
+    "difficulty": "medium",
+    "focus": "4b",
+    "category": "View Terraform state",
+    "multiple": false
+  },
+  {
+    "id": "tf_4b_020",
+    "q": "How to view state stored in a remote backend?",
+    "choices": [
+      "terraform state commands with backend access",
+      "Download manually"
+    ],
+    "answer": [
+      0
+    ],
+    "explain": "Use Terraform with proper backend config and credentials.",
+    "tags": [
+      "backend"
+    ],
+    "difficulty": "medium",
+    "focus": "4b",
+    "category": "View Terraform state",
+    "multiple": false
+  },
+  {
+    "id": "tf_4b_021",
+    "q": "What does terraform state pull do?",
+    "choices": [
+      "Downloads raw state",
+      "Displays resource graph"
+    ],
+    "answer": [
+      0
+    ],
+    "explain": "It fetches the state file content.",
+    "tags": [
+      "state",
+      "pull"
+    ],
+    "difficulty": "medium",
+    "focus": "4b",
+    "category": "View Terraform state",
+    "multiple": false
+  },
+  {
+    "id": "tf_4b_022",
+    "q": "If terraform state list shows stale resources, what likely happened?",
+    "choices": [
+      "Manual deletion in cloud",
+      "Backend misconfig"
+    ],
+    "answer": [
+      0
+    ],
+    "explain": "Manual changes outside Terraform cause drift.",
+    "tags": [
+      "drift"
+    ],
+    "difficulty": "medium",
+    "focus": "4b",
+    "category": "View Terraform state",
+    "multiple": false
+  },
+  {
+    "id": "tf_4b_023",
+    "q": "How to view attributes of a resource in a module?",
+    "choices": [
+      "terraform state show module.name.resource.type",
+      "terraform show resource"
+    ],
+    "answer": [
+      0
+    ],
+    "explain": "Use full address including module path.",
+    "tags": [
+      "module",
+      "state"
+    ],
+    "difficulty": "hard",
+    "focus": "4b",
+    "category": "View Terraform state",
+    "multiple": false
+  },
+  {
+    "id": "tf_4b_024",
+    "q": "What is the difference between terraform show and terraform state show?",
+    "choices": [
+      "show can display plan or state, state show only displays state",
+      "They are the same"
+    ],
+    "answer": [
+      0
+    ],
+    "explain": "terraform state show reads only from state; terraform show can read plans too.",
+    "tags": [
+      "show",
+      "state"
+    ],
+    "difficulty": "hard",
+    "focus": "4b",
+    "category": "View Terraform state",
+    "multiple": false
+  },
+  {
+    "id": "tf_4b_025",
+    "q": "How to programmatically extract an attribute from state?",
+    "choices": [
+      "terraform show -json | jq",
+      "terraform state list"
+    ],
+    "answer": [
+      0
+    ],
+    "explain": "JSON output can be parsed with jq or similar tools.",
+    "tags": [
+      "json",
+      "automation"
+    ],
+    "difficulty": "hard",
+    "focus": "4b",
+    "category": "View Terraform state",
+    "multiple": false
+  }
+]

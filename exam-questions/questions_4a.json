@@ -1,0 +1,514 @@
+[
+    {
+        "id": "tf_4a_001",
+        "q": "When should you use terraform import?",
+        "choices": [
+            "To bring existing infrastructure into Terraform state without recreating it",
+            "To download providers",
+            "To move resources between states",
+            "To refresh state"
+        ],
+        "answer": [
+            0
+        ],
+        "explain": "terraform import links existing infrastructure to Terraform state so it can be managed without destruction.",
+        "tags": [
+            "import",
+            "state"
+        ],
+        "difficulty": "easy",
+        "focus": "4a",
+        "category": "Import existing infrastructure",
+        "multiple": false
+    },
+    {
+        "id": "tf_4a_002",
+        "q": "Which preconditions must be met to run terraform import successfully? (Select all that apply)",
+        "choices": [
+            "A resource block matching the target must exist in the configuration",
+            "The resource exists in the provider",
+            "State file must be empty",
+            "Credentials to access the resource"
+        ],
+        "answer": [
+            0,
+            1,
+            3
+        ],
+        "explain": "You need a config block, an actual resource in the provider, and access to it.",
+        "tags": [
+            "import",
+            "requirements"
+        ],
+        "difficulty": "easy",
+        "focus": "4a",
+        "category": "Import existing infrastructure",
+        "multiple": true
+    },
+    {
+        "id": "tf_4a_003",
+        "q": "What does terraform import change?",
+        "choices": [
+            "Only the Terraform state",
+            "The configuration file",
+            "Both configuration and state",
+            "The backend type"
+        ],
+        "answer": [
+            0
+        ],
+        "explain": "It updates the state to include a mapping to the existing resource; you must write the configuration separately.",
+        "tags": [
+            "import",
+            "state"
+        ],
+        "difficulty": "easy",
+        "focus": "4a",
+        "category": "Import existing infrastructure",
+        "multiple": false
+    },
+    {
+        "id": "tf_4a_004",
+        "q": "Why must configuration be written before or after terraform import?",
+        "choices": [
+            "Because Terraform will destroy the resource otherwise",
+            "Because import does not create configuration for you",
+            "Because Terraform cannot import without variables",
+            "Because providers require it for authentication"
+        ],
+        "answer": [
+            1
+        ],
+        "explain": "Import only changes state; without matching configuration, future plans may destroy the resource.",
+        "tags": [
+            "import",
+            "config"
+        ],
+        "difficulty": "easy",
+        "focus": "4a",
+        "category": "Import existing infrastructure",
+        "multiple": false
+    },
+    {
+        "id": "tf_4a_005",
+        "q": "Which syntax is correct for terraform import?",
+        "choices": [
+            "terraform import aws_instance.example i-12345678",
+            "terraform import i-12345678 aws_instance.example",
+            "terraform import example.aws_instance i-12345678",
+            "terraform import aws_instance.example"
+        ],
+        "answer": [
+            0
+        ],
+        "explain": "The format is terraform import <address> <id>.",
+        "tags": [
+            "import",
+            "syntax"
+        ],
+        "difficulty": "easy",
+        "focus": "4a",
+        "category": "Import existing infrastructure",
+        "multiple": false
+    },
+    {
+        "id": "tf_4a_006",
+        "q": "Does terraform import create new resources?",
+        "choices": [
+            "Yes",
+            "No"
+        ],
+        "answer": [
+            1
+        ],
+        "explain": "Import links to existing resources; it does not create them.",
+        "tags": [
+            "import"
+        ],
+        "difficulty": "easy",
+        "focus": "4a",
+        "category": "Import existing infrastructure",
+        "multiple": false
+    },
+    {
+        "id": "tf_4a_007",
+        "q": "Can terraform import bring in multiple resources at once?",
+        "choices": [
+            "Yes, by specifying multiple IDs",
+            "No, one resource per command"
+        ],
+        "answer": [
+            1
+        ],
+        "explain": "terraform import imports one resource at a time.",
+        "tags": [
+            "import"
+        ],
+        "difficulty": "easy",
+        "focus": "4a",
+        "category": "Import existing infrastructure",
+        "multiple": false
+    },
+    {
+        "id": "tf_4a_008",
+        "q": "If configuration does not match the imported resource, what may happen on apply?",
+        "choices": [
+            "Terraform may replace it",
+            "Nothing happens"
+        ],
+        "answer": [
+            0
+        ],
+        "explain": "Mismatched configuration can trigger replacement on apply.",
+        "tags": [
+            "import"
+        ],
+        "difficulty": "easy",
+        "focus": "4a",
+        "category": "Import existing infrastructure",
+        "multiple": false
+    },
+    {
+        "id": "tf_4a_009",
+        "q": "Is terraform import idempotent?",
+        "choices": [
+            "Yes, running it again on same resource does nothing harmful",
+            "No"
+        ],
+        "answer": [
+            0
+        ],
+        "explain": "Importing the same mapping again overwrites state mapping harmlessly.",
+        "tags": [
+            "import"
+        ],
+        "difficulty": "easy",
+        "focus": "4a",
+        "category": "Import existing infrastructure",
+        "multiple": false
+    },
+    {
+        "id": "tf_4a_010",
+        "q": "Does terraform import require internet access?",
+        "choices": [
+            "Yes, to contact the provider API",
+            "No"
+        ],
+        "answer": [
+            0
+        ],
+        "explain": "Terraform must query provider APIs to fetch the resource during import.",
+        "tags": [
+            "import"
+        ],
+        "difficulty": "easy",
+        "focus": "4a",
+        "category": "Import existing infrastructure",
+        "multiple": false
+    },
+    {
+        "id": "tf_4a_011",
+        "q": "Where is imported resource data stored?",
+        "choices": [
+            "In the state file",
+            "In .terraform.lock.hcl"
+        ],
+        "answer": [
+            0
+        ],
+        "explain": "State stores attributes of imported resources.",
+        "tags": [
+            "import"
+        ],
+        "difficulty": "easy",
+        "focus": "4a",
+        "category": "Import existing infrastructure",
+        "multiple": false
+    },
+    {
+        "id": "tf_4a_012",
+        "q": "Can terraform import be undone?",
+        "choices": [
+            "Yes, by removing from state",
+            "No"
+        ],
+        "answer": [
+            0
+        ],
+        "explain": "Use terraform state rm to remove an imported resource.",
+        "tags": [
+            "import"
+        ],
+        "difficulty": "easy",
+        "focus": "4a",
+        "category": "Import existing infrastructure",
+        "multiple": false
+    },
+    {
+        "id": "tf_4a_013",
+        "q": "Is terraform plan run automatically after import?",
+        "choices": [
+            "Yes",
+            "No"
+        ],
+        "answer": [
+            1
+        ],
+        "explain": "You must run plan manually to see changes after import.",
+        "tags": [
+            "import"
+        ],
+        "difficulty": "easy",
+        "focus": "4a",
+        "category": "Import existing infrastructure",
+        "multiple": false
+    },
+    {
+        "id": "tf_4a_014",
+        "q": "What is a common next step after import?",
+        "choices": [
+            "Run terraform plan to verify drift",
+            "Run terraform destroy"
+        ],
+        "answer": [
+            0
+        ],
+        "explain": "Plan helps confirm config and state match reality.",
+        "tags": [
+            "import"
+        ],
+        "difficulty": "easy",
+        "focus": "4a",
+        "category": "Import existing infrastructure",
+        "multiple": false
+    },
+    {
+        "id": "tf_4a_015",
+        "q": "Does terraform import work with all providers?",
+        "choices": [
+            "Yes, if provider implements Importer",
+            "No"
+        ],
+        "answer": [
+            0
+        ],
+        "explain": "Providers must implement import support for resource types.",
+        "tags": [
+            "import"
+        ],
+        "difficulty": "easy",
+        "focus": "4a",
+        "category": "Import existing infrastructure",
+        "multiple": false
+    },
+    {
+        "id": "tf_4a_016",
+        "q": "Which steps are best practice when importing resources? (Select all that apply)",
+        "choices": [
+            "Backup state",
+            "Verify credentials",
+            "Write config first",
+            "Run terraform destroy"
+        ],
+        "answer": [
+            0,
+            1,
+            2
+        ],
+        "explain": "Backup, verify access, and have config ready to avoid accidental destruction.",
+        "tags": [
+            "import"
+        ],
+        "difficulty": "medium",
+        "focus": "4a",
+        "category": "Import existing infrastructure",
+        "multiple": true
+    },
+    {
+        "id": "tf_4a_017",
+        "q": "If terraform import fails with 'resource type not supported', what should you do?",
+        "choices": [
+            "Check provider docs for import support",
+            "Manually edit state",
+            "Use terraform refresh",
+            "Contact cloud vendor"
+        ],
+        "answer": [
+            0
+        ],
+        "explain": "Only resources with importer support can be imported.",
+        "tags": [
+            "import"
+        ],
+        "difficulty": "medium",
+        "focus": "4a",
+        "category": "Import existing infrastructure",
+        "multiple": false
+    },
+    {
+        "id": "tf_4a_018",
+        "q": "What happens if you import with the wrong ID?",
+        "choices": [
+            "Terraform links state to wrong resource",
+            "Terraform throws an error",
+            "State is unchanged"
+        ],
+        "answer": [
+            0
+        ],
+        "explain": "It may link to the wrong resource; verify IDs carefully.",
+        "tags": [
+            "import"
+        ],
+        "difficulty": "medium",
+        "focus": "4a",
+        "category": "Import existing infrastructure",
+        "multiple": false
+    },
+    {
+        "id": "tf_4a_019",
+        "q": "You imported a VM, but plan wants to destroy and recreate it. What’s wrong?",
+        "choices": [
+            "Config does not match imported attributes",
+            "State is corrupted",
+            "Provider bug",
+            "Backend mismatch"
+        ],
+        "answer": [
+            0
+        ],
+        "explain": "Config differences cause Terraform to propose changes.",
+        "tags": [
+            "import"
+        ],
+        "difficulty": "medium",
+        "focus": "4a",
+        "category": "Import existing infrastructure",
+        "multiple": false
+    },
+    {
+        "id": "tf_4a_020",
+        "q": "How to handle importing 200 similar resources?",
+        "choices": [
+            "Use a script looping terraform import",
+            "Run terraform import once",
+            "Manually add to state"
+        ],
+        "answer": [
+            0
+        ],
+        "explain": "Scripting can batch import one-by-one.",
+        "tags": [
+            "import"
+        ],
+        "difficulty": "medium",
+        "focus": "4a",
+        "category": "Import existing infrastructure",
+        "multiple": false
+    },
+    {
+        "id": "tf_4a_021",
+        "q": "After import, sensitive data is missing in state. Why?",
+        "choices": [
+            "Provider does not return it after creation",
+            "Terraform bug",
+            "Plan not run"
+        ],
+        "answer": [
+            0
+        ],
+        "explain": "Some providers cannot retrieve sensitive values later.",
+        "tags": [
+            "import",
+            "sensitive"
+        ],
+        "difficulty": "medium",
+        "focus": "4a",
+        "category": "Import existing infrastructure",
+        "multiple": false
+    },
+    {
+        "id": "tf_4a_022",
+        "q": "What is a safe method to test imports in CI?",
+        "choices": [
+            "Use a separate workspace and backend",
+            "Run in production workspace directly"
+        ],
+        "answer": [
+            0
+        ],
+        "explain": "Separate workspace avoids affecting production state.",
+        "tags": [
+            "import",
+            "ci"
+        ],
+        "difficulty": "medium",
+        "focus": "4a",
+        "category": "Import existing infrastructure",
+        "multiple": false
+    },
+    {
+        "id": "tf_4a_023",
+        "q": "You imported a resource from one provider instance, but config uses another alias. Result?",
+        "choices": [
+            "Terraform treats it as new and will recreate",
+            "Terraform updates alias automatically",
+            "State changes alias mapping without recreate"
+        ],
+        "answer": [
+            0
+        ],
+        "explain": "Alias mismatch causes Terraform to see it as a different provider binding.",
+        "tags": [
+            "import",
+            "alias"
+        ],
+        "difficulty": "hard",
+        "focus": "4a",
+        "category": "Import existing infrastructure",
+        "multiple": false
+    },
+    {
+        "id": "tf_4a_024",
+        "q": "How to import into a module resource?",
+        "choices": [
+            "Use full address with module path, e.g., module.name.aws_instance.example",
+            "Import to root then move",
+            "Not possible"
+        ],
+        "answer": [
+            0
+        ],
+        "explain": "Specify the full resource address with module path to import directly.",
+        "tags": [
+            "import",
+            "modules"
+        ],
+        "difficulty": "hard",
+        "focus": "4a",
+        "category": "Import existing infrastructure",
+        "multiple": false
+    },
+    {
+        "id": "tf_4a_025",
+        "q": "What’s the difference between terraform import and terraform state mv when linking infra?",
+        "choices": [
+            "Import brings in unmanaged infra; mv changes addresses within managed state",
+            "They are identical",
+            "mv creates resources",
+            "import renames resources"
+        ],
+        "answer": [
+            0
+        ],
+        "explain": "Import maps external resources into state; mv just renames within state.",
+        "tags": [
+            "import",
+            "state-mv"
+        ],
+        "difficulty": "hard",
+        "focus": "4a",
+        "category": "Import existing infrastructure",
+        "multiple": false
+    }
+]
