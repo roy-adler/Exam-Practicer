@@ -80,7 +80,7 @@
                 type="number" 
                 min="5" 
                 max="500" 
-                value="60" 
+                value="80" 
                 style="width:68px;margin-left:8px;background:transparent;border:none;color:var(--text)"
                 aria-label="Number of questions for the quiz"
               />
@@ -105,6 +105,19 @@
               />
               Show explanations on submit
             </label>
+            <label class="pill">
+              <input 
+                id="balancedFocus" 
+                type="checkbox" 
+                style="margin-left:8px"
+                aria-label="Ensure balanced coverage across focus areas (at least 2 questions per focus)"
+              />
+              Balanced focus areas
+            </label>
+          </div>
+          <div class="row" id="focusInfo" style="display:none; font-size:0.9em; color:var(--muted);">
+            <p>📚 <strong>Balanced mode:</strong> Ensures balanced coverage across focus areas. Available focus areas: <span id="availableFocusAreas">-</span></p>
+            <p id="balancedModeWarning" style="display:none; color:var(--warning); font-weight:bold;">⚠️ Note: With fewer questions, some focus areas may have limited coverage.</p>
           </div>
           <div class="row">
             <button 

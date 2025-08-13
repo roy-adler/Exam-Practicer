@@ -1,33 +1,17 @@
-# Build stage - Generate the exam questions index file
+# Build stage - Generate the exam questions index file and focus areas
 FROM alpine:latest AS build
 WORKDIR /app
 
 # Install necessary tools
 RUN apk add --no-cache bash
 
-# Copy source code
+# Copy source code and script
 COPY . .
+COPY generate_files.sh /app/generate_files.sh
 
-# Create a script to generate index.json
-RUN echo '#!/bin/bash' > /app/generate_index.sh && \
-    echo 'cd /app/exam-questions' >> /app/generate_index.sh && \
-    echo 'echo "[" > index.json' >> /app/generate_index.sh && \
-    echo 'first=true' >> /app/generate_index.sh && \
-    echo 'for file in *.json; do' >> /app/generate_index.sh && \
-    echo '  if [ "$file" != "index.json" ]; then' >> /app/generate_index.sh && \
-    echo '    if [ "$first" = "true" ]; then' >> /app/generate_index.sh && \
-    echo '      echo "  \"$file\"" >> index.json' >> /app/generate_index.sh && \
-    echo '      first=false' >> /app/generate_index.sh && \
-    echo '    else' >> /app/generate_index.sh && \
-    echo '      echo "  ,\"$file\"" >> index.json' >> /app/generate_index.sh && \
-    echo '    fi' >> /app/generate_index.sh && \
-    echo '  fi' >> /app/generate_index.sh && \
-    echo 'done' >> /app/generate_index.sh && \
-    echo 'echo "]" >> index.json' >> /app/generate_index.sh && \
-    chmod +x /app/generate_index.sh
-
-# Generate index using the script
-RUN /app/generate_index.sh
+# Make the script executable and run it from the root directory
+RUN chmod +x /app/generate_files.sh && \
+    /app/generate_files.sh
 
 # Production stage - Serve static files with nginx
 FROM nginx:alpine
@@ -37,7 +21,7 @@ COPY --from=build /app/index.html /usr/share/nginx/html/
 COPY --from=build /app/app.js /usr/share/nginx/html/
 COPY --from=build /app/styles.css /usr/share/nginx/html/
 
-# Copy exam questions directory (including generated index.json)
+# Copy exam questions directory (including generated index.json and focus-areas.json)
 COPY --from=build /app/exam-questions/ /usr/share/nginx/html/exam-questions/
 
 # Use default nginx configuration
