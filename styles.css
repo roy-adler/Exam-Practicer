@@ -458,6 +458,19 @@ button.danger:hover {
   flex-wrap: wrap;
 }
 
+/* Scoring info */
+.scoring-info {
+  border-left: 4px solid var(--accent);
+}
+
+.scoring-info ul {
+  color: var(--text-muted);
+}
+
+.scoring-info li {
+  margin: 4px 0;
+}
+
 .score-circle {
   width: 120px;
   height: 120px;
@@ -542,6 +555,28 @@ button.danger:hover {
   display: inline-flex;
   align-items: center;
   gap: var(--spacing-xs);
+}
+
+/* Points badge */
+.points-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.points-badge.earned {
+  background: var(--success);
+  color: #041225;
+}
+
+.points-badge.missed {
+  background: var(--danger);
+  color: #fff;
 }
 
 /* Utility classes */

@@ -661,10 +661,7 @@ class QuizApp {
         const choiceIndex = parseInt(event.target.dataset.choiceIndex);
         const question = this.currentQuiz[this.currentQuestionIndex];
 
-        // Double-check the multiple property
-        const isMultiple = question.answer && question.answer.length > 1;
-        question.multiple = isMultiple;
-
+        // Use the multiple property from the question data
         if (question.multiple) {
             this.selectMultipleChoice(choiceIndex, event.target.checked);
         } else {
@@ -808,26 +805,60 @@ class QuizApp {
     }
 
     calculateAndShowResults() {
-        let correct = 0;
+        let totalPoints = 0;
         let wrong = [];
 
         this.currentQuiz.forEach((question, index) => {
-            if (this.isAnswerCorrect(question, this.answers[index])) {
-                correct++;
-            } else if (this.answers[index] !== null) {
+            const questionPoints = this.calculateQuestionPoints(question, this.answers[index]);
+            totalPoints += questionPoints;
+            
+            if (questionPoints === 0 && this.answers[index] !== null) {
                 wrong.push(index);
             }
         });
 
-        const percentage = Math.round((correct / this.currentQuiz.length) * 100);
+        const percentage = Math.round((totalPoints / this.currentQuiz.length) * 100);
         const timeElapsed = Date.now() - this.startTime;
 
-        this.showResults(correct, this.currentQuiz.length, percentage, wrong, timeElapsed);
+        this.showResults(totalPoints, this.currentQuiz.length, percentage, wrong, timeElapsed);
 
         // Store wrong answers for practice
         if (wrong.length > 0) {
             this.storeWrongAnswers(wrong);
         }
+    }
+
+    calculateQuestionPoints(question, userAnswer) {
+        if (!userAnswer) return 0;
+
+        const correctAnswers = question.answer;
+
+        // Handle single answer questions
+        if (!question.multiple) {
+            return userAnswer === correctAnswers[0] ? 1 : 0;
+        }
+
+        // Handle multiple answer questions
+        if (Array.isArray(userAnswer)) {
+            // If any wrong answer is selected, the whole question gives 0 points
+            for (const userChoice of userAnswer) {
+                if (!correctAnswers.includes(userChoice)) {
+                    return 0;
+                }
+            }
+            
+            // Count correct answers for points (1 point per correct answer)
+            let points = 0;
+            for (const userChoice of userAnswer) {
+                if (correctAnswers.includes(userChoice)) {
+                    points++;
+                }
+            }
+            
+            return points;
+        }
+
+        return 0;
     }
 
     isAnswerCorrect(question, userAnswer) {
@@ -868,7 +899,7 @@ class QuizApp {
         }
     }
 
-    showResults(correct, total, percentage, wrong, timeElapsed) {
+    showResults(points, total, percentage, wrong, timeElapsed) {
         const minutes = Math.floor(timeElapsed / 60000);
         const seconds = Math.floor((timeElapsed % 60000) / 1000);
 
@@ -881,12 +912,24 @@ class QuizApp {
                         <span class="label">${percentage >= this.PASS_THRESHOLD ? 'PASS' : 'FAIL'}</span>
                     </div>
                     <div class="score-details">
-                        <p><strong>Correct:</strong> ${correct} / ${total}</p>
-                        <p><strong>Wrong:</strong> ${total - correct}</p>
+                        <p><strong>Points:</strong> ${points} / ${total}</p>
+                        <p><strong>Questions with errors:</strong> ${wrong.length}</p>
                         <p><strong>Unanswered:</strong> ${total - this.answers.filter(a => a !== null).length}</p>
                     </div>
                 </div>
                 ${wrong.length > 0 ? `<p><strong>Questions to review:</strong> ${wrong.length}</p>` : ''}
+                <div class="scoring-breakdown" style="margin-top: 20px; padding: 16px; background: var(--accent-bg); border-radius: 8px;">
+                    <p style="margin: 0 0 12px 0;"><strong>📊 Scoring Breakdown:</strong></p>
+                    <p style="margin: 0; font-size: 0.9em; color: var(--text-muted);">
+                        You earned ${points} points out of ${total} possible points. 
+                        ${wrong.length > 0 ? `You have ${wrong.length} questions with errors that need review.` : 'Great job! No errors to review.'}
+                    </p>
+                    <div style="margin-top: 12px; padding-top: 12px; border-top: 1px solid var(--border);">
+                        <p style="margin: 0; font-size: 0.85em; color: var(--text-muted);">
+                            <strong>Scoring:</strong> Single choice = 1 point, Multiple choice = 1 point per correct answer (0 if any wrong answer selected)
+                        </p>
+                    </div>
+                </div>
             `;
         }
 
@@ -974,6 +1017,7 @@ class QuizApp {
         this.currentQuiz.forEach((question, index) => {
             const userAnswer = this.answers[index];
             const isCorrect = this.isAnswerCorrect(question, userAnswer);
+            const questionPoints = this.calculateQuestionPoints(question, userAnswer);
             const userChoice = this.formatUserAnswer(userAnswer, question);
             const correctChoice = this.formatCorrectAnswer(question);
 
@@ -984,6 +1028,7 @@ class QuizApp {
                         <span class="difficulty-badge ${question.difficulty}">${question.difficulty}</span>
                         <span class="focus-badge">${question.focus}</span>
                         <span class="category-badge">${question.category}</span>
+                        <span class="points-badge ${questionPoints > 0 ? 'earned' : 'missed'}">${questionPoints} point${questionPoints !== 1 ? 's' : ''}</span>
                     </div>
                     <p><strong>Question:</strong> ${this.escapeHtml(question.q)}</p>
                     <p><strong>Your answer:</strong> ${userChoice}</p>

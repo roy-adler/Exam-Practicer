@@ -1,14 +1,14 @@
-#!/bin/bash
+﻿#!/bin/bash
 
 # Script to generate index.json and focus-areas.json for the exam questions
 # This script should be run from the root directory
 
 set -e  # Exit on any error
 
-echo "🔍 Starting file generation..."
+echo "ðŸ” Starting file generation..."
 
 # Generate index.json
-echo "📋 Generating index.json..."
+echo "ðŸ“‹ Generating index.json..."
 echo "[" > exam-questions/index.json
 first=true
 
@@ -26,10 +26,10 @@ for file in exam-questions/*.json; do
 done
 
 echo "]" >> exam-questions/index.json
-echo "✅ index.json generated successfully"
+echo "âœ… index.json generated successfully"
 
 # Generate focus-areas.json by dynamically extracting focus values
-echo "🎯 Generating focus-areas.json..."
+echo "ðŸŽ¯ Generating focus-areas.json..."
 echo "[" > exam-questions/focus-areas.json
 
 # Extract all unique focus values from question files
@@ -49,10 +49,10 @@ done
 
 echo "]" >> exam-questions/focus-areas.json
 
-echo "✅ focus-areas.json generated successfully"
-echo "🎉 All files generated successfully!"
+echo "âœ… focus-areas.json generated successfully"
+echo "ðŸŽ‰ All files generated successfully!"
 echo ""
-echo "📊 Summary:"
+echo "ðŸ“Š Summary:"
 echo "  - index.json: Lists all question files"
 echo "  - focus-areas.json: Contains all focus areas for balanced quiz mode"
 echo "  - Found $(echo "$focus_values" | wc -l) unique focus areas"
