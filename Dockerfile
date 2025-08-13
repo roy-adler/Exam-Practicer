@@ -9,10 +9,9 @@ RUN apk add --no-cache bash
 COPY . .
 COPY generate_files.sh /app/generate_files.sh
 
-# Make the script executable and run it
+# Make the script executable and run it from the root directory
 RUN chmod +x /app/generate_files.sh && \
-    cd /app/exam-questions && \
-    ../generate_files.sh
+    /app/generate_files.sh
 
 # Production stage - Serve static files with nginx
 FROM nginx:alpine
