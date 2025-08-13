@@ -1,23 +1,46 @@
 # Build stage - Generate the exam questions index file
-FROM node:20 AS build
+FROM alpine:latest AS build
 WORKDIR /app
 
-# Copy package files and install dependencies
-COPY package*.json ./
-RUN npm ci || true
+# Install necessary tools
+RUN apk add --no-cache bash
 
-# Copy source code and generate index
+# Copy source code
 COPY . .
-RUN node tools/gen-index.mjs
 
-# Optional: Build static assets if needed
-# RUN npm run build
+# Create a script to generate index.json
+RUN echo '#!/bin/bash' > /app/generate_index.sh && \
+    echo 'cd /app/exam-questions' >> /app/generate_index.sh && \
+    echo 'echo "[" > index.json' >> /app/generate_index.sh && \
+    echo 'first=true' >> /app/generate_index.sh && \
+    echo 'for file in *.json; do' >> /app/generate_index.sh && \
+    echo '  if [ "$file" != "index.json" ]; then' >> /app/generate_index.sh && \
+    echo '    if [ "$first" = "true" ]; then' >> /app/generate_index.sh && \
+    echo '      echo "  \"$file\"" >> index.json' >> /app/generate_index.sh && \
+    echo '      first=false' >> /app/generate_index.sh && \
+    echo '    else' >> /app/generate_index.sh && \
+    echo '      echo "  ,\"$file\"" >> index.json' >> /app/generate_index.sh && \
+    echo '    fi' >> /app/generate_index.sh && \
+    echo '  fi' >> /app/generate_index.sh && \
+    echo 'done' >> /app/generate_index.sh && \
+    echo 'echo "]" >> index.json' >> /app/generate_index.sh && \
+    chmod +x /app/generate_index.sh
+
+# Generate index using the script
+RUN /app/generate_index.sh
 
 # Production stage - Serve static files with nginx
 FROM nginx:alpine
 
-# Copy exam questions directory to nginx web root
+# Copy main application files to nginx web root
+COPY --from=build /app/index.html /usr/share/nginx/html/
+COPY --from=build /app/app.js /usr/share/nginx/html/
+COPY --from=build /app/styles.css /usr/share/nginx/html/
+
+# Copy exam questions directory (including generated index.json)
 COPY --from=build /app/exam-questions/ /usr/share/nginx/html/exam-questions/
+
+# Use default nginx configuration
 
 # Expose port 80 for web traffic
 EXPOSE 80

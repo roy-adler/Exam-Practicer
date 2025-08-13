@@ -131,22 +131,32 @@ class QuizApp {
     async loadQuestions() {
         try {
             this.showLoading(true);
+            console.log('🚀 Starting to load questions...');
 
             const base = 'exam-questions/';
+            console.log(`📁 Loading index from: ${base}index.json`);
+            
             const idx = await fetch(base + 'index.json', { cache: 'no-store' });
             if (!idx.ok) throw new Error(`Cannot load ${base}index.json (${idx.status})`);
 
             const files = await idx.json(); // e.g. ["set1.json","set2.json"]
+            console.log(`📋 Found ${files.length} question files:`, files);
+            
             if (!Array.isArray(files) || files.length === 0) {
-                throw new Error('index.json is empty.');
+                throw new Error('index.json is empty or invalid.');
             }
 
+            console.log(`🔄 Loading ${files.length} question files...`);
             const rs = await Promise.all(files.map(f => fetch(base + f, { cache: 'no-store' })));
+            
+            // Check for any failed requests
             const bad = rs.find(r => !r.ok);
             if (bad) throw new Error(`Failed to load ${bad.url} (${bad.status})`);
 
+            console.log(`✅ All files loaded successfully, parsing JSON...`);
             const jsons = await Promise.all(rs.map(r => r.json()));
             const raw = jsons.flat();
+            
             if (raw.length === 0) throw new Error('Loaded files but found 0 questions.');
 
             this.questions = raw.map(q => this.normalizeQuestion(q));
@@ -155,7 +165,7 @@ class QuizApp {
             this.showMainMenu();
         } catch (err) {
             console.error('❌ Error loading questions:', err);
-            this.showError('Failed to load questions. Check console.');
+            this.showError(`Failed to load questions: ${err.message}`);
         } finally {
             this.showLoading(false);
         }
@@ -291,7 +301,7 @@ class QuizApp {
         this.startTimer();
 
         // Show quiz
-        this.showCard('quizCard');
+        this.showQuizCard();
         this.showQuestion();
     }
 
@@ -629,7 +639,7 @@ class QuizApp {
         }
 
         // Show results
-        this.showCard('resultCard');
+        this.showResultCard();
     }
 
     handleRetry() {
@@ -637,7 +647,7 @@ class QuizApp {
     }
 
     resetQuiz() {
-        this.showCard('introCard');
+        this.showMainMenu();
         this.cleanup();
 
         // Reset timer display
@@ -686,7 +696,7 @@ class QuizApp {
         this.startTime = Date.now();
 
         this.startTimer();
-        this.showCard('quizCard');
+        this.showQuizCard();
 
         if (this.elements.modeLabel) {
             this.elements.modeLabel.textContent = 'Mode: Practice Errors';
@@ -834,14 +844,7 @@ class QuizApp {
         event.target.value = '';
     }
 
-    showCard(cardId) {
-        const cards = ['introCard', 'quizCard', 'resultCard'];
-        cards.forEach(id => {
-            if (this.elements[id]) {
-                this.elements[id].classList.toggle('hidden', id !== cardId);
-            }
-        });
-    }
+
 
     cleanup() {
         // Stop timer
@@ -919,10 +922,17 @@ class QuizApp {
 
     showMainMenu() {
         this.currentView = 'main';
-        this.elements.mainMenu.style.display = 'block';
-        this.elements.quizContainer.style.display = 'none';
-        this.elements.resultsContainer.style.display = 'none';
-        this.elements.settingsContainer.style.display = 'none';
+        
+        // Show intro card (main menu), hide others
+        if (this.elements.introCard) {
+            this.elements.introCard.classList.remove('hidden');
+        }
+        if (this.elements.quizCard) {
+            this.elements.quizCard.classList.add('hidden');
+        }
+        if (this.elements.resultCard) {
+            this.elements.resultCard.classList.add('hidden');
+        }
 
         // Update question count display
         if (this.elements.questionCountLabel) {
@@ -931,11 +941,67 @@ class QuizApp {
 
         // Update load errors button state
         if (this.elements.btnLoadErrors) {
-            this.elements.btnLoadErrors.disabled = true;
+            this.elements.btnLoadErrors.disabled = this.questions.length === 0;
         }
 
         // Reset any previous quiz state
         this.resetQuiz();
+    }
+
+    showQuizCard() {
+        this.currentView = 'quiz';
+        
+        // Hide intro card, show quiz card
+        if (this.elements.introCard) {
+            this.elements.introCard.classList.add('hidden');
+        }
+        if (this.elements.quizCard) {
+            this.elements.quizCard.classList.remove('hidden');
+        }
+        if (this.elements.resultCard) {
+            this.elements.resultCard.classList.add('hidden');
+        }
+    }
+
+    showResultCard() {
+        this.currentView = 'result';
+        
+        // Hide other cards, show result card
+        if (this.elements.introCard) {
+            this.elements.introCard.classList.add('hidden');
+        }
+        if (this.elements.quizCard) {
+            this.elements.quizCard.classList.add('hidden');
+        }
+        if (this.elements.resultCard) {
+            this.elements.resultCard.classList.remove('hidden');
+        }
+    }
+
+    resetQuiz() {
+        // Reset quiz state
+        this.currentQuestionIndex = 0;
+        this.answers = [];
+        this.startTime = null;
+        this.stopTimer();
+        
+        // Clear any existing quiz content
+        if (this.elements.qContainer) {
+            this.elements.qContainer.innerHTML = '';
+        }
+        
+        // Reset progress
+        if (this.elements.progressInner) {
+            this.elements.progressInner.style.width = '0%';
+        }
+        if (this.elements.progressLabel) {
+            this.elements.progressLabel.textContent = '0 / 0';
+        }
+        
+        // Reset timer display
+        if (this.elements.liveTimer) {
+            this.elements.liveTimer.textContent = '00:00';
+        }
     }
 }
 
