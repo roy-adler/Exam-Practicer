@@ -6,7 +6,8 @@
   "scripts": {
     "start": "python3 -m http.server 8000",
     "dev": "python3 -m http.server 8000",
-    "build": "echo 'No build step required for static files'",
+    "build:index": "node tools/gen-index.mjs",
+    "build": "npm run build:index && vite build",
     "test": "echo 'No tests specified'",
     "lint": "echo 'No linter configured'",
     "format": "echo 'No formatter configured'",

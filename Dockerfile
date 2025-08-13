@@ -19,12 +19,6 @@ FROM nginx:alpine
 # Copy exam questions directory to nginx web root
 COPY --from=build /app/exam-questions/ /usr/share/nginx/html/exam-questions/
 
-# Alternative: Copy built dist folder if using a build process
-# COPY --from=build /app/dist/ /usr/share/nginx/html/
-
-# Alternative: Copy entire app directory for fully static serving
-# COPY --from=build /app/ /usr/share/nginx/html/
-
 # Expose port 80 for web traffic
 EXPOSE 80
 
