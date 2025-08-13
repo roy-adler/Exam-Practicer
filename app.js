@@ -303,24 +303,10 @@ class QuizApp {
             this.currentQuiz[this.currentQuestionIndex].multiple = isMultiple;
         }
         
-        // Debug logging
-        console.log(`=== CREATING CHOICES DEBUG ===`);
-        console.log(`Question ID: ${question.id}`);
-        console.log(`Question text: ${question.q.substring(0, 50)}...`);
-        console.log(`Answer array: ${JSON.stringify(question.answer)}`);
-        console.log(`Answer length: ${question.answer.length}`);
-        console.log(`Is multiple: ${isMultiple}`);
-        console.log(`Question.multiple before: ${question.multiple}`);
-        console.log(`Question.multiple after: ${question.multiple}`);
-        console.log(`Current quiz multiple: ${this.currentQuiz[this.currentQuestionIndex]?.multiple}`);
-        console.log(`=== END DEBUG ===`);
-        
         return choices.map((choice, index) => {
             const isSelected = this.isChoiceSelected(index);
             const inputType = question.multiple ? 'checkbox' : 'radio';
             const inputName = question.multiple ? `q${this.currentQuestionIndex}_${index}` : `q${this.currentQuestionIndex}`;
-            
-            console.log(`Choice ${index}: type=${inputType}, name=${inputName}, selected=${isSelected}, multiple=${question.multiple}`);
             
             return `
                 <label class="choice ${isSelected ? 'selected' : ''}">
@@ -358,23 +344,9 @@ class QuizApp {
         const isMultiple = question.answer && question.answer.length > 1;
         question.multiple = isMultiple;
         
-        console.log(`=== HANDLE CHOICE CHANGE DEBUG ===`);
-        console.log(`Choice clicked: ${choiceIndex}`);
-        console.log(`Question ID: ${question.id}`);
-        console.log(`Question text: ${question.q.substring(0, 50)}...`);
-        console.log(`Answer array: ${JSON.stringify(question.answer)}`);
-        console.log(`Answer length: ${question.answer.length}`);
-        console.log(`Question.multiple: ${question.multiple}`);
-        console.log(`Is multiple: ${isMultiple}`);
-        console.log(`Event checked: ${event.target.checked}`);
-        console.log(`Input type: ${event.target.type}`);
-        console.log(`=== END DEBUG ===`);
-        
         if (question.multiple) {
-            console.log(`Calling selectMultipleChoice for question ${question.id}`);
             this.selectMultipleChoice(choiceIndex, event.target.checked);
         } else {
-            console.log(`Calling selectSingleChoice for question ${question.id}`);
             this.selectSingleChoice(choiceIndex);
         }
     }
@@ -398,10 +370,6 @@ class QuizApp {
     }
     
     selectMultipleChoice(choiceIndex, isChecked) {
-        console.log(`=== SELECT MULTIPLE CHOICE DEBUG ===`);
-        console.log(`selectMultipleChoice called: choiceIndex=${choiceIndex}, isChecked=${isChecked}`);
-        console.log(`Current question:`, this.currentQuiz[this.currentQuestionIndex]);
-        
         let currentAnswers = this.answers[this.currentQuestionIndex];
         
         // Initialize as empty array if no answers yet
@@ -414,30 +382,20 @@ class QuizApp {
             currentAnswers = [currentAnswers];
         }
         
-        console.log(`Current answers before:`, currentAnswers);
-        
         if (isChecked) {
             // Add choice if not already selected
             if (!currentAnswers.includes(choiceIndex)) {
                 currentAnswers.push(choiceIndex);
-                console.log(`Added choice ${choiceIndex}`);
-            } else {
-                console.log(`Choice ${choiceIndex} already selected`);
             }
         } else {
             // Remove choice if selected
             currentAnswers = currentAnswers.filter(a => a !== choiceIndex);
-            console.log(`Removed choice ${choiceIndex}`);
         }
         
-        console.log(`Current answers after:`, currentAnswers);
-        
         this.answers[this.currentQuestionIndex] = currentAnswers;
-        console.log(`Updated answers array:`, this.answers);
         
         this.updateChoiceStyling();
         this.updateProgress();
-        console.log(`=== END SELECT MULTIPLE CHOICE DEBUG ===`);
     }
     
     updateChoiceStyling() {
