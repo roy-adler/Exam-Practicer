@@ -1,0 +1,552 @@
+[
+  {
+    "id": "tf_5c_001",
+    "q": "[EASY] (Variable scope within modules/child modules) Question 1: What is the correct practice or fact about Variable scope within modules/child modules?",
+    "choices": [
+      "Correct fact for Variable scope within modules/child modules",
+      "Incorrect fact A for Variable scope within modules/child modules",
+      "Incorrect fact B for Variable scope within modules/child modules",
+      "Incorrect fact C for Variable scope within modules/child modules"
+    ],
+    "answer": [
+      0
+    ],
+    "explain": "This is the explanation for question 1 in Variable scope within modules/child modules. Focus area: 5c.",
+    "tags": [
+      "modules",
+      "scope"
+    ],
+    "difficulty": "easy",
+    "focus": "5c",
+    "category": "Modules - Variable Scope",
+    "multiple": false
+  },
+  {
+    "id": "tf_5c_002",
+    "q": "[MEDIUM] (Variable scope within modules/child modules) Question 2: What is the correct practice or fact about Variable scope within modules/child modules?",
+    "choices": [
+      "Correct fact for Variable scope within modules/child modules",
+      "Incorrect fact A for Variable scope within modules/child modules",
+      "Incorrect fact B for Variable scope within modules/child modules",
+      "Incorrect fact C for Variable scope within modules/child modules"
+    ],
+    "answer": [
+      0
+    ],
+    "explain": "This is the explanation for question 2 in Variable scope within modules/child modules. Focus area: 5c.",
+    "tags": [
+      "modules",
+      "scope"
+    ],
+    "difficulty": "medium",
+    "focus": "5c",
+    "category": "Modules - Variable Scope",
+    "multiple": false
+  },
+  {
+    "id": "tf_5c_003",
+    "q": "[EASY] (Variable scope within modules/child modules) Question 3: What is the correct practice or fact about Variable scope within modules/child modules?",
+    "choices": [
+      "Correct fact for Variable scope within modules/child modules",
+      "Incorrect fact A for Variable scope within modules/child modules",
+      "Incorrect fact B for Variable scope within modules/child modules",
+      "Incorrect fact C for Variable scope within modules/child modules"
+    ],
+    "answer": [
+      0
+    ],
+    "explain": "This is the explanation for question 3 in Variable scope within modules/child modules. Focus area: 5c.",
+    "tags": [
+      "modules",
+      "scope"
+    ],
+    "difficulty": "easy",
+    "focus": "5c",
+    "category": "Modules - Variable Scope",
+    "multiple": false
+  },
+  {
+    "id": "tf_5c_004",
+    "q": "[MEDIUM] (Variable scope within modules/child modules) Question 4: What is the correct practice or fact about Variable scope within modules/child modules?",
+    "choices": [
+      "Correct fact for Variable scope within modules/child modules",
+      "Incorrect fact A for Variable scope within modules/child modules",
+      "Incorrect fact B for Variable scope within modules/child modules",
+      "Incorrect fact C for Variable scope within modules/child modules"
+    ],
+    "answer": [
+      0
+    ],
+    "explain": "This is the explanation for question 4 in Variable scope within modules/child modules. Focus area: 5c.",
+    "tags": [
+      "modules",
+      "scope"
+    ],
+    "difficulty": "medium",
+    "focus": "5c",
+    "category": "Modules - Variable Scope",
+    "multiple": false
+  },
+  {
+    "id": "tf_5c_005",
+    "q": "[EASY] (Variable scope within modules/child modules) Question 5: What is the correct practice or fact about Variable scope within modules/child modules?",
+    "choices": [
+      "Correct fact for Variable scope within modules/child modules",
+      "Incorrect fact A for Variable scope within modules/child modules",
+      "Incorrect fact B for Variable scope within modules/child modules",
+      "Incorrect fact C for Variable scope within modules/child modules"
+    ],
+    "answer": [
+      0
+    ],
+    "explain": "This is the explanation for question 5 in Variable scope within modules/child modules. Focus area: 5c.",
+    "tags": [
+      "modules",
+      "scope"
+    ],
+    "difficulty": "easy",
+    "focus": "5c",
+    "category": "Modules - Variable Scope",
+    "multiple": false
+  },
+  {
+    "id": "tf_5c_006",
+    "q": "[EASY] (Variable scope within modules/child modules) Question 6: What is the correct practice or fact about Variable scope within modules/child modules?",
+    "choices": [
+      "Correct fact for Variable scope within modules/child modules",
+      "Incorrect fact A for Variable scope within modules/child modules",
+      "Incorrect fact B for Variable scope within modules/child modules",
+      "Incorrect fact C for Variable scope within modules/child modules"
+    ],
+    "answer": [
+      0
+    ],
+    "explain": "This is the explanation for question 6 in Variable scope within modules/child modules. Focus area: 5c.",
+    "tags": [
+      "modules",
+      "scope"
+    ],
+    "difficulty": "easy",
+    "focus": "5c",
+    "category": "Modules - Variable Scope",
+    "multiple": false
+  },
+  {
+    "id": "tf_5c_007",
+    "q": "[MEDIUM] (Variable scope within modules/child modules) Question 7: What is the correct practice or fact about Variable scope within modules/child modules?",
+    "choices": [
+      "Correct fact for Variable scope within modules/child modules",
+      "Incorrect fact A for Variable scope within modules/child modules",
+      "Incorrect fact B for Variable scope within modules/child modules",
+      "Incorrect fact C for Variable scope within modules/child modules"
+    ],
+    "answer": [
+      0
+    ],
+    "explain": "This is the explanation for question 7 in Variable scope within modules/child modules. Focus area: 5c.",
+    "tags": [
+      "modules",
+      "scope"
+    ],
+    "difficulty": "medium",
+    "focus": "5c",
+    "category": "Modules - Variable Scope",
+    "multiple": false
+  },
+  {
+    "id": "tf_5c_008",
+    "q": "[HARD] (Variable scope within modules/child modules) Question 8: What is the correct practice or fact about Variable scope within modules/child modules?",
+    "choices": [
+      "Correct fact for Variable scope within modules/child modules",
+      "Incorrect fact A for Variable scope within modules/child modules",
+      "Incorrect fact B for Variable scope within modules/child modules",
+      "Incorrect fact C for Variable scope within modules/child modules"
+    ],
+    "answer": [
+      0
+    ],
+    "explain": "This is the explanation for question 8 in Variable scope within modules/child modules. Focus area: 5c.",
+    "tags": [
+      "modules",
+      "scope"
+    ],
+    "difficulty": "hard",
+    "focus": "5c",
+    "category": "Modules - Variable Scope",
+    "multiple": false
+  },
+  {
+    "id": "tf_5c_009",
+    "q": "[EASY] (Variable scope within modules/child modules) Question 9: What is the correct practice or fact about Variable scope within modules/child modules?",
+    "choices": [
+      "Correct fact for Variable scope within modules/child modules",
+      "Incorrect fact A for Variable scope within modules/child modules",
+      "Incorrect fact B for Variable scope within modules/child modules",
+      "Incorrect fact C for Variable scope within modules/child modules"
+    ],
+    "answer": [
+      0
+    ],
+    "explain": "This is the explanation for question 9 in Variable scope within modules/child modules. Focus area: 5c.",
+    "tags": [
+      "modules",
+      "scope"
+    ],
+    "difficulty": "easy",
+    "focus": "5c",
+    "category": "Modules - Variable Scope",
+    "multiple": false
+  },
+  {
+    "id": "tf_5c_010",
+    "q": "[MEDIUM] (Variable scope within modules/child modules) Question 10: What is the correct practice or fact about Variable scope within modules/child modules?",
+    "choices": [
+      "Correct fact for Variable scope within modules/child modules",
+      "Incorrect fact A for Variable scope within modules/child modules",
+      "Incorrect fact B for Variable scope within modules/child modules",
+      "Incorrect fact C for Variable scope within modules/child modules"
+    ],
+    "answer": [
+      0
+    ],
+    "explain": "This is the explanation for question 10 in Variable scope within modules/child modules. Focus area: 5c.",
+    "tags": [
+      "modules",
+      "scope"
+    ],
+    "difficulty": "medium",
+    "focus": "5c",
+    "category": "Modules - Variable Scope",
+    "multiple": false
+  },
+  {
+    "id": "tf_5c_011",
+    "q": "[HARD] (Variable scope within modules/child modules) Question 11: What is the correct practice or fact about Variable scope within modules/child modules?",
+    "choices": [
+      "Correct fact for Variable scope within modules/child modules",
+      "Incorrect fact A for Variable scope within modules/child modules",
+      "Incorrect fact B for Variable scope within modules/child modules",
+      "Incorrect fact C for Variable scope within modules/child modules"
+    ],
+    "answer": [
+      0
+    ],
+    "explain": "This is the explanation for question 11 in Variable scope within modules/child modules. Focus area: 5c.",
+    "tags": [
+      "modules",
+      "scope"
+    ],
+    "difficulty": "hard",
+    "focus": "5c",
+    "category": "Modules - Variable Scope",
+    "multiple": false
+  },
+  {
+    "id": "tf_5c_012",
+    "q": "[EASY] (Variable scope within modules/child modules) Question 12: What is the correct practice or fact about Variable scope within modules/child modules?",
+    "choices": [
+      "Correct fact for Variable scope within modules/child modules",
+      "Incorrect fact A for Variable scope within modules/child modules",
+      "Incorrect fact B for Variable scope within modules/child modules",
+      "Incorrect fact C for Variable scope within modules/child modules"
+    ],
+    "answer": [
+      0
+    ],
+    "explain": "This is the explanation for question 12 in Variable scope within modules/child modules. Focus area: 5c.",
+    "tags": [
+      "modules",
+      "scope"
+    ],
+    "difficulty": "easy",
+    "focus": "5c",
+    "category": "Modules - Variable Scope",
+    "multiple": false
+  },
+  {
+    "id": "tf_5c_013",
+    "q": "[EASY] (Variable scope within modules/child modules) Question 13: What is the correct practice or fact about Variable scope within modules/child modules?",
+    "choices": [
+      "Correct fact for Variable scope within modules/child modules",
+      "Incorrect fact A for Variable scope within modules/child modules",
+      "Incorrect fact B for Variable scope within modules/child modules",
+      "Incorrect fact C for Variable scope within modules/child modules"
+    ],
+    "answer": [
+      0
+    ],
+    "explain": "This is the explanation for question 13 in Variable scope within modules/child modules. Focus area: 5c.",
+    "tags": [
+      "modules",
+      "scope"
+    ],
+    "difficulty": "easy",
+    "focus": "5c",
+    "category": "Modules - Variable Scope",
+    "multiple": false
+  },
+  {
+    "id": "tf_5c_014",
+    "q": "[EASY] (Variable scope within modules/child modules) Question 14: What is the correct practice or fact about Variable scope within modules/child modules?",
+    "choices": [
+      "Correct fact for Variable scope within modules/child modules",
+      "Incorrect fact A for Variable scope within modules/child modules",
+      "Incorrect fact B for Variable scope within modules/child modules",
+      "Incorrect fact C for Variable scope within modules/child modules"
+    ],
+    "answer": [
+      0
+    ],
+    "explain": "This is the explanation for question 14 in Variable scope within modules/child modules. Focus area: 5c.",
+    "tags": [
+      "modules",
+      "scope"
+    ],
+    "difficulty": "easy",
+    "focus": "5c",
+    "category": "Modules - Variable Scope",
+    "multiple": false
+  },
+  {
+    "id": "tf_5c_015",
+    "q": "[EASY] (Variable scope within modules/child modules) Question 15: What is the correct practice or fact about Variable scope within modules/child modules?",
+    "choices": [
+      "Correct fact for Variable scope within modules/child modules",
+      "Incorrect fact A for Variable scope within modules/child modules",
+      "Incorrect fact B for Variable scope within modules/child modules",
+      "Incorrect fact C for Variable scope within modules/child modules"
+    ],
+    "answer": [
+      0
+    ],
+    "explain": "This is the explanation for question 15 in Variable scope within modules/child modules. Focus area: 5c.",
+    "tags": [
+      "modules",
+      "scope"
+    ],
+    "difficulty": "easy",
+    "focus": "5c",
+    "category": "Modules - Variable Scope",
+    "multiple": false
+  },
+  {
+    "id": "tf_5c_016",
+    "q": "[MEDIUM] (Variable scope within modules/child modules) Question 16: What is the correct practice or fact about Variable scope within modules/child modules?",
+    "choices": [
+      "Correct fact for Variable scope within modules/child modules",
+      "Incorrect fact A for Variable scope within modules/child modules",
+      "Incorrect fact B for Variable scope within modules/child modules",
+      "Incorrect fact C for Variable scope within modules/child modules"
+    ],
+    "answer": [
+      0
+    ],
+    "explain": "This is the explanation for question 16 in Variable scope within modules/child modules. Focus area: 5c.",
+    "tags": [
+      "modules",
+      "scope"
+    ],
+    "difficulty": "medium",
+    "focus": "5c",
+    "category": "Modules - Variable Scope",
+    "multiple": false
+  },
+  {
+    "id": "tf_5c_017",
+    "q": "[EASY] (Variable scope within modules/child modules) Question 17: What is the correct practice or fact about Variable scope within modules/child modules?",
+    "choices": [
+      "Correct fact for Variable scope within modules/child modules",
+      "Incorrect fact A for Variable scope within modules/child modules",
+      "Incorrect fact B for Variable scope within modules/child modules",
+      "Incorrect fact C for Variable scope within modules/child modules"
+    ],
+    "answer": [
+      0
+    ],
+    "explain": "This is the explanation for question 17 in Variable scope within modules/child modules. Focus area: 5c.",
+    "tags": [
+      "modules",
+      "scope"
+    ],
+    "difficulty": "easy",
+    "focus": "5c",
+    "category": "Modules - Variable Scope",
+    "multiple": false
+  },
+  {
+    "id": "tf_5c_018",
+    "q": "[EASY] (Variable scope within modules/child modules) Question 18: What is the correct practice or fact about Variable scope within modules/child modules?",
+    "choices": [
+      "Correct fact for Variable scope within modules/child modules",
+      "Incorrect fact A for Variable scope within modules/child modules",
+      "Incorrect fact B for Variable scope within modules/child modules",
+      "Incorrect fact C for Variable scope within modules/child modules"
+    ],
+    "answer": [
+      0
+    ],
+    "explain": "This is the explanation for question 18 in Variable scope within modules/child modules. Focus area: 5c.",
+    "tags": [
+      "modules",
+      "scope"
+    ],
+    "difficulty": "easy",
+    "focus": "5c",
+    "category": "Modules - Variable Scope",
+    "multiple": false
+  },
+  {
+    "id": "tf_5c_019",
+    "q": "[EASY] (Variable scope within modules/child modules) Question 19: What is the correct practice or fact about Variable scope within modules/child modules?",
+    "choices": [
+      "Correct fact for Variable scope within modules/child modules",
+      "Incorrect fact A for Variable scope within modules/child modules",
+      "Incorrect fact B for Variable scope within modules/child modules",
+      "Incorrect fact C for Variable scope within modules/child modules"
+    ],
+    "answer": [
+      0
+    ],
+    "explain": "This is the explanation for question 19 in Variable scope within modules/child modules. Focus area: 5c.",
+    "tags": [
+      "modules",
+      "scope"
+    ],
+    "difficulty": "easy",
+    "focus": "5c",
+    "category": "Modules - Variable Scope",
+    "multiple": false
+  },
+  {
+    "id": "tf_5c_020",
+    "q": "[EASY] (Variable scope within modules/child modules) Question 20: What is the correct practice or fact about Variable scope within modules/child modules?",
+    "choices": [
+      "Correct fact for Variable scope within modules/child modules",
+      "Incorrect fact A for Variable scope within modules/child modules",
+      "Incorrect fact B for Variable scope within modules/child modules",
+      "Incorrect fact C for Variable scope within modules/child modules"
+    ],
+    "answer": [
+      0
+    ],
+    "explain": "This is the explanation for question 20 in Variable scope within modules/child modules. Focus area: 5c.",
+    "tags": [
+      "modules",
+      "scope"
+    ],
+    "difficulty": "easy",
+    "focus": "5c",
+    "category": "Modules - Variable Scope",
+    "multiple": false
+  },
+  {
+    "id": "tf_5c_021",
+    "q": "[HARD] (Variable scope within modules/child modules) Question 21: What is the correct practice or fact about Variable scope within modules/child modules?",
+    "choices": [
+      "Correct fact for Variable scope within modules/child modules",
+      "Incorrect fact A for Variable scope within modules/child modules",
+      "Incorrect fact B for Variable scope within modules/child modules",
+      "Incorrect fact C for Variable scope within modules/child modules"
+    ],
+    "answer": [
+      0
+    ],
+    "explain": "This is the explanation for question 21 in Variable scope within modules/child modules. Focus area: 5c.",
+    "tags": [
+      "modules",
+      "scope"
+    ],
+    "difficulty": "hard",
+    "focus": "5c",
+    "category": "Modules - Variable Scope",
+    "multiple": false
+  },
+  {
+    "id": "tf_5c_022",
+    "q": "[MEDIUM] (Variable scope within modules/child modules) Question 22: What is the correct practice or fact about Variable scope within modules/child modules?",
+    "choices": [
+      "Correct fact for Variable scope within modules/child modules",
+      "Incorrect fact A for Variable scope within modules/child modules",
+      "Incorrect fact B for Variable scope within modules/child modules",
+      "Incorrect fact C for Variable scope within modules/child modules"
+    ],
+    "answer": [
+      0
+    ],
+    "explain": "This is the explanation for question 22 in Variable scope within modules/child modules. Focus area: 5c.",
+    "tags": [
+      "modules",
+      "scope"
+    ],
+    "difficulty": "medium",
+    "focus": "5c",
+    "category": "Modules - Variable Scope",
+    "multiple": false
+  },
+  {
+    "id": "tf_5c_023",
+    "q": "[EASY] (Variable scope within modules/child modules) Question 23: What is the correct practice or fact about Variable scope within modules/child modules?",
+    "choices": [
+      "Correct fact for Variable scope within modules/child modules",
+      "Incorrect fact A for Variable scope within modules/child modules",
+      "Incorrect fact B for Variable scope within modules/child modules",
+      "Incorrect fact C for Variable scope within modules/child modules"
+    ],
+    "answer": [
+      0
+    ],
+    "explain": "This is the explanation for question 23 in Variable scope within modules/child modules. Focus area: 5c.",
+    "tags": [
+      "modules",
+      "scope"
+    ],
+    "difficulty": "easy",
+    "focus": "5c",
+    "category": "Modules - Variable Scope",
+    "multiple": false
+  },
+  {
+    "id": "tf_5c_024",
+    "q": "[MEDIUM] (Variable scope within modules/child modules) Question 24: What is the correct practice or fact about Variable scope within modules/child modules?",
+    "choices": [
+      "Correct fact for Variable scope within modules/child modules",
+      "Incorrect fact A for Variable scope within modules/child modules",
+      "Incorrect fact B for Variable scope within modules/child modules",
+      "Incorrect fact C for Variable scope within modules/child modules"
+    ],
+    "answer": [
+      0
+    ],
+    "explain": "This is the explanation for question 24 in Variable scope within modules/child modules. Focus area: 5c.",
+    "tags": [
+      "modules",
+      "scope"
+    ],
+    "difficulty": "medium",
+    "focus": "5c",
+    "category": "Modules - Variable Scope",
+    "multiple": false
+  },
+  {
+    "id": "tf_5c_025",
+    "q": "[EASY] (Variable scope within modules/child modules) Question 25: What is the correct practice or fact about Variable scope within modules/child modules?",
+    "choices": [
+      "Correct fact for Variable scope within modules/child modules",
+      "Incorrect fact A for Variable scope within modules/child modules",
+      "Incorrect fact B for Variable scope within modules/child modules",
+      "Incorrect fact C for Variable scope within modules/child modules"
+    ],
+    "answer": [
+      0
+    ],
+    "explain": "This is the explanation for question 25 in Variable scope within modules/child modules. Focus area: 5c.",
+    "tags": [
+      "modules",
+      "scope"
+    ],
+    "difficulty": "easy",
+    "focus": "5c",
+    "category": "Modules - Variable Scope",
+    "multiple": false
+  }
+]
