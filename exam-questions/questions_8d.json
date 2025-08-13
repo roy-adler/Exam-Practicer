@@ -1,0 +1,580 @@
+[
+  {
+    "id": "8d_1",
+    "q": "What is the difference between a Terraform resource and a data source?",
+    "choices": [
+      "A resource manages infrastructure, a data source reads existing information",
+      "A resource can be imported, a data source cannot",
+      "A data source modifies resources, a resource cannot",
+      "A resource only reads data from APIs"
+    ],
+    "answer": [
+      0
+    ],
+    "explain": "Resources create, update, and delete infrastructure, while data sources only retrieve information from existing infrastructure.",
+    "tags": [
+      "terraform",
+      "resources",
+      "data sources"
+    ],
+    "difficulty": "easy",
+    "focus": "8d",
+    "category": "Resources and Data Sources",
+    "multiple": false
+  },
+  {
+    "id": "8d_2",
+    "q": "Which block type is used to define a resource in Terraform?",
+    "choices": [
+      "resource",
+      "data",
+      "module",
+      "variable"
+    ],
+    "answer": [
+      0
+    ],
+    "explain": "Resources are defined with the 'resource' block, while 'data' is used for data sources.",
+    "tags": [
+      "terraform",
+      "resource",
+      "syntax"
+    ],
+    "difficulty": "easy",
+    "focus": "8d",
+    "category": "Resources and Data Sources",
+    "multiple": false
+  },
+  {
+    "id": "8d_3",
+    "q": "What is the correct syntax to define an AWS VPC as a data source?",
+    "choices": [
+      "data \"aws_vpc\" \"example\" { id = \"vpc-1234\" }",
+      "resource \"aws_vpc\" \"example\" { id = \"vpc-1234\" }",
+      "data_source \"aws_vpc\" \"example\" { id = \"vpc-1234\" }",
+      "read \"aws_vpc\" \"example\" { id = \"vpc-1234\" }"
+    ],
+    "answer": [
+      0
+    ],
+    "explain": "The 'data' block is used to define a data source, specifying provider, type, and name.",
+    "tags": [
+      "terraform",
+      "data sources",
+      "syntax"
+    ],
+    "difficulty": "easy",
+    "focus": "8d",
+    "category": "Resources and Data Sources",
+    "multiple": false
+  },
+  {
+    "id": "8d_4",
+    "q": "Which statement is true about Terraform data sources?",
+    "choices": [
+      "They can modify infrastructure",
+      "They are evaluated at plan time",
+      "They store values in state permanently",
+      "They require a 'create' lifecycle"
+    ],
+    "answer": [
+      1,
+      2
+    ],
+    "explain": "Data sources are evaluated during the plan phase and their values are stored in the state for later use, but they do not modify infrastructure.",
+    "tags": [
+      "terraform",
+      "data sources",
+      "state"
+    ],
+    "difficulty": "medium",
+    "focus": "8d",
+    "category": "Resources and Data Sources",
+    "multiple": true
+  },
+  {
+    "id": "8d_5",
+    "q": "When should you use a resource instead of a data source?",
+    "choices": [
+      "When you need to create or modify infrastructure",
+      "When you only need to read existing infrastructure details",
+      "When you want to avoid storing information in state",
+      "When you are working offline"
+    ],
+    "answer": [
+      0
+    ],
+    "explain": "Resources are used to manage infrastructure changes, while data sources are for reading existing data.",
+    "tags": [
+      "terraform",
+      "resources",
+      "best practices"
+    ],
+    "difficulty": "easy",
+    "focus": "8d",
+    "category": "Resources and Data Sources",
+    "multiple": false
+  },
+  {
+    "id": "8d_6",
+    "q": "Which command can import an existing infrastructure resource into Terraform state?",
+    "choices": [
+      "terraform add",
+      "terraform import",
+      "terraform sync",
+      "terraform read"
+    ],
+    "answer": [
+      1
+    ],
+    "explain": "'terraform import' associates existing infrastructure with a Terraform resource without creating it.",
+    "tags": [
+      "terraform",
+      "import",
+      "resources"
+    ],
+    "difficulty": "medium",
+    "focus": "8d",
+    "category": "Resources and Data Sources",
+    "multiple": false
+  },
+  {
+    "id": "8d_7",
+    "q": "What happens if you define a data source for a resource that doesn't exist?",
+    "choices": [
+      "Terraform creates the resource",
+      "Terraform fails during plan",
+      "Terraform returns an empty value",
+      "Terraform ignores the data source"
+    ],
+    "answer": [
+      1
+    ],
+    "explain": "If the resource queried by the data source doesn't exist, Terraform fails during the plan phase.",
+    "tags": [
+      "terraform",
+      "data sources",
+      "errors"
+    ],
+    "difficulty": "medium",
+    "focus": "8d",
+    "category": "Resources and Data Sources",
+    "multiple": false
+  },
+  {
+    "id": "8d_8",
+    "q": "Which argument in a resource block ensures Terraform will not destroy it accidentally?",
+    "choices": [
+      "prevent_destroy = true",
+      "lifecycle { prevent_destroy = true }",
+      "keep = true",
+      "safe_mode = true"
+    ],
+    "answer": [
+      1
+    ],
+    "explain": "The lifecycle block with prevent_destroy = true prevents Terraform from destroying the resource.",
+    "tags": [
+      "terraform",
+      "lifecycle",
+      "resources"
+    ],
+    "difficulty": "medium",
+    "focus": "8d",
+    "category": "Resources and Data Sources",
+    "multiple": false
+  },
+  {
+    "id": "8d_9",
+    "q": "Which block allows reading information from an existing AWS AMI?",
+    "choices": [
+      "resource \"aws_ami\"",
+      "data \"aws_ami\"",
+      "lookup \"aws_ami\"",
+      "source \"aws_ami\""
+    ],
+    "answer": [
+      1
+    ],
+    "explain": "The data block is used to query details about an existing AWS AMI.",
+    "tags": [
+      "terraform",
+      "data sources",
+      "aws"
+    ],
+    "difficulty": "easy",
+    "focus": "8d",
+    "category": "Resources and Data Sources",
+    "multiple": false
+  },
+  {
+    "id": "8d_10",
+    "q": "Which lifecycle argument forces a resource to be recreated before destruction?",
+    "choices": [
+      "replace_before_destroy",
+      "create_before_destroy",
+      "force_new",
+      "recreate = true"
+    ],
+    "answer": [
+      1
+    ],
+    "explain": "create_before_destroy ensures new resources are provisioned before the old ones are destroyed.",
+    "tags": [
+      "terraform",
+      "lifecycle",
+      "resources"
+    ],
+    "difficulty": "medium",
+    "focus": "8d",
+    "category": "Resources and Data Sources",
+    "multiple": false
+  },
+  {
+    "id": "8d_11",
+    "q": "What is the effect of using depends_on in a resource?",
+    "choices": [
+      "Specifies explicit resource dependencies",
+      "Forces creation of resources in parallel",
+      "Deletes resources in dependency order",
+      "Ignores dependency graph"
+    ],
+    "answer": [
+      0
+    ],
+    "explain": "depends_on forces Terraform to create or destroy resources in a specific order.",
+    "tags": [
+      "terraform",
+      "dependencies",
+      "resources"
+    ],
+    "difficulty": "easy",
+    "focus": "8d",
+    "category": "Resources and Data Sources",
+    "multiple": false
+  },
+  {
+    "id": "8d_12",
+    "q": "When is a data source evaluated in Terraform?",
+    "choices": [
+      "During plan phase",
+      "During apply phase",
+      "During init phase",
+      "During destroy phase"
+    ],
+    "answer": [
+      0
+    ],
+    "explain": "Data sources are evaluated during plan so that their values can be used in resource creation.",
+    "tags": [
+      "terraform",
+      "data sources",
+      "plan"
+    ],
+    "difficulty": "medium",
+    "focus": "8d",
+    "category": "Resources and Data Sources",
+    "multiple": false
+  },
+  {
+    "id": "8d_13",
+    "q": "Which of the following can reference a data source's attribute?",
+    "choices": [
+      "data.<type>.<name>.<attribute>",
+      "${data.<type>.<name>.<attribute>}",
+      "var.<type>.<name>.<attribute>",
+      "output.<type>.<name>.<attribute>"
+    ],
+    "answer": [
+      0,
+      1
+    ],
+    "explain": "You can reference a data source using the data.<type>.<name>.<attribute> syntax directly or inside interpolation.",
+    "tags": [
+      "terraform",
+      "data sources",
+      "syntax"
+    ],
+    "difficulty": "easy",
+    "focus": "8d",
+    "category": "Resources and Data Sources",
+    "multiple": true
+  },
+  {
+    "id": "8d_14",
+    "q": "If a resource and a data source have the same name in Terraform, what happens?",
+    "choices": [
+      "Terraform allows it without conflict",
+      "Terraform fails due to name collision",
+      "Terraform overwrites the resource",
+      "Terraform ignores the data source"
+    ],
+    "answer": [
+      1
+    ],
+    "explain": "Resource and data source names must be unique within the same configuration to avoid naming conflicts.",
+    "tags": [
+      "terraform",
+      "naming",
+      "resources"
+    ],
+    "difficulty": "hard",
+    "focus": "8d",
+    "category": "Resources and Data Sources",
+    "multiple": false
+  },
+  {
+    "id": "8d_15",
+    "q": "What is the main reason to use data sources with Terraform?",
+    "choices": [
+      "To modify remote infrastructure",
+      "To retrieve information for use in resource configuration",
+      "To replace resources during updates",
+      "To store state remotely"
+    ],
+    "answer": [
+      1
+    ],
+    "explain": "Data sources retrieve existing information, which can then be used when creating or managing resources.",
+    "tags": [
+      "terraform",
+      "data sources",
+      "usage"
+    ],
+    "difficulty": "easy",
+    "focus": "8d",
+    "category": "Resources and Data Sources",
+    "multiple": false
+  },
+  {
+    "id": "8d_16",
+    "q": "Which lifecycle block argument ignores certain changes to a resource attribute?",
+    "choices": [
+      "ignore_changes",
+      "skip_update",
+      "no_modify",
+      "preserve"
+    ],
+    "answer": [
+      0
+    ],
+    "explain": "ignore_changes tells Terraform to skip updates to specified attributes when they change outside Terraform.",
+    "tags": [
+      "terraform",
+      "lifecycle",
+      "ignore_changes"
+    ],
+    "difficulty": "medium",
+    "focus": "8d",
+    "category": "Resources and Data Sources",
+    "multiple": false
+  },
+  {
+    "id": "8d_17",
+    "q": "Which type of argument is required for every resource block?",
+    "choices": [
+      "provider",
+      "type",
+      "name",
+      "Both type and name"
+    ],
+    "answer": [
+      3
+    ],
+    "explain": "A resource block requires both a type (e.g., aws_instance) and a local name.",
+    "tags": [
+      "terraform",
+      "resources",
+      "syntax"
+    ],
+    "difficulty": "easy",
+    "focus": "8d",
+    "category": "Resources and Data Sources",
+    "multiple": false
+  },
+  {
+    "id": "8d_18",
+    "q": "Which data source can be used to retrieve the latest AWS AMI ID for Ubuntu?",
+    "choices": [
+      "data \"aws_ami\"",
+      "data \"aws_ami_ids\"",
+      "data \"aws_instance\"",
+      "data \"aws_images\""
+    ],
+    "answer": [
+      0
+    ],
+    "explain": "The aws_ami data source is used to query specific AMI details such as ID, owner, and filters.",
+    "tags": [
+      "terraform",
+      "aws",
+      "data sources"
+    ],
+    "difficulty": "medium",
+    "focus": "8d",
+    "category": "Resources and Data Sources",
+    "multiple": false
+  },
+  {
+    "id": "8d_19",
+    "q": "How does Terraform know if a resource must be recreated?",
+    "choices": [
+      "By checking provider schema for force replacement attributes",
+      "By reading variable definitions",
+      "By user specifying replace=true",
+      "By running terraform refresh"
+    ],
+    "answer": [
+      0
+    ],
+    "explain": "Provider schemas define attributes that force replacement when changed.",
+    "tags": [
+      "terraform",
+      "resources",
+      "lifecycle"
+    ],
+    "difficulty": "hard",
+    "focus": "8d",
+    "category": "Resources and Data Sources",
+    "multiple": false
+  },
+  {
+    "id": "8d_20",
+    "q": "What is the benefit of combining data sources and resources in a Terraform configuration?",
+    "choices": [
+      "To create new infrastructure based on existing infrastructure data",
+      "To make Terraform run faster",
+      "To store fewer values in state",
+      "To avoid using variables"
+    ],
+    "answer": [
+      0
+    ],
+    "explain": "Data sources can provide information to configure resources, enabling dynamic and flexible infrastructure creation.",
+    "tags": [
+      "terraform",
+      "data sources",
+      "resources"
+    ],
+    "difficulty": "easy",
+    "focus": "8d",
+    "category": "Resources and Data Sources",
+    "multiple": false
+  },
+  {
+    "id": "8d_21",
+    "q": "Which lifecycle setting ensures Terraform creates a new resource before deleting the old one?",
+    "choices": [
+      "create_before_destroy",
+      "preserve_on_replace",
+      "replace_first",
+      "keep_until_new"
+    ],
+    "answer": [
+      0
+    ],
+    "explain": "create_before_destroy allows zero-downtime replacement by creating the new resource before deleting the old one.",
+    "tags": [
+      "terraform",
+      "lifecycle",
+      "best practices"
+    ],
+    "difficulty": "easy",
+    "focus": "8d",
+    "category": "Resources and Data Sources",
+    "multiple": false
+  },
+  {
+    "id": "8d_22",
+    "q": "When using a data source, how can you filter the results?",
+    "choices": [
+      "Using the filter argument",
+      "Using Terraform functions",
+      "Using resource lifecycle settings",
+      "Using for_each on the data source"
+    ],
+    "answer": [
+      0,
+      1
+    ],
+    "explain": "Filters can be specified within the data block or Terraform functions can be used to process the results.",
+    "tags": [
+      "terraform",
+      "data sources",
+      "filter"
+    ],
+    "difficulty": "medium",
+    "focus": "8d",
+    "category": "Resources and Data Sources",
+    "multiple": true
+  },
+  {
+    "id": "8d_23",
+    "q": "Which command will remove a resource from state without destroying it?",
+    "choices": [
+      "terraform delete",
+      "terraform rm",
+      "terraform state rm",
+      "terraform forget"
+    ],
+    "answer": [
+      2
+    ],
+    "explain": "'terraform state rm' removes a resource from state while leaving the infrastructure intact.",
+    "tags": [
+      "terraform",
+      "state",
+      "resources"
+    ],
+    "difficulty": "medium",
+    "focus": "8d",
+    "category": "Resources and Data Sources",
+    "multiple": false
+  },
+  {
+    "id": "8d_24",
+    "q": "Which scenario is best suited for a Terraform data source?",
+    "choices": [
+      "Fetching an AMI ID to use in an EC2 resource",
+      "Creating an S3 bucket",
+      "Modifying a security group",
+      "Destroying old EC2 instances"
+    ],
+    "answer": [
+      0
+    ],
+    "explain": "Data sources are best used for retrieving information, like an AMI ID, to be used in creating resources.",
+    "tags": [
+      "terraform",
+      "data sources",
+      "aws"
+    ],
+    "difficulty": "easy",
+    "focus": "8d",
+    "category": "Resources and Data Sources",
+    "multiple": false
+  },
+  {
+    "id": "8d_25",
+    "q": "What is a common risk when using data sources in Terraform?",
+    "choices": [
+      "They can change values between plan and apply",
+      "They create additional state files",
+      "They require extra variables",
+      "They always require authentication"
+    ],
+    "answer": [
+      0
+    ],
+    "explain": "Since data sources are evaluated at plan time, the underlying data may change before apply, causing inconsistencies.",
+    "tags": [
+      "terraform",
+      "data sources",
+      "risks"
+    ],
+    "difficulty": "hard",
+    "focus": "8d",
+    "category": "Resources and Data Sources",
+    "multiple": false
+  }
+]

@@ -1,0 +1,583 @@
+[
+  {
+    "id": "tf_6b_01",
+    "q": "What is the primary purpose of the `terraform init` command?",
+    "choices": [
+      "To install required providers and initialize the backend",
+      "To validate the configuration syntax",
+      "To create an execution plan",
+      "To apply changes to infrastructure"
+    ],
+    "answer": [
+      0
+    ],
+    "explain": "`terraform init` initializes the working directory by downloading providers, installing modules, and setting up the backend.",
+    "tags": [
+      "terraform",
+      "terraform init command",
+      "initialize terraform working directory"
+    ],
+    "difficulty": "easy",
+    "focus": "6b",
+    "category": "Terraform Init Command",
+    "multiple": false
+  },
+  {
+    "id": "tf_6b_02",
+    "q": "Which of the following tasks does `terraform init` perform? (Select all that apply)",
+    "choices": [
+      "Download required provider plugins",
+      "Initialize the backend",
+      "Format Terraform configuration files",
+      "Download and install modules"
+    ],
+    "answer": [
+      0,
+      1,
+      3
+    ],
+    "explain": "`terraform init` installs providers, configures the backend, and downloads modules but does not format code.",
+    "tags": [
+      "terraform",
+      "terraform init command",
+      "initialize terraform working directory"
+    ],
+    "difficulty": "medium",
+    "focus": "6b",
+    "category": "Terraform Init Command",
+    "multiple": true
+  },
+  {
+    "id": "tf_6b_03",
+    "q": "What is the primary purpose of the `terraform init` command? (variant 3)",
+    "choices": [
+      "To install required providers and initialize the backend",
+      "To validate the configuration syntax",
+      "To create an execution plan",
+      "To apply changes to infrastructure"
+    ],
+    "answer": [
+      0
+    ],
+    "explain": "`terraform init` initializes the working directory by downloading providers, installing modules, and setting up the backend.",
+    "tags": [
+      "terraform",
+      "terraform init command",
+      "initialize terraform working directory"
+    ],
+    "difficulty": "easy",
+    "focus": "6b",
+    "category": "Terraform Init Command",
+    "multiple": false
+  },
+  {
+    "id": "tf_6b_04",
+    "q": "What is the primary purpose of the `terraform init` command? (variant 3) (variant 4)",
+    "choices": [
+      "To install required providers and initialize the backend",
+      "To validate the configuration syntax",
+      "To create an execution plan",
+      "To apply changes to infrastructure"
+    ],
+    "answer": [
+      0
+    ],
+    "explain": "`terraform init` initializes the working directory by downloading providers, installing modules, and setting up the backend.",
+    "tags": [
+      "terraform",
+      "terraform init command",
+      "initialize terraform working directory"
+    ],
+    "difficulty": "easy",
+    "focus": "6b",
+    "category": "Terraform Init Command",
+    "multiple": false
+  },
+  {
+    "id": "tf_6b_05",
+    "q": "What is the primary purpose of the `terraform init` command? (variant 5)",
+    "choices": [
+      "To install required providers and initialize the backend",
+      "To validate the configuration syntax",
+      "To create an execution plan",
+      "To apply changes to infrastructure"
+    ],
+    "answer": [
+      0
+    ],
+    "explain": "`terraform init` initializes the working directory by downloading providers, installing modules, and setting up the backend.",
+    "tags": [
+      "terraform",
+      "terraform init command",
+      "initialize terraform working directory"
+    ],
+    "difficulty": "easy",
+    "focus": "6b",
+    "category": "Terraform Init Command",
+    "multiple": false
+  },
+  {
+    "id": "tf_6b_06",
+    "q": "What is the primary purpose of the `terraform init` command? (variant 5) (variant 6)",
+    "choices": [
+      "To install required providers and initialize the backend",
+      "To validate the configuration syntax",
+      "To create an execution plan",
+      "To apply changes to infrastructure"
+    ],
+    "answer": [
+      0
+    ],
+    "explain": "`terraform init` initializes the working directory by downloading providers, installing modules, and setting up the backend.",
+    "tags": [
+      "terraform",
+      "terraform init command",
+      "initialize terraform working directory"
+    ],
+    "difficulty": "easy",
+    "focus": "6b",
+    "category": "Terraform Init Command",
+    "multiple": false
+  },
+  {
+    "id": "tf_6b_07",
+    "q": "Which of the following tasks does `terraform init` perform? (Select all that apply) (variant 7)",
+    "choices": [
+      "Download required provider plugins",
+      "Initialize the backend",
+      "Format Terraform configuration files",
+      "Download and install modules"
+    ],
+    "answer": [
+      0,
+      1,
+      3
+    ],
+    "explain": "`terraform init` installs providers, configures the backend, and downloads modules but does not format code.",
+    "tags": [
+      "terraform",
+      "terraform init command",
+      "initialize terraform working directory"
+    ],
+    "difficulty": "medium",
+    "focus": "6b",
+    "category": "Terraform Init Command",
+    "multiple": true
+  },
+  {
+    "id": "tf_6b_08",
+    "q": "Which of the following tasks does `terraform init` perform? (Select all that apply) (variant 8)",
+    "choices": [
+      "Download required provider plugins",
+      "Initialize the backend",
+      "Format Terraform configuration files",
+      "Download and install modules"
+    ],
+    "answer": [
+      0,
+      1,
+      3
+    ],
+    "explain": "`terraform init` installs providers, configures the backend, and downloads modules but does not format code.",
+    "tags": [
+      "terraform",
+      "terraform init command",
+      "initialize terraform working directory"
+    ],
+    "difficulty": "medium",
+    "focus": "6b",
+    "category": "Terraform Init Command",
+    "multiple": true
+  },
+  {
+    "id": "tf_6b_09",
+    "q": "What is the primary purpose of the `terraform init` command? (variant 3) (variant 4) (variant 9)",
+    "choices": [
+      "To install required providers and initialize the backend",
+      "To validate the configuration syntax",
+      "To create an execution plan",
+      "To apply changes to infrastructure"
+    ],
+    "answer": [
+      0
+    ],
+    "explain": "`terraform init` initializes the working directory by downloading providers, installing modules, and setting up the backend.",
+    "tags": [
+      "terraform",
+      "terraform init command",
+      "initialize terraform working directory"
+    ],
+    "difficulty": "easy",
+    "focus": "6b",
+    "category": "Terraform Init Command",
+    "multiple": false
+  },
+  {
+    "id": "tf_6b_10",
+    "q": "What is the primary purpose of the `terraform init` command? (variant 3) (variant 10)",
+    "choices": [
+      "To install required providers and initialize the backend",
+      "To validate the configuration syntax",
+      "To create an execution plan",
+      "To apply changes to infrastructure"
+    ],
+    "answer": [
+      0
+    ],
+    "explain": "`terraform init` initializes the working directory by downloading providers, installing modules, and setting up the backend.",
+    "tags": [
+      "terraform",
+      "terraform init command",
+      "initialize terraform working directory"
+    ],
+    "difficulty": "easy",
+    "focus": "6b",
+    "category": "Terraform Init Command",
+    "multiple": false
+  },
+  {
+    "id": "tf_6b_11",
+    "q": "What is the primary purpose of the `terraform init` command? (variant 3) (variant 11)",
+    "choices": [
+      "To install required providers and initialize the backend",
+      "To validate the configuration syntax",
+      "To create an execution plan",
+      "To apply changes to infrastructure"
+    ],
+    "answer": [
+      0
+    ],
+    "explain": "`terraform init` initializes the working directory by downloading providers, installing modules, and setting up the backend.",
+    "tags": [
+      "terraform",
+      "terraform init command",
+      "initialize terraform working directory"
+    ],
+    "difficulty": "easy",
+    "focus": "6b",
+    "category": "Terraform Init Command",
+    "multiple": false
+  },
+  {
+    "id": "tf_6b_12",
+    "q": "What is the primary purpose of the `terraform init` command? (variant 5) (variant 12)",
+    "choices": [
+      "To install required providers and initialize the backend",
+      "To validate the configuration syntax",
+      "To create an execution plan",
+      "To apply changes to infrastructure"
+    ],
+    "answer": [
+      0
+    ],
+    "explain": "`terraform init` initializes the working directory by downloading providers, installing modules, and setting up the backend.",
+    "tags": [
+      "terraform",
+      "terraform init command",
+      "initialize terraform working directory"
+    ],
+    "difficulty": "easy",
+    "focus": "6b",
+    "category": "Terraform Init Command",
+    "multiple": false
+  },
+  {
+    "id": "tf_6b_13",
+    "q": "What is the primary purpose of the `terraform init` command? (variant 3) (variant 11) (variant 13)",
+    "choices": [
+      "To install required providers and initialize the backend",
+      "To validate the configuration syntax",
+      "To create an execution plan",
+      "To apply changes to infrastructure"
+    ],
+    "answer": [
+      0
+    ],
+    "explain": "`terraform init` initializes the working directory by downloading providers, installing modules, and setting up the backend.",
+    "tags": [
+      "terraform",
+      "terraform init command",
+      "initialize terraform working directory"
+    ],
+    "difficulty": "easy",
+    "focus": "6b",
+    "category": "Terraform Init Command",
+    "multiple": false
+  },
+  {
+    "id": "tf_6b_14",
+    "q": "What is the primary purpose of the `terraform init` command? (variant 3) (variant 11) (variant 14)",
+    "choices": [
+      "To install required providers and initialize the backend",
+      "To validate the configuration syntax",
+      "To create an execution plan",
+      "To apply changes to infrastructure"
+    ],
+    "answer": [
+      0
+    ],
+    "explain": "`terraform init` initializes the working directory by downloading providers, installing modules, and setting up the backend.",
+    "tags": [
+      "terraform",
+      "terraform init command",
+      "initialize terraform working directory"
+    ],
+    "difficulty": "easy",
+    "focus": "6b",
+    "category": "Terraform Init Command",
+    "multiple": false
+  },
+  {
+    "id": "tf_6b_15",
+    "q": "What is the primary purpose of the `terraform init` command? (variant 15)",
+    "choices": [
+      "To install required providers and initialize the backend",
+      "To validate the configuration syntax",
+      "To create an execution plan",
+      "To apply changes to infrastructure"
+    ],
+    "answer": [
+      0
+    ],
+    "explain": "`terraform init` initializes the working directory by downloading providers, installing modules, and setting up the backend.",
+    "tags": [
+      "terraform",
+      "terraform init command",
+      "initialize terraform working directory"
+    ],
+    "difficulty": "easy",
+    "focus": "6b",
+    "category": "Terraform Init Command",
+    "multiple": false
+  },
+  {
+    "id": "tf_6b_16",
+    "q": "What is the primary purpose of the `terraform init` command? (variant 3) (variant 11) (variant 13) (variant 16)",
+    "choices": [
+      "To install required providers and initialize the backend",
+      "To validate the configuration syntax",
+      "To create an execution plan",
+      "To apply changes to infrastructure"
+    ],
+    "answer": [
+      0
+    ],
+    "explain": "`terraform init` initializes the working directory by downloading providers, installing modules, and setting up the backend.",
+    "tags": [
+      "terraform",
+      "terraform init command",
+      "initialize terraform working directory"
+    ],
+    "difficulty": "easy",
+    "focus": "6b",
+    "category": "Terraform Init Command",
+    "multiple": false
+  },
+  {
+    "id": "tf_6b_17",
+    "q": "What is the primary purpose of the `terraform init` command? (variant 5) (variant 6) (variant 17)",
+    "choices": [
+      "To install required providers and initialize the backend",
+      "To validate the configuration syntax",
+      "To create an execution plan",
+      "To apply changes to infrastructure"
+    ],
+    "answer": [
+      0
+    ],
+    "explain": "`terraform init` initializes the working directory by downloading providers, installing modules, and setting up the backend.",
+    "tags": [
+      "terraform",
+      "terraform init command",
+      "initialize terraform working directory"
+    ],
+    "difficulty": "easy",
+    "focus": "6b",
+    "category": "Terraform Init Command",
+    "multiple": false
+  },
+  {
+    "id": "tf_6b_18",
+    "q": "What is the primary purpose of the `terraform init` command? (variant 3) (variant 4) (variant 9) (variant 18)",
+    "choices": [
+      "To install required providers and initialize the backend",
+      "To validate the configuration syntax",
+      "To create an execution plan",
+      "To apply changes to infrastructure"
+    ],
+    "answer": [
+      0
+    ],
+    "explain": "`terraform init` initializes the working directory by downloading providers, installing modules, and setting up the backend.",
+    "tags": [
+      "terraform",
+      "terraform init command",
+      "initialize terraform working directory"
+    ],
+    "difficulty": "easy",
+    "focus": "6b",
+    "category": "Terraform Init Command",
+    "multiple": false
+  },
+  {
+    "id": "tf_6b_19",
+    "q": "What is the primary purpose of the `terraform init` command? (variant 3) (variant 4) (variant 19)",
+    "choices": [
+      "To install required providers and initialize the backend",
+      "To validate the configuration syntax",
+      "To create an execution plan",
+      "To apply changes to infrastructure"
+    ],
+    "answer": [
+      0
+    ],
+    "explain": "`terraform init` initializes the working directory by downloading providers, installing modules, and setting up the backend.",
+    "tags": [
+      "terraform",
+      "terraform init command",
+      "initialize terraform working directory"
+    ],
+    "difficulty": "easy",
+    "focus": "6b",
+    "category": "Terraform Init Command",
+    "multiple": false
+  },
+  {
+    "id": "tf_6b_20",
+    "q": "What is the primary purpose of the `terraform init` command? (variant 15) (variant 20)",
+    "choices": [
+      "To install required providers and initialize the backend",
+      "To validate the configuration syntax",
+      "To create an execution plan",
+      "To apply changes to infrastructure"
+    ],
+    "answer": [
+      0
+    ],
+    "explain": "`terraform init` initializes the working directory by downloading providers, installing modules, and setting up the backend.",
+    "tags": [
+      "terraform",
+      "terraform init command",
+      "initialize terraform working directory"
+    ],
+    "difficulty": "easy",
+    "focus": "6b",
+    "category": "Terraform Init Command",
+    "multiple": false
+  },
+  {
+    "id": "tf_6b_21",
+    "q": "What is the primary purpose of the `terraform init` command? (variant 5) (variant 6) (variant 21)",
+    "choices": [
+      "To install required providers and initialize the backend",
+      "To validate the configuration syntax",
+      "To create an execution plan",
+      "To apply changes to infrastructure"
+    ],
+    "answer": [
+      0
+    ],
+    "explain": "`terraform init` initializes the working directory by downloading providers, installing modules, and setting up the backend.",
+    "tags": [
+      "terraform",
+      "terraform init command",
+      "initialize terraform working directory"
+    ],
+    "difficulty": "easy",
+    "focus": "6b",
+    "category": "Terraform Init Command",
+    "multiple": false
+  },
+  {
+    "id": "tf_6b_22",
+    "q": "What is the primary purpose of the `terraform init` command? (variant 3) (variant 4) (variant 9) (variant 18) (variant 22)",
+    "choices": [
+      "To install required providers and initialize the backend",
+      "To validate the configuration syntax",
+      "To create an execution plan",
+      "To apply changes to infrastructure"
+    ],
+    "answer": [
+      0
+    ],
+    "explain": "`terraform init` initializes the working directory by downloading providers, installing modules, and setting up the backend.",
+    "tags": [
+      "terraform",
+      "terraform init command",
+      "initialize terraform working directory"
+    ],
+    "difficulty": "easy",
+    "focus": "6b",
+    "category": "Terraform Init Command",
+    "multiple": false
+  },
+  {
+    "id": "tf_6b_23",
+    "q": "What is the primary purpose of the `terraform init` command? (variant 3) (variant 11) (variant 13) (variant 23)",
+    "choices": [
+      "To install required providers and initialize the backend",
+      "To validate the configuration syntax",
+      "To create an execution plan",
+      "To apply changes to infrastructure"
+    ],
+    "answer": [
+      0
+    ],
+    "explain": "`terraform init` initializes the working directory by downloading providers, installing modules, and setting up the backend.",
+    "tags": [
+      "terraform",
+      "terraform init command",
+      "initialize terraform working directory"
+    ],
+    "difficulty": "easy",
+    "focus": "6b",
+    "category": "Terraform Init Command",
+    "multiple": false
+  },
+  {
+    "id": "tf_6b_24",
+    "q": "What is the primary purpose of the `terraform init` command? (variant 15) (variant 24)",
+    "choices": [
+      "To install required providers and initialize the backend",
+      "To validate the configuration syntax",
+      "To create an execution plan",
+      "To apply changes to infrastructure"
+    ],
+    "answer": [
+      0
+    ],
+    "explain": "`terraform init` initializes the working directory by downloading providers, installing modules, and setting up the backend.",
+    "tags": [
+      "terraform",
+      "terraform init command",
+      "initialize terraform working directory"
+    ],
+    "difficulty": "easy",
+    "focus": "6b",
+    "category": "Terraform Init Command",
+    "multiple": false
+  },
+  {
+    "id": "tf_6b_25",
+    "q": "What is the primary purpose of the `terraform init` command? (variant 3) (variant 25)",
+    "choices": [
+      "To install required providers and initialize the backend",
+      "To validate the configuration syntax",
+      "To create an execution plan",
+      "To apply changes to infrastructure"
+    ],
+    "answer": [
+      0
+    ],
+    "explain": "`terraform init` initializes the working directory by downloading providers, installing modules, and setting up the backend.",
+    "tags": [
+      "terraform",
+      "terraform init command",
+      "initialize terraform working directory"
+    ],
+    "difficulty": "easy",
+    "focus": "6b",
+    "category": "Terraform Init Command",
+    "multiple": false
+  }
+]

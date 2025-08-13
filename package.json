@@ -4,19 +4,8 @@
   "description": "Interactive practice test for Terraform Associate certification",
   "main": "app.js",
   "scripts": {
-    "start": "python3 -m http.server 8000",
-    "dev": "python3 -m http.server 8000",
-    "build": "echo 'No build step required for static files'",
-    "test": "echo 'No tests specified'",
-    "lint": "echo 'No linter configured'",
-    "format": "echo 'No formatter configured'",
     "docker:build": "docker build -t terraform-quiz .",
-    "docker:run": "docker run -p 8080:80 terraform-quiz",
-    "docker:compose": "docker-compose up -d",
-    "docker:compose:down": "docker-compose down",
-    "docker:compose:logs": "docker-compose logs -f",
-    "clean": "rm -rf node_modules logs",
-    "preview": "python3 -m http.server 8000"
+    "docker:run": "docker run -p 8080:80 terraform-quiz"
   },
   "keywords": [
     "terraform",
@@ -29,35 +18,5 @@
   ],
   "author": "Terraform Practice Test",
   "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/yourusername/terraform-practice-test.git"
-  },
-  "bugs": {
-    "url": "https://github.com/yourusername/terraform-practice-test/issues"
-  },
-  "homepage": "https://github.com/yourusername/terraform-practice-test#readme",
-  "engines": {
-    "node": ">=14.0.0"
-  },
-  "browserslist": [
-    "> 1%",
-    "last 2 versions",
-    "not dead"
-  ],
-  "devDependencies": {},
-  "dependencies": {},
-  "optionalDependencies": {},
-  "peerDependencies": {},
-  "bundledDependencies": [],
-  "os": [
-    "linux",
-    "darwin",
-    "win32"
-  ],
-  "cpu": [
-    "x64",
-    "arm64"
-  ],
   "private": true
 }

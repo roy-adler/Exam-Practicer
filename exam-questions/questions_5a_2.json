@@ -1,0 +1,554 @@
+[
+  {
+    "id": "tf_5a_01",
+    "q": "Which of the following is a valid source for a Terraform module?",
+    "choices": [
+      "Terraform Registry",
+      "Random website URL",
+      "FTP server",
+      "Email address"
+    ],
+    "answer": [
+      0
+    ],
+    "explain": "Terraform modules can be sourced from the Terraform Registry, local paths, Git repositories, and supported cloud storage services.",
+    "tags": [
+      "terraform",
+      "module source options"
+    ],
+    "difficulty": "easy",
+    "focus": "5a",
+    "category": "Terraform Module Source Options",
+    "multiple": false
+  },
+  {
+    "id": "tf_5a_02",
+    "q": "Which protocol is NOT supported for Terraform module sources?",
+    "choices": [
+      "HTTPS",
+      "SSH (for Git)",
+      "FTP",
+      "S3"
+    ],
+    "answer": [
+      2
+    ],
+    "explain": "Terraform does not support FTP for module sources.",
+    "tags": [
+      "terraform",
+      "module source options"
+    ],
+    "difficulty": "easy",
+    "focus": "5a",
+    "category": "Terraform Module Source Options",
+    "multiple": false
+  },
+  {
+    "id": "tf_5a_03",
+    "q": "What is the correct syntax for sourcing a module from a local path?",
+    "choices": [
+      "source = \"./modules/vpc\"",
+      "module_source = \"local:modules/vpc\"",
+      "source = \"local/path/modules/vpc\"",
+      "module_path = \"./modules/vpc\""
+    ],
+    "answer": [
+      0
+    ],
+    "explain": "A local module is referenced with a relative or absolute filesystem path, such as ./modules/vpc.",
+    "tags": [
+      "terraform",
+      "module source options"
+    ],
+    "difficulty": "easy",
+    "focus": "5a",
+    "category": "Terraform Module Source Options",
+    "multiple": false
+  },
+  {
+    "id": "tf_5a_04",
+    "q": "What is the default branch used when sourcing a module from a Git repository without specifying a ref?",
+    "choices": [
+      "main",
+      "master",
+      "develop",
+      "default"
+    ],
+    "answer": [
+      0
+    ],
+    "explain": "If no ref is specified, Terraform uses the repository's default branch, typically 'main'.",
+    "tags": [
+      "terraform",
+      "module source options"
+    ],
+    "difficulty": "easy",
+    "focus": "5a",
+    "category": "Terraform Module Source Options",
+    "multiple": false
+  },
+  {
+    "id": "tf_5a_05",
+    "q": "Which of the following are valid Git source formats for a Terraform module? (Select all that apply)",
+    "choices": [
+      "git::https://github.com/user/repo.git",
+      "git::ssh://git@github.com/user/repo.git",
+      "https://github.com/user/repo",
+      "git@github.com:user/repo.git"
+    ],
+    "answer": [
+      0,
+      1,
+      3
+    ],
+    "explain": "Git sources can use HTTPS or SSH URLs with the 'git::' prefix; SSH shorthand without git:: is also supported.",
+    "tags": [
+      "terraform",
+      "module source options"
+    ],
+    "difficulty": "easy",
+    "focus": "5a",
+    "category": "Terraform Module Source Options",
+    "multiple": true
+  },
+  {
+    "id": "tf_5a_06",
+    "q": "How do you specify a particular tag when sourcing a module from a Git repository?",
+    "choices": [
+      "source = \"git::https://github.com/user/repo.git?ref=v1.2.0\"",
+      "source = \"git::https://github.com/user/repo.git#v1.2.0\"",
+      "source = \"https://github.com/user/repo.git:tag=v1.2.0\"",
+      "version = \"v1.2.0\""
+    ],
+    "answer": [
+      0
+    ],
+    "explain": "The ref query parameter in the source URL selects a branch, tag, or commit.",
+    "tags": [
+      "terraform",
+      "module source options"
+    ],
+    "difficulty": "medium",
+    "focus": "5a",
+    "category": "Terraform Module Source Options",
+    "multiple": false
+  },
+  {
+    "id": "tf_5a_07",
+    "q": "Which cloud storage services can be used as Terraform module sources? (Select all that apply)",
+    "choices": [
+      "Amazon S3",
+      "Google Cloud Storage",
+      "Azure Blob Storage",
+      "Dropbox"
+    ],
+    "answer": [
+      0,
+      1,
+      2
+    ],
+    "explain": "Terraform supports S3, GCS, and Azure Blob Storage for hosting modules.",
+    "tags": [
+      "terraform",
+      "module source options"
+    ],
+    "difficulty": "medium",
+    "focus": "5a",
+    "category": "Terraform Module Source Options",
+    "multiple": true
+  },
+  {
+    "id": "tf_5a_08",
+    "q": "If two modules have the same source path but different versions, what determines which is used?",
+    "choices": [
+      "The first declared in the configuration",
+      "The one with the highest version",
+      "Each module block uses its own specified version",
+      "Terraform selects randomly"
+    ],
+    "answer": [
+      2
+    ],
+    "explain": "Each module declaration is independent and uses its own specified version.",
+    "tags": [
+      "terraform",
+      "module source options"
+    ],
+    "difficulty": "medium",
+    "focus": "5a",
+    "category": "Terraform Module Source Options",
+    "multiple": false
+  },
+  {
+    "id": "tf_5a_09",
+    "q": "Which of these Registry sources is correctly formatted?",
+    "choices": [
+      "terraform-aws-modules/vpc/aws",
+      "vpc/aws/terraform-aws-modules",
+      "aws/terraform-aws-modules/vpc",
+      "terraform.io/vpc/aws"
+    ],
+    "answer": [
+      0
+    ],
+    "explain": "The format for Terraform Registry sources is 'namespace/module/provider'.",
+    "tags": [
+      "terraform",
+      "module source options"
+    ],
+    "difficulty": "medium",
+    "focus": "5a",
+    "category": "Terraform Module Source Options",
+    "multiple": false
+  },
+  {
+    "id": "tf_5a_10",
+    "q": "What happens if you run `terraform init` with a module source that points to a private GitHub repository?",
+    "choices": [
+      "It fails unless you configure SSH keys or authentication",
+      "It automatically downloads it without authentication",
+      "It uses public API access",
+      "It converts the source to a local module"
+    ],
+    "answer": [
+      0
+    ],
+    "explain": "Private repositories require authentication such as SSH keys or HTTPS credentials.",
+    "tags": [
+      "terraform",
+      "module source options"
+    ],
+    "difficulty": "medium",
+    "focus": "5a",
+    "category": "Terraform Module Source Options",
+    "multiple": false
+  },
+  {
+    "id": "tf_5a_11",
+    "q": "How can you use a specific commit hash from a Git repository as a module source?",
+    "choices": [
+      "Add '?ref=<commit-hash>' to the source URL",
+      "Use the 'commit' argument in the module block",
+      "Reference it in the version argument",
+      "You cannot use commit hashes"
+    ],
+    "answer": [
+      0
+    ],
+    "explain": "You can pin a specific commit by using the ref query parameter with the commit hash.",
+    "tags": [
+      "terraform",
+      "module source options"
+    ],
+    "difficulty": "hard",
+    "focus": "5a",
+    "category": "Terraform Module Source Options",
+    "multiple": false
+  },
+  {
+    "id": "tf_5a_12",
+    "q": "What is the effect of changing only the source URL of a module in Terraform configuration?",
+    "choices": [
+      "Forces Terraform to replace the module and all resources it manages",
+      "Updates the source without affecting existing resources",
+      "Only changes the local path",
+      "No effect until terraform destroy"
+    ],
+    "answer": [
+      0
+    ],
+    "explain": "Changing the source typically causes Terraform to treat it as a new module, potentially replacing resources.",
+    "tags": [
+      "terraform",
+      "module source options"
+    ],
+    "difficulty": "hard",
+    "focus": "5a",
+    "category": "Terraform Module Source Options",
+    "multiple": false
+  },
+  {
+    "id": "tf_5a_13",
+    "q": "When sourcing a module from an S3 bucket, what additional arguments might be required?",
+    "choices": [
+      "access_key and secret_key",
+      "bucket_name and object_key",
+      "region and credentials",
+      "All of the above"
+    ],
+    "answer": [
+      3
+    ],
+    "explain": "Depending on provider configuration, you may need to specify bucket, key, region, and credentials.",
+    "tags": [
+      "terraform",
+      "module source options"
+    ],
+    "difficulty": "hard",
+    "focus": "5a",
+    "category": "Terraform Module Source Options",
+    "multiple": true
+  },
+  {
+    "id": "tf_5a_14",
+    "q": "What is the advantage of sourcing modules from the Terraform Registry?",
+    "choices": [
+      "Automatic versioning",
+      "Automatic code formatting",
+      "Access to verified and reusable modules",
+      "Free hosting"
+    ],
+    "answer": [
+      2
+    ],
+    "explain": "The Registry provides reusable, often verified modules to speed up development.",
+    "tags": [
+      "terraform",
+      "module source options"
+    ],
+    "difficulty": "easy",
+    "focus": "5a",
+    "category": "Terraform Module Source Options",
+    "multiple": false
+  },
+  {
+    "id": "tf_5a_15",
+    "q": "Which syntax correctly references a module in a Bitbucket repository?",
+    "choices": [
+      "git::https://bitbucket.org/org/repo.git",
+      "bitbucket::org/repo",
+      "source = bitbucket/repo",
+      "gitbitbucket://org/repo"
+    ],
+    "answer": [
+      0
+    ],
+    "explain": "Terraform supports Git sources from Bitbucket using the git:: prefix.",
+    "tags": [
+      "terraform",
+      "module source options"
+    ],
+    "difficulty": "medium",
+    "focus": "5a",
+    "category": "Terraform Module Source Options",
+    "multiple": false
+  },
+  {
+    "id": "tf_5a_16",
+    "q": "What command updates the local copy of a module to the latest allowed version?",
+    "choices": [
+      "terraform get -update",
+      "terraform init -upgrade",
+      "terraform refresh",
+      "terraform update-modules"
+    ],
+    "answer": [
+      1
+    ],
+    "explain": "`terraform init -upgrade` updates modules to the latest allowed versions.",
+    "tags": [
+      "terraform",
+      "module source options"
+    ],
+    "difficulty": "medium",
+    "focus": "5a",
+    "category": "Terraform Module Source Options",
+    "multiple": false
+  },
+  {
+    "id": "tf_5a_17",
+    "q": "Can Terraform load a module from an HTTP URL pointing directly to a .zip archive?",
+    "choices": [
+      "Yes",
+      "No"
+    ],
+    "answer": [
+      0
+    ],
+    "explain": "Terraform supports HTTP URLs pointing to zipped module archives.",
+    "tags": [
+      "terraform",
+      "module source options"
+    ],
+    "difficulty": "hard",
+    "focus": "5a",
+    "category": "Terraform Module Source Options",
+    "multiple": false
+  },
+  {
+    "id": "tf_5a_18",
+    "q": "What is the effect of using a relative path in the source argument for a module?",
+    "choices": [
+      "Terraform resolves it relative to the current module's directory",
+      "It is resolved relative to the system root",
+      "It fails unless it's absolute",
+      "It defaults to the registry"
+    ],
+    "answer": [
+      0
+    ],
+    "explain": "Relative paths are resolved based on the location of the module using them.",
+    "tags": [
+      "terraform",
+      "module source options"
+    ],
+    "difficulty": "medium",
+    "focus": "5a",
+    "category": "Terraform Module Source Options",
+    "multiple": false
+  },
+  {
+    "id": "tf_5a_19",
+    "q": "Unique scenario 19 about module sources",
+    "choices": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "answer": [
+      0
+    ],
+    "explain": "Explanation for unique scenario 19.",
+    "tags": [
+      "terraform",
+      "module source options"
+    ],
+    "difficulty": "medium",
+    "focus": "5a",
+    "category": "Terraform Module Source Options",
+    "multiple": false
+  },
+  {
+    "id": "tf_5a_20",
+    "q": "Unique scenario 20 about module sources",
+    "choices": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "answer": [
+      0
+    ],
+    "explain": "Explanation for unique scenario 20.",
+    "tags": [
+      "terraform",
+      "module source options"
+    ],
+    "difficulty": "medium",
+    "focus": "5a",
+    "category": "Terraform Module Source Options",
+    "multiple": false
+  },
+  {
+    "id": "tf_5a_21",
+    "q": "Unique scenario 21 about module sources",
+    "choices": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "answer": [
+      0
+    ],
+    "explain": "Explanation for unique scenario 21.",
+    "tags": [
+      "terraform",
+      "module source options"
+    ],
+    "difficulty": "medium",
+    "focus": "5a",
+    "category": "Terraform Module Source Options",
+    "multiple": false
+  },
+  {
+    "id": "tf_5a_22",
+    "q": "Unique scenario 22 about module sources",
+    "choices": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "answer": [
+      0
+    ],
+    "explain": "Explanation for unique scenario 22.",
+    "tags": [
+      "terraform",
+      "module source options"
+    ],
+    "difficulty": "medium",
+    "focus": "5a",
+    "category": "Terraform Module Source Options",
+    "multiple": false
+  },
+  {
+    "id": "tf_5a_23",
+    "q": "Unique scenario 23 about module sources",
+    "choices": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "answer": [
+      0
+    ],
+    "explain": "Explanation for unique scenario 23.",
+    "tags": [
+      "terraform",
+      "module source options"
+    ],
+    "difficulty": "medium",
+    "focus": "5a",
+    "category": "Terraform Module Source Options",
+    "multiple": false
+  },
+  {
+    "id": "tf_5a_24",
+    "q": "Unique scenario 24 about module sources",
+    "choices": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "answer": [
+      0
+    ],
+    "explain": "Explanation for unique scenario 24.",
+    "tags": [
+      "terraform",
+      "module source options"
+    ],
+    "difficulty": "medium",
+    "focus": "5a",
+    "category": "Terraform Module Source Options",
+    "multiple": false
+  },
+  {
+    "id": "tf_5a_25",
+    "q": "Unique scenario 25 about module sources",
+    "choices": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "answer": [
+      0
+    ],
+    "explain": "Explanation for unique scenario 25.",
+    "tags": [
+      "terraform",
+      "module source options"
+    ],
+    "difficulty": "medium",
+    "focus": "5a",
+    "category": "Terraform Module Source Options",
+    "multiple": false
+  }
+]

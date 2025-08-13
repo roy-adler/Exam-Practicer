@@ -1,0 +1,232 @@
+[
+  {
+    "id": "tf_3a_001",
+    "q": "Where do you declare provider source addresses and version constraints for a module?",
+    "choices": [
+      "In the provider block",
+      "In the terraform block under required_providers",
+      "In backend configuration",
+      "In variables.tf"
+    ],
+    "answer": [
+      1
+    ],
+    "explain": "Use terraform { required_providers { <name> = { source = \"namespace/type\" version = \"…\" }}} to declare the provider source and version constraints. The provider block configures provider settings like region.",
+    "tags": [
+      "providers",
+      "versions",
+      "required_providers"
+    ],
+    "difficulty": "easy",
+    "focus": "3a",
+    "category": "Install and version Terraform providers",
+    "multiple": false
+  },
+  {
+    "id": "tf_3a_002",
+    "q": "Which command installs providers referenced by your configuration and initializes the working directory?",
+    "choices": [
+      "terraform get",
+      "terraform init",
+      "terraform providers",
+      "terraform fmt"
+    ],
+    "answer": [
+      1
+    ],
+    "explain": "terraform init downloads providers and modules and prepares the working directory for other commands.",
+    "tags": [
+      "init",
+      "providers",
+      "install"
+    ],
+    "difficulty": "easy",
+    "focus": "3a",
+    "category": "Install and version Terraform providers",
+    "multiple": false
+  },
+  {
+    "id": "tf_3a_003",
+    "q": "Which file records the exact provider versions and checksums to ensure reproducible installs, and should be committed to VCS?",
+    "choices": [
+      ".terraformrc",
+      ".terraform.lock.hcl",
+      "terraform.tfstate",
+      ".terraform/providers.json"
+    ],
+    "answer": [
+      1
+    ],
+    "explain": "The dependency lock file .terraform.lock.hcl captures selected versions and checksums. Commit it to version control.",
+    "tags": [
+      "lockfile",
+      "checksums",
+      "security"
+    ],
+    "difficulty": "easy",
+    "focus": "3a",
+    "category": "Install and version Terraform providers",
+    "multiple": false
+  },
+  {
+    "id": "tf_3a_004",
+    "q": "How do you instruct Terraform to upgrade providers within allowed version constraints and update the lock file?",
+    "choices": [
+      "terraform apply -upgrade",
+      "terraform init -upgrade",
+      "terraform plan -refresh-only",
+      "terraform fmt -upgrade"
+    ],
+    "answer": [
+      1
+    ],
+    "explain": "Use terraform init -upgrade to request newer versions that satisfy your version constraints and refresh the lock file.",
+    "tags": [
+      "init",
+      "upgrade",
+      "providers"
+    ],
+    "difficulty": "easy",
+    "focus": "3a",
+    "category": "Install and version Terraform providers",
+    "multiple": false
+  },
+  {
+    "id": "tf_3a_005",
+    "q": "Which version constraint means “allow upgrades within the current minor series, but not to the next minor” for version 3.5.0?",
+    "choices": [
+      "~> 3.5",
+      ">= 3.5, < 3.6",
+      "~> 3",
+      ">= 3.5"
+    ],
+    "answer": [
+      0,
+      1
+    ],
+    "explain": "The pessimistic constraint ~> 3.5 is equivalent to \">= 3.5, < 3.6\" and allows patch-level updates within 3.5.x.",
+    "tags": [
+      "version-constraints",
+      "semver"
+    ],
+    "difficulty": "medium",
+    "focus": "3a",
+    "category": "Install and version Terraform providers",
+    "multiple": true
+  },
+  {
+    "id": "tf_3a_006",
+    "q": "What is a provider source address example for the official AWS provider from the public registry?",
+    "choices": [
+      "hashicorp/aws",
+      "registry.terraform.io/aws",
+      "aws/hashicorp",
+      "terraform.io/hashicorp/aws-provider"
+    ],
+    "answer": [
+      0
+    ],
+    "explain": "Use the short form \"hashicorp/aws\" (fully qualified: registry.terraform.io/hashicorp/aws).",
+    "tags": [
+      "source-address",
+      "registry"
+    ],
+    "difficulty": "easy",
+    "focus": "3a",
+    "category": "Install and version Terraform providers",
+    "multiple": false
+  },
+  {
+    "id": "tf_3a_007",
+    "q": "Select actions you should take to ensure deterministic provider installs across machines. (Select all that apply)",
+    "choices": [
+      "Commit .terraform.lock.hcl to version control",
+      "Pin provider versions with constraints in required_providers",
+      "Run terraform apply before terraform init",
+      "Use terraform init -upgrade only when intentionally changing versions"
+    ],
+    "answer": [
+      0,
+      1,
+      3
+    ],
+    "explain": "Pinning plus the lock file yields reproducible installs; only upgrade intentionally. apply cannot run before init.",
+    "tags": [
+      "determinism",
+      "lockfile",
+      "pinning"
+    ],
+    "difficulty": "medium",
+    "focus": "3a",
+    "category": "Install and version Terraform providers",
+    "multiple": true
+  },
+  {
+    "id": "tf_3a_008",
+    "q": "Which command can pre-generate lock entries for additional OS/architectures for CI runners?",
+    "choices": [
+      "terraform providers lock",
+      "terraform lock providers",
+      "terraform cache providers",
+      "terraform init -generate-lock"
+    ],
+    "answer": [
+      0
+    ],
+    "explain": "terraform providers lock creates platform entries in .terraform.lock.hcl for specified target systems.",
+    "tags": [
+      "lockfile",
+      "ci"
+    ],
+    "difficulty": "medium",
+    "focus": "3a",
+    "category": "Install and version Terraform providers",
+    "multiple": false
+  },
+  {
+    "id": "tf_3a_009",
+    "q": "Which statement about the provider block is true?",
+    "choices": [
+      "It sets version constraints for the provider",
+      "It configures provider settings (e.g., region, credentials) for resources using that provider",
+      "It declares the backend type",
+      "It is required in every child module even if not used"
+    ],
+    "answer": [
+      1
+    ],
+    "explain": "The provider block configures provider behavior. Version constraints live in terraform.required_providers.",
+    "tags": [
+      "providers",
+      "configuration"
+    ],
+    "difficulty": "easy",
+    "focus": "3a",
+    "category": "Install and version Terraform providers",
+    "multiple": false
+  },
+  {
+    "id": "tf_3a_010",
+    "q": "How can you cache previously downloaded provider binaries to speed up CI? (Select all that apply)",
+    "choices": [
+      "Set TF_PLUGIN_CACHE_DIR to a shared cache location",
+      "Use a filesystem or network mirror via CLI config provider_installation",
+      "Disable the lockfile",
+      "Vendor provider binaries into your Git repo"
+    ],
+    "answer": [
+      0,
+      1
+    ],
+    "explain": "Use the plugin cache and/or a mirror to avoid repeated downloads. Disabling the lockfile or checking binaries into Git is discouraged.",
+    "tags": [
+      "cache",
+      "cli-config",
+      "mirrors"
+    ],
+    "difficulty": "medium",
+    "focus": "3a",
+    "category": "Install and version Terraform providers",
+    "multiple": true
+  }
+]

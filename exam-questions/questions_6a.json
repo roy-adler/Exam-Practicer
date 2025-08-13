@@ -1,0 +1,542 @@
+[
+  {
+    "id": "6a_001",
+    "q": "What is the typical order of steps in the core Terraform workflow?",
+    "choices": [
+      "Plan -> Write -> Create",
+      "Write -> Plan -> Create",
+      "Create -> Plan -> Write",
+      "Plan -> Apply -> Destroy"
+    ],
+    "answer": [
+      1
+    ],
+    "explain": "Terraform's core workflow follows the order: Write configuration, Plan execution, and Create (apply) infrastructure.",
+    "tags": [
+      "workflow",
+      "core"
+    ],
+    "difficulty": "easy",
+    "focus": "6a",
+    "category": "Core Workflow",
+    "multiple": true
+  },
+  {
+    "id": "6a_002",
+    "q": "Which Terraform command generates an execution plan without applying it?",
+    "choices": [
+      "terraform apply",
+      "terraform init",
+      "terraform plan",
+      "terraform validate"
+    ],
+    "answer": [
+      2
+    ],
+    "explain": "`terraform plan` shows the changes Terraform will make without applying them.",
+    "tags": [
+      "workflow",
+      "plan"
+    ],
+    "difficulty": "easy",
+    "focus": "6a",
+    "category": "Core Workflow",
+    "multiple": false
+  },
+  {
+    "id": "6a_003",
+    "q": "What does the 'Write' phase in Terraform involve?",
+    "choices": [
+      "Writing provider plugins",
+      "Writing Terraform configuration code",
+      "Writing execution plans",
+      "Writing backend configuration only"
+    ],
+    "answer": [
+      1
+    ],
+    "explain": "The 'Write' phase is where you create or modify Terraform configuration files to define your infrastructure.",
+    "tags": [
+      "workflow",
+      "write"
+    ],
+    "difficulty": "easy",
+    "focus": "6a",
+    "category": "Core Workflow",
+    "multiple": false
+  },
+  {
+    "id": "6a_004",
+    "q": "What happens in the 'Create' phase of Terraform workflow?",
+    "choices": [
+      "Terraform applies the changes to reach the desired state",
+      "Terraform writes configuration files",
+      "Terraform validates syntax",
+      "Terraform destroys infrastructure"
+    ],
+    "answer": [
+      0
+    ],
+    "explain": "In the 'Create' phase, Terraform applies changes described in the execution plan to provision or modify infrastructure.",
+    "tags": [
+      "workflow",
+      "apply"
+    ],
+    "difficulty": "easy",
+    "focus": "6a",
+    "category": "Core Workflow",
+    "multiple": false
+  },
+  {
+    "id": "6a_005",
+    "q": "Which phase of the Terraform workflow compares the current state with the desired state?",
+    "choices": [
+      "Write",
+      "Plan",
+      "Create",
+      "Destroy"
+    ],
+    "answer": [
+      1
+    ],
+    "explain": "The 'Plan' phase compares the desired configuration to the current state to create an execution plan.",
+    "tags": [
+      "workflow",
+      "plan"
+    ],
+    "difficulty": "easy",
+    "focus": "6a",
+    "category": "Core Workflow",
+    "multiple": false
+  },
+  {
+    "id": "6a_006",
+    "q": "What is the correct sequence for updating existing infrastructure in Terraform?",
+    "choices": [
+      "Plan -> Write -> Create",
+      "Write -> Plan -> Create",
+      "Write -> Create -> Plan",
+      "Init -> Apply -> Plan"
+    ],
+    "answer": [
+      1
+    ],
+    "explain": "For updates, you modify the configuration (Write), review the plan, and then apply changes.",
+    "tags": [
+      "workflow",
+      "update"
+    ],
+    "difficulty": "medium",
+    "focus": "6a",
+    "category": "Core Workflow",
+    "multiple": false
+  },
+  {
+    "id": "6a_007",
+    "q": "Which Terraform command should be run immediately after writing a new configuration but before planning or applying?",
+    "choices": [
+      "terraform init",
+      "terraform plan",
+      "terraform apply",
+      "terraform validate"
+    ],
+    "answer": [
+      0
+    ],
+    "explain": "`terraform init` initializes the working directory and downloads necessary provider plugins.",
+    "tags": [
+      "workflow",
+      "init"
+    ],
+    "difficulty": "medium",
+    "focus": "6a",
+    "category": "Core Workflow",
+    "multiple": false
+  },
+  {
+    "id": "6a_008",
+    "q": "What is the benefit of running `terraform plan` before `terraform apply`?",
+    "choices": [
+      "It validates the syntax",
+      "It locks the state",
+      "It previews the changes without modifying infrastructure",
+      "It creates the backend configuration"
+    ],
+    "answer": [
+      2
+    ],
+    "explain": "`terraform plan` lets you see what Terraform will do before making any changes.",
+    "tags": [
+      "workflow",
+      "plan"
+    ],
+    "difficulty": "medium",
+    "focus": "6a",
+    "category": "Core Workflow",
+    "multiple": false
+  },
+  {
+    "id": "6a_009",
+    "q": "Which phase of the Terraform workflow might reveal that a change will destroy and recreate a resource?",
+    "choices": [
+      "Write",
+      "Plan",
+      "Create",
+      "Validate"
+    ],
+    "answer": [
+      1
+    ],
+    "explain": "The 'Plan' phase will show resources that will be destroyed and recreated.",
+    "tags": [
+      "workflow",
+      "plan",
+      "destroy"
+    ],
+    "difficulty": "medium",
+    "focus": "6a",
+    "category": "Core Workflow",
+    "multiple": false
+  },
+  {
+    "id": "6a_010",
+    "q": "Why might a Terraform plan output indicate 'no changes'?",
+    "choices": [
+      "The provider is not initialized",
+      "The configuration matches the current state",
+      "The state file is missing",
+      "The backend is misconfigured"
+    ],
+    "answer": [
+      1
+    ],
+    "explain": "If there are no differences between desired and current state, the plan will show 'no changes'.",
+    "tags": [
+      "workflow",
+      "plan"
+    ],
+    "difficulty": "medium",
+    "focus": "6a",
+    "category": "Core Workflow",
+    "multiple": false
+  },
+  {
+    "id": "6a_011",
+    "q": "Which internal Terraform mechanism determines the difference between the desired and current state?",
+    "choices": [
+      "State locking",
+      "Execution plan",
+      "Dependency graph",
+      "Terraform backend"
+    ],
+    "answer": [
+      1
+    ],
+    "explain": "The execution plan compares the desired configuration to the state to determine changes.",
+    "tags": [
+      "workflow",
+      "plan",
+      "state"
+    ],
+    "difficulty": "hard",
+    "focus": "6a",
+    "category": "Core Workflow",
+    "multiple": false
+  },
+  {
+    "id": "6a_012",
+    "q": "How does Terraform ensure the correct order of resource creation during the 'Create' phase?",
+    "choices": [
+      "By alphabetical order",
+      "By provider priority",
+      "By analyzing resource dependencies in the dependency graph",
+      "By user-defined order only"
+    ],
+    "answer": [
+      2
+    ],
+    "explain": "Terraform uses a dependency graph to create resources in the correct order.",
+    "tags": [
+      "workflow",
+      "create",
+      "dependencies"
+    ],
+    "difficulty": "hard",
+    "focus": "6a",
+    "category": "Core Workflow",
+    "multiple": false
+  },
+  {
+    "id": "6a_013",
+    "q": "Placeholder question 13 about Terraform core workflow.",
+    "choices": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "answer": [
+      0
+    ],
+    "explain": "Explanation for placeholder question.",
+    "tags": [
+      "workflow"
+    ],
+    "difficulty": "medium",
+    "focus": "6a",
+    "category": "Core Workflow",
+    "multiple": false
+  },
+  {
+    "id": "6a_014",
+    "q": "Placeholder question 14 about Terraform core workflow.",
+    "choices": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "answer": [
+      0
+    ],
+    "explain": "Explanation for placeholder question.",
+    "tags": [
+      "workflow"
+    ],
+    "difficulty": "medium",
+    "focus": "6a",
+    "category": "Core Workflow",
+    "multiple": false
+  },
+  {
+    "id": "6a_015",
+    "q": "Placeholder question 15 about Terraform core workflow.",
+    "choices": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "answer": [
+      0
+    ],
+    "explain": "Explanation for placeholder question.",
+    "tags": [
+      "workflow"
+    ],
+    "difficulty": "medium",
+    "focus": "6a",
+    "category": "Core Workflow",
+    "multiple": false
+  },
+  {
+    "id": "6a_016",
+    "q": "Placeholder question 16 about Terraform core workflow.",
+    "choices": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "answer": [
+      0
+    ],
+    "explain": "Explanation for placeholder question.",
+    "tags": [
+      "workflow"
+    ],
+    "difficulty": "medium",
+    "focus": "6a",
+    "category": "Core Workflow",
+    "multiple": false
+  },
+  {
+    "id": "6a_017",
+    "q": "Placeholder question 17 about Terraform core workflow.",
+    "choices": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "answer": [
+      0
+    ],
+    "explain": "Explanation for placeholder question.",
+    "tags": [
+      "workflow"
+    ],
+    "difficulty": "medium",
+    "focus": "6a",
+    "category": "Core Workflow",
+    "multiple": false
+  },
+  {
+    "id": "6a_018",
+    "q": "Placeholder question 18 about Terraform core workflow.",
+    "choices": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "answer": [
+      0
+    ],
+    "explain": "Explanation for placeholder question.",
+    "tags": [
+      "workflow"
+    ],
+    "difficulty": "medium",
+    "focus": "6a",
+    "category": "Core Workflow",
+    "multiple": false
+  },
+  {
+    "id": "6a_019",
+    "q": "Placeholder question 19 about Terraform core workflow.",
+    "choices": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "answer": [
+      0
+    ],
+    "explain": "Explanation for placeholder question.",
+    "tags": [
+      "workflow"
+    ],
+    "difficulty": "medium",
+    "focus": "6a",
+    "category": "Core Workflow",
+    "multiple": false
+  },
+  {
+    "id": "6a_020",
+    "q": "Placeholder question 20 about Terraform core workflow.",
+    "choices": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "answer": [
+      0
+    ],
+    "explain": "Explanation for placeholder question.",
+    "tags": [
+      "workflow"
+    ],
+    "difficulty": "medium",
+    "focus": "6a",
+    "category": "Core Workflow",
+    "multiple": false
+  },
+  {
+    "id": "6a_021",
+    "q": "Placeholder question 21 about Terraform core workflow.",
+    "choices": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "answer": [
+      0
+    ],
+    "explain": "Explanation for placeholder question.",
+    "tags": [
+      "workflow"
+    ],
+    "difficulty": "medium",
+    "focus": "6a",
+    "category": "Core Workflow",
+    "multiple": false
+  },
+  {
+    "id": "6a_022",
+    "q": "Placeholder question 22 about Terraform core workflow.",
+    "choices": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "answer": [
+      0
+    ],
+    "explain": "Explanation for placeholder question.",
+    "tags": [
+      "workflow"
+    ],
+    "difficulty": "medium",
+    "focus": "6a",
+    "category": "Core Workflow",
+    "multiple": false
+  },
+  {
+    "id": "6a_023",
+    "q": "Placeholder question 23 about Terraform core workflow.",
+    "choices": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "answer": [
+      0
+    ],
+    "explain": "Explanation for placeholder question.",
+    "tags": [
+      "workflow"
+    ],
+    "difficulty": "medium",
+    "focus": "6a",
+    "category": "Core Workflow",
+    "multiple": false
+  },
+  {
+    "id": "6a_024",
+    "q": "Placeholder question 24 about Terraform core workflow.",
+    "choices": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "answer": [
+      0
+    ],
+    "explain": "Explanation for placeholder question.",
+    "tags": [
+      "workflow"
+    ],
+    "difficulty": "medium",
+    "focus": "6a",
+    "category": "Core Workflow",
+    "multiple": false
+  },
+  {
+    "id": "6a_025",
+    "q": "Placeholder question 25 about Terraform core workflow.",
+    "choices": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "answer": [
+      0
+    ],
+    "explain": "Explanation for placeholder question.",
+    "tags": [
+      "workflow"
+    ],
+    "difficulty": "medium",
+    "focus": "6a",
+    "category": "Core Workflow",
+    "multiple": false
+  }
+]

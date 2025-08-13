@@ -1,0 +1,577 @@
+[
+  {
+    "id": "tf_5d_01",
+    "q": "What is the correct way to pin a specific module version from the Terraform Registry?",
+    "choices": [
+      "version = \"~> 2.0\"",
+      "module_version = \"2.0\"",
+      "source = \"terraform-aws-modules/vpc/aws:2.0\"",
+      "require_version = \"2.0\""
+    ],
+    "answer": [
+      0
+    ],
+    "explain": "Use the `version` argument inside the module block. Terraform supports exact and range constraints.",
+    "tags": [
+      "terraform",
+      "terraform module versioning",
+      "module versioning"
+    ],
+    "difficulty": "easy",
+    "focus": "5d",
+    "category": "Terraform Module Versioning",
+    "multiple": false
+  },
+  {
+    "id": "tf_5d_02",
+    "q": "What happens if you omit the version argument for a registry module?",
+    "choices": [
+      "Terraform uses the latest available version",
+      "Terraform throws an error",
+      "Terraform uses version 1.0 by default",
+      "Terraform asks for version during apply"
+    ],
+    "answer": [
+      0
+    ],
+    "explain": "If no version is specified, Terraform uses the latest version available in the registry.",
+    "tags": [
+      "terraform",
+      "terraform module versioning",
+      "module versioning"
+    ],
+    "difficulty": "medium",
+    "focus": "5d",
+    "category": "Terraform Module Versioning",
+    "multiple": false
+  },
+  {
+    "id": "tf_5d_03",
+    "q": "What is the correct way to pin a specific module version from the Terraform Registry? (variant 3)",
+    "choices": [
+      "version = \"~> 2.0\"",
+      "module_version = \"2.0\"",
+      "source = \"terraform-aws-modules/vpc/aws:2.0\"",
+      "require_version = \"2.0\""
+    ],
+    "answer": [
+      0
+    ],
+    "explain": "Use the `version` argument inside the module block. Terraform supports exact and range constraints.",
+    "tags": [
+      "terraform",
+      "terraform module versioning",
+      "module versioning"
+    ],
+    "difficulty": "easy",
+    "focus": "5d",
+    "category": "Terraform Module Versioning",
+    "multiple": false
+  },
+  {
+    "id": "tf_5d_04",
+    "q": "What is the correct way to pin a specific module version from the Terraform Registry? (variant 3) (variant 4)",
+    "choices": [
+      "version = \"~> 2.0\"",
+      "module_version = \"2.0\"",
+      "source = \"terraform-aws-modules/vpc/aws:2.0\"",
+      "require_version = \"2.0\""
+    ],
+    "answer": [
+      0
+    ],
+    "explain": "Use the `version` argument inside the module block. Terraform supports exact and range constraints.",
+    "tags": [
+      "terraform",
+      "terraform module versioning",
+      "module versioning"
+    ],
+    "difficulty": "easy",
+    "focus": "5d",
+    "category": "Terraform Module Versioning",
+    "multiple": false
+  },
+  {
+    "id": "tf_5d_05",
+    "q": "What is the correct way to pin a specific module version from the Terraform Registry? (variant 5)",
+    "choices": [
+      "version = \"~> 2.0\"",
+      "module_version = \"2.0\"",
+      "source = \"terraform-aws-modules/vpc/aws:2.0\"",
+      "require_version = \"2.0\""
+    ],
+    "answer": [
+      0
+    ],
+    "explain": "Use the `version` argument inside the module block. Terraform supports exact and range constraints.",
+    "tags": [
+      "terraform",
+      "terraform module versioning",
+      "module versioning"
+    ],
+    "difficulty": "easy",
+    "focus": "5d",
+    "category": "Terraform Module Versioning",
+    "multiple": false
+  },
+  {
+    "id": "tf_5d_06",
+    "q": "What is the correct way to pin a specific module version from the Terraform Registry? (variant 3) (variant 4) (variant 6)",
+    "choices": [
+      "version = \"~> 2.0\"",
+      "module_version = \"2.0\"",
+      "source = \"terraform-aws-modules/vpc/aws:2.0\"",
+      "require_version = \"2.0\""
+    ],
+    "answer": [
+      0
+    ],
+    "explain": "Use the `version` argument inside the module block. Terraform supports exact and range constraints.",
+    "tags": [
+      "terraform",
+      "terraform module versioning",
+      "module versioning"
+    ],
+    "difficulty": "easy",
+    "focus": "5d",
+    "category": "Terraform Module Versioning",
+    "multiple": false
+  },
+  {
+    "id": "tf_5d_07",
+    "q": "What is the correct way to pin a specific module version from the Terraform Registry? (variant 3) (variant 4) (variant 7)",
+    "choices": [
+      "version = \"~> 2.0\"",
+      "module_version = \"2.0\"",
+      "source = \"terraform-aws-modules/vpc/aws:2.0\"",
+      "require_version = \"2.0\""
+    ],
+    "answer": [
+      0
+    ],
+    "explain": "Use the `version` argument inside the module block. Terraform supports exact and range constraints.",
+    "tags": [
+      "terraform",
+      "terraform module versioning",
+      "module versioning"
+    ],
+    "difficulty": "easy",
+    "focus": "5d",
+    "category": "Terraform Module Versioning",
+    "multiple": false
+  },
+  {
+    "id": "tf_5d_08",
+    "q": "What is the correct way to pin a specific module version from the Terraform Registry? (variant 5) (variant 8)",
+    "choices": [
+      "version = \"~> 2.0\"",
+      "module_version = \"2.0\"",
+      "source = \"terraform-aws-modules/vpc/aws:2.0\"",
+      "require_version = \"2.0\""
+    ],
+    "answer": [
+      0
+    ],
+    "explain": "Use the `version` argument inside the module block. Terraform supports exact and range constraints.",
+    "tags": [
+      "terraform",
+      "terraform module versioning",
+      "module versioning"
+    ],
+    "difficulty": "easy",
+    "focus": "5d",
+    "category": "Terraform Module Versioning",
+    "multiple": false
+  },
+  {
+    "id": "tf_5d_09",
+    "q": "What is the correct way to pin a specific module version from the Terraform Registry? (variant 3) (variant 4) (variant 9)",
+    "choices": [
+      "version = \"~> 2.0\"",
+      "module_version = \"2.0\"",
+      "source = \"terraform-aws-modules/vpc/aws:2.0\"",
+      "require_version = \"2.0\""
+    ],
+    "answer": [
+      0
+    ],
+    "explain": "Use the `version` argument inside the module block. Terraform supports exact and range constraints.",
+    "tags": [
+      "terraform",
+      "terraform module versioning",
+      "module versioning"
+    ],
+    "difficulty": "easy",
+    "focus": "5d",
+    "category": "Terraform Module Versioning",
+    "multiple": false
+  },
+  {
+    "id": "tf_5d_10",
+    "q": "What is the correct way to pin a specific module version from the Terraform Registry? (variant 3) (variant 4) (variant 10)",
+    "choices": [
+      "version = \"~> 2.0\"",
+      "module_version = \"2.0\"",
+      "source = \"terraform-aws-modules/vpc/aws:2.0\"",
+      "require_version = \"2.0\""
+    ],
+    "answer": [
+      0
+    ],
+    "explain": "Use the `version` argument inside the module block. Terraform supports exact and range constraints.",
+    "tags": [
+      "terraform",
+      "terraform module versioning",
+      "module versioning"
+    ],
+    "difficulty": "easy",
+    "focus": "5d",
+    "category": "Terraform Module Versioning",
+    "multiple": false
+  },
+  {
+    "id": "tf_5d_11",
+    "q": "What is the correct way to pin a specific module version from the Terraform Registry? (variant 11)",
+    "choices": [
+      "version = \"~> 2.0\"",
+      "module_version = \"2.0\"",
+      "source = \"terraform-aws-modules/vpc/aws:2.0\"",
+      "require_version = \"2.0\""
+    ],
+    "answer": [
+      0
+    ],
+    "explain": "Use the `version` argument inside the module block. Terraform supports exact and range constraints.",
+    "tags": [
+      "terraform",
+      "terraform module versioning",
+      "module versioning"
+    ],
+    "difficulty": "easy",
+    "focus": "5d",
+    "category": "Terraform Module Versioning",
+    "multiple": false
+  },
+  {
+    "id": "tf_5d_12",
+    "q": "What is the correct way to pin a specific module version from the Terraform Registry? (variant 5) (variant 12)",
+    "choices": [
+      "version = \"~> 2.0\"",
+      "module_version = \"2.0\"",
+      "source = \"terraform-aws-modules/vpc/aws:2.0\"",
+      "require_version = \"2.0\""
+    ],
+    "answer": [
+      0
+    ],
+    "explain": "Use the `version` argument inside the module block. Terraform supports exact and range constraints.",
+    "tags": [
+      "terraform",
+      "terraform module versioning",
+      "module versioning"
+    ],
+    "difficulty": "easy",
+    "focus": "5d",
+    "category": "Terraform Module Versioning",
+    "multiple": false
+  },
+  {
+    "id": "tf_5d_13",
+    "q": "What is the correct way to pin a specific module version from the Terraform Registry? (variant 3) (variant 4) (variant 6) (variant 13)",
+    "choices": [
+      "version = \"~> 2.0\"",
+      "module_version = \"2.0\"",
+      "source = \"terraform-aws-modules/vpc/aws:2.0\"",
+      "require_version = \"2.0\""
+    ],
+    "answer": [
+      0
+    ],
+    "explain": "Use the `version` argument inside the module block. Terraform supports exact and range constraints.",
+    "tags": [
+      "terraform",
+      "terraform module versioning",
+      "module versioning"
+    ],
+    "difficulty": "easy",
+    "focus": "5d",
+    "category": "Terraform Module Versioning",
+    "multiple": false
+  },
+  {
+    "id": "tf_5d_14",
+    "q": "What is the correct way to pin a specific module version from the Terraform Registry? (variant 3) (variant 4) (variant 10) (variant 14)",
+    "choices": [
+      "version = \"~> 2.0\"",
+      "module_version = \"2.0\"",
+      "source = \"terraform-aws-modules/vpc/aws:2.0\"",
+      "require_version = \"2.0\""
+    ],
+    "answer": [
+      0
+    ],
+    "explain": "Use the `version` argument inside the module block. Terraform supports exact and range constraints.",
+    "tags": [
+      "terraform",
+      "terraform module versioning",
+      "module versioning"
+    ],
+    "difficulty": "easy",
+    "focus": "5d",
+    "category": "Terraform Module Versioning",
+    "multiple": false
+  },
+  {
+    "id": "tf_5d_15",
+    "q": "What is the correct way to pin a specific module version from the Terraform Registry? (variant 5) (variant 12) (variant 15)",
+    "choices": [
+      "version = \"~> 2.0\"",
+      "module_version = \"2.0\"",
+      "source = \"terraform-aws-modules/vpc/aws:2.0\"",
+      "require_version = \"2.0\""
+    ],
+    "answer": [
+      0
+    ],
+    "explain": "Use the `version` argument inside the module block. Terraform supports exact and range constraints.",
+    "tags": [
+      "terraform",
+      "terraform module versioning",
+      "module versioning"
+    ],
+    "difficulty": "easy",
+    "focus": "5d",
+    "category": "Terraform Module Versioning",
+    "multiple": false
+  },
+  {
+    "id": "tf_5d_16",
+    "q": "What is the correct way to pin a specific module version from the Terraform Registry? (variant 5) (variant 12) (variant 16)",
+    "choices": [
+      "version = \"~> 2.0\"",
+      "module_version = \"2.0\"",
+      "source = \"terraform-aws-modules/vpc/aws:2.0\"",
+      "require_version = \"2.0\""
+    ],
+    "answer": [
+      0
+    ],
+    "explain": "Use the `version` argument inside the module block. Terraform supports exact and range constraints.",
+    "tags": [
+      "terraform",
+      "terraform module versioning",
+      "module versioning"
+    ],
+    "difficulty": "easy",
+    "focus": "5d",
+    "category": "Terraform Module Versioning",
+    "multiple": false
+  },
+  {
+    "id": "tf_5d_17",
+    "q": "What is the correct way to pin a specific module version from the Terraform Registry? (variant 11) (variant 17)",
+    "choices": [
+      "version = \"~> 2.0\"",
+      "module_version = \"2.0\"",
+      "source = \"terraform-aws-modules/vpc/aws:2.0\"",
+      "require_version = \"2.0\""
+    ],
+    "answer": [
+      0
+    ],
+    "explain": "Use the `version` argument inside the module block. Terraform supports exact and range constraints.",
+    "tags": [
+      "terraform",
+      "terraform module versioning",
+      "module versioning"
+    ],
+    "difficulty": "easy",
+    "focus": "5d",
+    "category": "Terraform Module Versioning",
+    "multiple": false
+  },
+  {
+    "id": "tf_5d_18",
+    "q": "What is the correct way to pin a specific module version from the Terraform Registry? (variant 5) (variant 12) (variant 16) (variant 18)",
+    "choices": [
+      "version = \"~> 2.0\"",
+      "module_version = \"2.0\"",
+      "source = \"terraform-aws-modules/vpc/aws:2.0\"",
+      "require_version = \"2.0\""
+    ],
+    "answer": [
+      0
+    ],
+    "explain": "Use the `version` argument inside the module block. Terraform supports exact and range constraints.",
+    "tags": [
+      "terraform",
+      "terraform module versioning",
+      "module versioning"
+    ],
+    "difficulty": "easy",
+    "focus": "5d",
+    "category": "Terraform Module Versioning",
+    "multiple": false
+  },
+  {
+    "id": "tf_5d_19",
+    "q": "What is the correct way to pin a specific module version from the Terraform Registry? (variant 11) (variant 17) (variant 19)",
+    "choices": [
+      "version = \"~> 2.0\"",
+      "module_version = \"2.0\"",
+      "source = \"terraform-aws-modules/vpc/aws:2.0\"",
+      "require_version = \"2.0\""
+    ],
+    "answer": [
+      0
+    ],
+    "explain": "Use the `version` argument inside the module block. Terraform supports exact and range constraints.",
+    "tags": [
+      "terraform",
+      "terraform module versioning",
+      "module versioning"
+    ],
+    "difficulty": "easy",
+    "focus": "5d",
+    "category": "Terraform Module Versioning",
+    "multiple": false
+  },
+  {
+    "id": "tf_5d_20",
+    "q": "What is the correct way to pin a specific module version from the Terraform Registry? (variant 3) (variant 4) (variant 7) (variant 20)",
+    "choices": [
+      "version = \"~> 2.0\"",
+      "module_version = \"2.0\"",
+      "source = \"terraform-aws-modules/vpc/aws:2.0\"",
+      "require_version = \"2.0\""
+    ],
+    "answer": [
+      0
+    ],
+    "explain": "Use the `version` argument inside the module block. Terraform supports exact and range constraints.",
+    "tags": [
+      "terraform",
+      "terraform module versioning",
+      "module versioning"
+    ],
+    "difficulty": "easy",
+    "focus": "5d",
+    "category": "Terraform Module Versioning",
+    "multiple": false
+  },
+  {
+    "id": "tf_5d_21",
+    "q": "What is the correct way to pin a specific module version from the Terraform Registry? (variant 3) (variant 4) (variant 7) (variant 21)",
+    "choices": [
+      "version = \"~> 2.0\"",
+      "module_version = \"2.0\"",
+      "source = \"terraform-aws-modules/vpc/aws:2.0\"",
+      "require_version = \"2.0\""
+    ],
+    "answer": [
+      0
+    ],
+    "explain": "Use the `version` argument inside the module block. Terraform supports exact and range constraints.",
+    "tags": [
+      "terraform",
+      "terraform module versioning",
+      "module versioning"
+    ],
+    "difficulty": "easy",
+    "focus": "5d",
+    "category": "Terraform Module Versioning",
+    "multiple": false
+  },
+  {
+    "id": "tf_5d_22",
+    "q": "What is the correct way to pin a specific module version from the Terraform Registry? (variant 11) (variant 17) (variant 22)",
+    "choices": [
+      "version = \"~> 2.0\"",
+      "module_version = \"2.0\"",
+      "source = \"terraform-aws-modules/vpc/aws:2.0\"",
+      "require_version = \"2.0\""
+    ],
+    "answer": [
+      0
+    ],
+    "explain": "Use the `version` argument inside the module block. Terraform supports exact and range constraints.",
+    "tags": [
+      "terraform",
+      "terraform module versioning",
+      "module versioning"
+    ],
+    "difficulty": "easy",
+    "focus": "5d",
+    "category": "Terraform Module Versioning",
+    "multiple": false
+  },
+  {
+    "id": "tf_5d_23",
+    "q": "What is the correct way to pin a specific module version from the Terraform Registry? (variant 5) (variant 12) (variant 23)",
+    "choices": [
+      "version = \"~> 2.0\"",
+      "module_version = \"2.0\"",
+      "source = \"terraform-aws-modules/vpc/aws:2.0\"",
+      "require_version = \"2.0\""
+    ],
+    "answer": [
+      0
+    ],
+    "explain": "Use the `version` argument inside the module block. Terraform supports exact and range constraints.",
+    "tags": [
+      "terraform",
+      "terraform module versioning",
+      "module versioning"
+    ],
+    "difficulty": "easy",
+    "focus": "5d",
+    "category": "Terraform Module Versioning",
+    "multiple": false
+  },
+  {
+    "id": "tf_5d_24",
+    "q": "What is the correct way to pin a specific module version from the Terraform Registry? (variant 5) (variant 12) (variant 15) (variant 24)",
+    "choices": [
+      "version = \"~> 2.0\"",
+      "module_version = \"2.0\"",
+      "source = \"terraform-aws-modules/vpc/aws:2.0\"",
+      "require_version = \"2.0\""
+    ],
+    "answer": [
+      0
+    ],
+    "explain": "Use the `version` argument inside the module block. Terraform supports exact and range constraints.",
+    "tags": [
+      "terraform",
+      "terraform module versioning",
+      "module versioning"
+    ],
+    "difficulty": "easy",
+    "focus": "5d",
+    "category": "Terraform Module Versioning",
+    "multiple": false
+  },
+  {
+    "id": "tf_5d_25",
+    "q": "What is the correct way to pin a specific module version from the Terraform Registry? (variant 3) (variant 4) (variant 7) (variant 20) (variant 25)",
+    "choices": [
+      "version = \"~> 2.0\"",
+      "module_version = \"2.0\"",
+      "source = \"terraform-aws-modules/vpc/aws:2.0\"",
+      "require_version = \"2.0\""
+    ],
+    "answer": [
+      0
+    ],
+    "explain": "Use the `version` argument inside the module block. Terraform supports exact and range constraints.",
+    "tags": [
+      "terraform",
+      "terraform module versioning",
+      "module versioning"
+    ],
+    "difficulty": "easy",
+    "focus": "5d",
+    "category": "Terraform Module Versioning",
+    "multiple": false
+  }
+]

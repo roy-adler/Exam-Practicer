@@ -1,0 +1,164 @@
+[
+  {
+    "id": "tf_3d_001",
+    "q": "How does Terraform decide which provider binaries to download during terraform init?",
+    "choices": [
+      "By reading terraform.required_providers to resolve source addresses and versions",
+      "By scanning resource names in all files and guessing providers",
+      "By downloading every provider in the registry",
+      "By using environment variables only"
+    ],
+    "answer": [
+      0
+    ],
+    "explain": "Terraform uses the required_providers declarations to resolve provider sources and versions, then downloads them during init.",
+    "tags": [
+      "init",
+      "required_providers"
+    ],
+    "difficulty": "easy",
+    "focus": "3d",
+    "category": "Provider discovery and fetching",
+    "multiple": false
+  },
+  {
+    "id": "tf_3d_002",
+    "q": "Which are valid ways to influence where Terraform fetches providers from? (Select all that apply)",
+    "choices": [
+      "CLI configuration file with provider_installation { filesystem_mirror ... }",
+      "CLI configuration file with provider_installation { network_mirror ... }",
+      "Setting TF_PLUGIN_CACHE_DIR to cache previously downloaded plugins",
+      "Editing terraform.tfstate"
+    ],
+    "answer": [
+      0,
+      1,
+      2
+    ],
+    "explain": "Use CLI config to set mirrors and a cache dir to reuse downloads. State must not be edited to affect provider discovery.",
+    "tags": [
+      "cli-config",
+      "mirrors",
+      "cache"
+    ],
+    "difficulty": "medium",
+    "focus": "3d",
+    "category": "Provider discovery and fetching",
+    "multiple": true
+  },
+  {
+    "id": "tf_3d_003",
+    "q": "What security checks does Terraform perform when installing providers from the registry? (Select all that apply)",
+    "choices": [
+      "Verifies checksums recorded in .terraform.lock.hcl",
+      "Verifies cryptographic signatures from the registry",
+      "Requires code review of the provider source code",
+      "Blocks installation without a backend"
+    ],
+    "answer": [
+      0,
+      1
+    ],
+    "explain": "Checksums and signatures guard against tampered binaries. Terraform does not review source code or require a backend to install providers.",
+    "tags": [
+      "security",
+      "checksums",
+      "signing"
+    ],
+    "difficulty": "medium",
+    "focus": "3d",
+    "category": "Provider discovery and fetching",
+    "multiple": true
+  },
+  {
+    "id": "tf_3d_004",
+    "q": "Where does Terraform place installed provider binaries by default in a working directory?",
+    "choices": [
+      "In .terraform/providers/ under the current configuration directory",
+      "In ~/.terraform.d/plugins only",
+      "In the system PATH",
+      "In .git/hooks"
+    ],
+    "answer": [
+      0
+    ],
+    "explain": "Providers are stored in the .terraform/providers tree inside the working directory. A global plugin cache can also be used.",
+    "tags": [
+      "filesystem",
+      "providers"
+    ],
+    "difficulty": "easy",
+    "focus": "3d",
+    "category": "Provider discovery and fetching",
+    "multiple": false
+  },
+  {
+    "id": "tf_3d_005",
+    "q": "What does terraform init -upgrade do with respect to provider fetching?",
+    "choices": [
+      "Forces Terraform to look for newer acceptable versions from the configured sources and update the lockfile",
+      "Deletes the state and re-imports",
+      "Switches backends automatically",
+      "Ignores version constraints"
+    ],
+    "answer": [
+      0
+    ],
+    "explain": "The -upgrade flag requests newer versions within constraints and refreshes the lock file entries.",
+    "tags": [
+      "init",
+      "upgrade",
+      "providers"
+    ],
+    "difficulty": "easy",
+    "focus": "3d",
+    "category": "Provider discovery and fetching",
+    "multiple": false
+  },
+  {
+    "id": "tf_3d_006",
+    "q": "Which inputs determine the exact provider binary Terraform downloads? (Select all that apply)",
+    "choices": [
+      "Provider source address and version constraints",
+      "The current OS/architecture",
+      "Entries pinned in .terraform.lock.hcl",
+      "The chosen workspace name"
+    ],
+    "answer": [
+      0,
+      1,
+      2
+    ],
+    "explain": "Terraform selects binaries per platform and version per the lockfile and constraints. Workspaces don’t change provider binaries.",
+    "tags": [
+      "platforms",
+      "lockfile"
+    ],
+    "difficulty": "medium",
+    "focus": "3d",
+    "category": "Provider discovery and fetching",
+    "multiple": true
+  },
+  {
+    "id": "tf_3d_007",
+    "q": "What happens if a required provider cannot be found at its declared source address?",
+    "choices": [
+      "Terraform automatically substitutes a similarly named provider",
+      "terraform init fails with an error",
+      "Terraform creates a mock provider",
+      "terraform plan silently skips resources"
+    ],
+    "answer": [
+      1
+    ],
+    "explain": "If a provider cannot be resolved, init fails so you can correct the source address or configure mirrors.",
+    "tags": [
+      "errors",
+      "init"
+    ],
+    "difficulty": "easy",
+    "focus": "3d",
+    "category": "Provider discovery and fetching",
+    "multiple": false
+  }
+]

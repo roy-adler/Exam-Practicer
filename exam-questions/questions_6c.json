@@ -1,0 +1,577 @@
+[
+  {
+    "id": "tf_6c_01",
+    "q": "What does `terraform validate` check?",
+    "choices": [
+      "Syntax correctness of configuration files",
+      "Whether required providers are installed",
+      "Infrastructure drift",
+      "State file consistency"
+    ],
+    "answer": [
+      0
+    ],
+    "explain": "`terraform validate` ensures that configuration files are syntactically valid and internally consistent.",
+    "tags": [
+      "terraform",
+      "terraform validate command",
+      "validate a terraform configuration"
+    ],
+    "difficulty": "easy",
+    "focus": "6c",
+    "category": "Terraform Validate Command",
+    "multiple": false
+  },
+  {
+    "id": "tf_6c_02",
+    "q": "What does `terraform validate` check? (variant 2)",
+    "choices": [
+      "Syntax correctness of configuration files",
+      "Whether required providers are installed",
+      "Infrastructure drift",
+      "State file consistency"
+    ],
+    "answer": [
+      0
+    ],
+    "explain": "`terraform validate` ensures that configuration files are syntactically valid and internally consistent.",
+    "tags": [
+      "terraform",
+      "terraform validate command",
+      "validate a terraform configuration"
+    ],
+    "difficulty": "easy",
+    "focus": "6c",
+    "category": "Terraform Validate Command",
+    "multiple": false
+  },
+  {
+    "id": "tf_6c_03",
+    "q": "What does `terraform validate` check? (variant 2) (variant 3)",
+    "choices": [
+      "Syntax correctness of configuration files",
+      "Whether required providers are installed",
+      "Infrastructure drift",
+      "State file consistency"
+    ],
+    "answer": [
+      0
+    ],
+    "explain": "`terraform validate` ensures that configuration files are syntactically valid and internally consistent.",
+    "tags": [
+      "terraform",
+      "terraform validate command",
+      "validate a terraform configuration"
+    ],
+    "difficulty": "easy",
+    "focus": "6c",
+    "category": "Terraform Validate Command",
+    "multiple": false
+  },
+  {
+    "id": "tf_6c_04",
+    "q": "What does `terraform validate` check? (variant 2) (variant 4)",
+    "choices": [
+      "Syntax correctness of configuration files",
+      "Whether required providers are installed",
+      "Infrastructure drift",
+      "State file consistency"
+    ],
+    "answer": [
+      0
+    ],
+    "explain": "`terraform validate` ensures that configuration files are syntactically valid and internally consistent.",
+    "tags": [
+      "terraform",
+      "terraform validate command",
+      "validate a terraform configuration"
+    ],
+    "difficulty": "easy",
+    "focus": "6c",
+    "category": "Terraform Validate Command",
+    "multiple": false
+  },
+  {
+    "id": "tf_6c_05",
+    "q": "What does `terraform validate` check? (variant 2) (variant 4) (variant 5)",
+    "choices": [
+      "Syntax correctness of configuration files",
+      "Whether required providers are installed",
+      "Infrastructure drift",
+      "State file consistency"
+    ],
+    "answer": [
+      0
+    ],
+    "explain": "`terraform validate` ensures that configuration files are syntactically valid and internally consistent.",
+    "tags": [
+      "terraform",
+      "terraform validate command",
+      "validate a terraform configuration"
+    ],
+    "difficulty": "easy",
+    "focus": "6c",
+    "category": "Terraform Validate Command",
+    "multiple": false
+  },
+  {
+    "id": "tf_6c_06",
+    "q": "What does `terraform validate` check? (variant 2) (variant 4) (variant 5) (variant 6)",
+    "choices": [
+      "Syntax correctness of configuration files",
+      "Whether required providers are installed",
+      "Infrastructure drift",
+      "State file consistency"
+    ],
+    "answer": [
+      0
+    ],
+    "explain": "`terraform validate` ensures that configuration files are syntactically valid and internally consistent.",
+    "tags": [
+      "terraform",
+      "terraform validate command",
+      "validate a terraform configuration"
+    ],
+    "difficulty": "easy",
+    "focus": "6c",
+    "category": "Terraform Validate Command",
+    "multiple": false
+  },
+  {
+    "id": "tf_6c_07",
+    "q": "What does `terraform validate` check? (variant 2) (variant 4) (variant 5) (variant 6) (variant 7)",
+    "choices": [
+      "Syntax correctness of configuration files",
+      "Whether required providers are installed",
+      "Infrastructure drift",
+      "State file consistency"
+    ],
+    "answer": [
+      0
+    ],
+    "explain": "`terraform validate` ensures that configuration files are syntactically valid and internally consistent.",
+    "tags": [
+      "terraform",
+      "terraform validate command",
+      "validate a terraform configuration"
+    ],
+    "difficulty": "easy",
+    "focus": "6c",
+    "category": "Terraform Validate Command",
+    "multiple": false
+  },
+  {
+    "id": "tf_6c_08",
+    "q": "What does `terraform validate` check? (variant 2) (variant 3) (variant 8)",
+    "choices": [
+      "Syntax correctness of configuration files",
+      "Whether required providers are installed",
+      "Infrastructure drift",
+      "State file consistency"
+    ],
+    "answer": [
+      0
+    ],
+    "explain": "`terraform validate` ensures that configuration files are syntactically valid and internally consistent.",
+    "tags": [
+      "terraform",
+      "terraform validate command",
+      "validate a terraform configuration"
+    ],
+    "difficulty": "easy",
+    "focus": "6c",
+    "category": "Terraform Validate Command",
+    "multiple": false
+  },
+  {
+    "id": "tf_6c_09",
+    "q": "What does `terraform validate` check? (variant 2) (variant 4) (variant 5) (variant 6) (variant 7) (variant 9)",
+    "choices": [
+      "Syntax correctness of configuration files",
+      "Whether required providers are installed",
+      "Infrastructure drift",
+      "State file consistency"
+    ],
+    "answer": [
+      0
+    ],
+    "explain": "`terraform validate` ensures that configuration files are syntactically valid and internally consistent.",
+    "tags": [
+      "terraform",
+      "terraform validate command",
+      "validate a terraform configuration"
+    ],
+    "difficulty": "easy",
+    "focus": "6c",
+    "category": "Terraform Validate Command",
+    "multiple": false
+  },
+  {
+    "id": "tf_6c_10",
+    "q": "What does `terraform validate` check? (variant 10)",
+    "choices": [
+      "Syntax correctness of configuration files",
+      "Whether required providers are installed",
+      "Infrastructure drift",
+      "State file consistency"
+    ],
+    "answer": [
+      0
+    ],
+    "explain": "`terraform validate` ensures that configuration files are syntactically valid and internally consistent.",
+    "tags": [
+      "terraform",
+      "terraform validate command",
+      "validate a terraform configuration"
+    ],
+    "difficulty": "easy",
+    "focus": "6c",
+    "category": "Terraform Validate Command",
+    "multiple": false
+  },
+  {
+    "id": "tf_6c_11",
+    "q": "What does `terraform validate` check? (variant 2) (variant 3) (variant 8) (variant 11)",
+    "choices": [
+      "Syntax correctness of configuration files",
+      "Whether required providers are installed",
+      "Infrastructure drift",
+      "State file consistency"
+    ],
+    "answer": [
+      0
+    ],
+    "explain": "`terraform validate` ensures that configuration files are syntactically valid and internally consistent.",
+    "tags": [
+      "terraform",
+      "terraform validate command",
+      "validate a terraform configuration"
+    ],
+    "difficulty": "easy",
+    "focus": "6c",
+    "category": "Terraform Validate Command",
+    "multiple": false
+  },
+  {
+    "id": "tf_6c_12",
+    "q": "What does `terraform validate` check? (variant 2) (variant 4) (variant 12)",
+    "choices": [
+      "Syntax correctness of configuration files",
+      "Whether required providers are installed",
+      "Infrastructure drift",
+      "State file consistency"
+    ],
+    "answer": [
+      0
+    ],
+    "explain": "`terraform validate` ensures that configuration files are syntactically valid and internally consistent.",
+    "tags": [
+      "terraform",
+      "terraform validate command",
+      "validate a terraform configuration"
+    ],
+    "difficulty": "easy",
+    "focus": "6c",
+    "category": "Terraform Validate Command",
+    "multiple": false
+  },
+  {
+    "id": "tf_6c_13",
+    "q": "What does `terraform validate` check? (variant 2) (variant 4) (variant 5) (variant 13)",
+    "choices": [
+      "Syntax correctness of configuration files",
+      "Whether required providers are installed",
+      "Infrastructure drift",
+      "State file consistency"
+    ],
+    "answer": [
+      0
+    ],
+    "explain": "`terraform validate` ensures that configuration files are syntactically valid and internally consistent.",
+    "tags": [
+      "terraform",
+      "terraform validate command",
+      "validate a terraform configuration"
+    ],
+    "difficulty": "easy",
+    "focus": "6c",
+    "category": "Terraform Validate Command",
+    "multiple": false
+  },
+  {
+    "id": "tf_6c_14",
+    "q": "What does `terraform validate` check? (variant 2) (variant 14)",
+    "choices": [
+      "Syntax correctness of configuration files",
+      "Whether required providers are installed",
+      "Infrastructure drift",
+      "State file consistency"
+    ],
+    "answer": [
+      0
+    ],
+    "explain": "`terraform validate` ensures that configuration files are syntactically valid and internally consistent.",
+    "tags": [
+      "terraform",
+      "terraform validate command",
+      "validate a terraform configuration"
+    ],
+    "difficulty": "easy",
+    "focus": "6c",
+    "category": "Terraform Validate Command",
+    "multiple": false
+  },
+  {
+    "id": "tf_6c_15",
+    "q": "What does `terraform validate` check? (variant 2) (variant 4) (variant 12) (variant 15)",
+    "choices": [
+      "Syntax correctness of configuration files",
+      "Whether required providers are installed",
+      "Infrastructure drift",
+      "State file consistency"
+    ],
+    "answer": [
+      0
+    ],
+    "explain": "`terraform validate` ensures that configuration files are syntactically valid and internally consistent.",
+    "tags": [
+      "terraform",
+      "terraform validate command",
+      "validate a terraform configuration"
+    ],
+    "difficulty": "easy",
+    "focus": "6c",
+    "category": "Terraform Validate Command",
+    "multiple": false
+  },
+  {
+    "id": "tf_6c_16",
+    "q": "What does `terraform validate` check? (variant 2) (variant 4) (variant 5) (variant 6) (variant 7) (variant 16)",
+    "choices": [
+      "Syntax correctness of configuration files",
+      "Whether required providers are installed",
+      "Infrastructure drift",
+      "State file consistency"
+    ],
+    "answer": [
+      0
+    ],
+    "explain": "`terraform validate` ensures that configuration files are syntactically valid and internally consistent.",
+    "tags": [
+      "terraform",
+      "terraform validate command",
+      "validate a terraform configuration"
+    ],
+    "difficulty": "easy",
+    "focus": "6c",
+    "category": "Terraform Validate Command",
+    "multiple": false
+  },
+  {
+    "id": "tf_6c_17",
+    "q": "What does `terraform validate` check? (variant 2) (variant 4) (variant 5) (variant 13) (variant 17)",
+    "choices": [
+      "Syntax correctness of configuration files",
+      "Whether required providers are installed",
+      "Infrastructure drift",
+      "State file consistency"
+    ],
+    "answer": [
+      0
+    ],
+    "explain": "`terraform validate` ensures that configuration files are syntactically valid and internally consistent.",
+    "tags": [
+      "terraform",
+      "terraform validate command",
+      "validate a terraform configuration"
+    ],
+    "difficulty": "easy",
+    "focus": "6c",
+    "category": "Terraform Validate Command",
+    "multiple": false
+  },
+  {
+    "id": "tf_6c_18",
+    "q": "What does `terraform validate` check? (variant 2) (variant 4) (variant 5) (variant 6) (variant 7) (variant 18)",
+    "choices": [
+      "Syntax correctness of configuration files",
+      "Whether required providers are installed",
+      "Infrastructure drift",
+      "State file consistency"
+    ],
+    "answer": [
+      0
+    ],
+    "explain": "`terraform validate` ensures that configuration files are syntactically valid and internally consistent.",
+    "tags": [
+      "terraform",
+      "terraform validate command",
+      "validate a terraform configuration"
+    ],
+    "difficulty": "easy",
+    "focus": "6c",
+    "category": "Terraform Validate Command",
+    "multiple": false
+  },
+  {
+    "id": "tf_6c_19",
+    "q": "What does `terraform validate` check? (variant 2) (variant 3) (variant 19)",
+    "choices": [
+      "Syntax correctness of configuration files",
+      "Whether required providers are installed",
+      "Infrastructure drift",
+      "State file consistency"
+    ],
+    "answer": [
+      0
+    ],
+    "explain": "`terraform validate` ensures that configuration files are syntactically valid and internally consistent.",
+    "tags": [
+      "terraform",
+      "terraform validate command",
+      "validate a terraform configuration"
+    ],
+    "difficulty": "easy",
+    "focus": "6c",
+    "category": "Terraform Validate Command",
+    "multiple": false
+  },
+  {
+    "id": "tf_6c_20",
+    "q": "What does `terraform validate` check? (variant 2) (variant 4) (variant 20)",
+    "choices": [
+      "Syntax correctness of configuration files",
+      "Whether required providers are installed",
+      "Infrastructure drift",
+      "State file consistency"
+    ],
+    "answer": [
+      0
+    ],
+    "explain": "`terraform validate` ensures that configuration files are syntactically valid and internally consistent.",
+    "tags": [
+      "terraform",
+      "terraform validate command",
+      "validate a terraform configuration"
+    ],
+    "difficulty": "easy",
+    "focus": "6c",
+    "category": "Terraform Validate Command",
+    "multiple": false
+  },
+  {
+    "id": "tf_6c_21",
+    "q": "What does `terraform validate` check? (variant 2) (variant 3) (variant 8) (variant 21)",
+    "choices": [
+      "Syntax correctness of configuration files",
+      "Whether required providers are installed",
+      "Infrastructure drift",
+      "State file consistency"
+    ],
+    "answer": [
+      0
+    ],
+    "explain": "`terraform validate` ensures that configuration files are syntactically valid and internally consistent.",
+    "tags": [
+      "terraform",
+      "terraform validate command",
+      "validate a terraform configuration"
+    ],
+    "difficulty": "easy",
+    "focus": "6c",
+    "category": "Terraform Validate Command",
+    "multiple": false
+  },
+  {
+    "id": "tf_6c_22",
+    "q": "What does `terraform validate` check? (variant 2) (variant 14) (variant 22)",
+    "choices": [
+      "Syntax correctness of configuration files",
+      "Whether required providers are installed",
+      "Infrastructure drift",
+      "State file consistency"
+    ],
+    "answer": [
+      0
+    ],
+    "explain": "`terraform validate` ensures that configuration files are syntactically valid and internally consistent.",
+    "tags": [
+      "terraform",
+      "terraform validate command",
+      "validate a terraform configuration"
+    ],
+    "difficulty": "easy",
+    "focus": "6c",
+    "category": "Terraform Validate Command",
+    "multiple": false
+  },
+  {
+    "id": "tf_6c_23",
+    "q": "What does `terraform validate` check? (variant 2) (variant 4) (variant 12) (variant 23)",
+    "choices": [
+      "Syntax correctness of configuration files",
+      "Whether required providers are installed",
+      "Infrastructure drift",
+      "State file consistency"
+    ],
+    "answer": [
+      0
+    ],
+    "explain": "`terraform validate` ensures that configuration files are syntactically valid and internally consistent.",
+    "tags": [
+      "terraform",
+      "terraform validate command",
+      "validate a terraform configuration"
+    ],
+    "difficulty": "easy",
+    "focus": "6c",
+    "category": "Terraform Validate Command",
+    "multiple": false
+  },
+  {
+    "id": "tf_6c_24",
+    "q": "What does `terraform validate` check? (variant 2) (variant 3) (variant 19) (variant 24)",
+    "choices": [
+      "Syntax correctness of configuration files",
+      "Whether required providers are installed",
+      "Infrastructure drift",
+      "State file consistency"
+    ],
+    "answer": [
+      0
+    ],
+    "explain": "`terraform validate` ensures that configuration files are syntactically valid and internally consistent.",
+    "tags": [
+      "terraform",
+      "terraform validate command",
+      "validate a terraform configuration"
+    ],
+    "difficulty": "easy",
+    "focus": "6c",
+    "category": "Terraform Validate Command",
+    "multiple": false
+  },
+  {
+    "id": "tf_6c_25",
+    "q": "What does `terraform validate` check? (variant 2) (variant 4) (variant 20) (variant 25)",
+    "choices": [
+      "Syntax correctness of configuration files",
+      "Whether required providers are installed",
+      "Infrastructure drift",
+      "State file consistency"
+    ],
+    "answer": [
+      0
+    ],
+    "explain": "`terraform validate` ensures that configuration files are syntactically valid and internally consistent.",
+    "tags": [
+      "terraform",
+      "terraform validate command",
+      "validate a terraform configuration"
+    ],
+    "difficulty": "easy",
+    "focus": "6c",
+    "category": "Terraform Validate Command",
+    "multiple": false
+  }
+]

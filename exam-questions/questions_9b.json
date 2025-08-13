@@ -1,0 +1,605 @@
+[
+    {
+        "id": "9b_1",
+        "q": "Which feature of HCP Terraform allows multiple team members to work on the same infrastructure code without state conflicts?",
+        "choices": [
+            "Remote state locking",
+            "Sentinel policies",
+            "Versioned modules",
+            "CLI workflow"
+        ],
+        "answer": [
+            0
+        ],
+        "explain": "Remote state locking ensures that only one run can modify the state at a time, preventing conflicts between team members.",
+        "tags": [
+            "terraform",
+            "hcp",
+            "collaboration",
+            "state"
+        ],
+        "difficulty": "easy",
+        "focus": "9b",
+        "category": "Collaboration and Governance",
+        "multiple": false
+    },
+    {
+        "id": "9b_2",
+        "q": "What is the primary purpose of Sentinel in HCP Terraform?",
+        "choices": [
+            "To enforce policy-as-code",
+            "To manage remote state",
+            "To schedule Terraform runs",
+            "To create Terraform modules"
+        ],
+        "answer": [
+            0
+        ],
+        "explain": "Sentinel is a policy-as-code framework that enforces governance rules during Terraform runs.",
+        "tags": [
+            "terraform",
+            "hcp",
+            "sentinel",
+            "policy"
+        ],
+        "difficulty": "easy",
+        "focus": "9b",
+        "category": "Collaboration and Governance",
+        "multiple": false
+    },
+    {
+        "id": "9b_3",
+        "q": "Which permission level in HCP Terraform allows a user to manage workspaces but not organization settings?",
+        "choices": [
+            "Workspace admin",
+            "Organization owner",
+            "Policy editor",
+            "Read-only"
+        ],
+        "answer": [
+            0
+        ],
+        "explain": "Workspace admins can manage specific workspaces but cannot change organization-wide settings.",
+        "tags": [
+            "terraform",
+            "hcp",
+            "permissions",
+            "roles"
+        ],
+        "difficulty": "medium",
+        "focus": "9b",
+        "category": "Collaboration and Governance",
+        "multiple": false
+    },
+    {
+        "id": "9b_4",
+        "q": "Which of the following can be enforced using Sentinel policies in HCP Terraform?",
+        "choices": [
+            "Restricting certain providers",
+            "Enforcing tagging on resources",
+            "Blocking plans with excessive costs",
+            "Requiring code reviews before apply"
+        ],
+        "answer": [
+            0,
+            1,
+            2
+        ],
+        "explain": "Sentinel can enforce technical and cost policies, but code review enforcement is typically handled by the VCS system, not Sentinel.",
+        "tags": [
+            "terraform",
+            "hcp",
+            "sentinel",
+            "policies"
+        ],
+        "difficulty": "medium",
+        "focus": "9b",
+        "category": "Collaboration and Governance",
+        "multiple": true
+    },
+    {
+        "id": "9b_5",
+        "q": "What is the benefit of using HCP Terraform's team-based access control?",
+        "choices": [
+            "Different teams can have tailored permissions for workspaces",
+            "All users automatically get full access",
+            "Teams can bypass Sentinel policies",
+            "It eliminates the need for API tokens"
+        ],
+        "answer": [
+            0
+        ],
+        "explain": "Team-based access control allows fine-grained permission management across workspaces for collaboration and security.",
+        "tags": [
+            "terraform",
+            "hcp",
+            "permissions",
+            "teams"
+        ],
+        "difficulty": "easy",
+        "focus": "9b",
+        "category": "Collaboration and Governance",
+        "multiple": false
+    },
+    {
+        "id": "9b_6",
+        "q": "Which workflow integration allows teams to trigger Terraform runs automatically after a pull request is merged?",
+        "choices": [
+            "VCS-driven runs",
+            "CLI remote execution",
+            "Manual apply",
+            "Sentinel enforcement"
+        ],
+        "answer": [
+            0
+        ],
+        "explain": "VCS-driven runs allow Terraform to execute automatically when changes are merged in the connected repository.",
+        "tags": [
+            "terraform",
+            "hcp",
+            "vcs",
+            "automation"
+        ],
+        "difficulty": "easy",
+        "focus": "9b",
+        "category": "Collaboration and Governance",
+        "multiple": false
+    },
+    {
+        "id": "9b_7",
+        "q": "How can HCP Terraform ensure that only approved infrastructure changes are deployed?",
+        "choices": [
+            "By enabling policy checks with Sentinel before apply",
+            "By disabling workspace runs",
+            "By allowing any user to apply changes",
+            "By removing VCS integration"
+        ],
+        "answer": [
+            0
+        ],
+        "explain": "Sentinel policies can block applies unless they meet defined compliance and security standards.",
+        "tags": [
+            "terraform",
+            "hcp",
+            "governance",
+            "sentinel"
+        ],
+        "difficulty": "medium",
+        "focus": "9b",
+        "category": "Collaboration and Governance",
+        "multiple": false
+    },
+    {
+        "id": "9b_8",
+        "q": "What does 'run tasks' in HCP Terraform allow you to do?",
+        "choices": [
+            "Integrate external services into the Terraform run lifecycle",
+            "Execute Terraform locally",
+            "Bypass Sentinel checks",
+            "Run shell scripts after apply"
+        ],
+        "answer": [
+            0
+        ],
+        "explain": "Run tasks integrate external tools (e.g., security scanners) into specific phases of the run lifecycle.",
+        "tags": [
+            "terraform",
+            "hcp",
+            "run tasks",
+            "integration"
+        ],
+        "difficulty": "medium",
+        "focus": "9b",
+        "category": "Collaboration and Governance",
+        "multiple": false
+    },
+    {
+        "id": "9b_9",
+        "q": "Which HCP Terraform feature helps track all past changes and applies for audit purposes?",
+        "choices": [
+            "Run history",
+            "Versioned modules",
+            "CLI logs",
+            "Sentinel reports"
+        ],
+        "answer": [
+            0
+        ],
+        "explain": "Run history logs all past plans and applies, providing audit trails for compliance.",
+        "tags": [
+            "terraform",
+            "hcp",
+            "audit",
+            "runs"
+        ],
+        "difficulty": "easy",
+        "focus": "9b",
+        "category": "Collaboration and Governance",
+        "multiple": false
+    },
+    {
+        "id": "9b_10",
+        "q": "What is the purpose of 'policy sets' in HCP Terraform?",
+        "choices": [
+            "Group multiple Sentinel policies for application to workspaces",
+            "Store reusable Terraform modules",
+            "Define variable defaults for teams",
+            "Manage provider credentials"
+        ],
+        "answer": [
+            0
+        ],
+        "explain": "Policy sets allow grouping and assigning multiple Sentinel policies to one or more workspaces.",
+        "tags": [
+            "terraform",
+            "hcp",
+            "policy sets",
+            "sentinel"
+        ],
+        "difficulty": "medium",
+        "focus": "9b",
+        "category": "Collaboration and Governance",
+        "multiple": false
+    },
+    {
+        "id": "9b_11",
+        "q": "How can an organization prevent applies that exceed a defined cost threshold?",
+        "choices": [
+            "By using a Sentinel policy integrated with cost estimation",
+            "By disabling applies in workspace settings",
+            "By locking the state file",
+            "By removing write permissions"
+        ],
+        "answer": [
+            0
+        ],
+        "explain": "Sentinel can integrate with cost estimation to block applies exceeding a set budget.",
+        "tags": [
+            "terraform",
+            "hcp",
+            "sentinel",
+            "cost control"
+        ],
+        "difficulty": "medium",
+        "focus": "9b",
+        "category": "Collaboration and Governance",
+        "multiple": false
+    },
+    {
+        "id": "9b_12",
+        "q": "Which HCP Terraform feature allows assigning policies to all workspaces in an organization?",
+        "choices": [
+            "Global policy sets",
+            "Workspace policies",
+            "Team permissions",
+            "Run tasks"
+        ],
+        "answer": [
+            0
+        ],
+        "explain": "Global policy sets can be assigned to all workspaces across the organization for uniform governance.",
+        "tags": [
+            "terraform",
+            "hcp",
+            "sentinel",
+            "policy sets"
+        ],
+        "difficulty": "medium",
+        "focus": "9b",
+        "category": "Collaboration and Governance",
+        "multiple": false
+    },
+    {
+        "id": "9b_13",
+        "q": "In HCP Terraform, what does 'read' permission allow a user to do?",
+        "choices": [
+            "View runs and state but not modify",
+            "Edit policies",
+            "Run terraform apply",
+            "Delete workspaces"
+        ],
+        "answer": [
+            0
+        ],
+        "explain": "Read permission allows viewing workspace details without making changes.",
+        "tags": [
+            "terraform",
+            "hcp",
+            "permissions"
+        ],
+        "difficulty": "easy",
+        "focus": "9b",
+        "category": "Collaboration and Governance",
+        "multiple": false
+    },
+    {
+        "id": "9b_14",
+        "q": "Which tool in HCP Terraform enforces compliance before infrastructure changes are applied?",
+        "choices": [
+            "Sentinel",
+            "Run tasks",
+            "Audit logs",
+            "VCS hooks"
+        ],
+        "answer": [
+            0
+        ],
+        "explain": "Sentinel enforces compliance rules before allowing applies.",
+        "tags": [
+            "terraform",
+            "hcp",
+            "sentinel",
+            "compliance"
+        ],
+        "difficulty": "easy",
+        "focus": "9b",
+        "category": "Collaboration and Governance",
+        "multiple": false
+    },
+    {
+        "id": "9b_15",
+        "q": "Which of the following are benefits of using teams in HCP Terraform?",
+        "choices": [
+            "Centralized permission management",
+            "Easier onboarding",
+            "Automatic policy assignment",
+            "Reduced need for individual role changes"
+        ],
+        "answer": [
+            0,
+            1,
+            3
+        ],
+        "explain": "Teams allow grouping users for easier permission management and onboarding, reducing repetitive role changes.",
+        "tags": [
+            "terraform",
+            "hcp",
+            "teams",
+            "permissions"
+        ],
+        "difficulty": "easy",
+        "focus": "9b",
+        "category": "Collaboration and Governance",
+        "multiple": true
+    },
+    {
+        "id": "9b_16",
+        "q": "How can HCP Terraform integrate with security scanning tools during runs?",
+        "choices": [
+            "By using run tasks",
+            "By embedding scripts in Sentinel",
+            "By modifying Terraform core",
+            "By using CLI flags"
+        ],
+        "answer": [
+            0
+        ],
+        "explain": "Run tasks allow integration of security scanning tools into the run lifecycle.",
+        "tags": [
+            "terraform",
+            "hcp",
+            "run tasks",
+            "security"
+        ],
+        "difficulty": "medium",
+        "focus": "9b",
+        "category": "Collaboration and Governance",
+        "multiple": false
+    },
+    {
+        "id": "9b_17",
+        "q": "What is the function of 'Sentinel enforcement levels'?",
+        "choices": [
+            "Define whether policy failures block runs or just warn",
+            "Set priority of Sentinel policies",
+            "Determine policy execution order",
+            "Assign policies to teams"
+        ],
+        "answer": [
+            0
+        ],
+        "explain": "Enforcement levels in Sentinel determine whether policy violations block applies or only generate warnings.",
+        "tags": [
+            "terraform",
+            "hcp",
+            "sentinel",
+            "enforcement levels"
+        ],
+        "difficulty": "medium",
+        "focus": "9b",
+        "category": "Collaboration and Governance",
+        "multiple": false
+    },
+    {
+        "id": "9b_18",
+        "q": "Which of the following can be tracked in HCP Terraform's audit log?",
+        "choices": [
+            "User logins",
+            "Run starts and completions",
+            "Policy changes",
+            "Module downloads"
+        ],
+        "answer": [
+            0,
+            1,
+            2
+        ],
+        "explain": "Audit logs include user logins, run details, and policy changes, but not module downloads.",
+        "tags": [
+            "terraform",
+            "hcp",
+            "audit logs"
+        ],
+        "difficulty": "medium",
+        "focus": "9b",
+        "category": "Collaboration and Governance",
+        "multiple": true
+    },
+    {
+        "id": "9b_19",
+        "q": "How can an organization ensure that all workspaces have cost estimation enabled?",
+        "choices": [
+            "By enforcing a global policy set with Sentinel",
+            "By enabling it in each workspace manually",
+            "By setting a CLI flag",
+            "By using run tasks"
+        ],
+        "answer": [
+            0
+        ],
+        "explain": "A global Sentinel policy set can enforce cost estimation across all workspaces automatically.",
+        "tags": [
+            "terraform",
+            "hcp",
+            "sentinel",
+            "cost estimation"
+        ],
+        "difficulty": "medium",
+        "focus": "9b",
+        "category": "Collaboration and Governance",
+        "multiple": false
+    },
+    {
+        "id": "9b_20",
+        "q": "Which of the following statements about HCP Terraform's governance features is correct?",
+        "choices": [
+            "Policies can be applied before plan, after plan, or before apply",
+            "Policies can only be applied before plan",
+            "Policies run only after apply",
+            "Policies run only on state changes"
+        ],
+        "answer": [
+            0
+        ],
+        "explain": "Sentinel policies can be configured to run at multiple points in the run lifecycle for governance enforcement.",
+        "tags": [
+            "terraform",
+            "hcp",
+            "sentinel",
+            "governance"
+        ],
+        "difficulty": "medium",
+        "focus": "9b",
+        "category": "Collaboration and Governance",
+        "multiple": false
+    },
+    {
+        "id": "9b_21",
+        "q": "What does the 'manage' permission in HCP Terraform allow a team to do?",
+        "choices": [
+            "Create, update, and delete workspaces",
+            "Edit Sentinel policies",
+            "View runs",
+            "Invite new users"
+        ],
+        "answer": [
+            0
+        ],
+        "explain": "Manage permission allows creating, updating, and deleting workspaces but not necessarily editing policies unless granted separately.",
+        "tags": [
+            "terraform",
+            "hcp",
+            "permissions",
+            "roles"
+        ],
+        "difficulty": "medium",
+        "focus": "9b",
+        "category": "Collaboration and Governance",
+        "multiple": false
+    },
+    {
+        "id": "9b_22",
+        "q": "Which HCP Terraform feature can integrate with third-party approval workflows before apply?",
+        "choices": [
+            "Run tasks",
+            "Policy sets",
+            "VCS webhooks",
+            "CLI flags"
+        ],
+        "answer": [
+            0
+        ],
+        "explain": "Run tasks can integrate with external approval workflows before allowing an apply to proceed.",
+        "tags": [
+            "terraform",
+            "hcp",
+            "run tasks",
+            "approvals"
+        ],
+        "difficulty": "medium",
+        "focus": "9b",
+        "category": "Collaboration and Governance",
+        "multiple": false
+    },
+    {
+        "id": "9b_23",
+        "q": "How can HCP Terraform enforce that all resources are tagged with 'Environment'?",
+        "choices": [
+            "By writing a Sentinel policy that validates tags",
+            "By using run tasks",
+            "By modifying the provider schema",
+            "By adding it to the CLI config"
+        ],
+        "answer": [
+            0
+        ],
+        "explain": "A Sentinel policy can ensure all resources have the required tag before allowing apply.",
+        "tags": [
+            "terraform",
+            "hcp",
+            "sentinel",
+            "tags"
+        ],
+        "difficulty": "easy",
+        "focus": "9b",
+        "category": "Collaboration and Governance",
+        "multiple": false
+    },
+    {
+        "id": "9b_24",
+        "q": "What does the 'plan-only' permission allow a team to do in HCP Terraform?",
+        "choices": [
+            "Run terraform plan but not apply",
+            "View only the latest plan",
+            "Apply changes without planning",
+            "Manage Sentinel policies"
+        ],
+        "answer": [
+            0
+        ],
+        "explain": "Plan-only permission allows generating and viewing plans without applying changes.",
+        "tags": [
+            "terraform",
+            "hcp",
+            "permissions",
+            "plan-only"
+        ],
+        "difficulty": "easy",
+        "focus": "9b",
+        "category": "Collaboration and Governance",
+        "multiple": false
+    },
+    {
+        "id": "9b_25",
+        "q": "Why would an organization use HCP Terraform's 'workspace locking' feature?",
+        "choices": [
+            "To prevent any changes while an investigation or migration is in progress",
+            "To improve run performance",
+            "To enforce policy checks",
+            "To automatically delete old state files"
+        ],
+        "answer": [
+            0
+        ],
+        "explain": "Workspace locking prevents any runs from executing, useful during audits, migrations, or incident investigations.",
+        "tags": [
+            "terraform",
+            "hcp",
+            "workspace locking"
+        ],
+        "difficulty": "medium",
+        "focus": "9b",
+        "category": "Collaboration and Governance",
+        "multiple": false
+    }
+]

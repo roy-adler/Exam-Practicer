@@ -1,0 +1,249 @@
+[
+    {
+        "id": "7f_001",
+        "q": "In Terraform, where is the backend configuration typically defined?",
+        "choices": [
+            "Inside the terraform block",
+            "Inside the provider block",
+            "Inside the variables file",
+            "Inside outputs"
+        ],
+        "answer": [
+            0
+        ],
+        "explain": "Backend configuration is defined inside the terraform block, which specifies how Terraform should store and manage state.",
+        "tags": [
+            "terraform",
+            "backend",
+            "configuration",
+            "terraform-block"
+        ],
+        "difficulty": "easy",
+        "focus": "7f",
+        "category": "Backend Configuration",
+        "multiple": false
+    },
+    {
+        "id": "7f_002",
+        "q": "Which backend configuration parameter specifies the remote storage location for S3 backend?",
+        "choices": [
+            "bucket",
+            "container_name",
+            "storage_account_name",
+            "project"
+        ],
+        "answer": [
+            0
+        ],
+        "explain": "The `bucket` parameter specifies the S3 bucket name where the Terraform state file will be stored.",
+        "tags": [
+            "terraform",
+            "backend",
+            "s3",
+            "bucket",
+            "aws"
+        ],
+        "difficulty": "easy",
+        "focus": "7f",
+        "category": "Backend Configuration",
+        "multiple": false
+    },
+    {
+        "id": "7f_003",
+        "q": "For the AzureRM backend, which parameters are required to locate the state file?",
+        "choices": [
+            "storage_account_name, container_name, key",
+            "bucket, region, key",
+            "project, bucket, prefix",
+            "organization, workspace"
+        ],
+        "answer": [
+            0
+        ],
+        "explain": "The AzureRM backend requires storage_account_name, container_name, and key to locate and store the state file in Azure Blob Storage.",
+        "tags": [
+            "terraform",
+            "backend",
+            "azurerm",
+            "azure",
+            "blob-storage"
+        ],
+        "difficulty": "medium",
+        "focus": "7f",
+        "category": "Backend Configuration",
+        "multiple": false
+    },
+    {
+        "id": "7f_004",
+        "q": "What does the 'key' argument in backend configuration specify?",
+        "choices": [
+            "The encryption key",
+            "The path or name of the state file",
+            "The IAM key for authentication",
+            "The API key for provider"
+        ],
+        "answer": [
+            1
+        ],
+        "explain": "The `key` argument specifies the path or name of the state file within the backend storage location.",
+        "tags": [
+            "terraform",
+            "backend",
+            "key",
+            "state-file"
+        ],
+        "difficulty": "easy",
+        "focus": "7f",
+        "category": "Backend Configuration",
+        "multiple": false
+    },
+    {
+        "id": "7f_005",
+        "q": "In a backend configuration, what does setting 'encrypt = true' do for the S3 backend?",
+        "choices": [
+            "Enables server-side encryption for the state file",
+            "Encrypts provider credentials",
+            "Enables client-side encryption",
+            "Encrypts all resource data"
+        ],
+        "answer": [
+            0
+        ],
+        "explain": "Setting `encrypt = true` enables server-side encryption (SSE) for the state file stored in the S3 bucket.",
+        "tags": [
+            "terraform",
+            "backend",
+            "s3",
+            "encryption",
+            "sse"
+        ],
+        "difficulty": "medium",
+        "focus": "7f",
+        "category": "Backend Configuration",
+        "multiple": false
+    },
+    {
+        "id": "7f_006",
+        "q": "Which backend type requires the 'prefix' argument to organize state files in GCS?",
+        "choices": [
+            "gcs",
+            "S3",
+            "azurerm",
+            "local"
+        ],
+        "answer": [
+            0
+        ],
+        "explain": "The GCS backend uses the `prefix` argument to organize state files within a bucket, similar to a directory structure.",
+        "tags": [
+            "terraform",
+            "backend",
+            "gcs",
+            "google",
+            "prefix"
+        ],
+        "difficulty": "medium",
+        "focus": "7f",
+        "category": "Backend Configuration",
+        "multiple": false
+    },
+    {
+        "id": "7f_007",
+        "q": "If a backend configuration block contains sensitive information, what is the recommended best practice?",
+        "choices": [
+            "Use environment variables",
+            "Store in Git",
+            "Ignore encryption",
+            "Disable locking"
+        ],
+        "answer": [
+            0
+        ],
+        "explain": "Using environment variables prevents sensitive backend configuration from being stored in version-controlled files.",
+        "tags": [
+            "terraform",
+            "backend",
+            "security",
+            "environment-variables"
+        ],
+        "difficulty": "medium",
+        "focus": "7f",
+        "category": "Backend Configuration",
+        "multiple": false
+    },
+    {
+        "id": "7f_008",
+        "q": "In the 'remote' backend configuration, which argument specifies the Terraform Cloud workspace?",
+        "choices": [
+            "workspaces",
+            "workspace_name",
+            "key",
+            "org"
+        ],
+        "answer": [
+            0
+        ],
+        "explain": "The `workspaces` argument specifies the Terraform Cloud workspace where the state will be stored.",
+        "tags": [
+            "terraform",
+            "backend",
+            "remote",
+            "cloud",
+            "workspace"
+        ],
+        "difficulty": "medium",
+        "focus": "7f",
+        "category": "Backend Configuration",
+        "multiple": false
+    },
+    {
+        "id": "7f_009",
+        "q": "What is the function of the 'region' parameter in S3 backend configuration?",
+        "choices": [
+            "Specifies AWS region for the S3 bucket",
+            "Defines encryption algorithm",
+            "Sets IAM role",
+            "Specifies AWS profile"
+        ],
+        "answer": [
+            0
+        ],
+        "explain": "The `region` parameter specifies the AWS region where the S3 bucket is located for the backend configuration.",
+        "tags": [
+            "terraform",
+            "backend",
+            "s3",
+            "aws",
+            "region"
+        ],
+        "difficulty": "easy",
+        "focus": "7f",
+        "category": "Backend Configuration",
+        "multiple": false
+    },
+    {
+        "id": "7f_010",
+        "q": "Which backend configuration parameter enables state locking for the S3 backend?",
+        "choices": [
+            "lock_table",
+            "dynamodb_table",
+            "locking",
+            "state_lock"
+        ],
+        "answer": [
+            1
+        ],
+        "explain": "The `dynamodb_table` parameter specifies the DynamoDB table used for state locking when using the S3 backend.",
+        "tags": [
+            "terraform",
+            "backend",
+            "s3",
+            "dynamodb",
+            "locking"
+        ],
+        "difficulty": "medium",
+        "focus": "7f",
+        "category": "Backend Configuration",
+        "multiple": false
+    }
+]

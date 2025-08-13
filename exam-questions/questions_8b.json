@@ -1,0 +1,587 @@
+[
+    {
+        "id": "8b_1",
+        "q": "Which provider is commonly used for secure secret injection in Terraform?",
+        "choices": [
+            "Vault",
+            "AWS Secrets Manager",
+            "HashiCorp Secrets",
+            "Azure Key Vault"
+        ],
+        "answer": [
+            0,
+            1,
+            3
+        ],
+        "explain": "HashiCorp Vault, AWS Secrets Manager, and Azure Key Vault are common secure secret storage services used with Terraform. 'HashiCorp Secrets' is not an actual provider.",
+        "tags": [
+            "terraform",
+            "secrets",
+            "security",
+            "vault"
+        ],
+        "difficulty": "easy",
+        "focus": "8b",
+        "category": "Secure Secret Injection",
+        "multiple": true
+    },
+    {
+        "id": "8b_2",
+        "q": "What is the main advantage of using Vault with Terraform?",
+        "choices": [
+            "Secrets are stored directly in Terraform state",
+            "Secrets can be dynamically generated and short-lived",
+            "No authentication is needed",
+            "Secrets are version-controlled"
+        ],
+        "answer": [
+            1
+        ],
+        "explain": "Vault can dynamically generate short-lived credentials, improving security. Secrets stored in state files is a disadvantage, and authentication is required. Storing secrets in version control is not secure.",
+        "tags": [
+            "terraform",
+            "vault",
+            "security"
+        ],
+        "difficulty": "easy",
+        "focus": "8b",
+        "category": "Secure Secret Injection",
+        "multiple": false
+    },
+    {
+        "id": "8b_3",
+        "q": "Which Terraform function is useful for preventing sensitive values from being shown in logs?",
+        "choices": [
+            "sensitive()",
+            "hide()",
+            "obfuscate()",
+            "mask()"
+        ],
+        "answer": [
+            0
+        ],
+        "explain": "The sensitive() function in Terraform marks a value as sensitive, preventing it from being displayed in logs or CLI output.",
+        "tags": [
+            "terraform",
+            "functions",
+            "security"
+        ],
+        "difficulty": "easy",
+        "focus": "8b",
+        "category": "Secure Secret Injection",
+        "multiple": false
+    },
+    {
+        "id": "8b_4",
+        "q": "Why is it risky to store secrets in plain text inside Terraform configuration files?",
+        "choices": [
+            "They could be exposed in version control",
+            "They increase state file size",
+            "They may be visible in logs",
+            "They require additional dependencies"
+        ],
+        "answer": [
+            0,
+            2
+        ],
+        "explain": "Secrets in plain text can be committed to version control or printed in logs, creating serious security risks.",
+        "tags": [
+            "terraform",
+            "security",
+            "best practices"
+        ],
+        "difficulty": "easy",
+        "focus": "8b",
+        "category": "Secure Secret Injection",
+        "multiple": true
+    },
+    {
+        "id": "8b_5",
+        "q": "Which CLI argument can pass sensitive variables securely to Terraform?",
+        "choices": [
+            "-var",
+            "-var-file",
+            "TF_VAR_ environment variables",
+            "None; secrets should never be passed via CLI"
+        ],
+        "answer": [
+            2
+        ],
+        "explain": "Environment variables prefixed with TF_VAR_ are more secure than CLI arguments because CLI arguments may appear in shell history or process lists.",
+        "tags": [
+            "terraform",
+            "security",
+            "variables"
+        ],
+        "difficulty": "medium",
+        "focus": "8b",
+        "category": "Secure Secret Injection",
+        "multiple": false
+    },
+    {
+        "id": "8b_6",
+        "q": "What is the risk of storing sensitive data in the Terraform state file?",
+        "choices": [
+            "State files are often stored unencrypted on disk",
+            "State files are always public",
+            "State files cannot be accessed by Terraform",
+            "State files are not version-controlled"
+        ],
+        "answer": [
+            0
+        ],
+        "explain": "By default, Terraform state files are stored in plain text and can contain sensitive values, making encryption and restricted access critical.",
+        "tags": [
+            "terraform",
+            "security",
+            "state"
+        ],
+        "difficulty": "easy",
+        "focus": "8b",
+        "category": "Secure Secret Injection",
+        "multiple": false
+    },
+    {
+        "id": "8b_7",
+        "q": "Which method allows retrieving secrets at runtime instead of storing them in state?",
+        "choices": [
+            "Using data sources from a secret manager",
+            "Hardcoding values in variables",
+            "Using terraform import",
+            "Manually editing the state file"
+        ],
+        "answer": [
+            0
+        ],
+        "explain": "Using secret manager data sources allows Terraform to fetch secrets dynamically without storing them permanently in the state file.",
+        "tags": [
+            "terraform",
+            "vault",
+            "data sources"
+        ],
+        "difficulty": "medium",
+        "focus": "8b",
+        "category": "Secure Secret Injection",
+        "multiple": false
+    },
+    {
+        "id": "8b_8",
+        "q": "Which Vault authentication method allows Terraform to authenticate without embedding credentials in code?",
+        "choices": [
+            "AppRole",
+            "Token hardcoded in .tf files",
+            "GitHub auth",
+            "Environment variables"
+        ],
+        "answer": [
+            0,
+            3
+        ],
+        "explain": "AppRole and environment variable authentication methods avoid hardcoding secrets in Terraform code.",
+        "tags": [
+            "terraform",
+            "vault",
+            "authentication"
+        ],
+        "difficulty": "medium",
+        "focus": "8b",
+        "category": "Secure Secret Injection",
+        "multiple": true
+    },
+    {
+        "id": "8b_9",
+        "q": "What is a recommended practice when handling sensitive Terraform outputs?",
+        "choices": [
+            "Mark them as sensitive",
+            "Store them in a public S3 bucket",
+            "Write them to a secure password manager",
+            "Email them to the team"
+        ],
+        "answer": [
+            0,
+            2
+        ],
+        "explain": "Sensitive outputs should be marked with sensitive = true and, if needed, stored in a secure password manager, not in insecure locations.",
+        "tags": [
+            "terraform",
+            "security",
+            "outputs"
+        ],
+        "difficulty": "medium",
+        "focus": "8b",
+        "category": "Secure Secret Injection",
+        "multiple": true
+    },
+    {
+        "id": "8b_10",
+        "q": "What is the role of Vault's dynamic secrets in Terraform workflows?",
+        "choices": [
+            "Provide long-lived static credentials",
+            "Generate credentials that expire automatically",
+            "Replace Terraform's state file",
+            "Encrypt Terraform configuration files"
+        ],
+        "answer": [
+            1
+        ],
+        "explain": "Dynamic secrets in Vault are temporary credentials that expire automatically, reducing the risk of compromise.",
+        "tags": [
+            "terraform",
+            "vault",
+            "dynamic secrets"
+        ],
+        "difficulty": "easy",
+        "focus": "8b",
+        "category": "Secure Secret Injection",
+        "multiple": false
+    },
+    {
+        "id": "8b_11",
+        "q": "Which Vault feature allows revoking credentials issued to Terraform?",
+        "choices": [
+            "Token revocation",
+            "Secret lease revocation",
+            "Credential recycling",
+            "Role destruction"
+        ],
+        "answer": [
+            1
+        ],
+        "explain": "Vault uses secret lease revocation to invalidate dynamically issued credentials before their natural expiration.",
+        "tags": [
+            "terraform",
+            "vault",
+            "security"
+        ],
+        "difficulty": "medium",
+        "focus": "8b",
+        "category": "Secure Secret Injection",
+        "multiple": false
+    },
+    {
+        "id": "8b_12",
+        "q": "Why is it recommended to avoid committing .tfvars files with secrets to version control?",
+        "choices": [
+            "They can be read by anyone with repository access",
+            "They slow down Terraform execution",
+            "They may overwrite default values",
+            "They make Terraform fail on apply"
+        ],
+        "answer": [
+            0
+        ],
+        "explain": "Storing secrets in version control exposes them to anyone with repository access and may persist them in history forever.",
+        "tags": [
+            "terraform",
+            "security",
+            "version control"
+        ],
+        "difficulty": "easy",
+        "focus": "8b",
+        "category": "Secure Secret Injection",
+        "multiple": false
+    },
+    {
+        "id": "8b_13",
+        "q": "Which Terraform feature can read secrets from Vault without persisting them in the plan file?",
+        "choices": [
+            "External data source",
+            "Vault provider data source",
+            "Local-exec provisioner",
+            "Sensitive variables"
+        ],
+        "answer": [
+            1
+        ],
+        "explain": "The Vault provider data source retrieves secrets dynamically at runtime without storing them in the plan file.",
+        "tags": [
+            "terraform",
+            "vault",
+            "data source"
+        ],
+        "difficulty": "hard",
+        "focus": "8b",
+        "category": "Secure Secret Injection",
+        "multiple": false
+    },
+    {
+        "id": "8b_14",
+        "q": "What is the default behavior if a sensitive value is marked in Terraform?",
+        "choices": [
+            "It is hidden in CLI output",
+            "It is encrypted in state",
+            "It cannot be used in expressions",
+            "It is removed from the plan file"
+        ],
+        "answer": [
+            0
+        ],
+        "explain": "Marking a value as sensitive hides it in CLI output but does not encrypt it in the state file. Additional measures are needed for encryption.",
+        "tags": [
+            "terraform",
+            "security",
+            "sensitive"
+        ],
+        "difficulty": "easy",
+        "focus": "8b",
+        "category": "Secure Secret Injection",
+        "multiple": false
+    },
+    {
+        "id": "8b_15",
+        "q": "How can you ensure Terraform state files stored remotely are encrypted?",
+        "choices": [
+            "Enable encryption in the remote backend",
+            "Use an encrypted local drive",
+            "Rename the state file",
+            "Mark all variables as sensitive"
+        ],
+        "answer": [
+            0
+        ],
+        "explain": "Remote backends like S3 or Azure Blob offer encryption at rest, which should be enabled for sensitive states.",
+        "tags": [
+            "terraform",
+            "security",
+            "state encryption"
+        ],
+        "difficulty": "medium",
+        "focus": "8b",
+        "category": "Secure Secret Injection",
+        "multiple": false
+    },
+    {
+        "id": "8b_16",
+        "q": "Which of these methods is considered unsafe for injecting secrets?",
+        "choices": [
+            "Hardcoding in .tf files",
+            "Vault provider data source",
+            "AWS Secrets Manager data source",
+            "TF_VAR_ environment variables"
+        ],
+        "answer": [
+            0
+        ],
+        "explain": "Hardcoding secrets in configuration files is unsafe because they may be exposed in version control or logs.",
+        "tags": [
+            "terraform",
+            "security",
+            "best practices"
+        ],
+        "difficulty": "easy",
+        "focus": "8b",
+        "category": "Secure Secret Injection",
+        "multiple": false
+    },
+    {
+        "id": "8b_17",
+        "q": "Which practice minimizes the exposure of sensitive variables during Terraform runs?",
+        "choices": [
+            "Using environment variables",
+            "Using dynamic secrets",
+            "Storing them in plaintext tfvars",
+            "Avoiding any sensitive outputs"
+        ],
+        "answer": [
+            0,
+            1
+        ],
+        "explain": "Environment variables and dynamic secrets reduce the risk of leaking sensitive values in state or logs.",
+        "tags": [
+            "terraform",
+            "security",
+            "variables"
+        ],
+        "difficulty": "medium",
+        "focus": "8b",
+        "category": "Secure Secret Injection",
+        "multiple": true
+    },
+    {
+        "id": "8b_18",
+        "q": "How can you fetch AWS credentials securely in Terraform?",
+        "choices": [
+            "Using aws_secretsmanager_secret data source",
+            "Hardcoding in variables.tf",
+            "Passing as CLI arguments",
+            "Reading from environment variables"
+        ],
+        "answer": [
+            0,
+            3
+        ],
+        "explain": "Fetching credentials from AWS Secrets Manager or environment variables avoids storing them in configuration or CLI history.",
+        "tags": [
+            "terraform",
+            "aws",
+            "security"
+        ],
+        "difficulty": "medium",
+        "focus": "8b",
+        "category": "Secure Secret Injection",
+        "multiple": true
+    },
+    {
+        "id": "8b_19",
+        "q": "What is a limitation of marking variables as sensitive in Terraform?",
+        "choices": [
+            "They cannot be used in outputs",
+            "They still appear in the state file",
+            "They are inaccessible to resources",
+            "They cannot be set via CLI"
+        ],
+        "answer": [
+            1
+        ],
+        "explain": "Marking a variable as sensitive hides it from CLI output but does not prevent it from appearing in the unencrypted state file.",
+        "tags": [
+            "terraform",
+            "security",
+            "limitations"
+        ],
+        "difficulty": "hard",
+        "focus": "8b",
+        "category": "Secure Secret Injection",
+        "multiple": false
+    },
+    {
+        "id": "8b_20",
+        "q": "Which Vault capability allows Terraform to generate unique credentials for each run?",
+        "choices": [
+            "Dynamic secrets",
+            "Static secrets",
+            "Token policies",
+            "Audit logging"
+        ],
+        "answer": [
+            0
+        ],
+        "explain": "Dynamic secrets provide unique, short-lived credentials per run, improving security and reducing risks.",
+        "tags": [
+            "terraform",
+            "vault",
+            "dynamic secrets"
+        ],
+        "difficulty": "easy",
+        "focus": "8b",
+        "category": "Secure Secret Injection",
+        "multiple": false
+    },
+    {
+        "id": "8b_21",
+        "q": "Why should Terraform logs be monitored when handling sensitive data?",
+        "choices": [
+            "They can accidentally contain secret values",
+            "They may slow down performance",
+            "They are automatically encrypted",
+            "They must be version-controlled"
+        ],
+        "answer": [
+            0
+        ],
+        "explain": "Terraform logs may include variable values or outputs unless properly marked as sensitive.",
+        "tags": [
+            "terraform",
+            "security",
+            "logs"
+        ],
+        "difficulty": "easy",
+        "focus": "8b",
+        "category": "Secure Secret Injection",
+        "multiple": false
+    },
+    {
+        "id": "8b_22",
+        "q": "Which is a safe way to handle database passwords in Terraform?",
+        "choices": [
+            "Use Vault dynamic credentials",
+            "Store in plaintext tfvars in Git",
+            "Pass via TF_VAR_ environment variables",
+            "Embed directly in resource arguments"
+        ],
+        "answer": [
+            0,
+            2
+        ],
+        "explain": "Vault dynamic credentials and TF_VAR_ environment variables are safer than plaintext files or embedding in resources.",
+        "tags": [
+            "terraform",
+            "security",
+            "databases"
+        ],
+        "difficulty": "medium",
+        "focus": "8b",
+        "category": "Secure Secret Injection",
+        "multiple": true
+    },
+    {
+        "id": "8b_23",
+        "q": "What is the primary benefit of using Terraform with Vault for API key management?",
+        "choices": [
+            "Keys are automatically rotated",
+            "Keys are stored permanently in state",
+            "Keys are shared across all workspaces",
+            "Keys are manually entered every run"
+        ],
+        "answer": [
+            0
+        ],
+        "explain": "Vault can automatically rotate API keys, reducing risk if a key is compromised.",
+        "tags": [
+            "terraform",
+            "vault",
+            "api keys"
+        ],
+        "difficulty": "easy",
+        "focus": "8b",
+        "category": "Secure Secret Injection",
+        "multiple": false
+    },
+    {
+        "id": "8b_24",
+        "q": "How can you prevent secret values from being accidentally printed in Terraform plans?",
+        "choices": [
+            "Mark variables and outputs as sensitive",
+            "Use Vault dynamic secrets",
+            "Disable plan output",
+            "Encrypt the state file"
+        ],
+        "answer": [
+            0
+        ],
+        "explain": "Marking values as sensitive prevents Terraform from printing them in plan or apply outputs.",
+        "tags": [
+            "terraform",
+            "security",
+            "plan"
+        ],
+        "difficulty": "easy",
+        "focus": "8b",
+        "category": "Secure Secret Injection",
+        "multiple": false
+    },
+    {
+        "id": "8b_25",
+        "q": "What is the safest method for Terraform to retrieve cloud provider credentials?",
+        "choices": [
+            "Environment variables",
+            "Vault dynamic credentials",
+            "Hardcoded in main.tf",
+            "Insecure public secrets repository"
+        ],
+        "answer": [
+            0,
+            1
+        ],
+        "explain": "Environment variables and Vault dynamic credentials are secure methods for handling provider credentials. Hardcoding or public repos is unsafe.",
+        "tags": [
+            "terraform",
+            "security",
+            "cloud"
+        ],
+        "difficulty": "medium",
+        "focus": "8b",
+        "category": "Secure Secret Injection",
+        "multiple": true
+    }
+]

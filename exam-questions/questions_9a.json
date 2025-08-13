@@ -1,0 +1,238 @@
+[
+    {
+        "id": "9a_1",
+        "q": "What does HCP Terraform primarily provide for managing infrastructure?",
+        "choices": [
+            "A SaaS platform for remote Terraform execution and state management",
+            "A replacement for Terraform CLI",
+            "A tool for writing Terraform modules",
+            "An alternative to Terraform providers"
+        ],
+        "answer": [
+            0
+        ],
+        "explain": "HCP Terraform is a SaaS platform that enables remote execution, secure state storage, and collaboration, not a replacement for Terraform CLI or providers.",
+        "tags": [
+            "terraform",
+            "hcp",
+            "infrastructure management"
+        ],
+        "difficulty": "easy",
+        "focus": "9a",
+        "category": "HCP Terraform Capabilities",
+        "multiple": false
+    },
+    {
+        "id": "9a_2",
+        "q": "Which of the following are key features of HCP Terraform?",
+        "choices": [
+            "Remote state storage",
+            "Team collaboration",
+            "Provider development environment",
+            "Version control integration"
+        ],
+        "answer": [
+            0,
+            1,
+            3
+        ],
+        "explain": "HCP Terraform offers remote state, collaboration features, and VCS integration, but not a dedicated provider development environment.",
+        "tags": [
+            "terraform",
+            "hcp",
+            "features"
+        ],
+        "difficulty": "easy",
+        "focus": "9a",
+        "category": "HCP Terraform Capabilities",
+        "multiple": true
+    },
+    {
+        "id": "9a_3",
+        "q": "What is a primary benefit of using HCP Terraform over local Terraform runs?",
+        "choices": [
+            "State file stored locally for better performance",
+            "Centralized remote execution and locking",
+            "No need for Terraform configuration files",
+            "Automatic provider code generation"
+        ],
+        "answer": [
+            1
+        ],
+        "explain": "HCP Terraform ensures centralized runs with remote state locking, avoiding conflicts in collaborative environments.",
+        "tags": [
+            "terraform",
+            "hcp",
+            "remote execution"
+        ],
+        "difficulty": "medium",
+        "focus": "9a",
+        "category": "HCP Terraform Capabilities",
+        "multiple": false
+    },
+    {
+        "id": "9a_4",
+        "q": "Which HCP Terraform concept is used to organize related Terraform runs and state?",
+        "choices": [
+            "Modules",
+            "Workspaces",
+            "Stacks",
+            "Projects"
+        ],
+        "answer": [
+            1
+        ],
+        "explain": "Workspaces in HCP Terraform represent a collection of state and runs for a given configuration, enabling isolation.",
+        "tags": [
+            "terraform",
+            "hcp",
+            "workspaces"
+        ],
+        "difficulty": "easy",
+        "focus": "9a",
+        "category": "HCP Terraform Capabilities",
+        "multiple": false
+    },
+    {
+        "id": "9a_5",
+        "q": "Which version control systems are supported for VCS-driven runs in HCP Terraform?",
+        "choices": [
+            "GitHub",
+            "GitLab",
+            "Bitbucket",
+            "Subversion"
+        ],
+        "answer": [
+            0,
+            1,
+            2
+        ],
+        "explain": "HCP Terraform supports GitHub, GitLab, and Bitbucket VCS integration, but not Subversion.",
+        "tags": [
+            "terraform",
+            "hcp",
+            "vcs integration"
+        ],
+        "difficulty": "easy",
+        "focus": "9a",
+        "category": "HCP Terraform Capabilities",
+        "multiple": true
+    },
+    {
+        "id": "9a_6",
+        "q": "In HCP Terraform, which execution mode runs Terraform operations on HashiCorp's infrastructure?",
+        "choices": [
+            "Remote execution",
+            "Local execution",
+            "CLI workflow",
+            "Manual apply"
+        ],
+        "answer": [
+            0
+        ],
+        "explain": "Remote execution mode runs Terraform plans and applies on HCP Terraform's infrastructure rather than locally.",
+        "tags": [
+            "terraform",
+            "hcp",
+            "remote execution"
+        ],
+        "difficulty": "easy",
+        "focus": "9a",
+        "category": "HCP Terraform Capabilities",
+        "multiple": false
+    },
+    {
+        "id": "9a_7",
+        "q": "Which of these benefits does HCP Terraform's remote state provide?",
+        "choices": [
+            "Versioned state history",
+            "State locking",
+            "Manual file transfer",
+            "Built-in encryption"
+        ],
+        "answer": [
+            0,
+            1,
+            3
+        ],
+        "explain": "Remote state in HCP Terraform includes version history, locking to prevent concurrent changes, and encryption.",
+        "tags": [
+            "terraform",
+            "hcp",
+            "state management"
+        ],
+        "difficulty": "medium",
+        "focus": "9a",
+        "category": "HCP Terraform Capabilities",
+        "multiple": true
+    },
+    {
+        "id": "9a_8",
+        "q": "What is required to connect a local Terraform CLI to an HCP Terraform workspace?",
+        "choices": [
+            "Terraform API token",
+            "SSH key",
+            "Provider key",
+            "State import file"
+        ],
+        "answer": [
+            0
+        ],
+        "explain": "To authenticate local CLI runs with HCP Terraform, you must use a Terraform API token.",
+        "tags": [
+            "terraform",
+            "hcp",
+            "authentication"
+        ],
+        "difficulty": "easy",
+        "focus": "9a",
+        "category": "HCP Terraform Capabilities",
+        "multiple": false
+    },
+    {
+        "id": "9a_9",
+        "q": "Which statement about HCP Terraform module registry is correct?",
+        "choices": [
+            "It can host private modules for organizational use",
+            "It automatically creates providers",
+            "It is only available publicly",
+            "It does not support versioning"
+        ],
+        "answer": [
+            0
+        ],
+        "explain": "The private module registry in HCP Terraform allows organizations to share versioned modules internally.",
+        "tags": [
+            "terraform",
+            "hcp",
+            "module registry"
+        ],
+        "difficulty": "medium",
+        "focus": "9a",
+        "category": "HCP Terraform Capabilities",
+        "multiple": false
+    },
+    {
+        "id": "9a_10",
+        "q": "What happens when multiple users run terraform apply in the same HCP Terraform workspace?",
+        "choices": [
+            "The last run overrides others",
+            "HCP Terraform queues runs to prevent conflicts",
+            "Runs execute in parallel",
+            "The state file is duplicated"
+        ],
+        "answer": [
+            1
+        ],
+        "explain": "HCP Terraform serializes runs in a workspace, preventing state conflicts.",
+        "tags": [
+            "terraform",
+            "hcp",
+            "concurrency"
+        ],
+        "difficulty": "medium",
+        "focus": "9a",
+        "category": "HCP Terraform Capabilities",
+        "multiple": false
+    }
+]

@@ -1,0 +1,588 @@
+[
+    {
+        "id": "8a_1",
+        "q": "Which file extension is typically used for defining Terraform input variables?",
+        "choices": [
+            ".tf",
+            ".tfvars",
+            ".json",
+            ".vars"
+        ],
+        "answer": [
+            0,
+            1
+        ],
+        "explain": ".tf files are used to declare variables, while .tfvars files are used to assign values. .json files can be used for configuration but are less common for variable definitions, and .vars is not a valid Terraform extension.",
+        "tags": [
+            "terraform",
+            "variables",
+            "configuration"
+        ],
+        "difficulty": "easy",
+        "focus": "8a",
+        "category": "Variables and Outputs",
+        "multiple": true
+    },
+    {
+        "id": "8a_2",
+        "q": "What is the correct syntax to define a variable in Terraform?",
+        "choices": [
+            "variable \"region\" { default = \"us-east-1\" }",
+            "var \"region\" { value = \"us-east-1\" }",
+            "variable region = \"us-east-1\"",
+            "variable(region) { default: \"us-east-1\" }"
+        ],
+        "answer": [
+            0
+        ],
+        "explain": "The correct Terraform syntax uses the 'variable' keyword with the variable name in quotes, followed by a block where attributes like default are defined.",
+        "tags": [
+            "terraform",
+            "variables",
+            "syntax"
+        ],
+        "difficulty": "easy",
+        "focus": "8a",
+        "category": "Variables and Outputs",
+        "multiple": false
+    },
+    {
+        "id": "8a_3",
+        "q": "How do you reference a variable's value inside Terraform configuration?",
+        "choices": [
+            "var.variable_name",
+            "${var.variable_name}",
+            "variable_name.value",
+            "vars.variable_name"
+        ],
+        "answer": [
+            0,
+            1
+        ],
+        "explain": "Terraform 0.12+ allows both 'var.variable_name' and '${var.variable_name}' syntax for interpolation. The others are invalid.",
+        "tags": [
+            "terraform",
+            "variables",
+            "interpolation"
+        ],
+        "difficulty": "easy",
+        "focus": "8a",
+        "category": "Variables and Outputs",
+        "multiple": true
+    },
+    {
+        "id": "8a_4",
+        "q": "Which Terraform command is used to pass a .tfvars file explicitly during apply?",
+        "choices": [
+            "terraform apply -var-file=\"custom.tfvars\"",
+            "terraform apply --vars=custom.tfvars",
+            "terraform apply -tfvars=custom.tfvars",
+            "terraform apply -var custom.tfvars"
+        ],
+        "answer": [
+            0
+        ],
+        "explain": "The correct way to explicitly pass a tfvars file is using '-var-file=\"filename.tfvars\"'. Other options are not valid Terraform flags.",
+        "tags": [
+            "terraform",
+            "variables",
+            "cli"
+        ],
+        "difficulty": "medium",
+        "focus": "8a",
+        "category": "Variables and Outputs",
+        "multiple": false
+    },
+    {
+        "id": "8a_5",
+        "q": "Which attribute in a variable block makes a variable mandatory?",
+        "choices": [
+            "type = string",
+            "default = \"\"",
+            "No default attribute",
+            "required = true"
+        ],
+        "answer": [
+            2
+        ],
+        "explain": "A variable is mandatory if no default value is provided. Setting a type does not make it required, and 'required' is not a valid Terraform attribute.",
+        "tags": [
+            "terraform",
+            "variables",
+            "required"
+        ],
+        "difficulty": "easy",
+        "focus": "8a",
+        "category": "Variables and Outputs",
+        "multiple": false
+    },
+    {
+        "id": "8a_6",
+        "q": "What is the purpose of output values in Terraform?",
+        "choices": [
+            "To store sensitive data permanently",
+            "To display information after apply",
+            "To pass values to other configurations via remote state",
+            "To replace input variables"
+        ],
+        "answer": [
+            1,
+            2
+        ],
+        "explain": "Outputs are used to display results and can be consumed by other configurations through remote state. They are not for storing sensitive data permanently or replacing input variables.",
+        "tags": [
+            "terraform",
+            "outputs",
+            "state"
+        ],
+        "difficulty": "easy",
+        "focus": "8a",
+        "category": "Variables and Outputs",
+        "multiple": true
+    },
+    {
+        "id": "8a_7",
+        "q": "Which meta-argument in an output block hides its value from CLI output?",
+        "choices": [
+            "sensitive = true",
+            "hide = true",
+            "secret = true",
+            "secure_output = true"
+        ],
+        "answer": [
+            0
+        ],
+        "explain": "The 'sensitive = true' argument prevents Terraform from displaying the output in CLI results to protect confidential data.",
+        "tags": [
+            "terraform",
+            "outputs",
+            "sensitive"
+        ],
+        "difficulty": "medium",
+        "focus": "8a",
+        "category": "Variables and Outputs",
+        "multiple": false
+    },
+    {
+        "id": "8a_8",
+        "q": "How do you pass a variable from the CLI directly without a tfvars file?",
+        "choices": [
+            "terraform apply -var=\"region=us-east-1\"",
+            "terraform apply -set=region:us-east-1",
+            "terraform apply --var region=us-east-1",
+            "terraform apply var=region:us-east-1"
+        ],
+        "answer": [
+            0
+        ],
+        "explain": "Terraform accepts variables via the '-var=\"key=value\"' syntax on the CLI. Other options are invalid.",
+        "tags": [
+            "terraform",
+            "variables",
+            "cli"
+        ],
+        "difficulty": "easy",
+        "focus": "8a",
+        "category": "Variables and Outputs",
+        "multiple": false
+    },
+    {
+        "id": "8a_9",
+        "q": "What happens if a variable is declared with no default value and is not set in CLI or tfvars?",
+        "choices": [
+            "Terraform uses null",
+            "Terraform prompts the user for a value",
+            "Terraform fails immediately",
+            "Terraform assigns an empty string"
+        ],
+        "answer": [
+            1
+        ],
+        "explain": "If no default is given and the value is not provided, Terraform interactively prompts for input during plan/apply.",
+        "tags": [
+            "terraform",
+            "variables",
+            "input"
+        ],
+        "difficulty": "easy",
+        "focus": "8a",
+        "category": "Variables and Outputs",
+        "multiple": false
+    },
+    {
+        "id": "8a_10",
+        "q": "Which command shows all available output values for a Terraform configuration?",
+        "choices": [
+            "terraform show",
+            "terraform output",
+            "terraform list outputs",
+            "terraform outputs"
+        ],
+        "answer": [
+            1
+        ],
+        "explain": "'terraform output' lists all defined outputs for the current state. Other commands do not serve this purpose.",
+        "tags": [
+            "terraform",
+            "outputs",
+            "cli"
+        ],
+        "difficulty": "easy",
+        "focus": "8a",
+        "category": "Variables and Outputs",
+        "multiple": false
+    },
+    {
+        "id": "8a_11",
+        "q": "Which of the following can define a variable's type in Terraform?",
+        "choices": [
+            "type = string",
+            "type = list(string)",
+            "type = map(number)",
+            "type = boolean"
+        ],
+        "answer": [
+            0,
+            1,
+            2,
+            3
+        ],
+        "explain": "Terraform supports many types including string, list, map, and boolean, defined in the 'type' attribute of a variable block.",
+        "tags": [
+            "terraform",
+            "variables",
+            "types"
+        ],
+        "difficulty": "medium",
+        "focus": "8a",
+        "category": "Variables and Outputs",
+        "multiple": true
+    },
+    {
+        "id": "8a_12",
+        "q": "What is the precedence order when assigning variable values in Terraform?",
+        "choices": [
+            "Environment variables > CLI flags > tfvars files > default",
+            "CLI flags > Environment variables > tfvars files > default",
+            "CLI flags > tfvars files > Environment variables > default",
+            "tfvars files > CLI flags > Environment variables > default"
+        ],
+        "answer": [
+            2
+        ],
+        "explain": "Terraform evaluates variables in order: CLI flags, tfvars files, environment variables, and finally defaults.",
+        "tags": [
+            "terraform",
+            "variables",
+            "precedence"
+        ],
+        "difficulty": "medium",
+        "focus": "8a",
+        "category": "Variables and Outputs",
+        "multiple": false
+    },
+    {
+        "id": "8a_13",
+        "q": "Which environment variable prefix is used to set Terraform variables?",
+        "choices": [
+            "TF_VAR_",
+            "TFVARS_",
+            "TF_INPUT_",
+            "TFV_"
+        ],
+        "answer": [
+            0
+        ],
+        "explain": "Terraform reads environment variables prefixed with 'TF_VAR_' to set variable values.",
+        "tags": [
+            "terraform",
+            "variables",
+            "environment"
+        ],
+        "difficulty": "easy",
+        "focus": "8a",
+        "category": "Variables and Outputs",
+        "multiple": false
+    },
+    {
+        "id": "8a_14",
+        "q": "When using a JSON variables file, which command-line flag should you use?",
+        "choices": [
+            "-var-json",
+            "-var-file",
+            "-json-vars",
+            "--var-json"
+        ],
+        "answer": [
+            1
+        ],
+        "explain": "JSON variable files are still passed using '-var-file', with the file ending in .tfvars.json.",
+        "tags": [
+            "terraform",
+            "variables",
+            "json"
+        ],
+        "difficulty": "medium",
+        "focus": "8a",
+        "category": "Variables and Outputs",
+        "multiple": false
+    },
+    {
+        "id": "8a_15",
+        "q": "How can you mark an output as sensitive in Terraform?",
+        "choices": [
+            "Add sensitive = true inside the output block",
+            "Prefix output name with 'sensitive_'",
+            "Use the secret meta-argument",
+            "Set type = sensitive"
+        ],
+        "answer": [
+            0
+        ],
+        "explain": "Terraform uses the 'sensitive = true' attribute in output blocks to hide sensitive values from CLI.",
+        "tags": [
+            "terraform",
+            "outputs",
+            "sensitive"
+        ],
+        "difficulty": "easy",
+        "focus": "8a",
+        "category": "Variables and Outputs",
+        "multiple": false
+    },
+    {
+        "id": "8a_16",
+        "q": "Which command refreshes outputs to match the current state without running a full apply?",
+        "choices": [
+            "terraform refresh",
+            "terraform plan -refresh-only",
+            "terraform output -refresh",
+            "terraform update outputs"
+        ],
+        "answer": [
+            1
+        ],
+        "explain": "'terraform plan -refresh-only' updates the state and thus outputs without applying changes. 'terraform refresh' is deprecated.",
+        "tags": [
+            "terraform",
+            "outputs",
+            "refresh"
+        ],
+        "difficulty": "hard",
+        "focus": "8a",
+        "category": "Variables and Outputs",
+        "multiple": false
+    },
+    {
+        "id": "8a_17",
+        "q": "Which types can be nested inside a list type variable in Terraform?",
+        "choices": [
+            "list(string)",
+            "list(number)",
+            "list(any)",
+            "list(list(string))"
+        ],
+        "answer": [
+            0,
+            1,
+            2,
+            3
+        ],
+        "explain": "Lists can contain strings, numbers, any type, and even nested lists in Terraform's type system.",
+        "tags": [
+            "terraform",
+            "variables",
+            "types"
+        ],
+        "difficulty": "medium",
+        "focus": "8a",
+        "category": "Variables and Outputs",
+        "multiple": true
+    },
+    {
+        "id": "8a_18",
+        "q": "How can Terraform outputs be consumed by another configuration?",
+        "choices": [
+            "Using terraform_remote_state data source",
+            "Using terraform import",
+            "Copying values manually",
+            "Referencing the state file directly"
+        ],
+        "answer": [
+            0
+        ],
+        "explain": "terraform_remote_state is the supported way to reference outputs from another workspace or configuration.",
+        "tags": [
+            "terraform",
+            "outputs",
+            "remote state"
+        ],
+        "difficulty": "medium",
+        "focus": "8a",
+        "category": "Variables and Outputs",
+        "multiple": false
+    },
+    {
+        "id": "8a_19",
+        "q": "Which block type is used to define outputs in Terraform?",
+        "choices": [
+            "output",
+            "variable",
+            "result",
+            "export"
+        ],
+        "answer": [
+            0
+        ],
+        "explain": "Terraform uses the 'output' block to define values displayed after apply or shared via remote state.",
+        "tags": [
+            "terraform",
+            "outputs",
+            "syntax"
+        ],
+        "difficulty": "easy",
+        "focus": "8a",
+        "category": "Variables and Outputs",
+        "multiple": false
+    },
+    {
+        "id": "8a_20",
+        "q": "Which command can be used to inspect a single output value?",
+        "choices": [
+            "terraform output <name>",
+            "terraform show -output <name>",
+            "terraform view output <name>",
+            "terraform get output <name>"
+        ],
+        "answer": [
+            0
+        ],
+        "explain": "'terraform output <name>' prints the value of a single output. Other commands are invalid.",
+        "tags": [
+            "terraform",
+            "outputs",
+            "cli"
+        ],
+        "difficulty": "easy",
+        "focus": "8a",
+        "category": "Variables and Outputs",
+        "multiple": false
+    },
+    {
+        "id": "8a_21",
+        "q": "What is the default type assigned to a variable if no type is specified?",
+        "choices": [
+            "string",
+            "any",
+            "object",
+            "null"
+        ],
+        "answer": [
+            1
+        ],
+        "explain": "If no type is declared, Terraform assigns 'any', meaning it can accept any valid type.",
+        "tags": [
+            "terraform",
+            "variables",
+            "types"
+        ],
+        "difficulty": "easy",
+        "focus": "8a",
+        "category": "Variables and Outputs",
+        "multiple": false
+    },
+    {
+        "id": "8a_22",
+        "q": "Which of the following is NOT a valid way to provide variable values?",
+        "choices": [
+            ".tfvars file",
+            "Environment variables",
+            "Hardcoding inside resource blocks",
+            "CLI -var option"
+        ],
+        "answer": [
+            2
+        ],
+        "explain": "While hardcoding is possible, it is not considered providing a variable value — it bypasses variables entirely.",
+        "tags": [
+            "terraform",
+            "variables",
+            "configuration"
+        ],
+        "difficulty": "medium",
+        "focus": "8a",
+        "category": "Variables and Outputs",
+        "multiple": false
+    },
+    {
+        "id": "8a_23",
+        "q": "What is the recommended method for storing sensitive variables?",
+        "choices": [
+            "In plain text .tfvars files",
+            "In environment variables",
+            "In version-controlled tfvars files",
+            "Using Terraform Cloud workspace variables"
+        ],
+        "answer": [
+            1,
+            3
+        ],
+        "explain": "Sensitive variables should be stored in environment variables or managed via Terraform Cloud's variable management, not in plain text files under version control.",
+        "tags": [
+            "terraform",
+            "variables",
+            "security"
+        ],
+        "difficulty": "hard",
+        "focus": "8a",
+        "category": "Variables and Outputs",
+        "multiple": true
+    },
+    {
+        "id": "8a_24",
+        "q": "Which option allows you to define a variable's description?",
+        "choices": [
+            "description = \"This is my variable\"",
+            "desc = \"This is my variable\"",
+            "info = \"This is my variable\"",
+            "variable_description = \"This is my variable\""
+        ],
+        "answer": [
+            0
+        ],
+        "explain": "Terraform uses the 'description' argument inside variable blocks to describe their purpose.",
+        "tags": [
+            "terraform",
+            "variables",
+            "documentation"
+        ],
+        "difficulty": "easy",
+        "focus": "8a",
+        "category": "Variables and Outputs",
+        "multiple": false
+    },
+    {
+        "id": "8a_25",
+        "q": "How can you override a variable value set in a tfvars file?",
+        "choices": [
+            "Pass the variable in CLI with -var",
+            "Edit the .terraform.lock.hcl file",
+            "Use a higher-precedence tfvars file",
+            "Set the environment variable TF_VAR_<name>"
+        ],
+        "answer": [
+            0,
+            3
+        ],
+        "explain": "CLI -var and environment variables take precedence over tfvars file values. The lock file is unrelated.",
+        "tags": [
+            "terraform",
+            "variables",
+            "precedence"
+        ],
+        "difficulty": "medium",
+        "focus": "8a",
+        "category": "Variables and Outputs",
+        "multiple": true
+    }
+]

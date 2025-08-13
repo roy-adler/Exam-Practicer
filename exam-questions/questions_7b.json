@@ -1,0 +1,244 @@
+[
+    {
+        "id": "7b_001",
+        "q": "What is the primary purpose of Terraform state locking?",
+        "choices": [
+            "Prevent concurrent modifications",
+            "Encrypt state files",
+            "Validate syntax",
+            "Speed up applies"
+        ],
+        "answer": [
+            0
+        ],
+        "explain": "State locking prevents multiple users or processes from modifying the same Terraform state simultaneously, which could lead to state corruption.",
+        "tags": [
+            "terraform",
+            "state",
+            "locking",
+            "concurrency"
+        ],
+        "difficulty": "easy",
+        "focus": "7b",
+        "category": "State Management",
+        "multiple": false
+    },
+    {
+        "id": "7b_002",
+        "q": "Which backend type supports state locking natively?",
+        "choices": [
+            "Local",
+            "S3 with DynamoDB",
+            "Consul",
+            "All of the above"
+        ],
+        "answer": [
+            3
+        ],
+        "explain": "All of these backend types support state locking natively, though the local backend uses file-based locking which is less robust.",
+        "tags": [
+            "terraform",
+            "backend",
+            "locking",
+            "s3",
+            "consul"
+        ],
+        "difficulty": "medium",
+        "focus": "7b",
+        "category": "State Management",
+        "multiple": false
+    },
+    {
+        "id": "7b_003",
+        "q": "When using S3 as a backend, which AWS service can be used to enable state locking?",
+        "choices": [
+            "CloudWatch",
+            "DynamoDB",
+            "EC2",
+            "KMS"
+        ],
+        "answer": [
+            1
+        ],
+        "explain": "DynamoDB is used by the S3 backend to provide state locking capabilities, preventing concurrent modifications.",
+        "tags": [
+            "terraform",
+            "backend",
+            "s3",
+            "dynamodb",
+            "aws",
+            "locking"
+        ],
+        "difficulty": "easy",
+        "focus": "7b",
+        "category": "State Management",
+        "multiple": false
+    },
+    {
+        "id": "7b_004",
+        "q": "What could happen if state locking is disabled in a multi-user environment?",
+        "choices": [
+            "State corruption",
+            "Faster execution",
+            "Automatic encryption",
+            "Improved security"
+        ],
+        "answer": [
+            0
+        ],
+        "explain": "Without state locking, multiple users could modify the state simultaneously, leading to state corruption and inconsistent infrastructure.",
+        "tags": [
+            "terraform",
+            "state",
+            "locking",
+            "corruption",
+            "multi-user"
+        ],
+        "difficulty": "medium",
+        "focus": "7b",
+        "category": "State Management",
+        "multiple": false
+    },
+    {
+        "id": "7b_005",
+        "q": "True or False: The local backend supports remote state locking by default.",
+        "choices": [
+            "True",
+            "False"
+        ],
+        "answer": [
+            1
+        ],
+        "explain": "The local backend only supports basic file-based locking and does not provide robust remote state locking capabilities.",
+        "tags": [
+            "terraform",
+            "backend",
+            "local",
+            "locking"
+        ],
+        "difficulty": "easy",
+        "focus": "7b",
+        "category": "State Management",
+        "multiple": false
+    },
+    {
+        "id": "7b_006",
+        "q": "Which Terraform command is most likely to fail if another process holds the state lock?",
+        "choices": [
+            "terraform plan",
+            "terraform apply",
+            "terraform init",
+            "terraform fmt"
+        ],
+        "answer": [
+            1
+        ],
+        "explain": "`terraform apply` requires exclusive access to the state and will fail if another process holds the lock.",
+        "tags": [
+            "terraform",
+            "commands",
+            "apply",
+            "locking"
+        ],
+        "difficulty": "easy",
+        "focus": "7b",
+        "category": "State Management",
+        "multiple": false
+    },
+    {
+        "id": "7b_007",
+        "q": "How can you manually release a stuck state lock in Terraform?",
+        "choices": [
+            "By deleting the state file",
+            "Using 'terraform force-unlock'",
+            "Restarting Terraform CLI",
+            "Re-running 'terraform init'"
+        ],
+        "answer": [
+            1
+        ],
+        "explain": "The `terraform force-unlock` command allows you to manually release a stuck state lock when necessary.",
+        "tags": [
+            "terraform",
+            "commands",
+            "force-unlock",
+            "locking"
+        ],
+        "difficulty": "medium",
+        "focus": "7b",
+        "category": "State Management",
+        "multiple": false
+    },
+    {
+        "id": "7b_008",
+        "q": "State locking prevents:",
+        "choices": [
+            "Two users from running apply simultaneously",
+            "Terraform from using multiple providers",
+            "Backend configuration changes",
+            "Resource drift"
+        ],
+        "answer": [
+            0
+        ],
+        "explain": "State locking prevents multiple users from running `terraform apply` simultaneously, which could cause conflicts.",
+        "tags": [
+            "terraform",
+            "state",
+            "locking",
+            "concurrency"
+        ],
+        "difficulty": "easy",
+        "focus": "7b",
+        "category": "State Management",
+        "multiple": false
+    },
+    {
+        "id": "7b_009",
+        "q": "In Terraform Cloud, state locking is:",
+        "choices": [
+            "Disabled",
+            "Optional",
+            "Automatic",
+            "Unsupported"
+        ],
+        "answer": [
+            2
+        ],
+        "explain": "Terraform Cloud automatically provides state locking for all workspaces without additional configuration.",
+        "tags": [
+            "terraform",
+            "cloud",
+            "locking",
+            "automatic"
+        ],
+        "difficulty": "medium",
+        "focus": "7b",
+        "category": "State Management",
+        "multiple": false
+    },
+    {
+        "id": "7b_010",
+        "q": "What is the effect of 'terraform force-unlock -force'?",
+        "choices": [
+            "It releases the lock without confirmation",
+            "It destroys all resources",
+            "It resets the state file",
+            "It changes the backend"
+        ],
+        "answer": [
+            0
+        ],
+        "explain": "The `-force` flag bypasses the confirmation prompt and immediately releases the state lock.",
+        "tags": [
+            "terraform",
+            "commands",
+            "force-unlock",
+            "force"
+        ],
+        "difficulty": "medium",
+        "focus": "7b",
+        "category": "State Management",
+        "multiple": false
+    }
+]

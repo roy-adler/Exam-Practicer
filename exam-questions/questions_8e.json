@@ -1,0 +1,582 @@
+[
+    {
+        "id": "8e_1",
+        "q": "What is resource addressing in Terraform?",
+        "choices": [
+            "A way to reference a specific resource instance in the state",
+            "A method to configure provider authentication",
+            "A syntax to set variables",
+            "A way to encrypt state files"
+        ],
+        "answer": [
+            0
+        ],
+        "explain": "Resource addressing is the syntax Terraform uses to identify a specific resource instance, such as aws_instance.web[0].",
+        "tags": [
+            "terraform",
+            "resource addressing",
+            "state"
+        ],
+        "difficulty": "easy",
+        "focus": "8e",
+        "category": "Resource Addressing and Parameters",
+        "multiple": false
+    },
+    {
+        "id": "8e_2",
+        "q": "Which syntax references the first instance of a resource named 'web' of type aws_instance?",
+        "choices": [
+            "aws_instance.web[0]",
+            "resource.aws_instance.web[0]",
+            "var.aws_instance.web.0",
+            "aws_instance.web.index(0)"
+        ],
+        "answer": [
+            0
+        ],
+        "explain": "The correct addressing format for the first instance is aws_instance.web[0].",
+        "tags": [
+            "terraform",
+            "resource addressing",
+            "syntax"
+        ],
+        "difficulty": "easy",
+        "focus": "8e",
+        "category": "Resource Addressing and Parameters",
+        "multiple": false
+    },
+    {
+        "id": "8e_3",
+        "q": "What happens if you change the index of a resource in a count-based configuration?",
+        "choices": [
+            "Terraform destroys and recreates affected instances",
+            "Terraform updates them in place",
+            "Terraform renames them automatically",
+            "Terraform ignores the change"
+        ],
+        "answer": [
+            0
+        ],
+        "explain": "Changing the index alters the resource address, leading Terraform to destroy and recreate that instance.",
+        "tags": [
+            "terraform",
+            "count",
+            "resource addressing"
+        ],
+        "difficulty": "medium",
+        "focus": "8e",
+        "category": "Resource Addressing and Parameters",
+        "multiple": false
+    },
+    {
+        "id": "8e_4",
+        "q": "Which Terraform feature allows creating multiple instances of a resource with distinct keys?",
+        "choices": [
+            "for_each",
+            "count",
+            "depends_on",
+            "multi_instance"
+        ],
+        "answer": [
+            0
+        ],
+        "explain": "for_each creates multiple instances of a resource or module keyed by a map or set of strings.",
+        "tags": [
+            "terraform",
+            "for_each",
+            "resource addressing"
+        ],
+        "difficulty": "easy",
+        "focus": "8e",
+        "category": "Resource Addressing and Parameters",
+        "multiple": false
+    },
+    {
+        "id": "8e_5",
+        "q": "How is a specific instance referenced when using for_each?",
+        "choices": [
+            "resource_type.name[\"key\"]",
+            "resource_type.name.key",
+            "resource_type.name(each.key)",
+            "resource_type.name(key)"
+        ],
+        "answer": [
+            0
+        ],
+        "explain": "When using for_each, instances are addressed using the syntax resource_type.name[\"key\"].",
+        "tags": [
+            "terraform",
+            "for_each",
+            "resource addressing"
+        ],
+        "difficulty": "easy",
+        "focus": "8e",
+        "category": "Resource Addressing and Parameters",
+        "multiple": false
+    },
+    {
+        "id": "8e_6",
+        "q": "Which command can target a specific resource during apply?",
+        "choices": [
+            "terraform apply -target=aws_instance.web",
+            "terraform plan --only=aws_instance.web",
+            "terraform run -target=aws_instance.web",
+            "terraform exec -target=aws_instance.web"
+        ],
+        "answer": [
+            0
+        ],
+        "explain": "terraform apply -target=<resource address> allows applying changes to only that resource and its dependencies.",
+        "tags": [
+            "terraform",
+            "target",
+            "resource addressing"
+        ],
+        "difficulty": "medium",
+        "focus": "8e",
+        "category": "Resource Addressing and Parameters",
+        "multiple": false
+    },
+    {
+        "id": "8e_7",
+        "q": "Which is a disadvantage of using -target in Terraform?",
+        "choices": [
+            "It can cause incomplete dependency resolution",
+            "It permanently removes other resources",
+            "It prevents variable usage",
+            "It requires a separate state file"
+        ],
+        "answer": [
+            0
+        ],
+        "explain": "Using -target can skip resources outside the dependency chain, leading to inconsistent infrastructure if overused.",
+        "tags": [
+            "terraform",
+            "target",
+            "best practices"
+        ],
+        "difficulty": "medium",
+        "focus": "8e",
+        "category": "Resource Addressing and Parameters",
+        "multiple": false
+    },
+    {
+        "id": "8e_8",
+        "q": "What is the resource address of the second aws_instance named 'server' when count = 3?",
+        "choices": [
+            "aws_instance.server[1]",
+            "aws_instance.server.1",
+            "aws_instance.server[2]",
+            "aws_instance.server.2"
+        ],
+        "answer": [
+            0
+        ],
+        "explain": "Terraform uses zero-based indexing for count, so the second instance is aws_instance.server[1].",
+        "tags": [
+            "terraform",
+            "count",
+            "resource addressing"
+        ],
+        "difficulty": "easy",
+        "focus": "8e",
+        "category": "Resource Addressing and Parameters",
+        "multiple": false
+    },
+    {
+        "id": "8e_9",
+        "q": "Which argument can link one resource to another in Terraform?",
+        "choices": [
+            "depends_on",
+            "requires",
+            "links_to",
+            "attach_to"
+        ],
+        "answer": [
+            0
+        ],
+        "explain": "depends_on explicitly declares a dependency between resources.",
+        "tags": [
+            "terraform",
+            "depends_on",
+            "dependencies"
+        ],
+        "difficulty": "easy",
+        "focus": "8e",
+        "category": "Resource Addressing and Parameters",
+        "multiple": false
+    },
+    {
+        "id": "8e_10",
+        "q": "When referencing another resource's attribute, what syntax is used?",
+        "choices": [
+            "resource_type.name.attribute",
+            "data.resource_type.name.attribute",
+            "var.resource_type.name.attribute",
+            "output.resource_type.name.attribute"
+        ],
+        "answer": [
+            0
+        ],
+        "explain": "To reference an attribute from another resource, use resource_type.name.attribute.",
+        "tags": [
+            "terraform",
+            "references",
+            "resource addressing"
+        ],
+        "difficulty": "easy",
+        "focus": "8e",
+        "category": "Resource Addressing and Parameters",
+        "multiple": false
+    },
+    {
+        "id": "8e_11",
+        "q": "What is the purpose of the 'self' object in a resource block?",
+        "choices": [
+            "It references the resource's own attributes",
+            "It references the provider configuration",
+            "It references the module variables",
+            "It references the parent resource"
+        ],
+        "answer": [
+            0
+        ],
+        "explain": "The self object lets you refer to attributes of the resource being defined.",
+        "tags": [
+            "terraform",
+            "self",
+            "resource addressing"
+        ],
+        "difficulty": "medium",
+        "focus": "8e",
+        "category": "Resource Addressing and Parameters",
+        "multiple": false
+    },
+    {
+        "id": "8e_12",
+        "q": "How can you get the ID of an AWS subnet data source named 'example'?",
+        "choices": [
+            "data.aws_subnet.example.id",
+            "aws_subnet.example.id",
+            "var.aws_subnet.example.id",
+            "output.aws_subnet.example.id"
+        ],
+        "answer": [
+            0
+        ],
+        "explain": "Data source attributes are accessed using data.<type>.<name>.<attribute>.",
+        "tags": [
+            "terraform",
+            "data sources",
+            "resource addressing"
+        ],
+        "difficulty": "easy",
+        "focus": "8e",
+        "category": "Resource Addressing and Parameters",
+        "multiple": false
+    },
+    {
+        "id": "8e_13",
+        "q": "What does aws_instance.web[0].id represent?",
+        "choices": [
+            "The ID attribute of the first aws_instance.web resource",
+            "The ID of all aws_instance.web instances",
+            "A random ID generated by Terraform",
+            "The module name for web instance"
+        ],
+        "answer": [
+            0
+        ],
+        "explain": "aws_instance.web[0].id specifically references the ID of the first aws_instance.web resource instance.",
+        "tags": [
+            "terraform",
+            "resource addressing",
+            "attributes"
+        ],
+        "difficulty": "easy",
+        "focus": "8e",
+        "category": "Resource Addressing and Parameters",
+        "multiple": false
+    },
+    {
+        "id": "8e_14",
+        "q": "What happens if a resource parameter references an attribute of a resource not yet created?",
+        "choices": [
+            "Terraform automatically orders creation",
+            "Terraform throws an error",
+            "Terraform ignores the reference",
+            "Terraform creates a placeholder value"
+        ],
+        "answer": [
+            0
+        ],
+        "explain": "Terraform builds a dependency graph and ensures resources are created in the correct order.",
+        "tags": [
+            "terraform",
+            "dependencies",
+            "resource addressing"
+        ],
+        "difficulty": "medium",
+        "focus": "8e",
+        "category": "Resource Addressing and Parameters",
+        "multiple": false
+    },
+    {
+        "id": "8e_15",
+        "q": "Which special syntax allows referencing all instances of a resource?",
+        "choices": [
+            "resource_type.name[*].attribute",
+            "resource_type.name[].attribute",
+            "resource_type.name.all.attribute",
+            "resource_type.name[0:*].attribute"
+        ],
+        "answer": [
+            0
+        ],
+        "explain": "The splat expression [*] retrieves a list of the attribute from all instances.",
+        "tags": [
+            "terraform",
+            "splat",
+            "resource addressing"
+        ],
+        "difficulty": "medium",
+        "focus": "8e",
+        "category": "Resource Addressing and Parameters",
+        "multiple": false
+    },
+    {
+        "id": "8e_16",
+        "q": "What is a valid use case for using -target in terraform plan?",
+        "choices": [
+            "Testing changes to a specific resource",
+            "Skipping all dependency checks",
+            "Bypassing state management",
+            "Removing a resource from state"
+        ],
+        "answer": [
+            0
+        ],
+        "explain": "-target can be used to preview changes to a specific resource and its dependencies.",
+        "tags": [
+            "terraform",
+            "target",
+            "plan"
+        ],
+        "difficulty": "medium",
+        "focus": "8e",
+        "category": "Resource Addressing and Parameters",
+        "multiple": false
+    },
+    {
+        "id": "8e_17",
+        "q": "What is the resource address format for a module's resource?",
+        "choices": [
+            "module.<module_name>.<resource_type>.<name>",
+            "<module_name>.<resource_type>.<name>",
+            "resource.module.<module_name>.<name>",
+            "module.<name>.<name>"
+        ],
+        "answer": [
+            0
+        ],
+        "explain": "Resources inside modules are referenced with module.<module_name>.<resource_type>.<name>.",
+        "tags": [
+            "terraform",
+            "modules",
+            "resource addressing"
+        ],
+        "difficulty": "medium",
+        "focus": "8e",
+        "category": "Resource Addressing and Parameters",
+        "multiple": false
+    },
+    {
+        "id": "8e_18",
+        "q": "Which dependency type is created when a resource parameter references another resource's attribute?",
+        "choices": [
+            "Implicit dependency",
+            "Explicit dependency",
+            "Manual dependency",
+            "Hard dependency"
+        ],
+        "answer": [
+            0
+        ],
+        "explain": "Terraform automatically infers dependencies when a resource references another resource's attributes.",
+        "tags": [
+            "terraform",
+            "implicit dependency",
+            "resource addressing"
+        ],
+        "difficulty": "easy",
+        "focus": "8e",
+        "category": "Resource Addressing and Parameters",
+        "multiple": false
+    },
+    {
+        "id": "8e_19",
+        "q": "Which keyword creates explicit dependencies in Terraform?",
+        "choices": [
+            "depends_on",
+            "require",
+            "link_to",
+            "dependency"
+        ],
+        "answer": [
+            0
+        ],
+        "explain": "depends_on explicitly defines a dependency between resources when it cannot be inferred.",
+        "tags": [
+            "terraform",
+            "depends_on",
+            "dependencies"
+        ],
+        "difficulty": "easy",
+        "focus": "8e",
+        "category": "Resource Addressing and Parameters",
+        "multiple": false
+    },
+    {
+        "id": "8e_20",
+        "q": "Which of the following are true about splat expressions in Terraform?",
+        "choices": [
+            "They can extract attributes from all resource instances",
+            "They can only be used with for_each",
+            "They return a list of values",
+            "They sort the results alphabetically"
+        ],
+        "answer": [
+            0,
+            2
+        ],
+        "explain": "Splat expressions work with both count and for_each to return lists of values from all instances.",
+        "tags": [
+            "terraform",
+            "splat",
+            "resource addressing"
+        ],
+        "difficulty": "medium",
+        "focus": "8e",
+        "category": "Resource Addressing and Parameters",
+        "multiple": true
+    },
+    {
+        "id": "8e_21",
+        "q": "How can you reference the output 'bucket_name' from a module named 'storage'?",
+        "choices": [
+            "module.storage.bucket_name",
+            "storage.output.bucket_name",
+            "output.storage.bucket_name",
+            "module.output.storage.bucket_name"
+        ],
+        "answer": [
+            0
+        ],
+        "explain": "Outputs from modules are accessed via module.<module_name>.<output_name>.",
+        "tags": [
+            "terraform",
+            "modules",
+            "outputs"
+        ],
+        "difficulty": "easy",
+        "focus": "8e",
+        "category": "Resource Addressing and Parameters",
+        "multiple": false
+    },
+    {
+        "id": "8e_22",
+        "q": "If you use count with a resource and later reduce the count value, what happens?",
+        "choices": [
+            "Terraform destroys the extra instances",
+            "Terraform keeps the extra instances in state",
+            "Terraform renames the extra instances",
+            "Terraform ignores the change"
+        ],
+        "answer": [
+            0
+        ],
+        "explain": "Reducing count destroys the extra indexed resources not covered by the new count value.",
+        "tags": [
+            "terraform",
+            "count",
+            "resource addressing"
+        ],
+        "difficulty": "medium",
+        "focus": "8e",
+        "category": "Resource Addressing and Parameters",
+        "multiple": false
+    },
+    {
+        "id": "8e_23",
+        "q": "Which expression retrieves the IDs of all instances created with for_each?",
+        "choices": [
+            "values(resource_type.name)[*].id",
+            "resource_type.name[*].id",
+            "for_each(resource_type.name).id",
+            "all(resource_type.name).id"
+        ],
+        "answer": [
+            0
+        ],
+        "explain": "values() converts the for_each map into a list, and splat syntax retrieves the id attribute.",
+        "tags": [
+            "terraform",
+            "for_each",
+            "resource addressing"
+        ],
+        "difficulty": "hard",
+        "focus": "8e",
+        "category": "Resource Addressing and Parameters",
+        "multiple": false
+    },
+    {
+        "id": "8e_24",
+        "q": "Which of these can be part of a resource address?",
+        "choices": [
+            "Resource type",
+            "Resource name",
+            "Instance key or index",
+            "Provider alias"
+        ],
+        "answer": [
+            0,
+            1,
+            2,
+            3
+        ],
+        "explain": "A resource address can include the type, name, instance index or key, and optionally a provider alias.",
+        "tags": [
+            "terraform",
+            "resource addressing",
+            "components"
+        ],
+        "difficulty": "medium",
+        "focus": "8e",
+        "category": "Resource Addressing and Parameters",
+        "multiple": true
+    },
+    {
+        "id": "8e_25",
+        "q": "What is the purpose of references to named values in Terraform?",
+        "choices": [
+            "They allow using variables, locals, and outputs across configurations",
+            "They allow importing state from other workspaces",
+            "They create implicit dependencies",
+            "They replace module definitions"
+        ],
+        "answer": [
+            0,
+            2
+        ],
+        "explain": "References to named values let you use variables, locals, and outputs elsewhere in the configuration, and they create implicit dependencies when referencing other resources.",
+        "tags": [
+            "terraform",
+            "references",
+            "named values"
+        ],
+        "difficulty": "medium",
+        "focus": "8e",
+        "category": "Resource Addressing and Parameters",
+        "multiple": true
+    }
+]

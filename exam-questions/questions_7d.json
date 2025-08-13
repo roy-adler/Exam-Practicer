@@ -1,0 +1,254 @@
+[
+  {
+    "id": "7d_001",
+    "q": "Which Terraform backend type stores state locally on your machine and is not shared between team members?",
+    "choices": [
+      "local",
+      "remote",
+      "S3",
+      "Consul"
+    ],
+    "answer": [
+      0
+    ],
+    "explain": "The local backend stores Terraform state files locally on the machine where Terraform is running, making it unsuitable for team collaboration.",
+    "tags": [
+      "terraform",
+      "backend",
+      "local",
+      "state",
+      "team"
+    ],
+    "difficulty": "easy",
+    "focus": "7d",
+    "category": "Backend Types",
+    "multiple": false
+  },
+  {
+    "id": "7d_002",
+    "q": "Which backend type is most commonly used to store state in AWS and supports state locking with DynamoDB?",
+    "choices": [
+      "S3",
+      "local",
+      "gcs",
+      "remote"
+    ],
+    "answer": [
+      0
+    ],
+    "explain": "The S3 backend stores state in AWS S3 buckets and uses DynamoDB for state locking, making it a popular choice for AWS environments.",
+    "tags": [
+      "terraform",
+      "backend",
+      "s3",
+      "aws",
+      "dynamodb",
+      "locking"
+    ],
+    "difficulty": "easy",
+    "focus": "7d",
+    "category": "Backend Types",
+    "multiple": false
+  },
+  {
+    "id": "7d_003",
+    "q": "The 'remote' backend in Terraform is typically associated with which HashiCorp product?",
+    "choices": [
+      "HCP Terraform",
+      "Vault",
+      "Nomad",
+      "Consul"
+    ],
+    "answer": [
+      0
+    ],
+    "explain": "The remote backend is designed to work with HashiCorp Cloud Platform (HCP) Terraform, formerly known as Terraform Cloud.",
+    "tags": [
+      "terraform",
+      "backend",
+      "remote",
+      "hcp",
+      "cloud"
+    ],
+    "difficulty": "easy",
+    "focus": "7d",
+    "category": "Backend Types",
+    "multiple": false
+  },
+  {
+    "id": "7d_004",
+    "q": "Which backend type allows you to store state in Google Cloud Storage?",
+    "choices": [
+      "gcs",
+      "azurerm",
+      "S3",
+      "consul"
+    ],
+    "answer": [
+      0
+    ],
+    "explain": "The gcs backend stores Terraform state in Google Cloud Storage buckets, providing a native GCP solution for state management.",
+    "tags": [
+      "terraform",
+      "backend",
+      "gcs",
+      "google",
+      "cloud-storage"
+    ],
+    "difficulty": "easy",
+    "focus": "7d",
+    "category": "Backend Types",
+    "multiple": false
+  },
+  {
+    "id": "7d_005",
+    "q": "What is the main advantage of using a remote backend over a local backend?",
+    "choices": [
+      "Supports collaboration and locking",
+      "Faster execution",
+      "No configuration required",
+      "Works offline"
+    ],
+    "answer": [
+      0
+    ],
+    "explain": "Remote backends enable team collaboration through state sharing and provide state locking to prevent concurrent modifications.",
+    "tags": [
+      "terraform",
+      "backend",
+      "remote",
+      "collaboration",
+      "locking"
+    ],
+    "difficulty": "medium",
+    "focus": "7d",
+    "category": "Backend Types",
+    "multiple": false
+  },
+  {
+    "id": "7d_006",
+    "q": "Which backend type supports storing Terraform state in Azure Blob Storage?",
+    "choices": [
+      "azurerm",
+      "S3",
+      "gcs",
+      "remote"
+    ],
+    "answer": [
+      0
+    ],
+    "explain": "The azurerm backend stores Terraform state in Azure Blob Storage containers, providing a native Azure solution.",
+    "tags": [
+      "terraform",
+      "backend",
+      "azurerm",
+      "azure",
+      "blob-storage"
+    ],
+    "difficulty": "easy",
+    "focus": "7d",
+    "category": "Backend Types",
+    "multiple": false
+  },
+  {
+    "id": "7d_007",
+    "q": "When using the Consul backend, Terraform state is stored in which key-value store system?",
+    "choices": [
+      "Consul KV",
+      "Etcd",
+      "Redis",
+      "Vault"
+    ],
+    "answer": [
+      0
+    ],
+    "explain": "The Consul backend stores Terraform state in Consul's key-value (KV) store, leveraging Consul's distributed nature.",
+    "tags": [
+      "terraform",
+      "backend",
+      "consul",
+      "kv",
+      "distributed"
+    ],
+    "difficulty": "medium",
+    "focus": "7d",
+    "category": "Backend Types",
+    "multiple": false
+  },
+  {
+    "id": "7d_008",
+    "q": "Which backend type is best suited for storing Terraform state securely and centrally for multiple teams in a large organization using HashiCorp tools?",
+    "choices": [
+      "remote",
+      "local",
+      "S3",
+      "azurerm"
+    ],
+    "answer": [
+      0
+    ],
+    "explain": "The remote backend (HCP Terraform) provides enterprise-grade features like team management, policy enforcement, and centralized state management.",
+    "tags": [
+      "terraform",
+      "backend",
+      "remote",
+      "enterprise",
+      "teams"
+    ],
+    "difficulty": "medium",
+    "focus": "7d",
+    "category": "Backend Types",
+    "multiple": false
+  },
+  {
+    "id": "7d_009",
+    "q": "What is a key disadvantage of the local backend in a team environment?",
+    "choices": [
+      "No locking or collaboration",
+      "Requires internet connection",
+      "Slow performance",
+      "Cannot run terraform apply"
+    ],
+    "answer": [
+      0
+    ],
+    "explain": "The local backend lacks state locking and collaboration features, making it unsuitable for team environments where multiple users need access.",
+    "tags": [
+      "terraform",
+      "backend",
+      "local",
+      "limitations",
+      "team"
+    ],
+    "difficulty": "medium",
+    "focus": "7d",
+    "category": "Backend Types",
+    "multiple": false
+  },
+  {
+    "id": "7d_010",
+    "q": "Which backend type would be most appropriate for a small development team working on AWS infrastructure?",
+    "choices": [
+      "local",
+      "S3 with DynamoDB",
+      "remote",
+      "consul"
+    ],
+    "answer": [
+      1
+    ],
+    "explain": "S3 with DynamoDB provides a good balance of cost-effectiveness, reliability, and team collaboration features for AWS-based development teams.",
+    "tags": [
+      "terraform",
+      "backend",
+      "s3",
+      "dynamodb",
+      "aws",
+      "development"
+    ],
+    "difficulty": "medium",
+    "focus": "7d",
+    "category": "Backend Types",
+    "multiple": false
+  }
+]

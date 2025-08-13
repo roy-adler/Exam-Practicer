@@ -1,0 +1,200 @@
+[
+    {
+        "id": "iac_1b_001",
+        "q": "What are advantages of using reusable modules (an IaC pattern)? (Select all that apply)",
+        "choices": [
+            "Encapsulate best practices behind simple inputs/outputs",
+            "Reduce duplication (DRY) across environments",
+            "Guarantee zero bugs in all deployments",
+            "Enable consistent provisioning at scale"
+        ],
+        "answer": [
+            0,
+            1,
+            3
+        ],
+        "explain": "Modules package patterns, reduce copy/paste, and promote consistency. They don’t guarantee perfection.",
+        "tags": [
+            "modules",
+            "patterns",
+            "reusability"
+        ],
+        "difficulty": "easy",
+        "focus": "1b",
+        "category": "IaC patterns advantages",
+        "multiple": true
+    },
+    {
+        "id": "iac_1b_002",
+        "q": "How do immutable infrastructure patterns help?",
+        "choices": [
+            "Avoid long‑lived pets by recreating resources for changes",
+            "Reduce configuration drift",
+            "Require manual hotfixes on servers",
+            "Facilitate blue/green or canary deployments"
+        ],
+        "answer": [
+            0,
+            1,
+            3
+        ],
+        "explain": "Immutable patterns favor replacement over in‑place mutation, limiting drift and enabling safer rollout strategies.",
+        "tags": [
+            "immutable",
+            "blue-green",
+            "drift"
+        ],
+        "difficulty": "medium",
+        "focus": "1b",
+        "category": "IaC patterns advantages",
+        "multiple": true
+    },
+    {
+        "id": "iac_1b_003",
+        "q": "Why is separating environments (e.g., dev/stage/prod) using workspaces, directories, or repos considered a good IaC pattern?",
+        "choices": [
+            "Isolates state and blast radius",
+            "Enables different variables and policies per environment",
+            "Eliminates the need for access controls",
+            "Supports progressive delivery and testing"
+        ],
+        "answer": [
+            0,
+            1,
+            3
+        ],
+        "explain": "Environment separation limits risk, allows tailored configuration, and supports gradual promotion of changes.",
+        "tags": [
+            "environments",
+            "workspaces",
+            "state"
+        ],
+        "difficulty": "medium",
+        "focus": "1b",
+        "category": "IaC patterns advantages",
+        "multiple": true
+    },
+    {
+        "id": "iac_1b_004",
+        "q": "What advantages come from storing IaC in a VCS with pull requests and code reviews?",
+        "choices": [
+            "Auditable change history",
+            "Peer review to catch issues earlier",
+            "Automated checks via CI/CD",
+            "Eliminates the need for planning changes"
+        ],
+        "answer": [
+            0,
+            1,
+            2
+        ],
+        "explain": "VCS + PRs provide traceability, collaboration, and automation gates; you still need plans to preview impact.",
+        "tags": [
+            "git",
+            "governance",
+            "ci/cd"
+        ],
+        "difficulty": "easy",
+        "focus": "1b",
+        "category": "IaC patterns advantages",
+        "multiple": true
+    },
+    {
+        "id": "iac_1b_005",
+        "q": "Which are advantages of using parameterization (variables) in IaC modules? (Select all that apply)",
+        "choices": [
+            "Enables reusing the same module in different contexts",
+            "Allows enforcing input validation and sensible defaults",
+            "Forces hard‑coding values in multiple files",
+            "Improves readability of intent"
+        ],
+        "answer": [
+            0,
+            1,
+            3
+        ],
+        "explain": "Parameters make modules flexible and safe through validation and defaults, while expressing intent clearly.",
+        "tags": [
+            "variables",
+            "modules",
+            "validation"
+        ],
+        "difficulty": "easy",
+        "focus": "1b",
+        "category": "IaC patterns advantages",
+        "multiple": true
+    },
+    {
+        "id": "iac_1b_006",
+        "q": "How do policy‑as‑code and guardrails complement IaC?",
+        "choices": [
+            "They validate configurations against rules before apply",
+            "They remove the need for access controls",
+            "They help enforce cost, security, and compliance standards at scale",
+            "They make every apply a manual step"
+        ],
+        "answer": [
+            0,
+            2
+        ],
+        "explain": "Policies evaluate plans/configs to enforce organizational standards without replacing access controls.",
+        "tags": [
+            "policy-as-code",
+            "governance",
+            "security"
+        ],
+        "difficulty": "medium",
+        "focus": "1b",
+        "category": "IaC patterns advantages",
+        "multiple": true
+    },
+    {
+        "id": "iac_1b_007",
+        "q": "What is an advantage of using outputs and remote state consumption as a pattern?",
+        "choices": [
+            "Enables composing stacks where one layer consumes another’s outputs",
+            "Removes the need to document interfaces",
+            "Helps avoid hard‑coding resource identifiers",
+            "Guarantees no cyclic dependencies in any design"
+        ],
+        "answer": [
+            0,
+            2
+        ],
+        "explain": "Sharing outputs between stacks avoids hard‑coding and supports layered architectures.",
+        "tags": [
+            "outputs",
+            "remote-state",
+            "composition"
+        ],
+        "difficulty": "medium",
+        "focus": "1b",
+        "category": "IaC patterns advantages",
+        "multiple": true
+    },
+    {
+        "id": "iac_1b_008",
+        "q": "Why adopt standardized naming/tagging conventions as an IaC pattern? (Select all that apply)",
+        "choices": [
+            "Improve searchability and inventory management",
+            "Enable cost allocation and ownership tracking",
+            "Increase drift by encouraging manual edits",
+            "Support automation that relies on predictable keys"
+        ],
+        "answer": [
+            0,
+            1,
+            3
+        ],
+        "explain": "Consistent names/tags make resources findable, attributable, and machine‑addressable for automation.",
+        "tags": [
+            "tagging",
+            "governance",
+            "cost"
+        ],
+        "difficulty": "easy",
+        "focus": "1b",
+        "category": "IaC patterns advantages",
+        "multiple": true
+    }
+]
