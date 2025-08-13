@@ -8,9 +8,17 @@
             "terraform init",
             "terraform connect"
         ],
-        "answer": [0],
+        "answer": [
+            0
+        ],
         "explain": "The `terraform login` command opens a browser to authenticate with Terraform Cloud and stores the token locally.",
-        "tags": ["terraform", "cli", "login", "authentication", "cloud"],
+        "tags": [
+            "terraform",
+            "cli",
+            "login",
+            "authentication",
+            "cloud"
+        ],
         "difficulty": "easy",
         "focus": "7c",
         "category": "Authentication",
@@ -25,9 +33,16 @@
             "In provider-specific credential files",
             "In environment variables"
         ],
-        "answer": [0],
+        "answer": [
+            0
+        ],
         "explain": "Terraform stores authentication tokens in the `.terraformrc` (Unix) or `terraform.rc` (Windows) file in the user's home directory.",
-        "tags": ["terraform", "credentials", "terraformrc", "authentication"],
+        "tags": [
+            "terraform",
+            "credentials",
+            "terraformrc",
+            "authentication"
+        ],
         "difficulty": "medium",
         "focus": "7c",
         "category": "Authentication",
@@ -42,9 +57,17 @@
             "TF_TOKEN_app.terraform.io",
             "TERRAFORM_CLOUD_AUTH"
         ],
-        "answer": [2],
+        "answer": [
+            2
+        ],
         "explain": "The `TF_TOKEN_app.terraform.io` environment variable allows non-interactive authentication to Terraform Cloud.",
-        "tags": ["terraform", "environment", "variables", "authentication", "cloud"],
+        "tags": [
+            "terraform",
+            "environment",
+            "variables",
+            "authentication",
+            "cloud"
+        ],
         "difficulty": "hard",
         "focus": "7c",
         "category": "Authentication",
@@ -59,9 +82,17 @@
             "SSH key",
             "GPG key"
         ],
-        "answer": [1],
+        "answer": [
+            1
+        ],
         "explain": "AWS S3 backend requires AWS access keys (or IAM roles) for authentication to access the S3 bucket and DynamoDB table.",
-        "tags": ["terraform", "backend", "s3", "aws", "authentication"],
+        "tags": [
+            "terraform",
+            "backend",
+            "s3",
+            "aws",
+            "authentication"
+        ],
         "difficulty": "easy",
         "focus": "7c",
         "category": "Authentication",
@@ -76,9 +107,17 @@
             "s3",
             "local"
         ],
-        "answer": [0],
+        "answer": [
+            0
+        ],
         "explain": "The AzureRM backend requires a service principal with appropriate permissions to access Azure Blob Storage.",
-        "tags": ["terraform", "backend", "azurerm", "azure", "service-principal"],
+        "tags": [
+            "terraform",
+            "backend",
+            "azurerm",
+            "azure",
+            "service-principal"
+        ],
         "difficulty": "medium",
         "focus": "7c",
         "category": "Authentication",
@@ -93,9 +132,17 @@
             "Faster initialization",
             "Supports multiple backends"
         ],
-        "answer": [1],
+        "answer": [
+            1
+        ],
         "explain": "Environment variables prevent credentials from being stored in plain text files that might be committed to version control.",
-        "tags": ["terraform", "authentication", "environment", "variables", "security"],
+        "tags": [
+            "terraform",
+            "authentication",
+            "environment",
+            "variables",
+            "security"
+        ],
         "difficulty": "medium",
         "focus": "7c",
         "category": "Authentication",
@@ -110,9 +157,17 @@
             "GCP_KEY_PATH",
             "TF_GCP_AUTH"
         ],
-        "answer": [1],
+        "answer": [
+            1
+        ],
         "explain": "The `GOOGLE_APPLICATION_CREDENTIALS` environment variable points to the service account key JSON file for GCS backend authentication.",
-        "tags": ["terraform", "backend", "gcs", "google", "authentication"],
+        "tags": [
+            "terraform",
+            "backend",
+            "gcs",
+            "google",
+            "authentication"
+        ],
         "difficulty": "easy",
         "focus": "7c",
         "category": "Authentication",
@@ -127,9 +182,17 @@
             "Interactive OAuth",
             "SSH key authentication"
         ],
-        "answer": [1],
+        "answer": [
+            1
+        ],
         "explain": "Environment variable tokens are ideal for CI/CD pipelines as they provide non-interactive authentication without manual intervention.",
-        "tags": ["terraform", "ci-cd", "pipeline", "authentication", "cloud"],
+        "tags": [
+            "terraform",
+            "ci-cd",
+            "pipeline",
+            "authentication",
+            "cloud"
+        ],
         "difficulty": "medium",
         "focus": "7c",
         "category": "Authentication",
@@ -144,9 +207,17 @@
             "workspace_org",
             "account"
         ],
-        "answer": [1],
+        "answer": [
+            1
+        ],
         "explain": "The `organization` parameter in the remote backend configuration specifies the Terraform Cloud organization name.",
-        "tags": ["terraform", "backend", "remote", "cloud", "organization"],
+        "tags": [
+            "terraform",
+            "backend",
+            "remote",
+            "cloud",
+            "organization"
+        ],
         "difficulty": "medium",
         "focus": "7c",
         "category": "Authentication",
@@ -161,9 +232,17 @@
             "Configuration file",
             "Manual login"
         ],
-        "answer": [0],
+        "answer": [
+            0
+        ],
         "explain": "EC2 instances with IAM roles use the instance metadata service to automatically obtain temporary credentials.",
-        "tags": ["terraform", "aws", "iam", "ec2", "authentication"],
+        "tags": [
+            "terraform",
+            "aws",
+            "iam",
+            "ec2",
+            "authentication"
+        ],
         "difficulty": "medium",
         "focus": "7c",
         "category": "Authentication",

@@ -1,347 +1,580 @@
 [
-    {
-      "id": "8f_1",
-      "q": "What is the primary purpose of Terraform built-in functions?",
-      "choices": [
-        "To perform data transformations within configurations",
-        "To execute shell commands",
-        "To create new providers",
-        "To modify Terraform CLI behavior"
-      ],
-      "answer": [0],
-      "explain": "Terraform functions are used to transform and manipulate values inside configurations. They cannot run shell commands or modify CLI behavior.",
-      "tags": ["terraform", "functions", "built-in"],
-      "difficulty": "easy",
-      "focus": "8f",
-      "category": "Built-in Functions",
-      "multiple": false
-    },
-    {
-      "id": "8f_2",
-      "q": "Which function returns the number of elements in a list or map?",
-      "choices": ["count()", "len()", "length()", "size()"],
-      "answer": [2],
-      "explain": "The length() function returns the number of elements in a list, map, or set.",
-      "tags": ["terraform", "functions", "length"],
-      "difficulty": "easy",
-      "focus": "8f",
-      "category": "Built-in Functions",
-      "multiple": false
-    },
-    {
-      "id": "8f_3",
-      "q": "Which function merges multiple maps into one?",
-      "choices": ["merge()", "combine()", "join()", "mapmerge()"],
-      "answer": [0],
-      "explain": "merge() combines multiple maps into a single map, with later arguments overwriting earlier keys if duplicated.",
-      "tags": ["terraform", "functions", "merge"],
-      "difficulty": "easy",
-      "focus": "8f",
-      "category": "Built-in Functions",
-      "multiple": false
-    },
-    {
-      "id": "8f_4",
-      "q": "Which function should you use to safely retrieve a value from a map with a default if the key doesn't exist?",
-      "choices": ["lookup()", "get()", "mapget()", "find()"],
-      "answer": [0],
-      "explain": "lookup(map, key, default) returns the value for a key or a default if the key is not found.",
-      "tags": ["terraform", "functions", "lookup"],
-      "difficulty": "easy",
-      "focus": "8f",
-      "category": "Built-in Functions",
-      "multiple": false
-    },
-    {
-      "id": "8f_5",
-      "q": "What does the coalesce() function return?",
-      "choices": [
-        "The first non-null value in its arguments",
-        "A merged list of all arguments",
-        "The last non-empty string",
-        "The smallest number in a list"
-      ],
-      "answer": [0],
-      "explain": "coalesce() returns the first argument that is not null or an empty string.",
-      "tags": ["terraform", "functions", "coalesce"],
-      "difficulty": "medium",
-      "focus": "8f",
-      "category": "Built-in Functions",
-      "multiple": false
-    },
-    {
-      "id": "8f_6",
-      "q": "Which function splits a string into a list based on a delimiter?",
-      "choices": ["split()", "explode()", "separate()", "string_split()"],
-      "answer": [0],
-      "explain": "split(delimiter, string) returns a list by splitting the string at each delimiter occurrence.",
-      "tags": ["terraform", "functions", "split"],
-      "difficulty": "easy",
-      "focus": "8f",
-      "category": "Built-in Functions",
-      "multiple": false
-    },
-    {
-      "id": "8f_7",
-      "q": "Which function joins a list of strings into a single string with a given separator?",
-      "choices": ["merge()", "join()", "concat()", "combine()"],
-      "answer": [1],
-      "explain": "join(separator, list) concatenates list elements into a single string with the separator between them.",
-      "tags": ["terraform", "functions", "join"],
-      "difficulty": "easy",
-      "focus": "8f",
-      "category": "Built-in Functions",
-      "multiple": false
-    },
-    {
-      "id": "8f_8",
-      "q": "What does the element() function do in Terraform?",
-      "choices": [
-        "Retrieves a list element by index, wrapping around if the index is out of range",
-        "Returns the last element in a list",
-        "Finds an element in a list by value",
-        "Creates a new element in a list"
-      ],
-      "answer": [0],
-      "explain": "element(list, index) retrieves an item by index, cycling through if the index exceeds list length.",
-      "tags": ["terraform", "functions", "element"],
-      "difficulty": "medium",
-      "focus": "8f",
-      "category": "Built-in Functions",
-      "multiple": false
-    },
-    {
-      "id": "8f_9",
-      "q": "Which function removes duplicate elements from a list?",
-      "choices": ["unique()", "distinct()", "set()", "toset()"],
-      "answer": [0, 3],
-      "explain": "unique(list) removes duplicates while keeping order; toset(list) removes duplicates but returns an unordered set.",
-      "tags": ["terraform", "functions", "unique"],
-      "difficulty": "medium",
-      "focus": "8f",
-      "category": "Built-in Functions",
-      "multiple": true
-    },
-    {
-      "id": "8f_10",
-      "q": "Which function returns the current timestamp?",
-      "choices": ["time()", "timestamp()", "now()", "current_time()"],
-      "answer": [1],
-      "explain": "timestamp() returns the current UTC timestamp in RFC 3339 format.",
-      "tags": ["terraform", "functions", "timestamp"],
-      "difficulty": "easy",
-      "focus": "8f",
-      "category": "Built-in Functions",
-      "multiple": false
-    },
-    {
-      "id": "8f_11",
-      "q": "What does the file() function do?",
-      "choices": [
-        "Reads the contents of a file into a string",
-        "Creates a file on disk",
-        "Deletes a file",
-        "Writes a string to a file"
-      ],
-      "answer": [0],
-      "explain": "file(path) reads the contents of the specified file as a string.",
-      "tags": ["terraform", "functions", "file"],
-      "difficulty": "easy",
-      "focus": "8f",
-      "category": "Built-in Functions",
-      "multiple": false
-    },
-    {
-      "id": "8f_12",
-      "q": "Which function encodes a string into Base64 format?",
-      "choices": ["base64encode()", "encode64()", "b64encode()", "string_to_base64()"],
-      "answer": [0],
-      "explain": "base64encode() converts a string into its Base64 representation.",
-      "tags": ["terraform", "functions", "base64"],
-      "difficulty": "easy",
-      "focus": "8f",
-      "category": "Built-in Functions",
-      "multiple": false
-    },
-    {
-      "id": "8f_13",
-      "q": "Which function generates a cryptographic hash of a given string?",
-      "choices": ["hash()", "crypto()", "md5()", "sha256()"],
-      "answer": [2, 3],
-      "explain": "Terraform provides md5() and sha256() functions for generating hashes of strings or files.",
-      "tags": ["terraform", "functions", "hashing"],
-      "difficulty": "medium",
-      "focus": "8f",
-      "category": "Built-in Functions",
-      "multiple": true
-    },
-    {
-      "id": "8f_14",
-      "q": "What does the can() function do?",
-      "choices": [
-        "Checks if an expression can be evaluated without error",
-        "Checks if a value is non-null",
-        "Checks if a value is in a list",
-        "Checks if a file exists"
-      ],
-      "answer": [0],
-      "explain": "can(expression) returns true if the expression can be evaluated without error, otherwise false.",
-      "tags": ["terraform", "functions", "can"],
-      "difficulty": "medium",
-      "focus": "8f",
-      "category": "Built-in Functions",
-      "multiple": false
-    },
-    {
-      "id": "8f_15",
-      "q": "Which function converts a list of strings into a set?",
-      "choices": ["tolist()", "toset()", "list_to_set()", "set()"],
-      "answer": [1],
-      "explain": "toset(list) converts a list into a set, removing duplicates and losing order.",
-      "tags": ["terraform", "functions", "toset"],
-      "difficulty": "easy",
-      "focus": "8f",
-      "category": "Built-in Functions",
-      "multiple": false
-    },
-    {
-      "id": "8f_16",
-      "q": "What is the difference between compact() and distinct()?",
-      "choices": [
-        "compact() removes nulls and empty strings; distinct() removes duplicates",
-        "compact() removes duplicates; distinct() removes nulls",
-        "They are aliases for the same function",
-        "compact() only works on maps; distinct() only on lists"
-      ],
-      "answer": [0],
-      "explain": "compact(list) removes null and empty strings, while distinct(list) removes duplicate elements.",
-      "tags": ["terraform", "functions", "compact", "distinct"],
-      "difficulty": "medium",
-      "focus": "8f",
-      "category": "Built-in Functions",
-      "multiple": false
-    },
-    {
-      "id": "8f_17",
-      "q": "Which function retrieves all keys from a map?",
-      "choices": ["keys()", "mapkeys()", "getkeys()", "listkeys()"],
-      "answer": [0],
-      "explain": "keys(map) returns a list of all the keys from a given map.",
-      "tags": ["terraform", "functions", "keys"],
-      "difficulty": "easy",
-      "focus": "8f",
-      "category": "Built-in Functions",
-      "multiple": false
-    },
-    {
-      "id": "8f_18",
-      "q": "What does the cidrsubnet() function do?",
-      "choices": [
-        "Calculates subnet CIDR blocks within a given CIDR range",
-        "Merges multiple CIDR blocks",
-        "Validates CIDR notation",
-        "Converts a subnet to CIDR"
-      ],
-      "answer": [0],
-      "explain": "cidrsubnet(prefix, newbits, netnum) calculates subnet ranges from an existing CIDR block.",
-      "tags": ["terraform", "functions", "cidrsubnet"],
-      "difficulty": "hard",
-      "focus": "8f",
-      "category": "Built-in Functions",
-      "multiple": false
-    },
-    {
-      "id": "8f_19",
-      "q": "Which function checks if a string matches a given regex?",
-      "choices": ["regex()", "regexmatch()", "matches()", "stringmatch()"],
-      "answer": [1],
-      "explain": "regexmatch(pattern, string) returns a list of matches for the given regular expression.",
-      "tags": ["terraform", "functions", "regexmatch"],
-      "difficulty": "hard",
-      "focus": "8f",
-      "category": "Built-in Functions",
-      "multiple": false
-    },
-    {
-      "id": "8f_20",
-      "q": "Which function can flatten nested lists into a single list?",
-      "choices": ["flatten()", "merge()", "concat()", "listmerge()"],
-      "answer": [0],
-      "explain": "flatten(list) reduces nested lists into a single flat list of values.",
-      "tags": ["terraform", "functions", "flatten"],
-      "difficulty": "medium",
-      "focus": "8f",
-      "category": "Built-in Functions",
-      "multiple": false
-    },
-    {
-      "id": "8f_21",
-      "q": "What does the try() function do?",
-      "choices": [
-        "Returns the first argument that doesn't produce an error",
-        "Checks if a value exists",
-        "Tests a connection",
-        "Tries to run a resource creation"
-      ],
-      "answer": [0],
-      "explain": "try(expr1, expr2, ...) returns the first expression that evaluates successfully without an error.",
-      "tags": ["terraform", "functions", "try"],
-      "difficulty": "medium",
-      "focus": "8f",
-      "category": "Built-in Functions",
-      "multiple": false
-    },
-    {
-      "id": "8f_22",
-      "q": "Which function can be used to parse a JSON string into a Terraform object?",
-      "choices": ["parsejson()", "jsondecode()", "stringtojson()", "fromjson()"],
-      "answer": [1],
-      "explain": "jsondecode() parses a JSON string into Terraform's type system as an object, list, etc.",
-      "tags": ["terraform", "functions", "jsondecode"],
-      "difficulty": "easy",
-      "focus": "8f",
-      "category": "Built-in Functions",
-      "multiple": false
-    },
-    {
-      "id": "8f_23",
-      "q": "Which function converts a Terraform value into a JSON string?",
-      "choices": ["tojson()", "jsonencode()", "stringify()", "encodejson()"],
-      "answer": [1],
-      "explain": "jsonencode() converts Terraform values into a JSON string representation.",
-      "tags": ["terraform", "functions", "jsonencode"],
-      "difficulty": "easy",
-      "focus": "8f",
-      "category": "Built-in Functions",
-      "multiple": false
-    },
-    {
-      "id": "8f_24",
-      "q": "What does the pathexpand() function do?",
-      "choices": [
-        "Expands a file path with environment variables and ~",
-        "Splits a file path into components",
-        "Converts a relative path to absolute",
-        "Validates a file path"
-      ],
-      "answer": [0],
-      "explain": "pathexpand(path) replaces ~ with the user's home directory and expands environment variables.",
-      "tags": ["terraform", "functions", "pathexpand"],
-      "difficulty": "hard",
-      "focus": "8f",
-      "category": "Built-in Functions",
-      "multiple": false
-    },
-    {
-      "id": "8f_25",
-      "q": "Which function can randomize the order of elements in a list?",
-      "choices": ["shuffle()", "randomize()", "listshuffle()", "sort()"],
-      "answer": [0],
-      "explain": "shuffle(list) returns a new list with the elements in a random order.",
-      "tags": ["terraform", "functions", "shuffle"],
-      "difficulty": "hard",
-      "focus": "8f",
-      "category": "Built-in Functions",
-      "multiple": false
-    }
-  ]
+  {
+    "id": "8f_1",
+    "q": "What is the primary purpose of Terraform built-in functions?",
+    "choices": [
+      "To perform data transformations within configurations",
+      "To execute shell commands",
+      "To create new providers",
+      "To modify Terraform CLI behavior"
+    ],
+    "answer": [
+      0
+    ],
+    "explain": "Terraform functions are used to transform and manipulate values inside configurations. They cannot run shell commands or modify CLI behavior.",
+    "tags": [
+      "terraform",
+      "functions",
+      "built-in"
+    ],
+    "difficulty": "easy",
+    "focus": "8f",
+    "category": "Built-in Functions",
+    "multiple": false
+  },
+  {
+    "id": "8f_2",
+    "q": "Which function returns the number of elements in a list or map?",
+    "choices": [
+      "count()",
+      "len()",
+      "length()",
+      "size()"
+    ],
+    "answer": [
+      2
+    ],
+    "explain": "The length() function returns the number of elements in a list, map, or set.",
+    "tags": [
+      "terraform",
+      "functions",
+      "length"
+    ],
+    "difficulty": "easy",
+    "focus": "8f",
+    "category": "Built-in Functions",
+    "multiple": false
+  },
+  {
+    "id": "8f_3",
+    "q": "Which function merges multiple maps into one?",
+    "choices": [
+      "merge()",
+      "combine()",
+      "join()",
+      "mapmerge()"
+    ],
+    "answer": [
+      0
+    ],
+    "explain": "merge() combines multiple maps into a single map, with later arguments overwriting earlier keys if duplicated.",
+    "tags": [
+      "terraform",
+      "functions",
+      "merge"
+    ],
+    "difficulty": "easy",
+    "focus": "8f",
+    "category": "Built-in Functions",
+    "multiple": false
+  },
+  {
+    "id": "8f_4",
+    "q": "Which function should you use to safely retrieve a value from a map with a default if the key doesn't exist?",
+    "choices": [
+      "lookup()",
+      "get()",
+      "mapget()",
+      "find()"
+    ],
+    "answer": [
+      0
+    ],
+    "explain": "lookup(map, key, default) returns the value for a key or a default if the key is not found.",
+    "tags": [
+      "terraform",
+      "functions",
+      "lookup"
+    ],
+    "difficulty": "easy",
+    "focus": "8f",
+    "category": "Built-in Functions",
+    "multiple": false
+  },
+  {
+    "id": "8f_5",
+    "q": "What does the coalesce() function return?",
+    "choices": [
+      "The first non-null value in its arguments",
+      "A merged list of all arguments",
+      "The last non-empty string",
+      "The smallest number in a list"
+    ],
+    "answer": [
+      0
+    ],
+    "explain": "coalesce() returns the first argument that is not null or an empty string.",
+    "tags": [
+      "terraform",
+      "functions",
+      "coalesce"
+    ],
+    "difficulty": "medium",
+    "focus": "8f",
+    "category": "Built-in Functions",
+    "multiple": false
+  },
+  {
+    "id": "8f_6",
+    "q": "Which function splits a string into a list based on a delimiter?",
+    "choices": [
+      "split()",
+      "explode()",
+      "separate()",
+      "string_split()"
+    ],
+    "answer": [
+      0
+    ],
+    "explain": "split(delimiter, string) returns a list by splitting the string at each delimiter occurrence.",
+    "tags": [
+      "terraform",
+      "functions",
+      "split"
+    ],
+    "difficulty": "easy",
+    "focus": "8f",
+    "category": "Built-in Functions",
+    "multiple": false
+  },
+  {
+    "id": "8f_7",
+    "q": "Which function joins a list of strings into a single string with a given separator?",
+    "choices": [
+      "merge()",
+      "join()",
+      "concat()",
+      "combine()"
+    ],
+    "answer": [
+      1
+    ],
+    "explain": "join(separator, list) concatenates list elements into a single string with the separator between them.",
+    "tags": [
+      "terraform",
+      "functions",
+      "join"
+    ],
+    "difficulty": "easy",
+    "focus": "8f",
+    "category": "Built-in Functions",
+    "multiple": false
+  },
+  {
+    "id": "8f_8",
+    "q": "What does the element() function do in Terraform?",
+    "choices": [
+      "Retrieves a list element by index, wrapping around if the index is out of range",
+      "Returns the last element in a list",
+      "Finds an element in a list by value",
+      "Creates a new element in a list"
+    ],
+    "answer": [
+      0
+    ],
+    "explain": "element(list, index) retrieves an item by index, cycling through if the index exceeds list length.",
+    "tags": [
+      "terraform",
+      "functions",
+      "element"
+    ],
+    "difficulty": "medium",
+    "focus": "8f",
+    "category": "Built-in Functions",
+    "multiple": false
+  },
+  {
+    "id": "8f_9",
+    "q": "Which function removes duplicate elements from a list?",
+    "choices": [
+      "unique()",
+      "distinct()",
+      "set()",
+      "toset()"
+    ],
+    "answer": [
+      0,
+      3
+    ],
+    "explain": "unique(list) removes duplicates while keeping order; toset(list) removes duplicates but returns an unordered set.",
+    "tags": [
+      "terraform",
+      "functions",
+      "unique"
+    ],
+    "difficulty": "medium",
+    "focus": "8f",
+    "category": "Built-in Functions",
+    "multiple": true
+  },
+  {
+    "id": "8f_10",
+    "q": "Which function returns the current timestamp?",
+    "choices": [
+      "time()",
+      "timestamp()",
+      "now()",
+      "current_time()"
+    ],
+    "answer": [
+      1
+    ],
+    "explain": "timestamp() returns the current UTC timestamp in RFC 3339 format.",
+    "tags": [
+      "terraform",
+      "functions",
+      "timestamp"
+    ],
+    "difficulty": "easy",
+    "focus": "8f",
+    "category": "Built-in Functions",
+    "multiple": false
+  },
+  {
+    "id": "8f_11",
+    "q": "What does the file() function do?",
+    "choices": [
+      "Reads the contents of a file into a string",
+      "Creates a file on disk",
+      "Deletes a file",
+      "Writes a string to a file"
+    ],
+    "answer": [
+      0
+    ],
+    "explain": "file(path) reads the contents of the specified file as a string.",
+    "tags": [
+      "terraform",
+      "functions",
+      "file"
+    ],
+    "difficulty": "easy",
+    "focus": "8f",
+    "category": "Built-in Functions",
+    "multiple": false
+  },
+  {
+    "id": "8f_12",
+    "q": "Which function encodes a string into Base64 format?",
+    "choices": [
+      "base64encode()",
+      "encode64()",
+      "b64encode()",
+      "string_to_base64()"
+    ],
+    "answer": [
+      0
+    ],
+    "explain": "base64encode() converts a string into its Base64 representation.",
+    "tags": [
+      "terraform",
+      "functions",
+      "base64"
+    ],
+    "difficulty": "easy",
+    "focus": "8f",
+    "category": "Built-in Functions",
+    "multiple": false
+  },
+  {
+    "id": "8f_13",
+    "q": "Which function generates a cryptographic hash of a given string?",
+    "choices": [
+      "hash()",
+      "crypto()",
+      "md5()",
+      "sha256()"
+    ],
+    "answer": [
+      2,
+      3
+    ],
+    "explain": "Terraform provides md5() and sha256() functions for generating hashes of strings or files.",
+    "tags": [
+      "terraform",
+      "functions",
+      "hashing"
+    ],
+    "difficulty": "medium",
+    "focus": "8f",
+    "category": "Built-in Functions",
+    "multiple": true
+  },
+  {
+    "id": "8f_14",
+    "q": "What does the can() function do?",
+    "choices": [
+      "Checks if an expression can be evaluated without error",
+      "Checks if a value is non-null",
+      "Checks if a value is in a list",
+      "Checks if a file exists"
+    ],
+    "answer": [
+      0
+    ],
+    "explain": "can(expression) returns true if the expression can be evaluated without error, otherwise false.",
+    "tags": [
+      "terraform",
+      "functions",
+      "can"
+    ],
+    "difficulty": "medium",
+    "focus": "8f",
+    "category": "Built-in Functions",
+    "multiple": false
+  },
+  {
+    "id": "8f_15",
+    "q": "Which function converts a list of strings into a set?",
+    "choices": [
+      "tolist()",
+      "toset()",
+      "list_to_set()",
+      "set()"
+    ],
+    "answer": [
+      1
+    ],
+    "explain": "toset(list) converts a list into a set, removing duplicates and losing order.",
+    "tags": [
+      "terraform",
+      "functions",
+      "toset"
+    ],
+    "difficulty": "easy",
+    "focus": "8f",
+    "category": "Built-in Functions",
+    "multiple": false
+  },
+  {
+    "id": "8f_16",
+    "q": "What is the difference between compact() and distinct()?",
+    "choices": [
+      "compact() removes nulls and empty strings; distinct() removes duplicates",
+      "compact() removes duplicates; distinct() removes nulls",
+      "They are aliases for the same function",
+      "compact() only works on maps; distinct() only on lists"
+    ],
+    "answer": [
+      0
+    ],
+    "explain": "compact(list) removes null and empty strings, while distinct(list) removes duplicate elements.",
+    "tags": [
+      "terraform",
+      "functions",
+      "compact",
+      "distinct"
+    ],
+    "difficulty": "medium",
+    "focus": "8f",
+    "category": "Built-in Functions",
+    "multiple": false
+  },
+  {
+    "id": "8f_17",
+    "q": "Which function retrieves all keys from a map?",
+    "choices": [
+      "keys()",
+      "mapkeys()",
+      "getkeys()",
+      "listkeys()"
+    ],
+    "answer": [
+      0
+    ],
+    "explain": "keys(map) returns a list of all the keys from a given map.",
+    "tags": [
+      "terraform",
+      "functions",
+      "keys"
+    ],
+    "difficulty": "easy",
+    "focus": "8f",
+    "category": "Built-in Functions",
+    "multiple": false
+  },
+  {
+    "id": "8f_18",
+    "q": "What does the cidrsubnet() function do?",
+    "choices": [
+      "Calculates subnet CIDR blocks within a given CIDR range",
+      "Merges multiple CIDR blocks",
+      "Validates CIDR notation",
+      "Converts a subnet to CIDR"
+    ],
+    "answer": [
+      0
+    ],
+    "explain": "cidrsubnet(prefix, newbits, netnum) calculates subnet ranges from an existing CIDR block.",
+    "tags": [
+      "terraform",
+      "functions",
+      "cidrsubnet"
+    ],
+    "difficulty": "hard",
+    "focus": "8f",
+    "category": "Built-in Functions",
+    "multiple": false
+  },
+  {
+    "id": "8f_19",
+    "q": "Which function checks if a string matches a given regex?",
+    "choices": [
+      "regex()",
+      "regexmatch()",
+      "matches()",
+      "stringmatch()"
+    ],
+    "answer": [
+      1
+    ],
+    "explain": "regexmatch(pattern, string) returns a list of matches for the given regular expression.",
+    "tags": [
+      "terraform",
+      "functions",
+      "regexmatch"
+    ],
+    "difficulty": "hard",
+    "focus": "8f",
+    "category": "Built-in Functions",
+    "multiple": false
+  },
+  {
+    "id": "8f_20",
+    "q": "Which function can flatten nested lists into a single list?",
+    "choices": [
+      "flatten()",
+      "merge()",
+      "concat()",
+      "listmerge()"
+    ],
+    "answer": [
+      0
+    ],
+    "explain": "flatten(list) reduces nested lists into a single flat list of values.",
+    "tags": [
+      "terraform",
+      "functions",
+      "flatten"
+    ],
+    "difficulty": "medium",
+    "focus": "8f",
+    "category": "Built-in Functions",
+    "multiple": false
+  },
+  {
+    "id": "8f_21",
+    "q": "What does the try() function do?",
+    "choices": [
+      "Returns the first argument that doesn't produce an error",
+      "Checks if a value exists",
+      "Tests a connection",
+      "Tries to run a resource creation"
+    ],
+    "answer": [
+      0
+    ],
+    "explain": "try(expr1, expr2, ...) returns the first expression that evaluates successfully without an error.",
+    "tags": [
+      "terraform",
+      "functions",
+      "try"
+    ],
+    "difficulty": "medium",
+    "focus": "8f",
+    "category": "Built-in Functions",
+    "multiple": false
+  },
+  {
+    "id": "8f_22",
+    "q": "Which function can be used to parse a JSON string into a Terraform object?",
+    "choices": [
+      "parsejson()",
+      "jsondecode()",
+      "stringtojson()",
+      "fromjson()"
+    ],
+    "answer": [
+      1
+    ],
+    "explain": "jsondecode() parses a JSON string into Terraform's type system as an object, list, etc.",
+    "tags": [
+      "terraform",
+      "functions",
+      "jsondecode"
+    ],
+    "difficulty": "easy",
+    "focus": "8f",
+    "category": "Built-in Functions",
+    "multiple": false
+  },
+  {
+    "id": "8f_23",
+    "q": "Which function converts a Terraform value into a JSON string?",
+    "choices": [
+      "tojson()",
+      "jsonencode()",
+      "stringify()",
+      "encodejson()"
+    ],
+    "answer": [
+      1
+    ],
+    "explain": "jsonencode() converts Terraform values into a JSON string representation.",
+    "tags": [
+      "terraform",
+      "functions",
+      "jsonencode"
+    ],
+    "difficulty": "easy",
+    "focus": "8f",
+    "category": "Built-in Functions",
+    "multiple": false
+  },
+  {
+    "id": "8f_24",
+    "q": "What does the pathexpand() function do?",
+    "choices": [
+      "Expands a file path with environment variables and ~",
+      "Splits a file path into components",
+      "Converts a relative path to absolute",
+      "Validates a file path"
+    ],
+    "answer": [
+      0
+    ],
+    "explain": "pathexpand(path) replaces ~ with the user's home directory and expands environment variables.",
+    "tags": [
+      "terraform",
+      "functions",
+      "pathexpand"
+    ],
+    "difficulty": "hard",
+    "focus": "8f",
+    "category": "Built-in Functions",
+    "multiple": false
+  },
+  {
+    "id": "8f_25",
+    "q": "Which function can randomize the order of elements in a list?",
+    "choices": [
+      "shuffle()",
+      "randomize()",
+      "listshuffle()",
+      "sort()"
+    ],
+    "answer": [
+      0
+    ],
+    "explain": "shuffle(list) returns a new list with the elements in a random order.",
+    "tags": [
+      "terraform",
+      "functions",
+      "shuffle"
+    ],
+    "difficulty": "hard",
+    "focus": "8f",
+    "category": "Built-in Functions",
+    "multiple": false
+  }
+]

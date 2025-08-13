@@ -8,9 +8,16 @@
       "Store state in AWS S3",
       "Distribute state across multiple team members automatically"
     ],
-    "answer": [0],
+    "answer": [
+      0
+    ],
     "explain": "The local backend stores Terraform state files locally on the machine where Terraform is running, making it the default and simplest backend option.",
-    "tags": ["terraform", "backend", "local", "state"],
+    "tags": [
+      "terraform",
+      "backend",
+      "local",
+      "state"
+    ],
     "difficulty": "easy",
     "focus": "7a",
     "category": "Backend Configuration",
@@ -25,9 +32,17 @@
       "/var/lib/terraform/state.tfstate",
       "./state/local.tfstate"
     ],
-    "answer": [0],
+    "answer": [
+      0
+    ],
     "explain": "The local backend stores state in `./terraform.tfstate` by default, which is in the current working directory.",
-    "tags": ["terraform", "backend", "local", "state", "file"],
+    "tags": [
+      "terraform",
+      "backend",
+      "local",
+      "state",
+      "file"
+    ],
     "difficulty": "easy",
     "focus": "7a",
     "category": "Backend Configuration",
@@ -42,9 +57,16 @@
       "It encrypts state files automatically",
       "It requires network connectivity to operate"
     ],
-    "answer": [1],
+    "answer": [
+      1
+    ],
     "explain": "The local backend is the default backend when no backend configuration is specified in Terraform.",
-    "tags": ["terraform", "backend", "local", "default"],
+    "tags": [
+      "terraform",
+      "backend",
+      "local",
+      "default"
+    ],
     "difficulty": "easy",
     "focus": "7a",
     "category": "Backend Configuration",
@@ -59,9 +81,17 @@
       "It cannot be used with AWS",
       "It requires a separate database"
     ],
-    "answer": [0],
+    "answer": [
+      0
+    ],
     "explain": "The local backend stores state locally and cannot be shared between team members, making collaboration difficult.",
-    "tags": ["terraform", "backend", "local", "limitations", "team"],
+    "tags": [
+      "terraform",
+      "backend",
+      "local",
+      "limitations",
+      "team"
+    ],
     "difficulty": "medium",
     "focus": "7a",
     "category": "Backend Configuration",
@@ -76,9 +106,16 @@
       "backend \"filesystem\" {}",
       "backend \"file\" { location = \"./state\" }"
     ],
-    "answer": [0],
+    "answer": [
+      0
+    ],
     "explain": "You can explicitly configure the local backend with a custom path using the path argument.",
-    "tags": ["terraform", "backend", "local", "configuration"],
+    "tags": [
+      "terraform",
+      "backend",
+      "local",
+      "configuration"
+    ],
     "difficulty": "medium",
     "focus": "7a",
     "category": "Backend Configuration",
@@ -93,9 +130,16 @@
       "s3",
       "All of the above"
     ],
-    "answer": [3],
+    "answer": [
+      3
+    ],
     "explain": "All remote backends (remote, cloud, s3, etc.) are recommended for collaborative work as they support state sharing and locking.",
-    "tags": ["terraform", "backend", "remote", "collaboration"],
+    "tags": [
+      "terraform",
+      "backend",
+      "remote",
+      "collaboration"
+    ],
     "difficulty": "medium",
     "focus": "7a",
     "category": "Backend Configuration",
@@ -110,9 +154,17 @@
       "It uses DynamoDB for locking",
       "It locks state in memory only"
     ],
-    "answer": [0],
+    "answer": [
+      0
+    ],
     "explain": "The local backend does not support state locking, which can lead to state corruption in multi-user environments.",
-    "tags": ["terraform", "backend", "local", "locking", "state"],
+    "tags": [
+      "terraform",
+      "backend",
+      "local",
+      "locking",
+      "state"
+    ],
     "difficulty": "hard",
     "focus": "7a",
     "category": "Backend Configuration",
@@ -127,9 +179,16 @@
       "You need concurrent access from multiple team members",
       "You are testing a new Terraform module locally"
     ],
-    "answer": [2],
+    "answer": [
+      2
+    ],
     "explain": "The local backend is not suitable for concurrent access from multiple team members as it lacks state locking and sharing capabilities.",
-    "tags": ["terraform", "backend", "local", "use-cases"],
+    "tags": [
+      "terraform",
+      "backend",
+      "local",
+      "use-cases"
+    ],
     "difficulty": "medium",
     "focus": "7a",
     "category": "Backend Configuration",
@@ -144,9 +203,16 @@
       "It must be manually recreated",
       "Terraform ignores the old state file"
     ],
-    "answer": [0],
+    "answer": [
+      0
+    ],
     "explain": "When switching backends, Terraform automatically migrates the existing state to the new backend location.",
-    "tags": ["terraform", "backend", "migration", "state"],
+    "tags": [
+      "terraform",
+      "backend",
+      "migration",
+      "state"
+    ],
     "difficulty": "medium",
     "focus": "7a",
     "category": "Backend Configuration",
@@ -161,9 +227,16 @@
       "terraform backend configure",
       "terraform configure"
     ],
-    "answer": [1],
+    "answer": [
+      1
+    ],
     "explain": "The `terraform init` command initializes the backend configuration and downloads necessary providers.",
-    "tags": ["terraform", "backend", "init", "command"],
+    "tags": [
+      "terraform",
+      "backend",
+      "init",
+      "command"
+    ],
     "difficulty": "easy",
     "focus": "7a",
     "category": "Backend Configuration",

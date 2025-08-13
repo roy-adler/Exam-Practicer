@@ -8,9 +8,17 @@
             "They cannot be accessed after apply",
             "They expire after 24 hours"
         ],
-        "answer": [0],
+        "answer": [
+            0
+        ],
         "explain": "Secrets stored in Terraform state files are visible in plaintext to anyone with access to the state file, posing a security risk.",
-        "tags": ["terraform", "state", "secrets", "security", "plaintext"],
+        "tags": [
+            "terraform",
+            "state",
+            "secrets",
+            "security",
+            "plaintext"
+        ],
         "difficulty": "easy",
         "focus": "7g",
         "category": "Security",
@@ -25,9 +33,17 @@
             "Hashed with SHA-256",
             "Compressed and encoded"
         ],
-        "answer": [0],
+        "answer": [
+            0
+        ],
         "explain": "By default, Terraform stores sensitive data in plaintext within the state file, making it vulnerable to exposure.",
-        "tags": ["terraform", "state", "sensitive", "plaintext", "default"],
+        "tags": [
+            "terraform",
+            "state",
+            "sensitive",
+            "plaintext",
+            "default"
+        ],
         "difficulty": "easy",
         "focus": "7g",
         "category": "Security",
@@ -42,9 +58,17 @@
             "hidden = true",
             "encrypt = true"
         ],
-        "answer": [0],
+        "answer": [
+            0
+        ],
         "explain": "The `sensitive = true` argument marks an output as sensitive, which masks its value in CLI output and logs.",
-        "tags": ["terraform", "output", "sensitive", "argument", "masking"],
+        "tags": [
+            "terraform",
+            "output",
+            "sensitive",
+            "argument",
+            "masking"
+        ],
         "difficulty": "easy",
         "focus": "7g",
         "category": "Security",
@@ -59,9 +83,17 @@
             "It cannot be used in other modules",
             "It prevents the value from being saved"
         ],
-        "answer": [0],
+        "answer": [
+            0
+        ],
         "explain": "Marking a value as sensitive masks it in CLI output, but it still appears in plaintext in the state file.",
-        "tags": ["terraform", "sensitive", "cli", "output", "masking"],
+        "tags": [
+            "terraform",
+            "sensitive",
+            "cli",
+            "output",
+            "masking"
+        ],
         "difficulty": "medium",
         "focus": "7g",
         "category": "Security",
@@ -76,9 +108,17 @@
             "Consul",
             "None"
         ],
-        "answer": [0],
+        "answer": [
+            0
+        ],
         "explain": "S3 with Server-Side Encryption (SSE) provides encryption-at-rest for state files stored in S3 buckets.",
-        "tags": ["terraform", "backend", "s3", "encryption", "sse"],
+        "tags": [
+            "terraform",
+            "backend",
+            "s3",
+            "encryption",
+            "sse"
+        ],
         "difficulty": "medium",
         "focus": "7g",
         "category": "Security",
@@ -93,9 +133,17 @@
             "Use base64 encoding",
             "Encrypt logs manually"
         ],
-        "answer": [0],
+        "answer": [
+            0
+        ],
         "explain": "Marking variables or outputs as sensitive prevents their values from appearing in Terraform logs and CLI output.",
-        "tags": ["terraform", "logs", "sensitive", "variables", "outputs"],
+        "tags": [
+            "terraform",
+            "logs",
+            "sensitive",
+            "variables",
+            "outputs"
+        ],
         "difficulty": "medium",
         "focus": "7g",
         "category": "Security",
@@ -110,9 +158,17 @@
             "Mark outputs as sensitive",
             "Limit state file access"
         ],
-        "answer": [1],
+        "answer": [
+            1
+        ],
         "explain": "Storing secrets in plain text in .tfvars files that are committed to Git is a security risk and should be avoided.",
-        "tags": ["terraform", "secrets", "tfvars", "git", "security"],
+        "tags": [
+            "terraform",
+            "secrets",
+            "tfvars",
+            "git",
+            "security"
+        ],
         "difficulty": "medium",
         "focus": "7g",
         "category": "Security",
@@ -127,9 +183,17 @@
             "Only the user who ran terraform apply",
             "Nobody"
         ],
-        "answer": [0],
+        "answer": [
+            0
+        ],
         "explain": "Anyone with access to the backend storage can potentially access secrets stored in the state file, highlighting the importance of proper access controls.",
-        "tags": ["terraform", "backend", "state", "secrets", "access-control"],
+        "tags": [
+            "terraform",
+            "backend",
+            "state",
+            "secrets",
+            "access-control"
+        ],
         "difficulty": "medium",
         "focus": "7g",
         "category": "Security",
@@ -144,9 +208,17 @@
             "Hashed with SHA-256 only",
             "Base64 encoded"
         ],
-        "answer": [0],
+        "answer": [
+            0
+        ],
         "explain": "Terraform Cloud encrypts sensitive values at rest and masks them in the user interface for enhanced security.",
-        "tags": ["terraform", "cloud", "sensitive", "encryption", "ui"],
+        "tags": [
+            "terraform",
+            "cloud",
+            "sensitive",
+            "encryption",
+            "ui"
+        ],
         "difficulty": "hard",
         "focus": "7g",
         "category": "Security",
@@ -161,9 +233,17 @@
             "Store it in an environment variable",
             "Pass it via CLI"
         ],
-        "answer": [0],
+        "answer": [
+            0
+        ],
         "explain": "If a variable value is used in a managed resource, Terraform must store it in the state file to track the resource's current state.",
-        "tags": ["terraform", "variables", "state", "resources", "limitation"],
+        "tags": [
+            "terraform",
+            "variables",
+            "state",
+            "resources",
+            "limitation"
+        ],
         "difficulty": "hard",
         "focus": "7g",
         "category": "Security",

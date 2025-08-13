@@ -1,373 +1,589 @@
 [
-    {
-      "id": "8c_1",
-      "q": "Which of the following are valid Terraform collection types?",
-      "choices": ["list", "map", "set", "tuple"],
-      "answer": [0, 1, 2, 3],
-      "explain": "Terraform supports list, map, set, and tuple as collection types.",
-      "tags": ["terraform", "types", "collections"],
-      "difficulty": "easy",
-      "focus": "8c",
-      "category": "Collection and Structural Types",
-      "multiple": true
-    },
-    {
-      "id": "8c_2",
-      "q": "What is the main difference between a list and a tuple in Terraform?",
-      "choices": [
-        "Lists can only contain strings, tuples can contain multiple types",
-        "Tuples can contain values of different types, lists are type-consistent",
-        "Lists are immutable, tuples are mutable",
-        "Tuples are automatically sorted"
-      ],
-      "answer": [1],
-      "explain": "Lists must have elements of the same type, while tuples can have multiple types in a defined order.",
-      "tags": ["terraform", "list", "tuple"],
-      "difficulty": "medium",
-      "focus": "8c",
-      "category": "Collection and Structural Types",
-      "multiple": false
-    },
-    {
-      "id": "8c_3",
-      "q": "Which Terraform type is unordered and contains unique elements?",
-      "choices": ["list", "set", "map", "tuple"],
-      "answer": [1],
-      "explain": "A set is unordered and enforces uniqueness of its elements.",
-      "tags": ["terraform", "set", "types"],
-      "difficulty": "easy",
-      "focus": "8c",
-      "category": "Collection and Structural Types",
-      "multiple": false
-    },
-    {
-      "id": "8c_4",
-      "q": "Which of the following is a valid type constraint for a map?",
-      "choices": ["map(string)", "map(any)", "map(list(number))", "map(tuple)"],
-      "answer": [0, 1, 2],
-      "explain": "Map values must have a type specified, which can be primitive or another collection. 'map(tuple)' is invalid syntax.",
-      "tags": ["terraform", "map", "types"],
-      "difficulty": "medium",
-      "focus": "8c",
-      "category": "Collection and Structural Types",
-      "multiple": true
-    },
-    {
-      "id": "8c_5",
-      "q": "What is the correct syntax to define a variable of type list(string) in Terraform?",
-      "choices": [
-        "variable \"names\" { type = list(string) }",
-        "variable \"names\" { type = list }",
-        "variable \"names\" { list(string) }",
-        "variable \"names\" { type = [string] }"
-      ],
-      "answer": [0],
-      "explain": "The correct syntax explicitly declares type = list(string). The others are invalid or incomplete.",
-      "tags": ["terraform", "list", "syntax"],
-      "difficulty": "easy",
-      "focus": "8c",
-      "category": "Collection and Structural Types",
-      "multiple": false
-    },
-    {
-      "id": "8c_6",
-      "q": "Which statement about objects in Terraform is correct?",
-      "choices": [
-        "They can only contain strings",
-        "They can contain attributes of multiple types",
-        "They must be converted to maps before use",
-        "They are automatically converted to lists"
-      ],
-      "answer": [1],
-      "explain": "Objects in Terraform can hold multiple attributes, each with its own type.",
-      "tags": ["terraform", "objects", "types"],
-      "difficulty": "easy",
-      "focus": "8c",
-      "category": "Collection and Structural Types",
-      "multiple": false
-    },
-    {
-      "id": "8c_7",
-      "q": "How do you access the value of 'age' in an object variable 'person'?",
-      "choices": ["person.age", "person[\"age\"]", "${person.age}", "var.person.age"],
-      "answer": [0, 1, 3],
-      "explain": "You can use dot or bracket notation, and when inside Terraform config, prefix with var. for variables.",
-      "tags": ["terraform", "objects", "syntax"],
-      "difficulty": "medium",
-      "focus": "8c",
-      "category": "Collection and Structural Types",
-      "multiple": true
-    },
-    {
-      "id": "8c_8",
-      "q": "What is the primary difference between a map and an object in Terraform?",
-      "choices": [
-        "Maps require string keys, objects can have any key type",
-        "Objects have a fixed set of attributes with known types",
-        "Maps enforce key ordering, objects do not",
-        "Objects are mutable while maps are not"
-      ],
-      "answer": [1],
-      "explain": "Maps are flexible key-value pairs with string keys, while objects have a fixed schema with known attribute names and types.",
-      "tags": ["terraform", "map", "object"],
-      "difficulty": "medium",
-      "focus": "8c",
-      "category": "Collection and Structural Types",
-      "multiple": false
-    },
-    {
-      "id": "8c_9",
-      "q": "Which function can convert a list to a set in Terraform?",
-      "choices": ["tolist()", "toset()", "convert_set()", "list_to_set()"],
-      "answer": [1],
-      "explain": "The toset() function converts a list into a set, enforcing uniqueness and removing ordering.",
-      "tags": ["terraform", "functions", "set"],
-      "difficulty": "easy",
-      "focus": "8c",
-      "category": "Collection and Structural Types",
-      "multiple": false
-    },
-    {
-      "id": "8c_10",
-      "q": "If a tuple is defined as tuple([string, number]), which is valid?",
-      "choices": [
-        "[\"apple\", 5]",
-        "[\"apple\", \"orange\"]",
-        "[1, 2]",
-        "[true, 5]"
-      ],
-      "answer": [0],
-      "explain": "tuple([string, number]) expects first element string, second number. Only the first choice matches.",
-      "tags": ["terraform", "tuple", "types"],
-      "difficulty": "medium",
-      "focus": "8c",
-      "category": "Collection and Structural Types",
-      "multiple": false
-    },
-    {
-      "id": "8c_11",
-      "q": "Which Terraform type constraint allows any value?",
-      "choices": ["any", "dynamic", "var", "optional"],
-      "answer": [0],
-      "explain": "The 'any' type constraint allows any valid Terraform value type.",
-      "tags": ["terraform", "types", "any"],
-      "difficulty": "easy",
-      "focus": "8c",
-      "category": "Collection and Structural Types",
-      "multiple": false
-    },
-    {
-      "id": "8c_12",
-      "q": "Which is true about Terraform's set type?",
-      "choices": [
-        "It preserves order of elements",
-        "It cannot contain duplicate elements",
-        "It can contain mixed data types",
-        "It requires explicit typing"
-      ],
-      "answer": [1, 3],
-      "explain": "Sets are unordered and do not allow duplicates. They require type specification, e.g., set(string).",
-      "tags": ["terraform", "set", "types"],
-      "difficulty": "medium",
-      "focus": "8c",
-      "category": "Collection and Structural Types",
-      "multiple": true
-    },
-    {
-      "id": "8c_13",
-      "q": "Which function merges multiple maps in Terraform?",
-      "choices": ["merge()", "combine()", "mapmerge()", "join()"],
-      "answer": [0],
-      "explain": "merge() is the built-in function to combine multiple maps into one.",
-      "tags": ["terraform", "map", "functions"],
-      "difficulty": "easy",
-      "focus": "8c",
-      "category": "Collection and Structural Types",
-      "multiple": false
-    },
-    {
-      "id": "8c_14",
-      "q": "How do you define a variable that accepts either a string or a number?",
-      "choices": [
-        "type = string | number",
-        "type = any",
-        "type = union(string, number)",
-        "Terraform does not allow union types"
-      ],
-      "answer": [3],
-      "explain": "Terraform does not support direct union type constraints. You can use 'any' and validate manually.",
-      "tags": ["terraform", "types", "limitations"],
-      "difficulty": "hard",
-      "focus": "8c",
-      "category": "Collection and Structural Types",
-      "multiple": false
-    },
-    {
-      "id": "8c_15",
-      "q": "What is the result of tolist({a = 1, b = 2})?",
-      "choices": [
-        "[1, 2]",
-        "[\"a\", \"b\"]",
-        "[[\"a\", 1], [\"b\", 2]]",
-        "Error"
-      ],
-      "answer": [3],
-      "explain": "Converting a map directly to a list without extraction is not allowed and results in an error.",
-      "tags": ["terraform", "functions", "tolist"],
-      "difficulty": "hard",
-      "focus": "8c",
-      "category": "Collection and Structural Types",
-      "multiple": false
-    },
-    {
-      "id": "8c_16",
-      "q": "Which syntax defines a variable as an object with two attributes: name (string) and age (number)?",
-      "choices": [
-        "variable \"person\" { type = object({ name = string, age = number }) }",
-        "variable \"person\" { type = map({ name = string, age = number }) }",
-        "variable \"person\" { type = object(name, age) }",
-        "variable \"person\" { object({name, age}) }"
-      ],
-      "answer": [0],
-      "explain": "The correct syntax uses type = object({...}) with attribute definitions.",
-      "tags": ["terraform", "object", "syntax"],
-      "difficulty": "easy",
-      "focus": "8c",
-      "category": "Collection and Structural Types",
-      "multiple": false
-    },
-    {
-      "id": "8c_17",
-      "q": "What happens if you insert duplicate values into a set?",
-      "choices": [
-        "Terraform throws an error",
-        "Duplicates are automatically removed",
-        "Duplicates are preserved",
-        "Terraform converts it to a list"
-      ],
-      "answer": [1],
-      "explain": "Sets automatically remove duplicates, ensuring all elements are unique.",
-      "tags": ["terraform", "set", "duplicates"],
-      "difficulty": "easy",
-      "focus": "8c",
-      "category": "Collection and Structural Types",
-      "multiple": false
-    },
-    {
-      "id": "8c_18",
-      "q": "Which type is most suitable for representing AWS tags in Terraform?",
-      "choices": ["map(string)", "list(string)", "set(string)", "object({})"],
-      "answer": [0],
-      "explain": "AWS tags are best represented as map(string) for key-value pairs.",
-      "tags": ["terraform", "map", "aws"],
-      "difficulty": "medium",
-      "focus": "8c",
-      "category": "Collection and Structural Types",
-      "multiple": false
-    },
-    {
-      "id": "8c_19",
-      "q": "What is the output type of keys({a = 1, b = 2})?",
-      "choices": ["list(string)", "set(string)", "map(string)", "tuple(string)"],
-      "answer": [0],
-      "explain": "keys() returns a list of strings representing the keys of the map.",
-      "tags": ["terraform", "functions", "keys"],
-      "difficulty": "easy",
-      "focus": "8c",
-      "category": "Collection and Structural Types",
-      "multiple": false
-    },
-    {
-      "id": "8c_20",
-      "q": "Which of the following are valid type constraints for a list?",
-      "choices": ["list(string)", "list(number)", "list(any)", "list(object({id=string}))"],
-      "answer": [0, 1, 2, 3],
-      "explain": "Lists can be constrained to any valid Terraform type, including objects.",
-      "tags": ["terraform", "list", "types"],
-      "difficulty": "easy",
-      "focus": "8c",
-      "category": "Collection and Structural Types",
-      "multiple": true
-    },
-    {
-      "id": "8c_21",
-      "q": "Which function converts a map into a list of key-value pairs?",
-      "choices": ["tomap()", "tolist()", "flatten()", "maptolist()"],
-      "answer": [1],
-      "explain": "tolist() can be applied to map values after transformation, but there is no direct maptolist() function.",
-      "tags": ["terraform", "functions", "map"],
-      "difficulty": "hard",
-      "focus": "8c",
-      "category": "Collection and Structural Types",
-      "multiple": false
-    },
-    {
-      "id": "8c_22",
-      "q": "How can you specify that a list must contain unique elements?",
-      "choices": [
-        "Use set() instead of list()",
-        "Use list(unique)",
-        "Add unique constraint to list type",
-        "Terraform automatically enforces uniqueness"
-      ],
-      "answer": [0],
-      "explain": "Using a set type enforces uniqueness, while lists allow duplicates.",
-      "tags": ["terraform", "set", "list"],
-      "difficulty": "medium",
-      "focus": "8c",
-      "category": "Collection and Structural Types",
-      "multiple": false
-    },
-    {
-      "id": "8c_23",
-      "q": "If a variable type is object({name=string, tags=map(string)}), which is a valid value?",
-      "choices": [
-        "{name = \"web\", tags = {env = \"prod\"}}",
-        "{name = 1, tags = {env = \"prod\"}}",
-        "{name = \"web\", tags = [\"prod\"]}",
-        "{name = \"web\"}"
-      ],
-      "answer": [0],
-      "explain": "The name must be string and tags must be a map(string). The other examples violate type constraints.",
-      "tags": ["terraform", "object", "map"],
-      "difficulty": "medium",
-      "focus": "8c",
-      "category": "Collection and Structural Types",
-      "multiple": false
-    },
-    {
-      "id": "8c_24",
-      "q": "What happens when you merge two maps with duplicate keys?",
-      "choices": [
-        "Terraform throws an error",
-        "The last map's value overwrites the previous one",
-        "Both values are stored as a list",
-        "Keys are renamed automatically"
-      ],
-      "answer": [1],
-      "explain": "When merging maps, later values overwrite earlier ones for duplicate keys.",
-      "tags": ["terraform", "map", "merge"],
-      "difficulty": "medium",
-      "focus": "8c",
-      "category": "Collection and Structural Types",
-      "multiple": false
-    },
-    {
-      "id": "8c_25",
-      "q": "Which of the following is a valid empty map declaration?",
-      "choices": [
-        "var empty_map = {}",
-        "{}",
-        "map(string) {}",
-        "tomap({})"
-      ],
-      "answer": [1, 3],
-      "explain": "An empty map literal '{}' is valid, and tomap({}) explicitly converts to an empty map. Variable assignment syntax is invalid in Terraform configs.",
-      "tags": ["terraform", "map", "empty"],
-      "difficulty": "hard",
-      "focus": "8c",
-      "category": "Collection and Structural Types",
-      "multiple": true
-    }
-  ]
-  
+  {
+    "id": "8c_1",
+    "q": "Which of the following are valid Terraform collection types?",
+    "choices": [
+      "list",
+      "map",
+      "set",
+      "tuple"
+    ],
+    "answer": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "explain": "Terraform supports list, map, set, and tuple as collection types.",
+    "tags": [
+      "terraform",
+      "types",
+      "collections"
+    ],
+    "difficulty": "easy",
+    "focus": "8c",
+    "category": "Collection and Structural Types",
+    "multiple": true
+  },
+  {
+    "id": "8c_2",
+    "q": "What is the main difference between a list and a tuple in Terraform?",
+    "choices": [
+      "Lists can only contain strings, tuples can contain multiple types",
+      "Tuples can contain values of different types, lists are type-consistent",
+      "Lists are immutable, tuples are mutable",
+      "Tuples are automatically sorted"
+    ],
+    "answer": [
+      1
+    ],
+    "explain": "Lists must have elements of the same type, while tuples can have multiple types in a defined order.",
+    "tags": [
+      "terraform",
+      "list",
+      "tuple"
+    ],
+    "difficulty": "medium",
+    "focus": "8c",
+    "category": "Collection and Structural Types",
+    "multiple": false
+  },
+  {
+    "id": "8c_3",
+    "q": "Which Terraform type is unordered and contains unique elements?",
+    "choices": [
+      "list",
+      "set",
+      "map",
+      "tuple"
+    ],
+    "answer": [
+      1
+    ],
+    "explain": "A set is unordered and enforces uniqueness of its elements.",
+    "tags": [
+      "terraform",
+      "set",
+      "types"
+    ],
+    "difficulty": "easy",
+    "focus": "8c",
+    "category": "Collection and Structural Types",
+    "multiple": false
+  },
+  {
+    "id": "8c_4",
+    "q": "Which of the following is a valid type constraint for a map?",
+    "choices": [
+      "map(string)",
+      "map(any)",
+      "map(list(number))",
+      "map(tuple)"
+    ],
+    "answer": [
+      0,
+      1,
+      2
+    ],
+    "explain": "Map values must have a type specified, which can be primitive or another collection. 'map(tuple)' is invalid syntax.",
+    "tags": [
+      "terraform",
+      "map",
+      "types"
+    ],
+    "difficulty": "medium",
+    "focus": "8c",
+    "category": "Collection and Structural Types",
+    "multiple": true
+  },
+  {
+    "id": "8c_5",
+    "q": "What is the correct syntax to define a variable of type list(string) in Terraform?",
+    "choices": [
+      "variable \"names\" { type = list(string) }",
+      "variable \"names\" { type = list }",
+      "variable \"names\" { list(string) }",
+      "variable \"names\" { type = [string] }"
+    ],
+    "answer": [
+      0
+    ],
+    "explain": "The correct syntax explicitly declares type = list(string). The others are invalid or incomplete.",
+    "tags": [
+      "terraform",
+      "list",
+      "syntax"
+    ],
+    "difficulty": "easy",
+    "focus": "8c",
+    "category": "Collection and Structural Types",
+    "multiple": false
+  },
+  {
+    "id": "8c_6",
+    "q": "Which statement about objects in Terraform is correct?",
+    "choices": [
+      "They can only contain strings",
+      "They can contain attributes of multiple types",
+      "They must be converted to maps before use",
+      "They are automatically converted to lists"
+    ],
+    "answer": [
+      1
+    ],
+    "explain": "Objects in Terraform can hold multiple attributes, each with its own type.",
+    "tags": [
+      "terraform",
+      "objects",
+      "types"
+    ],
+    "difficulty": "easy",
+    "focus": "8c",
+    "category": "Collection and Structural Types",
+    "multiple": false
+  },
+  {
+    "id": "8c_7",
+    "q": "How do you access the value of 'age' in an object variable 'person'?",
+    "choices": [
+      "person.age",
+      "person[\"age\"]",
+      "${person.age}",
+      "var.person.age"
+    ],
+    "answer": [
+      0,
+      1,
+      3
+    ],
+    "explain": "You can use dot or bracket notation, and when inside Terraform config, prefix with var. for variables.",
+    "tags": [
+      "terraform",
+      "objects",
+      "syntax"
+    ],
+    "difficulty": "medium",
+    "focus": "8c",
+    "category": "Collection and Structural Types",
+    "multiple": true
+  },
+  {
+    "id": "8c_8",
+    "q": "What is the primary difference between a map and an object in Terraform?",
+    "choices": [
+      "Maps require string keys, objects can have any key type",
+      "Objects have a fixed set of attributes with known types",
+      "Maps enforce key ordering, objects do not",
+      "Objects are mutable while maps are not"
+    ],
+    "answer": [
+      1
+    ],
+    "explain": "Maps are flexible key-value pairs with string keys, while objects have a fixed schema with known attribute names and types.",
+    "tags": [
+      "terraform",
+      "map",
+      "object"
+    ],
+    "difficulty": "medium",
+    "focus": "8c",
+    "category": "Collection and Structural Types",
+    "multiple": false
+  },
+  {
+    "id": "8c_9",
+    "q": "Which function can convert a list to a set in Terraform?",
+    "choices": [
+      "tolist()",
+      "toset()",
+      "convert_set()",
+      "list_to_set()"
+    ],
+    "answer": [
+      1
+    ],
+    "explain": "The toset() function converts a list into a set, enforcing uniqueness and removing ordering.",
+    "tags": [
+      "terraform",
+      "functions",
+      "set"
+    ],
+    "difficulty": "easy",
+    "focus": "8c",
+    "category": "Collection and Structural Types",
+    "multiple": false
+  },
+  {
+    "id": "8c_10",
+    "q": "If a tuple is defined as tuple([string, number]), which is valid?",
+    "choices": [
+      "[\"apple\", 5]",
+      "[\"apple\", \"orange\"]",
+      "[1, 2]",
+      "[true, 5]"
+    ],
+    "answer": [
+      0
+    ],
+    "explain": "tuple([string, number]) expects first element string, second number. Only the first choice matches.",
+    "tags": [
+      "terraform",
+      "tuple",
+      "types"
+    ],
+    "difficulty": "medium",
+    "focus": "8c",
+    "category": "Collection and Structural Types",
+    "multiple": false
+  },
+  {
+    "id": "8c_11",
+    "q": "Which Terraform type constraint allows any value?",
+    "choices": [
+      "any",
+      "dynamic",
+      "var",
+      "optional"
+    ],
+    "answer": [
+      0
+    ],
+    "explain": "The 'any' type constraint allows any valid Terraform value type.",
+    "tags": [
+      "terraform",
+      "types",
+      "any"
+    ],
+    "difficulty": "easy",
+    "focus": "8c",
+    "category": "Collection and Structural Types",
+    "multiple": false
+  },
+  {
+    "id": "8c_12",
+    "q": "Which is true about Terraform's set type?",
+    "choices": [
+      "It preserves order of elements",
+      "It cannot contain duplicate elements",
+      "It can contain mixed data types",
+      "It requires explicit typing"
+    ],
+    "answer": [
+      1,
+      3
+    ],
+    "explain": "Sets are unordered and do not allow duplicates. They require type specification, e.g., set(string).",
+    "tags": [
+      "terraform",
+      "set",
+      "types"
+    ],
+    "difficulty": "medium",
+    "focus": "8c",
+    "category": "Collection and Structural Types",
+    "multiple": true
+  },
+  {
+    "id": "8c_13",
+    "q": "Which function merges multiple maps in Terraform?",
+    "choices": [
+      "merge()",
+      "combine()",
+      "mapmerge()",
+      "join()"
+    ],
+    "answer": [
+      0
+    ],
+    "explain": "merge() is the built-in function to combine multiple maps into one.",
+    "tags": [
+      "terraform",
+      "map",
+      "functions"
+    ],
+    "difficulty": "easy",
+    "focus": "8c",
+    "category": "Collection and Structural Types",
+    "multiple": false
+  },
+  {
+    "id": "8c_14",
+    "q": "How do you define a variable that accepts either a string or a number?",
+    "choices": [
+      "type = string | number",
+      "type = any",
+      "type = union(string, number)",
+      "Terraform does not allow union types"
+    ],
+    "answer": [
+      3
+    ],
+    "explain": "Terraform does not support direct union type constraints. You can use 'any' and validate manually.",
+    "tags": [
+      "terraform",
+      "types",
+      "limitations"
+    ],
+    "difficulty": "hard",
+    "focus": "8c",
+    "category": "Collection and Structural Types",
+    "multiple": false
+  },
+  {
+    "id": "8c_15",
+    "q": "What is the result of tolist({a = 1, b = 2})?",
+    "choices": [
+      "[1, 2]",
+      "[\"a\", \"b\"]",
+      "[[\"a\", 1], [\"b\", 2]]",
+      "Error"
+    ],
+    "answer": [
+      3
+    ],
+    "explain": "Converting a map directly to a list without extraction is not allowed and results in an error.",
+    "tags": [
+      "terraform",
+      "functions",
+      "tolist"
+    ],
+    "difficulty": "hard",
+    "focus": "8c",
+    "category": "Collection and Structural Types",
+    "multiple": false
+  },
+  {
+    "id": "8c_16",
+    "q": "Which syntax defines a variable as an object with two attributes: name (string) and age (number)?",
+    "choices": [
+      "variable \"person\" { type = object({ name = string, age = number }) }",
+      "variable \"person\" { type = map({ name = string, age = number }) }",
+      "variable \"person\" { type = object(name, age) }",
+      "variable \"person\" { object({name, age}) }"
+    ],
+    "answer": [
+      0
+    ],
+    "explain": "The correct syntax uses type = object({...}) with attribute definitions.",
+    "tags": [
+      "terraform",
+      "object",
+      "syntax"
+    ],
+    "difficulty": "easy",
+    "focus": "8c",
+    "category": "Collection and Structural Types",
+    "multiple": false
+  },
+  {
+    "id": "8c_17",
+    "q": "What happens if you insert duplicate values into a set?",
+    "choices": [
+      "Terraform throws an error",
+      "Duplicates are automatically removed",
+      "Duplicates are preserved",
+      "Terraform converts it to a list"
+    ],
+    "answer": [
+      1
+    ],
+    "explain": "Sets automatically remove duplicates, ensuring all elements are unique.",
+    "tags": [
+      "terraform",
+      "set",
+      "duplicates"
+    ],
+    "difficulty": "easy",
+    "focus": "8c",
+    "category": "Collection and Structural Types",
+    "multiple": false
+  },
+  {
+    "id": "8c_18",
+    "q": "Which type is most suitable for representing AWS tags in Terraform?",
+    "choices": [
+      "map(string)",
+      "list(string)",
+      "set(string)",
+      "object({})"
+    ],
+    "answer": [
+      0
+    ],
+    "explain": "AWS tags are best represented as map(string) for key-value pairs.",
+    "tags": [
+      "terraform",
+      "map",
+      "aws"
+    ],
+    "difficulty": "medium",
+    "focus": "8c",
+    "category": "Collection and Structural Types",
+    "multiple": false
+  },
+  {
+    "id": "8c_19",
+    "q": "What is the output type of keys({a = 1, b = 2})?",
+    "choices": [
+      "list(string)",
+      "set(string)",
+      "map(string)",
+      "tuple(string)"
+    ],
+    "answer": [
+      0
+    ],
+    "explain": "keys() returns a list of strings representing the keys of the map.",
+    "tags": [
+      "terraform",
+      "functions",
+      "keys"
+    ],
+    "difficulty": "easy",
+    "focus": "8c",
+    "category": "Collection and Structural Types",
+    "multiple": false
+  },
+  {
+    "id": "8c_20",
+    "q": "Which of the following are valid type constraints for a list?",
+    "choices": [
+      "list(string)",
+      "list(number)",
+      "list(any)",
+      "list(object({id=string}))"
+    ],
+    "answer": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "explain": "Lists can be constrained to any valid Terraform type, including objects.",
+    "tags": [
+      "terraform",
+      "list",
+      "types"
+    ],
+    "difficulty": "easy",
+    "focus": "8c",
+    "category": "Collection and Structural Types",
+    "multiple": true
+  },
+  {
+    "id": "8c_21",
+    "q": "Which function converts a map into a list of key-value pairs?",
+    "choices": [
+      "tomap()",
+      "tolist()",
+      "flatten()",
+      "maptolist()"
+    ],
+    "answer": [
+      1
+    ],
+    "explain": "tolist() can be applied to map values after transformation, but there is no direct maptolist() function.",
+    "tags": [
+      "terraform",
+      "functions",
+      "map"
+    ],
+    "difficulty": "hard",
+    "focus": "8c",
+    "category": "Collection and Structural Types",
+    "multiple": false
+  },
+  {
+    "id": "8c_22",
+    "q": "How can you specify that a list must contain unique elements?",
+    "choices": [
+      "Use set() instead of list()",
+      "Use list(unique)",
+      "Add unique constraint to list type",
+      "Terraform automatically enforces uniqueness"
+    ],
+    "answer": [
+      0
+    ],
+    "explain": "Using a set type enforces uniqueness, while lists allow duplicates.",
+    "tags": [
+      "terraform",
+      "set",
+      "list"
+    ],
+    "difficulty": "medium",
+    "focus": "8c",
+    "category": "Collection and Structural Types",
+    "multiple": false
+  },
+  {
+    "id": "8c_23",
+    "q": "If a variable type is object({name=string, tags=map(string)}), which is a valid value?",
+    "choices": [
+      "{name = \"web\", tags = {env = \"prod\"}}",
+      "{name = 1, tags = {env = \"prod\"}}",
+      "{name = \"web\", tags = [\"prod\"]}",
+      "{name = \"web\"}"
+    ],
+    "answer": [
+      0
+    ],
+    "explain": "The name must be string and tags must be a map(string). The other examples violate type constraints.",
+    "tags": [
+      "terraform",
+      "object",
+      "map"
+    ],
+    "difficulty": "medium",
+    "focus": "8c",
+    "category": "Collection and Structural Types",
+    "multiple": false
+  },
+  {
+    "id": "8c_24",
+    "q": "What happens when you merge two maps with duplicate keys?",
+    "choices": [
+      "Terraform throws an error",
+      "The last map's value overwrites the previous one",
+      "Both values are stored as a list",
+      "Keys are renamed automatically"
+    ],
+    "answer": [
+      1
+    ],
+    "explain": "When merging maps, later values overwrite earlier ones for duplicate keys.",
+    "tags": [
+      "terraform",
+      "map",
+      "merge"
+    ],
+    "difficulty": "medium",
+    "focus": "8c",
+    "category": "Collection and Structural Types",
+    "multiple": false
+  },
+  {
+    "id": "8c_25",
+    "q": "Which of the following is a valid empty map declaration?",
+    "choices": [
+      "var empty_map = {}",
+      "{}",
+      "map(string) {}",
+      "tomap({})"
+    ],
+    "answer": [
+      1,
+      3
+    ],
+    "explain": "An empty map literal '{}' is valid, and tomap({}) explicitly converts to an empty map. Variable assignment syntax is invalid in Terraform configs.",
+    "tags": [
+      "terraform",
+      "map",
+      "empty"
+    ],
+    "difficulty": "hard",
+    "focus": "8c",
+    "category": "Collection and Structural Types",
+    "multiple": true
+  }
+]

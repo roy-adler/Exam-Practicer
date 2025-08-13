@@ -8,9 +8,16 @@
             "Inside the variables file",
             "Inside outputs"
         ],
-        "answer": [0],
+        "answer": [
+            0
+        ],
         "explain": "Backend configuration is defined inside the terraform block, which specifies how Terraform should store and manage state.",
-        "tags": ["terraform", "backend", "configuration", "terraform-block"],
+        "tags": [
+            "terraform",
+            "backend",
+            "configuration",
+            "terraform-block"
+        ],
         "difficulty": "easy",
         "focus": "7f",
         "category": "Backend Configuration",
@@ -25,9 +32,17 @@
             "storage_account_name",
             "project"
         ],
-        "answer": [0],
+        "answer": [
+            0
+        ],
         "explain": "The `bucket` parameter specifies the S3 bucket name where the Terraform state file will be stored.",
-        "tags": ["terraform", "backend", "s3", "bucket", "aws"],
+        "tags": [
+            "terraform",
+            "backend",
+            "s3",
+            "bucket",
+            "aws"
+        ],
         "difficulty": "easy",
         "focus": "7f",
         "category": "Backend Configuration",
@@ -42,9 +57,17 @@
             "project, bucket, prefix",
             "organization, workspace"
         ],
-        "answer": [0],
+        "answer": [
+            0
+        ],
         "explain": "The AzureRM backend requires storage_account_name, container_name, and key to locate and store the state file in Azure Blob Storage.",
-        "tags": ["terraform", "backend", "azurerm", "azure", "blob-storage"],
+        "tags": [
+            "terraform",
+            "backend",
+            "azurerm",
+            "azure",
+            "blob-storage"
+        ],
         "difficulty": "medium",
         "focus": "7f",
         "category": "Backend Configuration",
@@ -59,9 +82,16 @@
             "The IAM key for authentication",
             "The API key for provider"
         ],
-        "answer": [1],
+        "answer": [
+            1
+        ],
         "explain": "The `key` argument specifies the path or name of the state file within the backend storage location.",
-        "tags": ["terraform", "backend", "key", "state-file"],
+        "tags": [
+            "terraform",
+            "backend",
+            "key",
+            "state-file"
+        ],
         "difficulty": "easy",
         "focus": "7f",
         "category": "Backend Configuration",
@@ -76,9 +106,17 @@
             "Enables client-side encryption",
             "Encrypts all resource data"
         ],
-        "answer": [0],
+        "answer": [
+            0
+        ],
         "explain": "Setting `encrypt = true` enables server-side encryption (SSE) for the state file stored in the S3 bucket.",
-        "tags": ["terraform", "backend", "s3", "encryption", "sse"],
+        "tags": [
+            "terraform",
+            "backend",
+            "s3",
+            "encryption",
+            "sse"
+        ],
         "difficulty": "medium",
         "focus": "7f",
         "category": "Backend Configuration",
@@ -93,9 +131,17 @@
             "azurerm",
             "local"
         ],
-        "answer": [0],
+        "answer": [
+            0
+        ],
         "explain": "The GCS backend uses the `prefix` argument to organize state files within a bucket, similar to a directory structure.",
-        "tags": ["terraform", "backend", "gcs", "google", "prefix"],
+        "tags": [
+            "terraform",
+            "backend",
+            "gcs",
+            "google",
+            "prefix"
+        ],
         "difficulty": "medium",
         "focus": "7f",
         "category": "Backend Configuration",
@@ -110,9 +156,16 @@
             "Ignore encryption",
             "Disable locking"
         ],
-        "answer": [0],
+        "answer": [
+            0
+        ],
         "explain": "Using environment variables prevents sensitive backend configuration from being stored in version-controlled files.",
-        "tags": ["terraform", "backend", "security", "environment-variables"],
+        "tags": [
+            "terraform",
+            "backend",
+            "security",
+            "environment-variables"
+        ],
         "difficulty": "medium",
         "focus": "7f",
         "category": "Backend Configuration",
@@ -127,9 +180,17 @@
             "key",
             "org"
         ],
-        "answer": [0],
+        "answer": [
+            0
+        ],
         "explain": "The `workspaces` argument specifies the Terraform Cloud workspace where the state will be stored.",
-        "tags": ["terraform", "backend", "remote", "cloud", "workspace"],
+        "tags": [
+            "terraform",
+            "backend",
+            "remote",
+            "cloud",
+            "workspace"
+        ],
         "difficulty": "medium",
         "focus": "7f",
         "category": "Backend Configuration",
@@ -144,9 +205,17 @@
             "Sets IAM role",
             "Specifies AWS profile"
         ],
-        "answer": [0],
+        "answer": [
+            0
+        ],
         "explain": "The `region` parameter specifies the AWS region where the S3 bucket is located for the backend configuration.",
-        "tags": ["terraform", "backend", "s3", "aws", "region"],
+        "tags": [
+            "terraform",
+            "backend",
+            "s3",
+            "aws",
+            "region"
+        ],
         "difficulty": "easy",
         "focus": "7f",
         "category": "Backend Configuration",
@@ -161,9 +230,17 @@
             "locking",
             "state_lock"
         ],
-        "answer": [1],
+        "answer": [
+            1
+        ],
         "explain": "The `dynamodb_table` parameter specifies the DynamoDB table used for state locking when using the S3 backend.",
-        "tags": ["terraform", "backend", "s3", "dynamodb", "locking"],
+        "tags": [
+            "terraform",
+            "backend",
+            "s3",
+            "dynamodb",
+            "locking"
+        ],
         "difficulty": "medium",
         "focus": "7f",
         "category": "Backend Configuration",
