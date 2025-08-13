@@ -1,0 +1,121 @@
+[
+    {
+      "id": "tf_3b_001",
+      "q": "Which statement best describes Terraform’s plugin-based architecture?",
+      "choices": [
+        "Terraform Core directly manages resources without providers",
+        "Terraform Core orchestrates plans while providers (plugins) implement resource CRUD and data sources",
+        "Providers compile Terraform language into binaries",
+        "Modules are plugins that run as separate processes"
+      ],
+      "answer": [1],
+      "explain": "Terraform Core handles graph planning, state, and diffing; provider plugins implement resource/data APIs against target platforms.",
+      "tags": ["architecture", "providers", "core"],
+      "difficulty": "easy",
+      "focus": "3b",
+      "category": "Plugin-based architecture",
+      "multiple": false
+    },
+    {
+      "id": "tf_3b_002",
+      "q": "What do providers expose to Terraform configurations? (Select all that apply)",
+      "choices": [
+        "Resources",
+        "Data sources",
+        "Backends",
+        "Provisioners"
+      ],
+      "answer": [0,1],
+      "explain": "Providers define resources and data sources. Backends are configured by Terraform Core; provisioners are separate features and not provider-defined.",
+      "tags": ["providers", "resources", "datasources"],
+      "difficulty": "easy",
+      "focus": "3b",
+      "category": "Plugin-based architecture",
+      "multiple": true
+    },
+    {
+      "id": "tf_3b_003",
+      "q": "Which responsibilities are handled by Terraform Core? (Select all that apply)",
+      "choices": [
+        "Dependency graph planning and diffing",
+        "State management",
+        "Implementing AWS API calls",
+        "Reading/writing the lock file"
+      ],
+      "answer": [0,1,3],
+      "explain": "Core plans and applies the graph, manages state, and manages the dependency lock file. Providers implement platform API calls.",
+      "tags": ["core", "state", "planning"],
+      "difficulty": "medium",
+      "focus": "3b",
+      "category": "Plugin-based architecture",
+      "multiple": true
+    },
+    {
+      "id": "tf_3b_004",
+      "q": "How does Terraform communicate with provider plugins?",
+      "choices": [
+        "Via defined plugin protocol over RPC between processes",
+        "By linking the provider as a static library",
+        "By shelling out to cloud CLIs only",
+        "Through HTTP webhooks only"
+      ],
+      "answer": [0],
+      "explain": "Providers run as separate processes and communicate via Terraform's plugin protocol (RPC).",
+      "tags": ["rpc", "providers", "architecture"],
+      "difficulty": "medium",
+      "focus": "3b",
+      "category": "Plugin-based architecture",
+      "multiple": false
+    },
+    {
+      "id": "tf_3b_005",
+      "q": "Which statements about community providers are accurate? (Select all that apply)",
+      "choices": [
+        "They use a fully qualified source address with a namespace, e.g., somecorp/mycloud",
+        "They can be published to the Terraform Registry for others to consume",
+        "They require custom Terraform forks to run",
+        "They follow the same provider protocol as official providers"
+      ],
+      "answer": [0,1,3],
+      "explain": "Community providers follow the same plugin protocol and can be hosted in the Registry with source addresses identifying their namespace.",
+      "tags": ["community", "registry", "source-address"],
+      "difficulty": "easy",
+      "focus": "3b",
+      "category": "Plugin-based architecture",
+      "multiple": true
+    },
+    {
+      "id": "tf_3b_006",
+      "q": "What is the role of schemas in provider resources and data sources?",
+      "choices": [
+        "Define attributes, types, and behavior for configuration and state",
+        "Control Terraform CLI flags",
+        "Choose a backend automatically",
+        "Replace input variables"
+      ],
+      "answer": [0],
+      "explain": "Provider schemas define the shape and semantics of resources/data, enabling validation and state management.",
+      "tags": ["schema", "providers"],
+      "difficulty": "medium",
+      "focus": "3b",
+      "category": "Plugin-based architecture",
+      "multiple": false
+    },
+    {
+      "id": "tf_3b_007",
+      "q": "Which items are NOT provider plugins? (Select all that apply)",
+      "choices": [
+        "Backends (e.g., s3, azurerm, gcs)",
+        "Terraform language functions",
+        "Resource providers (e.g., hashicorp/aws)",
+        "Provisioners (e.g., local-exec)"
+      ],
+      "answer": [0,1,3],
+      "explain": "Backends and provisioners are not providers. Language functions are part of Core. Providers expose resources/data sources.",
+      "tags": ["providers", "backends", "provisioners"],
+      "difficulty": "medium",
+      "focus": "3b",
+      "category": "Plugin-based architecture",
+      "multiple": true
+    }
+  ]

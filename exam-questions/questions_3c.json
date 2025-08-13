@@ -1,0 +1,162 @@
+[
+    {
+        "id": "tf_3c_001",
+        "q": "How do you configure multiple instances of the same provider in one configuration?",
+        "choices": [
+            "Use provider aliases in multiple provider blocks",
+            "Use multiple terraform blocks",
+            "Duplicate resources with count",
+            "It is not possible"
+        ],
+        "answer": [
+            0
+        ],
+        "explain": "Define multiple provider blocks with alias = \"...\" to configure separate instances (e.g., different regions/accounts).",
+        "tags": [
+            "providers",
+            "alias"
+        ],
+        "difficulty": "easy",
+        "focus": "3c",
+        "category": "Using multiple providers",
+        "multiple": false
+    },
+    {
+        "id": "tf_3c_002",
+        "q": "How does a resource choose a non-default provider instance?",
+        "choices": [
+            "Set provider = <PROVIDER>.<ALIAS> in the resource",
+            "Set alias in variables.tf",
+            "It always uses the last declared provider",
+            "By setting a different backend"
+        ],
+        "answer": [
+            0
+        ],
+        "explain": "Use the provider meta-argument: provider = aws.west to bind the resource to a specific aliased provider.",
+        "tags": [
+            "provider",
+            "alias",
+            "resources"
+        ],
+        "difficulty": "easy",
+        "focus": "3c",
+        "category": "Using multiple providers",
+        "multiple": false
+    },
+    {
+        "id": "tf_3c_003",
+        "q": "How do you pass specific provider instances into a child module? (Select all that apply)",
+        "choices": [
+            "Use the providers argument in the module block to map required providers",
+            "Define provider blocks inside the child module for production credentials",
+            "Rely on implicit inheritance of the root provider configuration",
+            "Use count to duplicate the module for each provider"
+        ],
+        "answer": [
+            0,
+            2
+        ],
+        "explain": "Modules can inherit the default root provider config implicitly. To use aliases, pass them explicitly via module \"providers\" mapping.",
+        "tags": [
+            "modules",
+            "providers",
+            "alias"
+        ],
+        "difficulty": "medium",
+        "focus": "3c",
+        "category": "Using multiple providers",
+        "multiple": true
+    },
+    {
+        "id": "tf_3c_004",
+        "q": "Which is a valid use case for multiple providers in a single configuration? (Select all that apply)",
+        "choices": [
+            "Provision DNS (Cloudflare) for resources created in AWS",
+            "Replicate infrastructure into two AWS regions with aliased AWS providers",
+            "Provision resources across two different AWS accounts",
+            "Avoid declaring required_providers entirely"
+        ],
+        "answer": [
+            0,
+            1,
+            2
+        ],
+        "explain": "Multi-service and multi-account/region scenarios often require several providers and provider aliases.",
+        "tags": [
+            "multi-account",
+            "multi-region",
+            "dns"
+        ],
+        "difficulty": "easy",
+        "focus": "3c",
+        "category": "Using multiple providers",
+        "multiple": true
+    },
+    {
+        "id": "tf_3c_005",
+        "q": "In a module that requires providers cloudflare and aws, how does Terraform decide which root provider configurations to use by default?",
+        "choices": [
+            "It fails unless providers are explicitly passed",
+            "It uses the default (non-aliased) root provider configurations with matching names",
+            "It chooses the most recently declared provider",
+            "It merges all provider blocks"
+        ],
+        "answer": [
+            1
+        ],
+        "explain": "By default, a child module uses the root module’s default provider configurations for required providers of the same name.",
+        "tags": [
+            "modules",
+            "providers"
+        ],
+        "difficulty": "medium",
+        "focus": "3c",
+        "category": "Using multiple providers",
+        "multiple": false
+    },
+    {
+        "id": "tf_3c_006",
+        "q": "Which meta-argument lets a module consume different provider instances for different resources inside the same module?",
+        "choices": [
+            "for_each",
+            "providers (in module block) and provider (in resource)",
+            "depends_on",
+            "lifecycle"
+        ],
+        "answer": [
+            1
+        ],
+        "explain": "Use providers mapping in the module block to supply instances, and the provider meta-argument on resources to select among them.",
+        "tags": [
+            "meta-arguments",
+            "modules"
+        ],
+        "difficulty": "medium",
+        "focus": "3c",
+        "category": "Using multiple providers",
+        "multiple": false
+    },
+    {
+        "id": "tf_3c_007",
+        "q": "What’s the effect of giving a module an aliased provider that the module didn’t declare under required_providers?",
+        "choices": [
+            "Terraform ignores it",
+            "Terraform errors because the module doesn’t require that provider",
+            "Terraform automatically adds it to the lockfile only",
+            "It becomes the module’s default provider"
+        ],
+        "answer": [
+            1
+        ],
+        "explain": "Modules must declare required_providers to accept provider configurations. Passing undeclared providers is an error.",
+        "tags": [
+            "required_providers",
+            "modules"
+        ],
+        "difficulty": "hard",
+        "focus": "3c",
+        "category": "Using multiple providers",
+        "multiple": false
+    }
+]
