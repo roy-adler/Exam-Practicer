@@ -83,5 +83,90 @@
         "focus": "7g",
         "category": "Security",
         "multiple": false
+    },
+    {
+        "id": "7g_006",
+        "q": "What is the best way to prevent secret leakage in Terraform logs?",
+        "choices": [
+            "Mark variables or outputs as sensitive",
+            "Store secrets in local variables",
+            "Use base64 encoding",
+            "Encrypt logs manually"
+        ],
+        "answer": [0],
+        "explain": "Marking variables or outputs as sensitive prevents their values from appearing in Terraform logs and CLI output.",
+        "tags": ["terraform", "logs", "sensitive", "variables", "outputs"],
+        "difficulty": "medium",
+        "focus": "7g",
+        "category": "Security",
+        "multiple": false
+    },
+    {
+        "id": "7g_007",
+        "q": "Which of the following is NOT a recommended practice for managing secrets in Terraform?",
+        "choices": [
+            "Use external secret stores like Vault",
+            "Use plain text in .tfvars files committed to Git",
+            "Mark outputs as sensitive",
+            "Limit state file access"
+        ],
+        "answer": [1],
+        "explain": "Storing secrets in plain text in .tfvars files that are committed to Git is a security risk and should be avoided.",
+        "tags": ["terraform", "secrets", "tfvars", "git", "security"],
+        "difficulty": "medium",
+        "focus": "7g",
+        "category": "Security",
+        "multiple": false
+    },
+    {
+        "id": "7g_008",
+        "q": "If you store Terraform state in a remote backend, who can access secrets in that state?",
+        "choices": [
+            "Anyone with access to the backend storage",
+            "Only the Terraform CLI",
+            "Only the user who ran terraform apply",
+            "Nobody"
+        ],
+        "answer": [0],
+        "explain": "Anyone with access to the backend storage can potentially access secrets stored in the state file, highlighting the importance of proper access controls.",
+        "tags": ["terraform", "backend", "state", "secrets", "access-control"],
+        "difficulty": "medium",
+        "focus": "7g",
+        "category": "Security",
+        "multiple": false
+    },
+    {
+        "id": "7g_009",
+        "q": "When using Terraform Cloud, how are sensitive values stored in the state file?",
+        "choices": [
+            "Encrypted at rest and masked in the UI",
+            "Plaintext in the database",
+            "Hashed with SHA-256 only",
+            "Base64 encoded"
+        ],
+        "answer": [0],
+        "explain": "Terraform Cloud encrypts sensitive values at rest and masks them in the user interface for enhanced security.",
+        "tags": ["terraform", "cloud", "sensitive", "encryption", "ui"],
+        "difficulty": "hard",
+        "focus": "7g",
+        "category": "Security",
+        "multiple": false
+    },
+    {
+        "id": "7g_010",
+        "q": "How can you ensure that an input variable value is never written to the Terraform state file?",
+        "choices": [
+            "You cannot prevent it if it is used in a managed resource",
+            "Set sensitive = true",
+            "Store it in an environment variable",
+            "Pass it via CLI"
+        ],
+        "answer": [0],
+        "explain": "If a variable value is used in a managed resource, Terraform must store it in the state file to track the resource's current state.",
+        "tags": ["terraform", "variables", "state", "resources", "limitation"],
+        "difficulty": "hard",
+        "focus": "7g",
+        "category": "Security",
+        "multiple": false
     }
 ]

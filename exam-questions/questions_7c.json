@@ -83,5 +83,90 @@
         "focus": "7c",
         "category": "Authentication",
         "multiple": false
+    },
+    {
+        "id": "7c_006",
+        "q": "What is the main benefit of authenticating with environment variables over storing credentials in configuration files?",
+        "choices": [
+            "Credentials are automatically encrypted",
+            "Credentials are not stored in plain text",
+            "Faster initialization",
+            "Supports multiple backends"
+        ],
+        "answer": [1],
+        "explain": "Environment variables prevent credentials from being stored in plain text files that might be committed to version control.",
+        "tags": ["terraform", "authentication", "environment", "variables", "security"],
+        "difficulty": "medium",
+        "focus": "7c",
+        "category": "Authentication",
+        "multiple": false
+    },
+    {
+        "id": "7c_007",
+        "q": "In Google Cloud Storage backend, which environment variable stores the path to the credentials JSON file?",
+        "choices": [
+            "GOOGLE_CREDENTIALS",
+            "GOOGLE_APPLICATION_CREDENTIALS",
+            "GCP_KEY_PATH",
+            "TF_GCP_AUTH"
+        ],
+        "answer": [1],
+        "explain": "The `GOOGLE_APPLICATION_CREDENTIALS` environment variable points to the service account key JSON file for GCS backend authentication.",
+        "tags": ["terraform", "backend", "gcs", "google", "authentication"],
+        "difficulty": "easy",
+        "focus": "7c",
+        "category": "Authentication",
+        "multiple": false
+    },
+    {
+        "id": "7c_008",
+        "q": "Which authentication method is recommended for CI/CD pipelines connecting to Terraform Cloud?",
+        "choices": [
+            "Manual terraform login",
+            "Environment variable token",
+            "Interactive OAuth",
+            "SSH key authentication"
+        ],
+        "answer": [1],
+        "explain": "Environment variable tokens are ideal for CI/CD pipelines as they provide non-interactive authentication without manual intervention.",
+        "tags": ["terraform", "ci-cd", "pipeline", "authentication", "cloud"],
+        "difficulty": "medium",
+        "focus": "7c",
+        "category": "Authentication",
+        "multiple": false
+    },
+    {
+        "id": "7c_009",
+        "q": "When configuring the 'remote' backend for Terraform Cloud, what parameter specifies the organization name?",
+        "choices": [
+            "org",
+            "organization",
+            "workspace_org",
+            "account"
+        ],
+        "answer": [1],
+        "explain": "The `organization` parameter in the remote backend configuration specifies the Terraform Cloud organization name.",
+        "tags": ["terraform", "backend", "remote", "cloud", "organization"],
+        "difficulty": "medium",
+        "focus": "7c",
+        "category": "Authentication",
+        "multiple": false
+    },
+    {
+        "id": "7c_010",
+        "q": "Which authentication method is used when Terraform runs on an EC2 instance with an IAM role?",
+        "choices": [
+            "Instance metadata service",
+            "Environment variables",
+            "Configuration file",
+            "Manual login"
+        ],
+        "answer": [0],
+        "explain": "EC2 instances with IAM roles use the instance metadata service to automatically obtain temporary credentials.",
+        "tags": ["terraform", "aws", "iam", "ec2", "authentication"],
+        "difficulty": "medium",
+        "focus": "7c",
+        "category": "Authentication",
+        "multiple": false
     }
 ]
