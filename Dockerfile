@@ -24,9 +24,9 @@ RUN apk update && apk upgrade && \
     apk add --no-cache curl && \
     rm -rf /var/cache/apk/*
 
-# Create non-root user
-RUN addgroup -g 1001 -S nginx && \
-    adduser -S -D -H -u 1001 -h /var/cache/nginx -s /sbin/nologin -G nginx -g nginx nginx
+# Create non-root user (handle existing users gracefully)
+RUN addgroup -g 1001 -S appuser 2>/dev/null || true && \
+    adduser -S -D -H -u 1001 -h /var/cache/nginx -s /sbin/nologin -G appuser -g appuser appuser 2>/dev/null || true
 
 # Copy nginx configuration
 COPY nginx.conf /etc/nginx/conf.d/default.conf
@@ -38,16 +38,16 @@ COPY --from=builder /app/app.js /usr/share/nginx/html/
 COPY --from=builder /app/questions.json /usr/share/nginx/html/
 
 # Set proper permissions
-RUN chown -R nginx:nginx /usr/share/nginx/html && \
+RUN chown -R appuser:appuser /usr/share/nginx/html && \
     chmod -R 755 /usr/share/nginx/html && \
-    chown -R nginx:nginx /var/cache/nginx && \
-    chown -R nginx:nginx /var/log/nginx && \
-    chown -R nginx:nginx /etc/nginx/conf.d && \
+    chown -R appuser:appuser /var/cache/nginx && \
+    chown -R appuser:appuser /var/log/nginx && \
+    chown -R appuser:appuser /etc/nginx/conf.d && \
     touch /var/run/nginx.pid && \
-    chown -R nginx:nginx /var/run/nginx.pid
+    chown -R appuser:appuser /var/run/nginx.pid
 
 # Switch to non-root user
-USER nginx
+USER appuser
 
 # Expose port
 EXPOSE 80
