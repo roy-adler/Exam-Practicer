@@ -18,18 +18,8 @@ class QuizApp {
         // Difficulty levels
         this.DIFFICULTY_LEVELS = ['easy', 'medium', 'hard'];
 
-        // Focus areas (exam points)
-        this.FOCUS_AREAS = [
-            '1.1', '1.2', '1.3', '1.4', '1.5',
-            '2.1', '2.2', '2.3', '2.4', '2.5',
-            '3.1', '3.2', '3.3', '3.4', '3.5',
-            '4.1', '4.2', '4.3', '4.4', '4.5',
-            '5.1', '5.2', '5.3', '5.4', '5.5',
-            '6.1', '6.2', '6.3', '6.4', '6.5',
-            '7.1', '7.2', '7.3', '7.4', '7.5',
-            '8.1', '8.2', '8.3', '8.4', '8.5',
-            '9.1', '9.2', '9.3', '9.4', '9.5'
-        ];
+        // Focus areas will be loaded dynamically from the generated focus-areas.json file
+        this.FOCUS_AREAS = [];
 
         // DOM elements cache
         this.elements = {};
@@ -48,6 +38,7 @@ class QuizApp {
         this.handleReset = this.handleReset.bind(this);
         this.handleFileUpload = this.handleFileUpload.bind(this);
         this.handleChoiceChange = this.handleChoiceChange.bind(this);
+        this.handleBalancedFocusChange = this.handleBalancedFocusChange.bind(this);
 
         this.init();
     }
@@ -57,6 +48,7 @@ class QuizApp {
             console.log('Initializing Quiz Application...');
             this.initializeElements();
             this.attachEventListeners();
+            await this.loadFocusAreas();
             await this.loadQuestions();
             this.isInitialized = true;
             console.log('Application fully initialized!');
@@ -66,15 +58,40 @@ class QuizApp {
         }
     }
 
+    async loadFocusAreas() {
+        try {
+            console.log('🔍 Loading focus areas...');
+            const response = await fetch('exam-questions/focus-areas.json', { cache: 'no-store' });
+            
+            if (!response.ok) {
+                throw new Error(`Failed to load focus areas: HTTP ${response.status}`);
+            }
+
+            const focusAreas = await response.json();
+            
+            if (!Array.isArray(focusAreas)) {
+                throw new Error('Invalid focus areas format - expected array');
+            }
+
+            this.FOCUS_AREAS = focusAreas;
+            console.log(`✅ Loaded ${focusAreas.length} focus areas:`, focusAreas);
+            
+        } catch (error) {
+            console.warn('⚠️ Failed to load focus areas, using fallback:', error.message);
+            // Fallback to extracting focus areas from questions when they're loaded
+            this.FOCUS_AREAS = [];
+        }
+    }
+
     initializeElements() {
         const elementIds = [
             'introCard', 'quizCard', 'resultCard', 'btnStart', 'btnSample',
             'btnPrev', 'btnNext', 'btnSubmit', 'btnRetry', 'btnPracticeWrong',
             'btnReview', 'btnLoadErrors', 'btnExport', 'btnReset', 'countInput',
-            'shuffleChoices', 'showExplain', 'qContainer', 'progressInner',
+            'shuffleChoices', 'showExplain', 'balancedFocus', 'focusInfo', 'availableFocusAreas', 'qContainer', 'progressInner',
             'progressLabel', 'liveTimer', 'resultSummary', 'timeTaken',
             'questionCountLabel', 'modeLabel', 'fileInput', 'loadingIndicator',
-            'errorBoundary'
+            'errorBoundary', 'balancedModeWarning'
         ];
 
         elementIds.forEach(id => {
@@ -122,6 +139,11 @@ class QuizApp {
         if (this.elements.fileInput) {
             this.elements.fileInput.addEventListener('change', this.handleFileUpload);
         }
+
+        // Special handling for balanced focus checkbox
+        if (this.elements.balancedFocus) {
+            this.elements.balancedFocus.addEventListener('change', this.handleBalancedFocusChange);
+        }
     }
 
     /// <summary>
@@ -161,6 +183,14 @@ class QuizApp {
 
             this.questions = raw.map(q => this.normalizeQuestion(q));
             console.log(`🎯 Total questions loaded: ${this.questions.length} from ${files.length} files`);
+
+            // If focus areas weren't loaded from file, extract them from questions
+            if (this.FOCUS_AREAS.length === 0) {
+                console.log('🔍 Extracting focus areas from loaded questions...');
+                const extractedFocusAreas = [...new Set(this.questions.map(q => q.focus || '1a'))].sort();
+                this.FOCUS_AREAS = extractedFocusAreas;
+                console.log(`✅ Extracted ${extractedFocusAreas.length} focus areas from questions:`, extractedFocusAreas);
+            }
 
             this.showMainMenu();
         } catch (err) {
@@ -241,7 +271,7 @@ class QuizApp {
 
         // Set default focus if missing
         if (!normalized.focus) {
-            normalized.focus = '1.1';
+            normalized.focus = '1a';
         }
 
         // Set default category if missing
@@ -262,9 +292,19 @@ class QuizApp {
 
     handleStartQuiz() {
         try {
+            console.log('🚀 Starting quiz...');
+            console.log('🔍 Balanced focus checked:', this.elements.balancedFocus?.checked);
+            console.log('🔍 Question count input:', this.elements.countInput?.value);
+            
             const count = this.validateQuestionCount();
-            if (count === null) return;
+            console.log('🔍 Validated count:', count);
+            
+            if (count === null) {
+                console.log('❌ Quiz start blocked - count validation failed');
+                return;
+            }
 
+            console.log('✅ Starting quiz with count:', count);
             this.startQuiz(count);
         } catch (error) {
             console.error('Error starting quiz:', error);
@@ -278,19 +318,53 @@ class QuizApp {
             this.showError(`Please select between ${this.MIN_QUESTIONS} and ${this.MAX_QUESTIONS} questions.`);
             return null;
         }
+
+        // Additional validation for balanced focus mode
+        if (this.elements.balancedFocus && this.elements.balancedFocus.checked) {
+            const uniqueFocusAreas = this.FOCUS_AREAS.length;
+            const minRequiredForBalanced = uniqueFocusAreas * 2;
+            
+            if (count < minRequiredForBalanced) {
+                console.warn(`⚠️ Balanced focus mode requested with ${count} questions, but ${minRequiredForBalanced} questions are recommended for optimal balance (2 per focus area × ${uniqueFocusAreas} focus areas).`);
+                console.warn(`⚠️ The quiz will still be created with balanced focus areas, but some areas may have fewer than 2 questions.`);
+                
+                // Show warning to user
+                this.showBalancedModeWarning(true, count, minRequiredForBalanced);
+                
+                // Don't block the quiz, just warn the user
+                // The createBalancedQuiz method will handle this gracefully
+            } else {
+                this.showBalancedModeWarning(false);
+            }
+        } else {
+            this.showBalancedModeWarning(false);
+        }
+
         return count;
     }
 
     startQuiz(count) {
+        console.log('🎯 startQuiz called with count:', count);
+        console.log('🎯 Balanced focus enabled:', this.elements.balancedFocus?.checked);
+        
         // Clean up any existing state
         this.cleanup();
 
-        // Create quiz from questions
-        this.currentQuiz = [...this.questions];
-        if (this.elements.shuffleChoices.checked) {
-            this.currentQuiz = this.shuffleArray(this.currentQuiz);
+        // Create quiz with balanced focus area distribution if enabled
+        if (this.elements.balancedFocus && this.elements.balancedFocus.checked) {
+            console.log('🎯 Creating balanced quiz...');
+            this.currentQuiz = this.createBalancedQuiz(count);
+            console.log('🎯 Balanced quiz created with', this.currentQuiz.length, 'questions');
+        } else {
+            console.log('🎯 Creating regular quiz...');
+            // Create quiz from questions (original behavior)
+            this.currentQuiz = [...this.questions];
+            if (this.elements.shuffleChoices.checked) {
+                this.currentQuiz = this.shuffleArray(this.currentQuiz);
+            }
+            this.currentQuiz = this.currentQuiz.slice(0, count);
+            console.log('🎯 Regular quiz created with', this.currentQuiz.length, 'questions');
         }
-        this.currentQuiz = this.currentQuiz.slice(0, count);
 
         // Initialize quiz state
         this.currentQuestionIndex = 0;
@@ -301,8 +375,195 @@ class QuizApp {
         this.startTimer();
 
         // Show quiz
+        console.log('🎯 Showing quiz card...');
         this.showQuizCard();
+        console.log('🎯 Showing first question...');
         this.showQuestion();
+
+        // Show focus area distribution if balanced mode is enabled
+        if (this.elements.balancedFocus && this.elements.balancedFocus.checked) {
+            console.log('🎯 Showing focus distribution...');
+            this.showFocusDistribution();
+        }
+        
+        console.log('🎯 Quiz started successfully!');
+    }
+
+    showFocusDistribution() {
+        if (!this.elements.qContainer) return;
+
+        const distribution = this.currentQuiz.reduce((acc, q) => {
+            acc[q.focus] = (acc[q.focus] || 0) + 1;
+            return acc;
+        }, {});
+
+        const distributionHtml = Object.entries(distribution)
+            .sort(([a], [b]) => a.localeCompare(b))
+            .map(([focus, count]) => `${focus}: ${count}`)
+            .join(', ');
+
+        const infoDiv = document.createElement('div');
+        infoDiv.style.cssText = 'background: var(--card); border: 1px solid var(--border-light); border-radius: 8px; padding: 12px; margin-bottom: 16px; font-size: 0.9em; color: var(--muted);';
+        infoDiv.innerHTML = `📊 <strong>Focus Area Distribution:</strong> ${distributionHtml}`;
+        
+        // Insert at the top of the question container
+        this.elements.qContainer.insertBefore(infoDiv, this.elements.qContainer.firstChild);
+    }
+
+    createBalancedQuiz(targetCount) {
+        try {
+            console.log(`🎯 Creating balanced quiz with ${targetCount} questions...`);
+            
+            // Group questions by focus area
+            const questionsByFocus = {};
+            this.questions.forEach(question => {
+                const focus = question.focus || '1a';
+                if (!questionsByFocus[focus]) {
+                    questionsByFocus[focus] = [];
+                }
+                questionsByFocus[focus].push(question);
+            });
+
+            const focusAreas = Object.keys(questionsByFocus);
+            const totalFocusAreas = focusAreas.length;
+            
+            console.log(`📊 Found ${totalFocusAreas} focus areas:`, focusAreas);
+            console.log(`📊 Questions per focus area:`, Object.fromEntries(
+                Object.entries(questionsByFocus).map(([focus, questions]) => [focus, questions.length])
+            ));
+
+            if (totalFocusAreas === 0) {
+                console.warn('No focus areas found, falling back to random selection');
+                return this.shuffleArray([...this.questions]).slice(0, targetCount);
+            }
+
+            // Calculate minimum questions per focus area (at least 1, ideally 2 if possible)
+            const minPerFocus = Math.max(1, Math.min(2, Math.floor(targetCount / totalFocusAreas)));
+            const remainingQuestions = targetCount - (minPerFocus * totalFocusAreas);
+            
+            console.log(`📊 Min questions per focus: ${minPerFocus}, Remaining: ${remainingQuestions}`);
+
+            let selectedQuestions = [];
+
+            // First, select minimum questions from each focus area
+            focusAreas.forEach(focus => {
+                const focusQuestions = questionsByFocus[focus];
+                const shuffled = this.shuffleArray([...focusQuestions]);
+                const selectedFromFocus = shuffled.slice(0, minPerFocus);
+                selectedQuestions.push(...selectedFromFocus);
+                console.log(`📊 Selected ${selectedFromFocus.length} questions from focus ${focus}`);
+            });
+
+            // Then distribute remaining questions across focus areas
+            if (remainingQuestions > 0) {
+                const focusAreasWithMoreQuestions = focusAreas.filter(focus => 
+                    questionsByFocus[focus].length > minPerFocus
+                );
+
+                if (focusAreasWithMoreQuestions.length > 0) {
+                    // Shuffle focus areas to distribute remaining questions randomly
+                    const shuffledFocusAreas = this.shuffleArray([...focusAreasWithMoreQuestions]);
+                    
+                    for (let i = 0; i < remainingQuestions && i < shuffledFocusAreas.length; i++) {
+                        const focus = shuffledFocusAreas[i];
+                        const focusQuestions = questionsByFocus[focus];
+                        const alreadySelected = selectedQuestions.filter(q => q.focus === focus).length;
+                        
+                        if (alreadySelected < focusQuestions.length) {
+                            const availableQuestions = focusQuestions.filter(q => 
+                                !selectedQuestions.includes(q)
+                            );
+                            if (availableQuestions.length > 0) {
+                                selectedQuestions.push(availableQuestions[0]);
+                                console.log(`📊 Added 1 more question from focus ${focus}`);
+                            }
+                        }
+                    }
+                }
+            }
+
+            // Ensure we don't exceed the target count
+            if (selectedQuestions.length > targetCount) {
+                selectedQuestions = selectedQuestions.slice(0, targetCount);
+                console.log(`📊 Trimmed to target count: ${selectedQuestions.length}`);
+            }
+
+            // If we don't have enough questions, fall back to random selection
+            if (selectedQuestions.length < targetCount) {
+                const remainingNeeded = targetCount - selectedQuestions.length;
+                const usedQuestions = new Set(selectedQuestions.map(q => q.id));
+                const availableQuestions = this.questions.filter(q => !usedQuestions.has(q.id));
+                
+                if (availableQuestions.length > 0) {
+                    const shuffled = this.shuffleArray([...availableQuestions]);
+                    selectedQuestions.push(...shuffled.slice(0, remainingNeeded));
+                    console.log(`📊 Added ${Math.min(remainingNeeded, availableQuestions.length)} random questions to reach target`);
+                }
+            }
+
+            // Shuffle the final selection if shuffle is enabled
+            if (this.elements.shuffleChoices && this.elements.shuffleChoices.checked) {
+                selectedQuestions = this.shuffleArray(selectedQuestions);
+            }
+
+            console.log(`🎯 Created balanced quiz with ${selectedQuestions.length} questions from ${totalFocusAreas} focus areas`);
+            console.log('📊 Focus area distribution:', Object.entries(
+                selectedQuestions.reduce((acc, q) => {
+                    acc[q.focus] = (acc[q.focus] || 0) + 1;
+                    return acc;
+                }, {})
+            ));
+
+            return selectedQuestions;
+        } catch (error) {
+            console.error('Error creating balanced quiz:', error);
+            console.warn('Falling back to random selection');
+            return this.shuffleArray([...this.questions]).slice(0, targetCount);
+        }
+    }
+
+    handleBalancedFocusChange() {
+        if (this.elements.focusInfo && this.elements.availableFocusAreas) {
+            if (this.elements.balancedFocus.checked) {
+                this.updateFocusInfo();
+                this.elements.focusInfo.style.display = 'block';
+            } else {
+                this.elements.focusInfo.style.display = 'none';
+            }
+        }
+    }
+
+    updateFocusInfo() {
+        if (!this.elements.availableFocusAreas) return;
+
+        // Use the loaded focus areas and count questions for each
+        const focusAreas = this.FOCUS_AREAS;
+        const focusCounts = {};
+        
+        this.questions.forEach(q => {
+            const focus = q.focus || '1a';
+            focusCounts[focus] = (focusCounts[focus] || 0) + 1;
+        });
+
+        console.log('🔍 Focus areas from loaded data:', focusAreas);
+        console.log('🔍 Focus area counts:', focusCounts);
+
+        const focusInfo = focusAreas.map(focus => 
+            `${focus} (${focusCounts[focus] || 0} questions)`
+        ).join(', ');
+
+        this.elements.availableFocusAreas.textContent = focusInfo || 'None available';
+    }
+
+    showBalancedModeWarning(show, currentCount, recommendedCount) {
+        if (!this.elements.balancedModeWarning) return;
+        
+        if (show) {
+            this.elements.balancedModeWarning.style.display = 'block';
+            this.elements.balancedModeWarning.innerHTML = `⚠️ <strong>Note:</strong> With ${currentCount} questions, some focus areas may have limited coverage. For optimal balance, consider using at least ${recommendedCount} questions.`;
+        } else {
+            this.elements.balancedModeWarning.style.display = 'none';
+        }
     }
 
     handleSample() {
@@ -942,6 +1203,14 @@ class QuizApp {
         // Update load errors button state
         if (this.elements.btnLoadErrors) {
             this.elements.btnLoadErrors.disabled = this.questions.length === 0;
+        }
+
+        // Update focus info if balanced focus is enabled
+        if (this.elements.balancedFocus && this.elements.balancedFocus.checked) {
+            this.updateFocusInfo();
+            if (this.elements.focusInfo) {
+                this.elements.focusInfo.style.display = 'block';
+            }
         }
 
         // Reset any previous quiz state
